@@ -1,146 +1,172 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>The Cafe Town</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Cafe Town</title>
 
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    body {
-      font-family: Arial, sans-serif;
-      background: #fffaf5;
-      color: #333;
-      line-height: 1.6;
-    }
-
-    header {
-      background: #3b1f14;
-      color: white;
-      text-align: center;
-      padding: 45px 20px;
-    }
-
-    header h1 {
-      font-size: 38px;
-      margin-bottom: 10px;
-    }
-
-    header p {
-      font-size: 17px;
-    }
-
-    .btn {
-      display: inline-block;
-      margin-top: 20px;
-      padding: 12px 24px;
-      background: #d89b4a;
-      color: white;
-      text-decoration: none;
-      border-radius: 25px;
-      font-weight: bold;
-    }
-
-    section {
-      max-width: 900px;
-      margin: auto;
-      padding: 45px 20px;
-      text-align: center;
-    }
-
-    h2 {
-      color: #3b1f14;
-      font-size: 28px;
-      margin-bottom: 18px;
-    }
-
-    .card {
-      background: white;
-      padding: 25px;
-      margin: 15px 0;
-      border-radius: 15px;
-      box-shadow: 0 3px 12px rgba(0,0,0,0.08);
-    }
-
-    .menu-placeholder {
-      border: 2px dashed #d89b4a;
-      padding: 35px 20px;
-      border-radius: 15px;
-      background: #fff;
-      color: #777;
-    }
-
-    footer {
-      background: #3b1f14;
-      color: white;
-      text-align: center;
-      padding: 25px 15px;
-    }
-
-    footer p {
-      margin: 5px 0;
-    }
-  </style>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Arial,sans-serif;background:#fffaf5;color:#333}
+header{background:#3b1f14;color:white;text-align:center;padding:45px 20px}
+header h1{font-size:38px;margin-bottom:8px}
+header p{font-size:17px}
+.btn{display:inline-block;margin-top:20px;padding:12px 25px;background:#d89b4a;color:white;text-decoration:none;border-radius:25px}
+section{max-width:950px;margin:auto;padding:40px 15px}
+h2{text-align:center;color:#3b1f14;margin-bottom:25px;font-size:30px}
+.category{margin-bottom:30px}
+.category h3{background:#3b1f14;color:white;padding:12px 15px;border-radius:10px;margin-bottom:10px}
+.item{display:flex;justify-content:space-between;gap:15px;background:white;padding:12px 15px;margin:5px 0;border-radius:8px;box-shadow:0 2px 7px rgba(0,0,0,.07)}
+.price{font-weight:bold;white-space:nowrap}
+.card{background:white;padding:25px;border-radius:15px;text-align:center;box-shadow:0 3px 12px rgba(0,0,0,.08)}
+footer{background:#3b1f14;color:white;text-align:center;padding:25px}
+</style>
 </head>
 
 <body>
 
-  <header>
-    <h1>The Cafe Town</h1>
-    <p>Delicious Food • Great Taste • Good Vibes</p>
-    <a href="#menu" class="btn">View Menu</a>
-  </header>
+<header>
+<h1>The Cafe Town</h1>
+<p>Delicious Food • Great Taste • Good Vibes</p>
+<a href="#menu" class="btn">View Menu</a>
+</header>
 
-  <section>
-    <h2>Welcome to The Cafe Town</h2>
-    <div class="card">
-      <p>
-        Welcome to The Cafe Town — a simple and friendly place
-        to enjoy delicious food with your family and friends.
-      </p>
-    </div>
-  </section>
+<section>
+<h2>Welcome to The Cafe Town</h2>
+<div class="card">
+<p>Enjoy delicious food, snacks and refreshing drinks with your family and friends.</p>
+<p style="margin-top:10px"><strong>📍 Near Rama Hospital, Hindalpur Marg</strong></p>
+</div>
+</section>
 
-  <section id="menu">
-    <h2>Our Menu</h2>
+<section id="menu">
+<h2>🍽️ Our Menu</h2>
 
-    <div class="menu-placeholder">
-      <h3>Menu Coming Soon</h3>
-      <p>
-        Our menu will be updated here shortly.
-      </p>
-    </div>
-  </section>
+<div class="category">
+<h3>🍕 Pizza Items</h3>
+<div class="item"><span>Margherita Pizza</span><span class="price">₹100</span></div>
+<div class="item"><span>Onion Pizza</span><span class="price">₹110</span></div>
+<div class="item"><span>Sweet Corn Pizza</span><span class="price">₹110</span></div>
+<div class="item"><span>Veggie Pizza</span><span class="price">₹150</span></div>
+<div class="item"><span>Paneer Tikka Pizza</span><span class="price">₹160</span></div>
+<div class="item"><span>Sandwich Paneer Pizza</span><span class="price">₹130</span></div>
+</div>
 
-  <section>
-    <h2>Visit Us</h2>
+<div class="category">
+<h3>🍔 Burger Items</h3>
+<div class="item"><span>Aloo Tikki Burger</span><span class="price">₹50</span></div>
+<div class="item"><span>Aloo Tikki Cheese Burger</span><span class="price">₹60</span></div>
+<div class="item"><span>Paneer Tikki Burger</span><span class="price">₹90</span></div>
+<div class="item"><span>Chicken Burger</span><span class="price">₹90</span></div>
+<div class="item"><span>Chicken Cheese Burger</span><span class="price">₹100</span></div>
+</div>
 
-    <div class="card">
-      <p><strong>📍 Location</strong></p>
-      <p>Near Rama Hospital, Hindalpur Marg</p>
-    </div>
-  </section>
+<div class="category">
+<h3>🥪 Sandwich Items</h3>
+<div class="item"><span>Coleslaw Sandwich</span><span class="price">₹60</span></div>
+<div class="item"><span>Veg Cheese Sandwich</span><span class="price">₹80</span></div>
+<div class="item"><span>Paneer Sandwich</span><span class="price">₹90</span></div>
+<div class="item"><span>Paneer Cheese Sandwich</span><span class="price">₹100</span></div>
+<div class="item"><span>Chicken Cheese Sandwich</span><span class="price">₹120</span></div>
+<div class="item"><span>Chicken Tandoori Sandwich</span><span class="price">₹140</span></div>
+</div>
 
-  <section>
-    <h2>Contact Us</h2>
+<div class="category">
+<h3>🥤 Shakes & Drinks</h3>
+<div class="item"><span>Cold Coffee</span><span class="price">₹70</span></div>
+<div class="item"><span>Oreo Shake</span><span class="price">₹70</span></div>
+<div class="item"><span>Kit Kat Shake</span><span class="price">₹90</span></div>
+<div class="item"><span>Banana Shake</span><span class="price">₹50</span></div>
+<div class="item"><span>Mango Shake</span><span class="price">₹60</span></div>
+<div class="item"><span>Vanilla Shake</span><span class="price">₹90</span></div>
+<div class="item"><span>Chocolate Shake</span><span class="price">₹80</span></div>
+<div class="item"><span>Strawberry Shake</span><span class="price">₹90</span></div>
+<div class="item"><span>Protein Shake</span><span class="price">₹120</span></div>
+<div class="item"><span>Mint Mojito</span><span class="price">₹80</span></div>
+<div class="item"><span>Blue Mojito</span><span class="price">₹80</span></div>
+<div class="item"><span>Green Mojito</span><span class="price">₹80</span></div>
+<div class="item"><span>Red Mojito</span><span class="price">₹80</span></div>
+<div class="item"><span>Hot Coffee</span><span class="price">₹30</span></div>
+</div>
 
-    <div class="card">
-      <p>
-        For orders and enquiries, please contact
-        The Cafe Town directly.
-      </p>
-    </div>
-  </section>
+<div class="category">
+<h3>🍟 Fries</h3>
+<div class="item"><span>French Fries</span><span class="price">₹60</span></div>
+<div class="item"><span>Peri Peri Fries</span><span class="price">₹80</span></div>
+<div class="item"><span>Cheese Fries</span><span class="price">₹80</span></div>
+<div class="item"><span>Peri Peri Cheese Fries</span><span class="price">₹100</span></div>
+</div>
 
-  <footer>
-    <p><strong>The Cafe Town</strong></p>
-    <p>Thank you for visiting us ❤️</p>
-  </footer>
+<div class="category">
+<h3>🍝 Pasta</h3>
+<div class="item"><span>Red Sauce Pasta</span><span class="price">₹80</span></div>
+<div class="item"><span>White Sauce Pasta</span><span class="price">₹80</span></div>
+<div class="item"><span>Mix Sauce Pasta</span><span class="price">₹110</span></div>
+<div class="item"><span>Tandoori Sauce Pasta</span><span class="price">₹100</span></div>
+<div class="item"><span>Chicken White Sauce Pasta</span><span class="price">₹150</span></div>
+<div class="item"><span>Chicken Red Sauce Pasta</span><span class="price">₹150</span></div>
+<div class="item"><span>Chicken Tandoori Pasta</span><span class="price">₹160</span></div>
+</div>
+
+<div class="category">
+<h3>🫓 Pratha</h3>
+<div class="item"><span>Aloo Pratha</span><span class="price">₹50</span></div>
+<div class="item"><span>Onion Pratha</span><span class="price">₹50</span></div>
+<div class="item"><span>Paneer Pratha</span><span class="price">₹80</span></div>
+<div class="item"><span>Mix Pratha</span><span class="price">₹90</span></div>
+</div>
+
+<div class="category">
+<h3>🥙 Chaap</h3>
+<div class="item"><span>Malai Chaap</span><span class="price">₹100 / ₹160</span></div>
+<div class="item"><span>Afghani Chaap</span><span class="price">₹100 / ₹160</span></div>
+<div class="item"><span>Masala Chaap</span><span class="price">₹140 / ₹190</span></div>
+<div class="item"><span>Kadai Chaap</span><span class="price">₹140 / ₹190</span></div>
+</div>
+
+<div class="category">
+<h3>🌯 Rolls</h3>
+<div class="item"><span>Veg Roll</span><span class="price">₹60</span></div>
+<div class="item"><span>Paneer Roll</span><span class="price">₹90</span></div>
+<div class="item"><span>Egg Roll Double</span><span class="price">₹70</span></div>
+<div class="item"><span>Chicken Roll</span><span class="price">₹100</span></div>
+<div class="item"><span>Potato Roll</span><span class="price">₹90</span></div>
+<div class="item"><span>Double Egg Chicken Roll</span><span class="price">₹120</span></div>
+</div>
+
+<div class="category">
+<h3>🍜 Noodles</h3>
+<div class="item"><span>Veg Noodles</span><span class="price">₹50 / ₹80</span></div>
+<div class="item"><span>Paneer Noodles</span><span class="price">₹70 / ₹90</span></div>
+<div class="item"><span>Egg Noodles</span><span class="price">₹60 / ₹80</span></div>
+<div class="item"><span>Singapore Noodles</span><span class="price">₹70 / ₹100</span></div>
+<div class="item"><span>Hakka Noodles</span><span class="price">₹70 / ₹100</span></div>
+</div>
+
+<div class="category">
+<h3>🥟 Momos & Maggi</h3>
+<div class="item"><span>Veg Momos</span><span class="price">₹50 / ₹90</span></div>
+<div class="item"><span>Paneer Momos</span><span class="price">₹70 / ₹120</span></div>
+<div class="item"><span>Plain Maggi</span><span class="price">₹40</span></div>
+<div class="item"><span>Cheese Maggi</span><span class="price">₹60</span></div>
+<div class="item"><span>Butter Maggi</span><span class="price">₹50</span></div>
+<div class="item"><span>Veg Maggi</span><span class="price">₹60</span></div>
+</div>
+
+</section>
+
+<section>
+<h2>📍 Visit Us</h2>
+<div class="card">
+<p><strong>The Cafe Town</strong></p>
+<p>Near Rama Hospital, Hindalpur Marg</p>
+</div>
+</section>
+
+<footer>
+<p><strong>The Cafe Town</strong></p>
+<p>Delicious Food • Great Taste</p>
+</footer>
 
 </body>
 </html>
