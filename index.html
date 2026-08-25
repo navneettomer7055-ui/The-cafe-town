@@ -1,7 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Cafe Town</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #fffaf5;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #3b1f14;
+      color: white;
+      text-align: center;
+      padding: 45px 20px;
+    }
+
+    header h1 {
+      font-size: 38px;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 17px;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 24px;
+      background: #d89b4a;
+      color: white;
+      text-decoration: none;
+      border-radius: 25px;
+      font-weight: bold;
+    }
+
+    section {
+      max-width: 900px;
+      margin: auto;
+      padding: 45px 20px;
+      text-align: center;
+    }
+
+    h2 {
+      color: #3b1f14;
+      font-size: 28px;
+      margin-bottom: 18px;
+    }
+
+    .card {
+      background: white;
+      padding: 25px;
+      margin: 15px 0;
+      border-radius: 15px;
+      box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+    }
+
+    .menu-placeholder {
+      border: 2px dashed #d89b4a;
+      padding: 35px 20px;
+      border-radius: 15px;
+      background: #fff;
+      color: #777;
+    }
+
+    footer {
+      background: #3b1f14;
+      color: white;
+      text-align: center;
+      padding: 25px 15px;
+    }
+
+    footer p {
+      margin: 5px 0;
+    }
+  </style>
 </head>
+
 <body>
-  <h1>The Cafe Town</h1>
-  <p>Welcome to The Cafe Town!</p>
-  <p>Near Rama Hospital, Hindalpur Marg</p>
+
+  <header>
+    <h1>The Cafe Town</h1>
+    <p>Delicious Food • Great Taste • Good Vibes</p>
+    <a href="#menu" class="btn">View Menu</a>
+  </header>
+
+  <section>
+    <h2>Welcome to The Cafe Town</h2>
+    <div class="card">
+      <p>
+        Welcome to The Cafe Town — a simple and friendly place
+        to enjoy delicious food with your family and friends.
+      </p>
+    </div>
+  </section>
+
+  <section id="menu">
+    <h2>Our Menu</h2>
+
+    <div class="menu-placeholder">
+      <h3>Menu Coming Soon</h3>
+      <p>
+        Our menu will be updated here shortly.
+      </p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Visit Us</h2>
+
+    <div class="card">
+      <p><strong>📍 Location</strong></p>
+      <p>Near Rama Hospital, Hindalpur Marg</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Contact Us</h2>
+
+    <div class="card">
+      <p>
+        For orders and enquiries, please contact
+        The Cafe Town directly.
+      </p>
+    </div>
+  </section>
+
+  <footer>
+    <p><strong>The Cafe Town</strong></p>
+    <p>Thank you for visiting us ❤️</p>
+  </footer>
+
 </body>
 </html>
