@@ -8,6 +8,11 @@ content="bRfOK-Ro06qe3K-JPiKjO3mRjdfqmC-kBP45Ulfhewo">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<meta name="description"
+content="The Cafe Town Pilkhuwa - Delicious food, great taste and good vibes. Order online near Rama Hospital, Pilkhuwa.">
+
+<meta name="referrer" content="strict-origin-when-cross-origin">
+
 <title>The Cafe Town | Pilkhuwa</title>
 
 <style>
@@ -26,6 +31,8 @@ body{
 font-family:Arial,sans-serif;
 background:#fff8f0;
 color:#333;
+-webkit-user-select:none;
+user-select:none;
 }
 
 /* HERO */
@@ -250,6 +257,52 @@ background:#673ab7;
 background:#e39a43;
 }
 
+/* REVIEWS */
+
+.reviews{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:18px;
+}
+
+.review-card{
+background:white;
+padding:22px;
+border-radius:18px;
+box-shadow:0 5px 18px rgba(0,0,0,.08);
+transition:.3s;
+}
+
+.review-card:hover{
+transform:translateY(-5px);
+}
+
+.stars{
+font-size:22px;
+letter-spacing:2px;
+margin-bottom:10px;
+}
+
+.review-card p{
+line-height:1.6;
+}
+
+.review-name{
+margin-top:12px;
+font-weight:bold;
+color:#542516;
+}
+
+.demo-label{
+display:inline-block;
+margin-top:10px;
+padding:5px 9px;
+font-size:11px;
+border-radius:10px;
+background:#fff0d7;
+color:#7b351d;
+}
+
 /* CART */
 
 .cart-bar{
@@ -339,6 +392,8 @@ border:1px solid #ddd;
 border-radius:10px;
 font-size:16px;
 background:white;
+user-select:text;
+-webkit-user-select:text;
 }
 
 .payment-box{
@@ -510,6 +565,10 @@ font-size:26px;
 }
 
 .video-gallery{
+grid-template-columns:1fr;
+}
+
+.reviews{
 grid-template-columns:1fr;
 }
 
@@ -705,6 +764,87 @@ Your browser does not support video playback.
 </section>
 
 
+<!-- REVIEWS -->
+
+<section id="reviews">
+
+<h2>
+⭐ Customer Reviews
+</h2>
+
+<p style="text-align:center;margin-bottom:25px;color:#666;">
+These are sample review placeholders. Replace them with genuine customer feedback.
+</p>
+
+<div class="reviews">
+
+<div class="review-card">
+
+<div class="stars">
+⭐⭐⭐⭐⭐
+</div>
+
+<p>
+“Food aur service bahut achhi lagi. Family ke saath achha experience raha.”
+</p>
+
+<div class="review-name">
+Sample Customer
+</div>
+
+<span class="demo-label">
+SAMPLE REVIEW
+</span>
+
+</div>
+
+
+<div class="review-card">
+
+<div class="stars">
+⭐⭐⭐⭐⭐
+</div>
+
+<p>
+“Cafe ka atmosphere achha hai aur food tasty laga. Definitely try karna chahiye.”
+</p>
+
+<div class="review-name">
+Sample Customer
+</div>
+
+<span class="demo-label">
+SAMPLE REVIEW
+</span>
+
+</div>
+
+
+<div class="review-card">
+
+<div class="stars">
+⭐⭐⭐⭐⭐
+</div>
+
+<p>
+“Menu mein kaafi options hain aur ordering process simple hai.”
+</p>
+
+<div class="review-name">
+Sample Customer
+</div>
+
+<span class="demo-label">
+SAMPLE REVIEW
+</span>
+
+</div>
+
+</div>
+
+</section>
+
+
 <!-- CART BAR -->
 
 <div class="cart-bar" id="cartBar">
@@ -760,6 +900,8 @@ id="customerPhone"
 class="input"
 placeholder="Mobile Number"
 type="tel"
+inputmode="numeric"
+maxlength="10"
 required
 >
 
@@ -1503,9 +1645,11 @@ return;
 }
 
 
-if(!phone){
+/* MOBILE VALIDATION */
 
-alert("Please enter your mobile number.");
+if(!/^[0-9]{10}$/.test(phone)){
+
+alert("Please enter a valid 10-digit mobile number.");
 
 return;
 
@@ -1611,9 +1755,8 @@ Important:
 UPI app payment alone cannot securely prove
 payment to this static website.
 
-After successful payment, customer should
-send the order through WhatsApp with payment
-confirmation.
+Customer should send the order through WhatsApp
+after completing payment.
 
 */
 
@@ -1740,6 +1883,61 @@ encodeURIComponent(name);
 window.location.href=upiUrl;
 
 }
+
+
+/* BASIC ANTI-COPY PROTECTION */
+
+/* Right click */
+
+document.addEventListener("contextmenu",function(e){
+
+e.preventDefault();
+
+});
+
+
+/* Text selection */
+
+document.addEventListener("selectstart",function(e){
+
+if(
+e.target.tagName !== "INPUT" &&
+e.target.tagName !== "TEXTAREA"
+){
+
+e.preventDefault();
+
+}
+
+});
+
+
+/* Drag protection */
+
+document.addEventListener("dragstart",function(e){
+
+e.preventDefault();
+
+});
+
+
+/* Common copy/source shortcuts */
+
+document.addEventListener("keydown",function(e){
+
+const key=e.key.toLowerCase();
+
+if(
+(e.ctrlKey && ["u","s","c"].includes(key)) ||
+(e.ctrlKey && e.shiftKey && ["i","j","c"].includes(key)) ||
+e.key === "F12"
+){
+
+e.preventDefault();
+
+}
+
+});
 
 
 /* START */
