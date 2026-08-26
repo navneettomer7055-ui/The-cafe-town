@@ -258,22 +258,14 @@ bottom:15px;
 left:50%;
 transform:translateX(-50%);
 z-index:999;
-
 background:#542516;
 color:white;
-
 border-radius:35px;
-
 padding:12px 18px;
-
 box-shadow:0 8px 25px rgba(0,0,0,.25);
-
 display:none;
-
 align-items:center;
-
 gap:10px;
-
 max-width:94%;
 }
 
@@ -297,99 +289,116 @@ cursor:pointer;
 display:none;
 position:fixed;
 inset:0;
-
 background:rgba(0,0,0,.65);
-
 z-index:1000;
-
 align-items:center;
 justify-content:center;
-
 padding:15px;
 }
 
 .modal-box{
 background:#fff8f0;
-
 width:min(500px,100%);
-
 max-height:90vh;
-
 overflow:auto;
-
 border-radius:20px;
-
 padding:22px;
 }
 
 .cart-row{
 display:flex;
-
 justify-content:space-between;
-
 gap:10px;
-
 padding:12px 0;
-
 border-bottom:1px solid #ddd;
+}
+
+.qty{
+display:flex;
+gap:5px;
+align-items:center;
 }
 
 .qty button{
 border:0;
-
 background:#e39a43;
-
 color:white;
-
 border-radius:50%;
-
 width:30px;
 height:30px;
-
 font-weight:bold;
-
 cursor:pointer;
 }
 
-.input{
+.input,
+.select{
 width:100%;
-
 padding:12px;
-
 margin:7px 0;
-
 border:1px solid #ddd;
-
 border-radius:10px;
-
 font-size:16px;
+background:white;
+}
+
+.payment-box{
+margin-top:12px;
+padding:15px;
+background:#fff;
+border-radius:12px;
+border:1px solid #eee;
+}
+
+.payment-title{
+font-weight:bold;
+margin-bottom:10px;
+}
+
+.payment-option{
+display:flex;
+align-items:center;
+gap:8px;
+padding:9px 0;
+}
+
+.payment-option input{
+width:18px;
+height:18px;
+}
+
+.cod-note{
+display:none;
+margin-top:8px;
+padding:10px;
+background:#fff0d7;
+border-radius:10px;
+font-size:14px;
+color:#7b351d;
+}
+
+.location-note{
+margin-top:5px;
+font-size:13px;
+color:#666;
 }
 
 .modal-actions{
 display:flex;
-
 gap:8px;
-
 margin-top:15px;
 }
 
 .modal-actions button{
 flex:1;
-
 padding:13px;
-
 border:0;
-
 border-radius:25px;
-
 font-weight:bold;
-
 cursor:pointer;
 }
 
 .whatsapp{
 background:#25D366;
-
 color:white;
 }
 
@@ -405,21 +414,13 @@ text-align:center;
 
 .phone{
 display:inline-block;
-
 margin-top:15px;
-
 padding:13px 24px;
-
 border-radius:30px;
-
 background:#2e8b57;
-
 color:white;
-
 text-decoration:none;
-
 font-weight:bold;
-
 transition:.3s;
 }
 
@@ -431,11 +432,8 @@ transform:scale(1.08);
 
 footer{
 background:#35170e;
-
 color:white;
-
 text-align:center;
-
 padding:30px 15px;
 }
 
@@ -523,6 +521,10 @@ font-size:14px;
 width:100%;
 }
 
+.modal-actions{
+flex-direction:column;
+}
+
 }
 
 </style>
@@ -530,7 +532,6 @@ width:100%;
 </head>
 
 <body>
-
 
 <!-- HERO -->
 
@@ -640,7 +641,6 @@ Terms & conditions may apply.
 
 <div class="video-gallery">
 
-
 <div class="video-box">
 
 <video controls preload="metadata" playsinline>
@@ -691,7 +691,6 @@ Your browser does not support video playback.
 </video>
 
 </div>
-
 
 </div>
 
@@ -752,6 +751,7 @@ Total:
 id="customerName"
 class="input"
 placeholder="Your Name"
+required
 >
 
 
@@ -760,25 +760,113 @@ id="customerPhone"
 class="input"
 placeholder="Mobile Number"
 type="tel"
+required
 >
+
+
+<!-- LOCATION -->
+
+<label style="font-weight:bold;">
+📍 Delivery Location
+</label>
+
+<select
+id="deliveryLocation"
+class="select"
+onchange="checkLocation()"
+>
+
+<option value="">
+-- Select Delivery Location --
+</option>
+
+<option value="Rama Hospital">
+🏥 Rama Hospital - Inside Hospital
+</option>
+
+<option value="Other Location">
+📍 Other Location
+</option>
+
+</select>
+
+<p class="location-note">
+COD is available only inside Rama Hospital.
+</p>
 
 
 <textarea
 id="customerAddress"
 class="input"
 rows="3"
-placeholder="Delivery Address"
+placeholder="Delivery Address / Room / Location Details"
+required
 ></textarea>
+
+
+<!-- PAYMENT -->
+
+<div class="payment-box">
+
+<div class="payment-title">
+💳 Payment Method
+</div>
+
+<label class="payment-option">
+
+<input
+type="radio"
+name="paymentMethod"
+value="Online Payment"
+checked
+onchange="checkPayment()"
+>
+
+Online Payment
+
+</label>
+
+
+<label
+class="payment-option"
+id="codOption"
+>
+
+<input
+type="radio"
+name="paymentMethod"
+value="Cash on Delivery"
+onchange="checkPayment()"
+>
+
+Cash on Delivery
+
+</label>
+
+
+<div
+class="cod-note"
+id="codNote"
+>
+
+🏥 <strong>COD Available Only at Rama Hospital</strong><br>
+
+Cash payment will be accepted only when the
+delivery location is inside Rama Hospital.
+
+</div>
+
+</div>
 
 
 <div class="modal-actions">
 
 <button
 class="whatsapp"
-onclick="sendWhatsApp()"
+onclick="placeOrder()"
 >
 
-📲 Order on WhatsApp
+📲 Continue Order
 
 </button>
 
@@ -1272,8 +1360,18 @@ onclick="changeQty(${index},1)">
 
 function openCart(){
 
+if(cart.length===0){
+
+alert("Please add an item first.");
+
+return;
+
+}
+
 document.getElementById("cartModal")
 .style.display="flex";
+
+checkLocation();
 
 }
 
@@ -1286,7 +1384,80 @@ document.getElementById("cartModal")
 }
 
 
-function sendWhatsApp(){
+/* LOCATION */
+
+function checkLocation(){
+
+const location =
+document.getElementById("deliveryLocation").value;
+
+const codRadio =
+document.querySelector(
+'input[name="paymentMethod"][value="Cash on Delivery"]'
+);
+
+const codNote =
+document.getElementById("codNote");
+
+
+if(location === "Rama Hospital"){
+
+codRadio.disabled=false;
+
+codNote.style.display="block";
+
+}else{
+
+codRadio.disabled=true;
+
+codRadio.checked=false;
+
+codNote.style.display="none";
+
+const online =
+document.querySelector(
+'input[name="paymentMethod"][value="Online Payment"]'
+);
+
+online.checked=true;
+
+}
+
+}
+
+
+/* PAYMENT */
+
+function checkPayment(){
+
+const location =
+document.getElementById("deliveryLocation").value;
+
+const payment =
+document.querySelector(
+'input[name="paymentMethod"]:checked'
+).value;
+
+
+if(payment === "Cash on Delivery" &&
+location !== "Rama Hospital"){
+
+alert(
+"Cash on Delivery is available only inside Rama Hospital."
+);
+
+document.querySelector(
+'input[name="paymentMethod"][value="Online Payment"]'
+).checked=true;
+
+}
+
+}
+
+
+/* PLACE ORDER */
+
+function placeOrder(){
 
 if(cart.length===0){
 
@@ -1297,11 +1468,189 @@ return;
 }
 
 
+const name =
+document.getElementById("customerName")
+.value.trim();
+
+
+const phone =
+document.getElementById("customerPhone")
+.value.trim();
+
+
+const location =
+document.getElementById("deliveryLocation")
+.value;
+
+
+const address =
+document.getElementById("customerAddress")
+.value.trim();
+
+
+const payment =
+document.querySelector(
+'input[name="paymentMethod"]:checked'
+).value;
+
+
+if(!name){
+
+alert("Please enter your name.");
+
+return;
+
+}
+
+
+if(!phone){
+
+alert("Please enter your mobile number.");
+
+return;
+
+}
+
+
+if(!location){
+
+alert("Please select your delivery location.");
+
+return;
+
+}
+
+
+if(!address){
+
+alert("Please enter your delivery address.");
+
+return;
+
+}
+
+
+if(payment === "Cash on Delivery" &&
+location !== "Rama Hospital"){
+
+alert(
+"COD is available only inside Rama Hospital."
+);
+
+return;
+
+}
+
+
+if(payment === "Online Payment"){
+
+payForCart(
+name,
+phone,
+location,
+address
+);
+
+}else{
+
+sendWhatsApp(
+payment,
+name,
+phone,
+location,
+address
+);
+
+}
+
+}
+
+
+/* ONLINE PAYMENT */
+
+function payForCart(
+name,
+phone,
+location,
+address
+){
+
+let total=0;
+
+cart.forEach(item=>{
+
+total += item.price * item.qty;
+
+});
+
+
+const orderDetails =
+"The Cafe Town Order - " +
+name;
+
+
+const upiUrl =
+"upi://pay?pa="+
+encodeURIComponent(UPI_ID)+
+"&pn="+
+encodeURIComponent("The Cafe Town")+
+"&am="+
+total+
+"&cu=INR"+
+"&tn="+
+encodeURIComponent(orderDetails);
+
+
+window.location.href=upiUrl;
+
+
+/*
+
+Important:
+
+UPI app payment alone cannot securely prove
+payment to this static website.
+
+After successful payment, customer should
+send the order through WhatsApp with payment
+confirmation.
+
+*/
+
+setTimeout(function(){
+
+sendWhatsApp(
+"Online Payment",
+name,
+phone,
+location,
+address
+);
+
+},2000);
+
+}
+
+
+/* WHATSAPP */
+
+function sendWhatsApp(
+payment,
+name,
+phone,
+location,
+address
+){
+
 let message =
 "Hello The Cafe Town 👋\n\n";
 
 message +=
-"I want to order:\n";
+"🍽️ NEW ORDER\n\n";
+
+
+message +=
+"Order Items:\n";
 
 
 let total=0;
@@ -1310,7 +1659,7 @@ let total=0;
 cart.forEach(item=>{
 
 const amount =
-item.price*item.qty;
+item.price * item.qty;
 
 total += amount;
 
@@ -1327,34 +1676,37 @@ message +=
 "\n💰 Total: ₹"+total;
 
 
-const name =
-document.getElementById("customerName")
-.value.trim();
-
-
-const phone =
-document.getElementById("customerPhone")
-.value.trim();
-
-
-const address =
-document.getElementById("customerAddress")
-.value.trim();
-
-
-if(name)
 message +=
-"\n👤 Name: "+name;
+"\n\n👤 Name: "+name;
 
 
-if(phone)
 message +=
 "\n📞 Mobile: "+phone;
 
 
-if(address)
 message +=
-"\n📍 Address: "+address;
+"\n📍 Location: "+location;
+
+
+message +=
+"\n🏠 Address: "+address;
+
+
+message +=
+"\n💳 Payment: "+payment;
+
+
+if(payment === "Cash on Delivery"){
+
+message +=
+"\n\n🏥 COD: Rama Hospital Inside Only";
+
+}else{
+
+message +=
+"\n\n💳 Online Payment Selected";
+
+}
 
 
 const url =
@@ -1368,6 +1720,8 @@ window.open(url,"_blank");
 
 }
 
+
+/* DIRECT PAY BUTTON */
 
 function payNow(name,price){
 
@@ -1387,6 +1741,8 @@ window.location.href=upiUrl;
 
 }
 
+
+/* START */
 
 renderMenu();
 
