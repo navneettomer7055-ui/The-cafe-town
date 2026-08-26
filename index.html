@@ -1,22 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta name="google-site-verification" content="bRfOK-Ro06qe3K-JPiKjO3mRjdfqmC-kBP45Ulfhewo">
+
+<meta name="google-site-verification"
+content="bRfOK-Ro06qe3K-JPiKjO3mRjdfqmC-kBP45Ulfhewo">
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>The Cafe Town | Pilkhuwa</title>
 
 <style>
-*{margin:0;padding:0;box-sizing:border-box}
 
-html{scroll-behavior:smooth}
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+html{
+scroll-behavior:smooth;
+}
 
 body{
 font-family:Arial,sans-serif;
 background:#fff8f0;
 color:#333;
 }
+
+/* HERO */
 
 .hero{
 min-height:90vh;
@@ -27,13 +39,42 @@ text-align:center;
 color:white;
 padding:30px 20px;
 background:linear-gradient(135deg,#35170e,#7b351d,#c97935);
+position:relative;
+overflow:hidden;
 }
 
-.hero-content{animation:fadeUp 1s ease}
+.hero:before,
+.hero:after{
+content:"";
+position:absolute;
+width:220px;
+height:220px;
+border-radius:50%;
+background:rgba(255,255,255,.08);
+animation:float 6s infinite ease-in-out;
+}
+
+.hero:before{
+top:-60px;
+left:-60px;
+}
+
+.hero:after{
+bottom:-80px;
+right:-50px;
+animation-delay:2s;
+}
+
+.hero-content{
+position:relative;
+z-index:2;
+animation:fadeUp 1.2s ease;
+}
 
 .logo{
 font-size:58px;
 margin-bottom:10px;
+animation:bounce 2s infinite;
 }
 
 .hero h1{
@@ -41,7 +82,9 @@ font-size:44px;
 margin-bottom:10px;
 }
 
-.hero p{font-size:18px}
+.hero p{
+font-size:18px;
+}
 
 .tagline{
 margin-top:15px;
@@ -58,7 +101,15 @@ text-decoration:none;
 font-weight:bold;
 color:white;
 background:#e39a43;
+transition:.3s;
 }
+
+.btn:hover{
+transform:scale(1.08);
+background:#f2b35f;
+}
+
+/* SECTIONS */
 
 section{
 max-width:1000px;
@@ -73,13 +124,22 @@ font-size:30px;
 margin-bottom:30px;
 }
 
+/* CARD */
+
 .card{
 background:white;
 padding:25px;
 border-radius:18px;
 margin:15px 0;
 box-shadow:0 5px 18px rgba(0,0,0,.08);
+transition:.3s;
 }
+
+.card:hover{
+transform:translateY(-5px);
+}
+
+/* OFFER */
 
 .offer{
 background:linear-gradient(135deg,#fff0d7,#ffe0b2);
@@ -88,12 +148,19 @@ border-radius:20px;
 padding:30px 20px;
 text-align:center;
 box-shadow:0 8px 25px rgba(0,0,0,.1);
+animation:pulse 3s infinite;
+}
+
+.offer h2{
+margin-bottom:12px;
 }
 
 .offer strong{
 font-size:24px;
 color:#a94718;
 }
+
+/* VIDEOS */
 
 .video-gallery{
 display:grid;
@@ -106,7 +173,12 @@ margin-bottom:45px;
 background:white;
 padding:12px;
 border-radius:18px;
-box-shadow:0 5px 18px rgba(0,0,0,.1);
+box-shadow:0 5px 18px rgba(0,0,0,.10);
+transition:.3s;
+}
+
+.video-box:hover{
+transform:translateY(-5px);
 }
 
 .video-box video{
@@ -114,6 +186,8 @@ width:100%;
 display:block;
 border-radius:12px;
 }
+
+/* MENU */
 
 .category{
 margin-bottom:30px;
@@ -134,7 +208,12 @@ gap:10px;
 padding:14px 15px;
 background:white;
 border-bottom:1px solid #eee;
+transition:.25s;
 flex-wrap:wrap;
+}
+
+.item:hover{
+background:#fff2df;
 }
 
 .price{
@@ -171,23 +250,28 @@ background:#673ab7;
 background:#e39a43;
 }
 
+/* CART */
+
 .cart-bar{
 position:fixed;
 bottom:15px;
 left:50%;
 transform:translateX(-50%);
-z-index:99;
+z-index:999;
 
 background:#542516;
 color:white;
 
 border-radius:35px;
+
 padding:12px 18px;
 
 box-shadow:0 8px 25px rgba(0,0,0,.25);
 
 display:none;
+
 align-items:center;
+
 gap:10px;
 
 max-width:94%;
@@ -207,12 +291,16 @@ font-weight:bold;
 cursor:pointer;
 }
 
+/* MODAL */
+
 .modal{
 display:none;
 position:fixed;
 inset:0;
+
 background:rgba(0,0,0,.65);
-z-index:100;
+
+z-index:1000;
 
 align-items:center;
 justify-content:center;
@@ -222,42 +310,56 @@ padding:15px;
 
 .modal-box{
 background:#fff8f0;
+
 width:min(500px,100%);
+
 max-height:90vh;
+
 overflow:auto;
 
 border-radius:20px;
+
 padding:22px;
 }
 
 .cart-row{
 display:flex;
+
 justify-content:space-between;
+
 gap:10px;
+
 padding:12px 0;
+
 border-bottom:1px solid #ddd;
 }
 
 .qty button{
 border:0;
+
 background:#e39a43;
+
 color:white;
 
 border-radius:50%;
 
-width:28px;
-height:28px;
+width:30px;
+height:30px;
 
 font-weight:bold;
+
 cursor:pointer;
 }
 
 .input{
 width:100%;
+
 padding:12px;
+
 margin:7px 0;
 
 border:1px solid #ddd;
+
 border-radius:10px;
 
 font-size:16px;
@@ -265,21 +367,29 @@ font-size:16px;
 
 .modal-actions{
 display:flex;
+
 gap:8px;
+
 margin-top:15px;
 }
 
 .modal-actions button{
 flex:1;
-padding:12px;
+
+padding:13px;
+
 border:0;
+
 border-radius:25px;
+
 font-weight:bold;
+
 cursor:pointer;
 }
 
 .whatsapp{
 background:#25D366;
+
 color:white;
 }
 
@@ -287,41 +397,101 @@ color:white;
 background:#ddd;
 }
 
+/* CONTACT */
+
 .contact{
 text-align:center;
 }
 
 .phone{
 display:inline-block;
+
 margin-top:15px;
+
 padding:13px 24px;
 
 border-radius:30px;
 
 background:#2e8b57;
+
 color:white;
 
 text-decoration:none;
+
 font-weight:bold;
+
+transition:.3s;
 }
+
+.phone:hover{
+transform:scale(1.08);
+}
+
+/* FOOTER */
 
 footer{
 background:#35170e;
+
 color:white;
+
 text-align:center;
+
 padding:30px 15px;
 }
 
+/* ANIMATION */
+
 @keyframes fadeUp{
+
 from{
 opacity:0;
 transform:translateY(40px);
 }
+
 to{
 opacity:1;
 transform:translateY(0);
 }
+
 }
+
+@keyframes float{
+
+0%,100%{
+transform:translateY(0);
+}
+
+50%{
+transform:translateY(-30px);
+}
+
+}
+
+@keyframes bounce{
+
+0%,100%{
+transform:translateY(0);
+}
+
+50%{
+transform:translateY(-8px);
+}
+
+}
+
+@keyframes pulse{
+
+0%,100%{
+transform:scale(1);
+}
+
+50%{
+transform:scale(1.02);
+}
+
+}
+
+/* MOBILE */
 
 @media(max-width:600px){
 
@@ -354,10 +524,13 @@ width:100%;
 }
 
 }
+
 </style>
+
 </head>
 
 <body>
+
 
 <!-- HERO -->
 
@@ -365,9 +538,13 @@ width:100%;
 
 <div class="hero-content">
 
-<div class="logo">🍕</div>
+<div class="logo">
+🍕
+</div>
 
-<h1>The Cafe Town</h1>
+<h1>
+The Cafe Town
+</h1>
 
 <p>
 Delicious Food • Great Taste • Good Vibes
@@ -394,20 +571,22 @@ Take a Bite, Make Your Future Bright!
 
 <section>
 
-<h2>❤️ Welcome to The Cafe Town</h2>
+<h2>
+❤️ Welcome to The Cafe Town
+</h2>
 
-<div class="card" style="text-align:center">
+<div class="card" style="text-align:center;">
 
 <p>
 
 Welcome to <strong>The Cafe Town</strong> —
 a friendly place to enjoy delicious food,
-refreshing drinks and great moments with
-your family and friends.
+refreshing drinks and great moments
+with your family and friends.
 
 </p>
 
-<p style="margin-top:15px">
+<p style="margin-top:15px;">
 
 📍 Rama Hospital, Near Hindalpur Marg, Pilkhuwa
 
@@ -424,22 +603,26 @@ your family and friends.
 
 <div class="offer">
 
-<h2>🛵 Special Delivery Offer</h2>
+<h2>
+🛵 Special Delivery Offer
+</h2>
 
 <p>
 Order for <strong>₹500 or more</strong>
 </p>
 
-<p style="margin-top:10px;font-size:19px">
+<p style="margin-top:10px;font-size:19px;">
 
 🎉 <strong>5 KM Delivery FREE!</strong>
 
 </p>
 
-<p style="margin-top:10px">
-
+<p style="margin-top:10px;">
 One FREE delivery per day.
+</p>
 
+<p style="margin-top:12px;font-size:13px;">
+Terms & conditions may apply.
 </p>
 
 </div>
@@ -451,14 +634,79 @@ One FREE delivery per day.
 
 <section id="menu">
 
-<h2>🍽️ Our Menu & Online Order</h2>
+<h2>
+🎥 Menu Video Gallery
+</h2>
 
-<div id="menuContainer"></div>
+<div class="video-gallery">
+
+
+<div class="video-box">
+
+<video controls preload="metadata" playsinline>
+
+<source src="br.mp4" type="video/mp4">
+
+Your browser does not support video playback.
+
+</video>
+
+</div>
+
+
+<div class="video-box">
+
+<video controls preload="metadata" playsinline>
+
+<source src="cv.mp4" type="video/mp4">
+
+Your browser does not support video playback.
+
+</video>
+
+</div>
+
+
+<div class="video-box">
+
+<video controls preload="metadata" playsinline>
+
+<source src="ki.mp4" type="video/mp4">
+
+Your browser does not support video playback.
+
+</video>
+
+</div>
+
+
+<div class="video-box">
+
+<video controls preload="metadata" playsinline>
+
+<source src="piz.mp4" type="video/mp4">
+
+Your browser does not support video playback.
+
+</video>
+
+</div>
+
+
+</div>
+
+
+<h2>
+🍽️ Our Menu & Online Order
+</h2>
+
+<div id="menuContainer">
+</div>
 
 </section>
 
 
-<!-- CART -->
+<!-- CART BAR -->
 
 <div class="cart-bar" id="cartBar">
 
@@ -485,23 +733,19 @@ View Cart
 
 <div class="modal-box">
 
-<h2>🛒 Your Order</h2>
+<h2>
+🛒 Your Order
+</h2>
 
-<div id="cartItems"></div>
+<div id="cartItems">
+</div>
 
-<p style="
-text-align:right;
-font-size:20px;
-font-weight:bold;
-margin-top:15px;
-">
+<h3 style="text-align:right;margin-top:15px;">
 
 Total:
-<span id="modalTotal">
-₹0
-</span>
+₹<span id="modalTotal">0</span>
 
-</p>
+</h3>
 
 
 <input
@@ -534,9 +778,10 @@ class="whatsapp"
 onclick="sendWhatsApp()"
 >
 
-📲 WhatsApp Order
+📲 Order on WhatsApp
 
 </button>
+
 
 <button
 class="close"
@@ -558,15 +803,19 @@ Close
 
 <section class="contact">
 
-<h2>📞 Contact Us</h2>
+<h2>
+📞 Contact Us
+</h2>
 
 <div class="card">
 
 <p>
-<strong>The Cafe Town</strong>
+<strong>
+The Cafe Town
+</strong>
 </p>
 
-<p style="margin-top:8px">
+<p style="margin-top:8px;">
 Deepak Tomar
 </p>
 
@@ -579,9 +828,15 @@ href="tel:7452849258"
 
 </a>
 
-<p style="margin-top:18px">
+<p style="margin-top:18px;">
 
 📍 Rama Hospital, Near Hindalpur Marg, Pilkhuwa
+
+</p>
+
+<p style="margin-top:18px;font-weight:bold;">
+
+Take a Bite, Make Your Future Bright! ❤️
 
 </p>
 
@@ -598,16 +853,12 @@ href="tel:7452849258"
 <strong>The Cafe Town</strong>
 </p>
 
-<p style="margin-top:8px">
-
+<p style="margin-top:8px;">
 Delicious Food • Great Taste • Good Vibes
-
 </p>
 
-<p style="margin-top:10px">
-
+<p style="margin-top:10px;">
 © 2026 The Cafe Town
-
 </p>
 
 </footer>
@@ -622,7 +873,7 @@ const UPI_ID = "paytm.s25oklx@pty";
 let cart = [];
 
 
-/* MENU DATA */
+/* MENU */
 
 const menu = [
 
@@ -720,11 +971,11 @@ items:[
 category:"🍜 Noodles",
 
 items:[
-["Veg Noodles",null,{Small:50,Large:80}],
-["Paneer Noodles",null,{Small:70,Large:90}],
-["Egg Noodles",null,{Small:60,Large:80}],
-["Singapore Noodles",null,{Small:70,Large:100}],
-["Hakka Noodles",null,{Small:70,Large:100}]
+["Veg Noodles",50,80],
+["Paneer Noodles",70,90],
+["Egg Noodles",60,80],
+["Singapore Noodles",70,100],
+["Hakka Noodles",70,100]
 ]
 
 },
@@ -733,8 +984,8 @@ items:[
 category:"🥟 Momos & Maggi",
 
 items:[
-["Veg Momos",null,{Half:50,Full:90}],
-["Paneer Momos",null,{Half:70,Full:120}],
+["Veg Momos",50,90],
+["Paneer Momos",70,120],
 ["Plain Maggi",40],
 ["Cheese Maggi",60],
 ["Butter Maggi",50],
@@ -756,12 +1007,12 @@ container.innerHTML="";
 
 menu.forEach(category=>{
 
-const div =
+const section =
 document.createElement("div");
 
-div.className="category";
+section.className="category";
 
-div.innerHTML =
+section.innerHTML=
 "<h3>"+category.category+"</h3>";
 
 
@@ -769,9 +1020,10 @@ category.items.forEach(item=>{
 
 const name=item[0];
 
-const price=item[1];
+const price1=item[1];
 
-const sizes=item[2];
+const price2=item[2];
+
 
 const row =
 document.createElement("div");
@@ -779,39 +1031,36 @@ document.createElement("div");
 row.className="item";
 
 
-if(sizes){
-
-let buttons="";
-
-Object.keys(sizes).forEach(size=>{
-
-buttons += `
-
-<button
-class="size-btn"
-onclick="addToCart('${name}','${size}',${sizes[size]})"
->
-
-➕ ${size} ₹${sizes[size]}
-
-</button>
-
-`;
-
-});
-
+if(price2){
 
 row.innerHTML=`
 
 <div>
 
-<strong>${name}</strong>
+<strong>
+${name}
+</strong>
 
 </div>
 
 <div class="item-buttons">
 
-${buttons}
+<button
+class="size-btn"
+onclick="addToCart('${name} (Small)',${price1})">
+
+➕ Small ₹${price1}
+
+</button>
+
+
+<button
+class="size-btn"
+onclick="addToCart('${name} (Large)',${price2})">
+
+➕ Large ₹${price2}
+
+</button>
 
 </div>
 
@@ -823,31 +1072,33 @@ row.innerHTML=`
 
 <div>
 
-<strong>${name}</strong>
+<strong>
+${name}
+</strong>
 
 <br>
 
 <span class="price">
-₹${price}
+₹${price1}
 </span>
 
 </div>
+
 
 <div class="item-buttons">
 
 <button
 class="order-btn"
-onclick="addToCart('${name}','',${price})"
->
+onclick="addToCart('${name}',${price1})">
 
 ➕ Add
 
 </button>
 
+
 <button
 class="pay-btn"
-onclick="payNow('${name}',${price})"
->
+onclick="payNow('${name}',${price1})">
 
 💳 Pay
 
@@ -859,24 +1110,24 @@ onclick="payNow('${name}',${price})"
 
 }
 
-div.appendChild(row);
+
+section.appendChild(row);
 
 });
 
-container.appendChild(div);
+
+container.appendChild(section);
 
 });
 
 }
 
 
-function addToCart(name,size,price){
-
-const fullName =
-size ? name+" ("+size+")" : name;
+function addToCart(name,price){
 
 const existing =
-cart.find(item=>item.name===fullName);
+cart.find(x=>x.name===name);
+
 
 if(existing){
 
@@ -886,7 +1137,7 @@ existing.qty++;
 
 cart.push({
 
-name:fullName,
+name:name,
 
 price:price,
 
@@ -895,6 +1146,24 @@ qty:1
 });
 
 }
+
+
+updateCart();
+
+}
+
+
+function changeQty(index,value){
+
+cart[index].qty += value;
+
+
+if(cart[index].qty<=0){
+
+cart.splice(index,1);
+
+}
+
 
 updateCart();
 
@@ -920,16 +1189,18 @@ total += item.price*item.qty;
 document.getElementById("cartCount")
 .innerText=count;
 
+
 document.getElementById("cartTotal")
 .innerText="₹"+total;
 
+
 document.getElementById("modalTotal")
-.innerText="₹"+total;
+.innerText=total;
 
 
 document.getElementById("cartBar")
-.style.display =
-count>0 ? "flex" : "none";
+.style.display=
+count ? "flex" : "none";
 
 
 renderCart();
@@ -945,7 +1216,7 @@ document.getElementById("cartItems");
 
 if(cart.length===0){
 
-box.innerHTML =
+box.innerHTML=
 "<p>Your cart is empty.</p>";
 
 return;
@@ -974,17 +1245,17 @@ ${item.name}
 
 </div>
 
+
 <div class="qty">
 
 <button
-onclick="changeQty(${index},-1)"
->
+onclick="changeQty(${index},-1)">
 −
 </button>
 
+
 <button
-onclick="changeQty(${index},1)"
->
+onclick="changeQty(${index},1)">
 +
 </button>
 
@@ -995,23 +1266,6 @@ onclick="changeQty(${index},1)"
 `;
 
 });
-
-}
-
-
-function changeQty(index,value){
-
-cart[index].qty += value;
-
-
-if(cart[index].qty<=0){
-
-cart.splice(index,1);
-
-}
-
-
-updateCart();
 
 }
 
@@ -1060,6 +1314,7 @@ item.price*item.qty;
 
 total += amount;
 
+
 message +=
 "• "+item.name+
 " × "+item.qty+
@@ -1104,4 +1359,40 @@ message +=
 
 const url =
 "https://wa.me/"+
-WHATSAPP
+WHATSAPP+
+"?text="+
+encodeURIComponent(message);
+
+
+window.open(url,"_blank");
+
+}
+
+
+function payNow(name,price){
+
+const upiUrl =
+"upi://pay?pa="+
+encodeURIComponent(UPI_ID)+
+"&pn="+
+encodeURIComponent("The Cafe Town")+
+"&am="+
+price+
+"&cu=INR"+
+"&tn="+
+encodeURIComponent(name);
+
+
+window.location.href=upiUrl;
+
+}
+
+
+renderMenu();
+
+updateCart();
+
+</script>
+
+</body>
+</html>
