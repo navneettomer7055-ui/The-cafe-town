@@ -15,7 +15,6 @@ content="The Cafe Town Pilkhuwa - Delicious food, great taste and good vibes. Or
 
 <title>The Cafe Town | Pilkhuwa</title>
 
-<!-- QR CODE LIBRARY -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
 
 <style>
@@ -446,18 +445,27 @@ gap:8px;
 margin-top:15px;
 }
 
-.modal-actions button{
+.modal-actions button,
+.modal-actions a{
 flex:1;
 padding:13px;
 border:0;
 border-radius:25px;
 font-weight:bold;
 cursor:pointer;
+text-align:center;
 }
 
 .whatsapp{
 background:#25D366;
 color:white;
+}
+
+.upi-button{
+background:#673ab7;
+color:white;
+text-decoration:none;
+display:block;
 }
 
 .close{
@@ -941,8 +949,6 @@ required
 >
 
 
-<!-- LOCATION -->
-
 <label style="font-weight:bold;">
 📍 Delivery Location
 </label>
@@ -1097,14 +1103,34 @@ UPI ID: paytm.s25oklx@pty
 
 </div>
 
+<!-- DIRECT UPI BUTTON -->
+
+<a
+id="upiPayButton"
+class="upi-button"
+href="#"
+style="margin-top:15px;"
+>
+
+📱 Open UPI App & Pay
+
+</a>
+
+
 <div class="payment-warning">
 
 <strong>Important:</strong><br>
+
 Please complete the payment first.
-Then press <strong>Payment Done</strong>.
-Payment is not automatically verified by this website.
+
+Then press
+<strong>I Have Paid — Send Order</strong>.
+
+This website does not automatically verify
+the bank transaction.
 
 </div>
+
 
 <div class="modal-actions">
 
@@ -1113,7 +1139,7 @@ class="whatsapp"
 onclick="confirmQRPayment()"
 >
 
-✅ Payment Done & Send Order
+✅ I Have Paid — Send Order
 
 </button>
 
@@ -1378,11 +1404,7 @@ if(price2){
 row.innerHTML=`
 
 <div>
-
-<strong>
-${name}
-</strong>
-
+<strong>${name}</strong>
 </div>
 
 <div class="item-buttons">
@@ -1677,10 +1699,19 @@ function checkPayment(){
 const location =
 document.getElementById("deliveryLocation").value;
 
-const payment =
+const selected =
 document.querySelector(
 'input[name="paymentMethod"]:checked'
-).value;
+);
+
+if(!selected){
+
+return;
+
+}
+
+const payment =
+selected.value;
 
 if(payment === "Cash on Delivery" &&
 location !== "Rama Hospital"){
@@ -1728,10 +1759,21 @@ const address =
 document.getElementById("customerAddress")
 .value.trim();
 
-const payment =
+const selectedPayment =
 document.querySelector(
 'input[name="paymentMethod"]:checked'
-).value;
+);
+
+if(!selectedPayment){
+
+alert("Please select a payment method.");
+
+return;
+
+}
+
+const payment =
+selectedPayment.value;
 
 
 if(!name){
@@ -1815,6 +1857,27 @@ address
 
 
 /* =========================
+   CREATE UPI URL
+========================= */
+
+function createUPIUrl(amount,note){
+
+return (
+"upi://pay?pa="+
+encodeURIComponent(UPI_ID)+
+"&pn="+
+encodeURIComponent("The Cafe Town")+
+"&am="+
+Number(amount).toFixed(2)+
+"&cu=INR"+
+"&tn="+
+encodeURIComponent(note)
+);
+
+}
+
+
+/* =========================
    QR ONLINE PAYMENT
 ========================= */
 
@@ -1835,29 +1898,14 @@ total += item.price * item.qty;
 
 
 const orderDetails =
-"The Cafe Town Order - " +
-name;
+"The Cafe Town Order - " + name;
 
-
-/*
-UPI PAYMENT LINK
-*/
 
 const upiUrl =
-"upi://pay?pa="+
-encodeURIComponent(UPI_ID)+
-"&pn="+
-encodeURIComponent("The Cafe Town")+
-"&am="+
-total+
-"&cu=INR"+
-"&tn="+
-encodeURIComponent(orderDetails);
+createUPIUrl(total,orderDetails);
 
 
-/*
-SAVE ORDER DETAILS
-*/
+/* SAVE ORDER DETAILS */
 
 currentQROrder = {
 
@@ -1874,9 +1922,7 @@ total:total
 };
 
 
-/*
-CLEAR OLD QR
-*/
+/* CLEAR OLD QR */
 
 const qrBox =
 document.getElementById("qrcode");
@@ -1884,9 +1930,7 @@ document.getElementById("qrcode");
 qrBox.innerHTML="";
 
 
-/*
-CREATE NEW QR
-*/
+/* CREATE QR */
 
 if(typeof QRCode === "undefined"){
 
@@ -1912,17 +1956,25 @@ correctLevel:QRCode.CorrectLevel.M
 });
 
 
-/*
-SHOW AMOUNT
-*/
+/* SHOW AMOUNT */
 
 document.getElementById("qrAmount")
 .innerText=total;
 
 
-/*
-OPEN QR MODAL
-*/
+/* OPEN UPI APP BUTTON */
+
+const upiButton =
+document.getElementById("upiPayButton");
+
+if(upiButton){
+
+upiButton.href=upiUrl;
+
+}
+
+
+/* SHOW QR MODAL */
 
 document.getElementById("qrModal")
 .style.display="flex";
@@ -1953,20 +2005,21 @@ function confirmQRPayment(){
 if(!currentQROrder){
 
 alert(
-"Order information not found."
+"Order information not found. Please start the order again from the cart."
 );
 
 return;
 
 }
 
-
 const order =
 currentQROrder;
 
 
 /*
-SEND ORDER TO WHATSAPP
+Customer confirms payment manually.
+The website does NOT claim automatic
+bank verification.
 */
 
 sendWhatsApp(
@@ -1976,11 +2029,6 @@ order.phone,
 order.location,
 order.address
 );
-
-
-/*
-CLOSE QR
-*/
 
 closeQR();
 
@@ -1996,26 +2044,11 @@ function payNow(name,price){
 const orderDetails =
 "The Cafe Town - " + name;
 
-
-/*
-CREATE UPI LINK
-*/
-
 const upiUrl =
-"upi://pay?pa="+
-encodeURIComponent(UPI_ID)+
-"&pn="+
-encodeURIComponent("The Cafe Town")+
-"&am="+
-price+
-"&cu=INR"+
-"&tn="+
-encodeURIComponent(orderDetails);
+createUPIUrl(price,orderDetails);
 
 
-/*
-OPEN QR MODAL
-*/
+/* CLEAR OLD QR */
 
 const qrBox =
 document.getElementById("qrcode");
@@ -2034,6 +2067,8 @@ return;
 }
 
 
+/* CREATE QR */
+
 new QRCode(qrBox,{
 
 text:upiUrl,
@@ -2047,23 +2082,35 @@ correctLevel:QRCode.CorrectLevel.M
 });
 
 
+/* SHOW AMOUNT */
+
 document.getElementById("qrAmount")
 .innerText=price;
 
 
-/*
-DIRECT PAY ORDER DATA
+/* OPEN UPI APP */
 
-Customer details are not available
-from direct menu Pay button.
+const upiButton =
+document.getElementById("upiPayButton");
+
+if(upiButton){
+
+upiButton.href=upiUrl;
+
+}
+
+
+/*
+Direct Pay button does not have
+customer/order details.
+Therefore we don't send an
+order from this route.
 */
 
 currentQROrder=null;
 
 
-/*
-SHOW QR
-*/
+/* SHOW QR */
 
 document.getElementById("qrModal")
 .style.display="flex";
@@ -2148,9 +2195,7 @@ WHATSAPP+
 encodeURIComponent(message);
 
 
-/*
-OPEN WHATSAPP
-*/
+/* OPEN WHATSAPP */
 
 window.open(url,"_blank");
 
@@ -2161,9 +2206,6 @@ window.open(url,"_blank");
    BASIC ANTI-COPY PROTECTION
 ========================= */
 
-
-/* Right click */
-
 document.addEventListener(
 "contextmenu",
 function(e){
@@ -2172,8 +2214,6 @@ e.preventDefault();
 
 });
 
-
-/* Text selection */
 
 document.addEventListener(
 "selectstart",
@@ -2191,8 +2231,6 @@ e.preventDefault();
 });
 
 
-/* Drag protection */
-
 document.addEventListener(
 "dragstart",
 function(e){
@@ -2201,8 +2239,6 @@ e.preventDefault();
 
 });
 
-
-/* Common copy/source shortcuts */
 
 document.addEventListener(
 "keydown",
