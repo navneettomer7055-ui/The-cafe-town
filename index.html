@@ -1,18 +1,10 @@
-यह पूरी तरह से तैयार, लाइव-टेस्टेड और फाइनल कोड है। इस कोड में आपकी असली UPI ID (paytm.s21aaef@pty) और आपका नाम (DEEPAK) पूरी तरह से कॉन्फ़िगर कर दिया गया है।
-इस कोड को बिना किसी बदलाव के सीधे इस्तेमाल किया जा सकता है।
-## 🖥️ फाइनल कोड (index.html)
-अपनी फ़ाइल का सारा पुराना कोड हटाकर इस पूरे कोड को पेस्ट कर दें:
-
 <!DOCTYPE html>
 <html lang="hi">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>दीपक रसोई — प्रीमियम डिजिटल मेनू</title>
-    
-    <!-- QR कोड जनरेट करने के लिए 100% फ्री और सुरक्षित लाइब्रेरी -->
     <script src="https://cloudflare.com"></script>
-    
     <style>
         :root {
             --primary: #ff3838;
@@ -23,264 +15,67 @@
             --accent: #2ed573;
             --upi-blue: #00baf2;
         }
-
-        body { 
-            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; 
-            margin: 0; 
-            padding: 0; 
-            background-color: var(--bg); 
-            color: var(--text); 
-        }
-
-        /* प्रीमियम रेस्टोरेंट हेडर */
-        header {
-            background: linear-gradient(135deg, #1e272e 0%, #2f3542 100%);
-            color: white;
-            text-align: center;
-            padding: 40px 20px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-            margin-bottom: 30px;
-        }
-
-        header h1 {
-            margin: 0;
-            font-size: 2.2rem;
-            letter-spacing: 1px;
-        }
-
-        header p {
-            margin: 8px 0 0 0;
-            color: #a4b0be;
-            font-size: 1rem;
-        }
-
-        .container { 
-            max-width: 1100px; 
-            margin: 0 auto; 
-            padding: 0 20px 40px 20px;
-            display: grid; 
-            grid-template-columns: 1fr; 
-            gap: 30px; 
-        }
-
-        @media (min-width: 768px) { 
-            .container { grid-template-columns: 1.8fr 1.2fr; } 
-        }
-        
-        /* आधुनिक मेनू ग्रिड */
-        .section-title {
-            font-size: 1.4rem;
-            margin-top: 0;
-            margin-bottom: 20px;
-            padding-bottom: 10px;
-            border-bottom: 3px solid var(--primary);
-            display: inline-block;
-            color: #1e272e;
-            font-weight: bold;
-        }
-
-        .menu-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-            gap: 20px;
-        }
-
-        .menu-card {
-            background: var(--card-bg);
-            border-radius: 16px;
-            overflow: hidden;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.03);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            display: flex;
-            flex-direction: column;
-            border: 1px solid rgba(0,0,0,0.04);
-        }
-
-        .menu-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 30px rgba(0,0,0,0.08);
-        }
-
-        .card-image-box {
-            background: #fff5f5;
-            height: 130px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 55px;
-        }
-
-        .card-details {
-            padding: 15px;
-            display: flex;
-            flex-direction: column;
-            flex-grow: 1;
-        }
-
-        .item-name { 
-            font-weight: 700; 
-            font-size: 1.1rem;
-            margin-bottom: 5px;
-        }
-
-        .item-price { 
-            color: var(--accent); 
-            font-weight: 700; 
-            font-size: 1.2rem;
-            margin-bottom: 15px;
-        }
-
-        .btn-add { 
-            background: var(--primary); 
-            color: white; 
-            border: none; 
-            padding: 10px; 
-            border-radius: 10px; 
-            cursor: pointer; 
-            font-weight: bold;
-            font-size: 0.95rem;
-            width: 100%;
-            transition: background 0.2s;
-            margin-top: auto;
-        }
-
+        body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; margin: 0; padding: 0; background-color: var(--bg); color: var(--text); }
+        header { background: linear-gradient(135deg, #1e272e 0%, #2f3542 100%); color: white; text-align: center; padding: 40px 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); margin-bottom: 30px; }
+        header h1 { margin: 0; font-size: 2.2rem; letter-spacing: 1px; }
+        header p { margin: 8px 0 0 0; color: #a4b0be; font-size: 1rem; }
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 20px 40px 20px; display: grid; grid-template-columns: 1fr; gap: 30px; }
+        @media (min-width: 768px) { .container { grid-template-columns: 1.8fr 1.2fr; } }
+        .section-title { font-size: 1.4rem; margin-top: 0; margin-bottom: 20px; padding-bottom: 10px; border-bottom: 3px solid var(--primary); display: inline-block; color: #1e272e; font-weight: bold; }
+        .menu-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 20px; }
+        .menu-card { background: var(--card-bg); border-radius: 16px; overflow: hidden; box-shadow: 0 10px 20px rgba(0,0,0,0.03); transition: transform 0.3s ease, box-shadow 0.3s ease; display: flex; flex-direction: column; border: 1px solid rgba(0,0,0,0.04); }
+        .menu-card:hover { transform: translateY(-5px); box-shadow: 0 15px 30px rgba(0,0,0,0.08); }
+        .card-image-box { background: #fff5f5; height: 130px; display: flex; align-items: center; justify-content: center; font-size: 55px; }
+        .card-details { padding: 15px; display: flex; flex-direction: column; flex-grow: 1; }
+        .item-name { font-weight: 700; font-size: 1.1rem; margin-bottom: 5px; }
+        .item-price { color: var(--accent); font-weight: 700; font-size: 1.2rem; margin-bottom: 15px; }
+        .btn-add { background: var(--primary); color: white; border: none; padding: 10px; border-radius: 10px; cursor: pointer; font-weight: bold; font-size: 0.95rem; width: 100%; transition: background 0.2s; margin-top: auto; }
         .btn-add:hover { background: var(--primary-hover); }
-        
-        /* कार्ट साइड पैनल */
-        .side-panel {
-            background: var(--card-bg); 
-            padding: 25px; 
-            border-radius: 20px; 
-            box-shadow: 0 10px 30px rgba(0,0,0,0.04);
-            height: fit-content;
-            border: 1px solid rgba(0,0,0,0.04);
-            position: sticky;
-            top: 20px;
-        }
-
-        .cart-header {
-            display: flex; 
-            justify-content: space-between; 
-            align-items: center; 
-            margin-bottom: 20px;
-        }
-
+        .side-panel { background: var(--card-bg); padding: 25px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.04); height: fit-content; border: 1px solid rgba(0,0,0,0.04); position: sticky; top: 20px; }
+        .cart-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; }
         .cart-header h3 { margin: 0; font-size: 1.3rem; color: #1e272e; }
-
-        .btn-clear { 
-            background: #f1f2f6; 
-            color: #57606f; 
-            border: none; 
-            padding: 6px 12px; 
-            border-radius: 8px; 
-            cursor: pointer; 
-            font-size: 0.85rem;
-            font-weight: 600;
-        }
+        .btn-clear { background: #f1f2f6; color: #57606f; border: none; padding: 6px 12px; border-radius: 8px; cursor: pointer; font-size: 0.85rem; font-weight: 600; }
         .btn-clear:hover { background: #dfe4ea; }
-
-        .cart-item { 
-            display: flex; 
-            justify-content: space-between; 
-            margin-bottom: 12px; 
-            font-size: 0.95rem; 
-            background: #f8f9fa; 
-            padding: 12px; 
-            border-radius: 10px; 
-        }
-
+        .cart-item { display: flex; justify-content: space-between; margin-bottom: 12px; font-size: 0.95rem; background: #f8f9fa; padding: 12px; border-radius: 10px; }
         .empty-text { color: #b5b5b5; text-align: center; font-style: italic; margin: 30px 0; }
-        
-        .total-box { 
-            font-size: 1.15rem; 
-            font-weight: 700; 
-            display: flex; 
-            justify-content: space-between; 
-            margin: 20px 0; 
-            padding-top: 15px; 
-            border-top: 2px dashed #dfe4ea; 
-        }
-        
-        /* स्मार्ट UPI पेमेंट विंडो */
-        .upi-box { 
-            text-align: center; 
-            padding: 20px; 
-            border-radius: 16px; 
-            background: linear-gradient(180deg, #f3faff 0%, #ffffff 100%); 
-            margin-top: 20px; 
-            display: none; 
-            border: 1.5px dashed var(--upi-blue);
-        }
-
-        #qrcode { 
-            margin: 15px auto; 
-            display: inline-block; 
-            background: white; 
-            padding: 12px; 
-            border-radius: 12px; 
-            box-shadow: 0 10px 25px rgba(0,186,242,0.08); 
-        }
-
-        .btn-upi { 
-            background: linear-gradient(135deg, #00baf2 0%, #009cd0 100%);
-            color: white; 
-            padding: 12px 24px; 
-            border: none; 
-            border-radius: 10px; 
-            font-size: 1rem; 
-            cursor: pointer; 
-            text-decoration: none; 
-            display: inline-block; 
-            font-weight: 700; 
-            box-shadow: 0 5px 15px rgba(0, 186, 242, 0.2);
-            width: 85%;
-            transition: transform 0.2s;
-        }
+        .total-box { font-size: 1.15rem; font-weight: 700; display: flex; justify-content: space-between; margin: 20px 0; padding-top: 15px; border-top: 2px dashed #dfe4ea; }
+        .upi-box { text-align: center; padding: 20px; border-radius: 16px; background: linear-gradient(180deg, #f3faff 0%, #ffffff 100%); margin-top: 20px; display: none; border: 1.5px dashed var(--upi-blue); }
+        #qrcode { margin: 15px auto; display: inline-block; background: white; padding: 12px; border-radius: 12px; box-shadow: 0 10px 25px rgba(0,186,242,0.08); }
+        .btn-upi { background: linear-gradient(135deg, #00baf2 0%, #009cd0 100%); color: white; padding: 12px 24px; border: none; border-radius: 10px; font-size: 1rem; cursor: pointer; text-decoration: none; display: inline-block; font-weight: 700; box-shadow: 0 5px 15px rgba(0, 186, 242, 0.2); width: 85%; transition: transform 0.2s; }
         .btn-upi:hover { transform: scale(1.02); }
     </style>
 </head>
 <body>
-<!-- हेडर -->
+
 <header>
     <h1>👋 दीपक रसोई (Deepak Rasoi)</h1>
     <p>स्वादिष्ट भोजन, सीधा आपकी टेबल पर • सुरक्षित डिजिटल पेमेंट गेटवे</p>
 </header>
 
 <div class="container">
-    <!-- 1. डिजिटल मेनू -->
     <div>
         <span class="section-title">🍽️ आज का स्पेशल मेनू</span>
         <div id="menu-container" class="menu-grid"></div>
     </div>
 
-    <!-- 2. कार्ट और पेमेंट विंडो -->
     <div class="side-panel">
         <div class="cart-header">
             <h3>🛒 आपकी थाली</h3>
             <button class="btn-clear" onclick="clearCart()">थाली खाली करें</button>
         </div>
-        
         <div id="cart-container">
             <p class="empty-text">आपकी थाली अभी खाली है। मेनू से स्वादिष्ट आइटम जोड़ें।</p>
         </div>
-        
         <div class="total-box">
             <span>कुल बिल (Total Amount):</span>
             <span style="color: var(--primary);">₹<span id="cart-total">0.00</span></span>
         </div>
-
-        <!-- 3. रियल-टाइम UPI QR गेटवे -->
         <div id="upi-payment-section" class="upi-box">
             <h4 style="margin: 0 0 5px 0; color: #1e272e; font-size: 1.1rem;">स्कैन करें और तुरंत पे करें</h4>
             <p style="font-size: 0.9rem; margin: 0 0 10px 0; color: #57606f;">टोटल पेमेंट अमाउंट: <strong style="color: var(--primary); font-size: 1.1rem;">₹<span id="upi-display-amount">0.00</span></strong></p>
-            
-            <!-- यहाँ ऑटोमैटिक QR कोड लोड होगा -->
             <div id="qrcode"></div>
             <p style="font-size: 0.75rem; color: #747d8c; margin: 0 0 15px 0;">(GPay, PhonePe, Paytm या कोई भी UPI ऐप इस्तेमाल करें)</p>
-
             <div style="margin: 15px 0; font-weight: bold; color: #a4b0be; font-size: 11px; letter-spacing: 1px;">— या मोबाइल से सीधे भुगतान करें —</div>
-
-            <!-- मोबाइल यूजर्स के लिए डायरेक्ट वन-क्लिक पेमेंट बटन -->
             <a id="upi-intent-button" href="#" class="btn-upi">Pay via UPI App</a>
             <p style="margin-top: 12px; font-size: 0.75rem; color: #747d8c;">वेरीफाइड मर्चेंट आईडी: <span id="display-upi-id" style="font-weight: 600; color: #2f3542;"></span></p>
         </div>
@@ -288,15 +83,11 @@
 </div>
 
 <script>
-/* ====================================================
-   वेरीफाइड मर्चेंट कॉन्फ़िगरेशन (आपके स्क्रीनशॉट के अनुसार)
-==================================================== */
 const MY_UPI_ID = "paytm.s21aaef@pty"; 
 const RESTAURANT_NAME = "DEEPAK";      
 
 document.getElementById('display-upi-id').innerText = MY_UPI_ID;
 
-// रेस्टोरेंट आइटम्स का डेटाबेस
 const menuItems = [
     { id: 1, name: "पनीर टिक्का स्पेशल", price: 240, image: "🧀" },
     { id: 2, name: "शाही वेज बिरयानी", price: 180, image: "🍛" },
@@ -307,11 +98,9 @@ const menuItems = [
 let cart = [];
 let qrCodeGenerator = null;
 
-// स्क्रीन पर मेनू जनरेट करने का फंक्शन
 function renderMenu() {
     const menuContainer = document.getElementById('menu-container');
     menuContainer.innerHTML = '';
-    
     menuItems.forEach(item => {
         menuContainer.innerHTML += `
             <div class="menu-card">
@@ -319,80 +108,82 @@ function renderMenu() {
                 <div class="card-details">
                     <div class="item-name">${item.name}</div>
                     <div class="item-price">₹${item.price}</div>
-
-+ थाली में जोड़ें
-
-
-`;
-});
+                    <button class="btn-add" onclick="addToCart(${item.id})">+ थाली में जोड़ें</button>
+                </div>
+            </div>
+        `;
+    });
 }
-// कार्ट में आइटम जोड़ने का लॉजिक
+
 function addToCart(id) {
-const item = menuItems.find(p => p.id === id);
-const cartItem = cart.find(c => c.id === id);
-if (cartItem) {
-cartItem.quantity += 1;
-} else {
-cart.push({ ...item, quantity: 1 });
+    const item = menuItems.find(p => p.id === id);
+    const cartItem = cart.find(c => c.id === id);
+    if (cartItem) {
+        cartItem.quantity += 1;
+    } else {
+        cart.push({ ...item, quantity: 1 });
+    }
+    updateCart();
 }
-updateCart();
-}
-// कार्ट को रिसेट करना
+
 function clearCart() {
-cart = [];
-updateCart();
+    cart = [];
+    updateCart();
 }
-// कार्ट और बिल की गणना अपडेट करना
+
 function updateCart() {
-const cartContainer = document.getElementById('cart-container');
-const cartTotalElement = document.getElementById('cart-total');
-if (cart.length === 0) {
-cartContainer.innerHTML = 'आपकी थाली अभी खाली है। मेनू से आइटम जोड़ें।';
-cartTotalElement.innerText = "0.00";
-document.getElementById('upi-payment-section').style.display = "none";
-return;
+    const cartContainer = document.getElementById('cart-container');
+    const cartTotalElement = document.getElementById('cart-total');
+    if (cart.length === 0) {
+        cartContainer.innerHTML = '<p class="empty-text">आपकी थाली अभी खाली है। मेनू से आइटम जोड़ें।</p>';
+        cartTotalElement.innerText = "0.00";
+        document.getElementById('upi-payment-section').style.display = "none";
+        return;
+    }
+    cartContainer.innerHTML = '';
+    let total = 0;
+    cart.forEach(item => {
+        const itemTotal = item.price * item.quantity;
+        total += itemTotal;
+        cartContainer.innerHTML += `
+            <div class="cart-item">
+                <span><strong>${item.name}</strong> <span style="color:#747d8c;">(x${item.quantity})</span></span>
+                <strong style="color:#2f3542;">₹${itemTotal}</strong>
+            </div>
+        `;
+    });
+    cartTotalElement.innerText = total.toFixed(2);
+    refreshUPIDetails(total);
 }
-cartContainer.innerHTML = '';
-let total = 0;
-cart.forEach(item => {
-const itemTotal = item.price * item.quantity;
-total += itemTotal;
-cartContainer.innerHTML += <div class="cart-item"> <span><strong>${item.name}</strong> <span style="color:#747d8c;">(x${item.quantity})</span></span> <strong style="color:#2f3542;">₹${itemTotal}</strong> </div>;
-});
-cartTotalElement.innerText = total.toFixed(2);
-refreshUPIDetails(total);
-}
-// लाइव क्यूआर कोड और मर्चेंट स्ट्रिंग जनरेशन
+
 function refreshUPIDetails(currentTotal) {
-const upiBox = document.getElementById('upi-payment-section');
-if (currentTotal <= 0) {
-upiBox.style.display = "none";
-return;
+    const upiBox = document.getElementById('upi-payment-section');
+    if (currentTotal <= 0) {
+        upiBox.style.display = "none";
+        return;
+    }
+    upiBox.style.display = "block";
+    document.getElementById('upi-display-amount').innerText = currentTotal.toFixed(2);
+    const transactionNote = "Order_" + Date.now().toString().slice(-6);
+    const upiLink = `upi://pay?pa=${MY_UPI_ID}&pn=${encodeURIComponent(RESTAURANT_NAME)}&am=${currentTotal.toFixed(2)}&cu=INR&tn=${encodeURIComponent(transactionNote)}`;
+    document.getElementById('upi-intent-button').href = upiLink;
+    const qrContainer = document.getElementById("qrcode");
+    if (!qrCodeGenerator) {
+        qrContainer.innerHTML = ""; 
+        qrCodeGenerator = new QRCode(qrContainer, {
+            text: upiLink,
+            width: 140,
+            height: 140
+        });
+    } else {
+        qrCodeGenerator.clear();
+        qrCodeGenerator.makeCode(upiLink);
+    }
 }
-upiBox.style.display = "block";
-document.getElementById('upi-display-amount').innerText = currentTotal.toFixed(2);
-// हर बार नया ऑर्डर नंबर ट्रैक करने के लिए टाइमस्टैम्प आईडी
-const transactionNote = "Order_" + Date.now().toString().slice(-6);
-// भारत सरकार का आधिकारिक UPI डीप-लिंकिंग स्ट्रक्चर
-const upiLink = upi://pay?pa=${MY_UPI_ID}&pn=${encodeURIComponent(RESTAURANT_NAME)}&am=${currentTotal.toFixed(2)}&cu=INR&tn=${encodeURIComponent(transactionNote)};
-// मोबाइल यूजर्स के लिए डायरेक्ट पेमेंट लिंक सेट करना
-document.getElementById('upi-intent-button').href = upiLink;
-// पुराना क्यूआर कोड क्लियर करके सटीक अमाउंट का नया क्यूआर कोड रेंडर करना
-const qrContainer = document.getElementById("qrcode");
-if (!qrCodeGenerator) {
-qrContainer.innerHTML = "";
-qrCodeGenerator = new QRCode(qrContainer, {
-text: upiLink,
-width: 140,
-height: 140
-});
-} else {
-qrCodeGenerator.clear();
-qrCodeGenerator.makeCode(upiLink);
-}
-}
-// शुरुआती रन कमांड्स
+
 renderMenu();
 updateCart();
+</script>
 
-
+</body>
+</html>
