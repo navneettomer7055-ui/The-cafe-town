@@ -15,6 +15,9 @@ content="The Cafe Town Pilkhuwa - Delicious food, great taste and good vibes. Or
 
 <title>The Cafe Town | Pilkhuwa</title>
 
+<!-- QR CODE LIBRARY -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+
 <style>
 
 *{
@@ -461,6 +464,61 @@ color:white;
 background:#ddd;
 }
 
+/* QR PAYMENT */
+
+.qr-box{
+text-align:center;
+}
+
+.qr-title{
+color:#542516;
+font-size:27px;
+font-weight:bold;
+margin-bottom:8px;
+}
+
+.qr-amount{
+font-size:25px;
+font-weight:bold;
+color:#a94718;
+margin:12px 0;
+}
+
+#qrcode{
+display:flex;
+justify-content:center;
+align-items:center;
+background:white;
+padding:15px;
+border-radius:15px;
+margin:15px auto;
+width:max-content;
+box-shadow:0 4px 15px rgba(0,0,0,.10);
+}
+
+.upi-id{
+font-size:13px;
+color:#666;
+margin-top:8px;
+word-break:break-all;
+}
+
+.qr-instruction{
+font-size:14px;
+line-height:1.5;
+color:#555;
+margin-top:10px;
+}
+
+.payment-warning{
+background:#fff0d7;
+border-radius:12px;
+padding:12px;
+margin-top:15px;
+font-size:13px;
+color:#7b351d;
+}
+
 /* CONTACT */
 
 .contact{
@@ -701,54 +759,31 @@ Terms & conditions may apply.
 <div class="video-gallery">
 
 <div class="video-box">
-
 <video controls preload="metadata" playsinline>
-
 <source src="br.mp4" type="video/mp4">
-
 Your browser does not support video playback.
-
 </video>
-
 </div>
 
-
 <div class="video-box">
-
 <video controls preload="metadata" playsinline>
-
 <source src="cv.mp4" type="video/mp4">
-
 Your browser does not support video playback.
-
 </video>
-
 </div>
 
-
 <div class="video-box">
-
 <video controls preload="metadata" playsinline>
-
 <source src="ki.mp4" type="video/mp4">
-
 Your browser does not support video playback.
-
 </video>
-
 </div>
 
-
 <div class="video-box">
-
 <video controls preload="metadata" playsinline>
-
 <source src="piz.mp4" type="video/mp4">
-
 Your browser does not support video playback.
-
 </video>
-
 </div>
 
 </div>
@@ -964,7 +999,7 @@ checked
 onchange="checkPayment()"
 >
 
-Online Payment
+Online Payment - QR Scan
 
 </label>
 
@@ -1012,10 +1047,79 @@ onclick="placeOrder()"
 
 </button>
 
-
 <button
 class="close"
 onclick="closeCart()"
+>
+
+Close
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- QR PAYMENT MODAL -->
+
+<div class="modal" id="qrModal">
+
+<div class="modal-box qr-box">
+
+<div class="qr-title">
+💳 Online Payment
+</div>
+
+<p>
+Scan this QR Code using PhonePe / Google Pay / other UPI app
+</p>
+
+<div class="qr-amount">
+Amount: ₹<span id="qrAmount">0</span>
+</div>
+
+<div id="qrcode">
+</div>
+
+<div class="upi-id">
+UPI ID: paytm.s25oklx@pty
+</div>
+
+<div class="qr-instruction">
+
+📱 Open your UPI app<br>
+📷 Scan the QR Code<br>
+💰 Check the amount and merchant name<br>
+🔐 Complete the payment
+
+</div>
+
+<div class="payment-warning">
+
+<strong>Important:</strong><br>
+Please complete the payment first.
+Then press <strong>Payment Done</strong>.
+Payment is not automatically verified by this website.
+
+</div>
+
+<div class="modal-actions">
+
+<button
+class="whatsapp"
+onclick="confirmQRPayment()"
+>
+
+✅ Payment Done & Send Order
+
+</button>
+
+<button
+class="close"
+onclick="closeQR()"
 >
 
 Close
@@ -1096,14 +1200,22 @@ Delicious Food • Great Taste • Good Vibes
 
 <script>
 
+/* =========================
+   BASIC SETTINGS
+========================= */
+
 const WHATSAPP = "917452849258";
 
 const UPI_ID = "paytm.s25oklx@pty";
 
 let cart = [];
 
+let currentQROrder = null;
 
-/* MENU */
+
+/* =========================
+   MENU
+========================= */
 
 const menu = [
 
@@ -1227,13 +1339,16 @@ items:[
 ];
 
 
+/* =========================
+   RENDER MENU
+========================= */
+
 function renderMenu(){
 
 const container =
 document.getElementById("menuContainer");
 
 container.innerHTML="";
-
 
 menu.forEach(category=>{
 
@@ -1242,9 +1357,8 @@ document.createElement("div");
 
 section.className="category";
 
-section.innerHTML=
+section.innerHTML =
 "<h3>"+category.category+"</h3>";
-
 
 category.items.forEach(item=>{
 
@@ -1254,12 +1368,10 @@ const price1=item[1];
 
 const price2=item[2];
 
-
 const row =
 document.createElement("div");
 
 row.className="item";
-
 
 if(price2){
 
@@ -1282,7 +1394,6 @@ onclick="addToCart('${name} (Small)',${price1})">
 ➕ Small ₹${price1}
 
 </button>
-
 
 <button
 class="size-btn"
@@ -1314,7 +1425,6 @@ ${name}
 
 </div>
 
-
 <div class="item-buttons">
 
 <button
@@ -1324,7 +1434,6 @@ onclick="addToCart('${name}',${price1})">
 ➕ Add
 
 </button>
-
 
 <button
 class="pay-btn"
@@ -1340,11 +1449,9 @@ onclick="payNow('${name}',${price1})">
 
 }
 
-
 section.appendChild(row);
 
 });
-
 
 container.appendChild(section);
 
@@ -1353,11 +1460,14 @@ container.appendChild(section);
 }
 
 
+/* =========================
+   CART
+========================= */
+
 function addToCart(name,price){
 
 const existing =
 cart.find(x=>x.name===name);
-
 
 if(existing){
 
@@ -1377,7 +1487,6 @@ qty:1
 
 }
 
-
 updateCart();
 
 }
@@ -1387,13 +1496,11 @@ function changeQty(index,value){
 
 cart[index].qty += value;
 
-
 if(cart[index].qty<=0){
 
 cart.splice(index,1);
 
 }
-
 
 updateCart();
 
@@ -1406,7 +1513,6 @@ let count=0;
 
 let total=0;
 
-
 cart.forEach(item=>{
 
 count += item.qty;
@@ -1415,23 +1521,17 @@ total += item.price*item.qty;
 
 });
 
-
 document.getElementById("cartCount")
 .innerText=count;
-
 
 document.getElementById("cartTotal")
 .innerText="₹"+total;
 
-
 document.getElementById("modalTotal")
 .innerText=total;
 
-
 document.getElementById("cartBar")
-.style.display=
-count ? "flex" : "none";
-
+.style.display=count ? "flex" : "none";
 
 renderCart();
 
@@ -1443,19 +1543,16 @@ function renderCart(){
 const box =
 document.getElementById("cartItems");
 
-
 if(cart.length===0){
 
-box.innerHTML=
+box.innerHTML =
 "<p>Your cart is empty.</p>";
 
 return;
 
 }
 
-
 box.innerHTML="";
-
 
 cart.forEach((item,index)=>{
 
@@ -1475,14 +1572,12 @@ ${item.name}
 
 </div>
 
-
 <div class="qty">
 
 <button
 onclick="changeQty(${index},-1)">
 −
 </button>
-
 
 <button
 onclick="changeQty(${index},1)">
@@ -1499,6 +1594,10 @@ onclick="changeQty(${index},1)">
 
 }
 
+
+/* =========================
+   CART MODAL
+========================= */
 
 function openCart(){
 
@@ -1526,7 +1625,9 @@ document.getElementById("cartModal")
 }
 
 
-/* LOCATION */
+/* =========================
+   LOCATION
+========================= */
 
 function checkLocation(){
 
@@ -1540,7 +1641,6 @@ document.querySelector(
 
 const codNote =
 document.getElementById("codNote");
-
 
 if(location === "Rama Hospital"){
 
@@ -1568,7 +1668,9 @@ online.checked=true;
 }
 
 
-/* PAYMENT */
+/* =========================
+   PAYMENT SELECTION
+========================= */
 
 function checkPayment(){
 
@@ -1579,7 +1681,6 @@ const payment =
 document.querySelector(
 'input[name="paymentMethod"]:checked'
 ).value;
-
 
 if(payment === "Cash on Delivery" &&
 location !== "Rama Hospital"){
@@ -1597,7 +1698,9 @@ document.querySelector(
 }
 
 
-/* PLACE ORDER */
+/* =========================
+   PLACE ORDER
+========================= */
 
 function placeOrder(){
 
@@ -1609,26 +1712,21 @@ return;
 
 }
 
-
 const name =
 document.getElementById("customerName")
 .value.trim();
-
 
 const phone =
 document.getElementById("customerPhone")
 .value.trim();
 
-
 const location =
 document.getElementById("deliveryLocation")
 .value;
 
-
 const address =
 document.getElementById("customerAddress")
 .value.trim();
-
 
 const payment =
 document.querySelector(
@@ -1649,7 +1747,9 @@ return;
 
 if(!/^[0-9]{10}$/.test(phone)){
 
-alert("Please enter a valid 10-digit mobile number.");
+alert(
+"Please enter a valid 10-digit mobile number."
+);
 
 return;
 
@@ -1658,7 +1758,9 @@ return;
 
 if(!location){
 
-alert("Please select your delivery location.");
+alert(
+"Please select your delivery location."
+);
 
 return;
 
@@ -1667,7 +1769,9 @@ return;
 
 if(!address){
 
-alert("Please enter your delivery address.");
+alert(
+"Please enter your delivery address."
+);
 
 return;
 
@@ -1710,7 +1814,9 @@ address
 }
 
 
-/* ONLINE PAYMENT */
+/* =========================
+   QR ONLINE PAYMENT
+========================= */
 
 function payForCart(
 name,
@@ -1733,6 +1839,10 @@ const orderDetails =
 name;
 
 
+/*
+UPI PAYMENT LINK
+*/
+
 const upiUrl =
 "upi://pay?pa="+
 encodeURIComponent(UPI_ID)+
@@ -1745,37 +1855,225 @@ total+
 encodeURIComponent(orderDetails);
 
 
-window.location.href=upiUrl;
+/*
+SAVE ORDER DETAILS
+*/
+
+currentQROrder = {
+
+name:name,
+
+phone:phone,
+
+location:location,
+
+address:address,
+
+total:total
+
+};
 
 
 /*
-
-Important:
-
-UPI app payment alone cannot securely prove
-payment to this static website.
-
-Customer should send the order through WhatsApp
-after completing payment.
-
+CLEAR OLD QR
 */
 
-setTimeout(function(){
+const qrBox =
+document.getElementById("qrcode");
 
-sendWhatsApp(
-"Online Payment",
-name,
-phone,
-location,
-address
+qrBox.innerHTML="";
+
+
+/*
+CREATE NEW QR
+*/
+
+if(typeof QRCode === "undefined"){
+
+alert(
+"QR Code library load nahi hui. Internet connection check karein."
 );
 
-},2000);
+return;
 
 }
 
 
-/* WHATSAPP */
+new QRCode(qrBox,{
+
+text:upiUrl,
+
+width:260,
+
+height:260,
+
+correctLevel:QRCode.CorrectLevel.M
+
+});
+
+
+/*
+SHOW AMOUNT
+*/
+
+document.getElementById("qrAmount")
+.innerText=total;
+
+
+/*
+OPEN QR MODAL
+*/
+
+document.getElementById("qrModal")
+.style.display="flex";
+
+}
+
+
+/* =========================
+   CLOSE QR
+========================= */
+
+function closeQR(){
+
+document.getElementById("qrModal")
+.style.display="none";
+
+currentQROrder=null;
+
+}
+
+
+/* =========================
+   PAYMENT DONE
+========================= */
+
+function confirmQRPayment(){
+
+if(!currentQROrder){
+
+alert(
+"Order information not found."
+);
+
+return;
+
+}
+
+
+const order =
+currentQROrder;
+
+
+/*
+SEND ORDER TO WHATSAPP
+*/
+
+sendWhatsApp(
+"Online Payment",
+order.name,
+order.phone,
+order.location,
+order.address
+);
+
+
+/*
+CLOSE QR
+*/
+
+closeQR();
+
+}
+
+
+/* =========================
+   DIRECT PAY BUTTON
+========================= */
+
+function payNow(name,price){
+
+const orderDetails =
+"The Cafe Town - " + name;
+
+
+/*
+CREATE UPI LINK
+*/
+
+const upiUrl =
+"upi://pay?pa="+
+encodeURIComponent(UPI_ID)+
+"&pn="+
+encodeURIComponent("The Cafe Town")+
+"&am="+
+price+
+"&cu=INR"+
+"&tn="+
+encodeURIComponent(orderDetails);
+
+
+/*
+OPEN QR MODAL
+*/
+
+const qrBox =
+document.getElementById("qrcode");
+
+qrBox.innerHTML="";
+
+
+if(typeof QRCode === "undefined"){
+
+alert(
+"QR Code library load nahi hui. Internet connection check karein."
+);
+
+return;
+
+}
+
+
+new QRCode(qrBox,{
+
+text:upiUrl,
+
+width:260,
+
+height:260,
+
+correctLevel:QRCode.CorrectLevel.M
+
+});
+
+
+document.getElementById("qrAmount")
+.innerText=price;
+
+
+/*
+DIRECT PAY ORDER DATA
+
+Customer details are not available
+from direct menu Pay button.
+*/
+
+currentQROrder=null;
+
+
+/*
+SHOW QR
+*/
+
+document.getElementById("qrModal")
+.style.display="flex";
+
+}
+
+
+/* =========================
+   WHATSAPP
+========================= */
 
 function sendWhatsApp(
 payment,
@@ -1791,13 +2089,10 @@ let message =
 message +=
 "🍽️ NEW ORDER\n\n";
 
-
 message +=
 "Order Items:\n";
 
-
 let total=0;
-
 
 cart.forEach(item=>{
 
@@ -1805,7 +2100,6 @@ const amount =
 item.price * item.qty;
 
 total += amount;
-
 
 message +=
 "• "+item.name+
@@ -1818,22 +2112,17 @@ message +=
 message +=
 "\n💰 Total: ₹"+total;
 
-
 message +=
 "\n\n👤 Name: "+name;
-
 
 message +=
 "\n📞 Mobile: "+phone;
 
-
 message +=
 "\n📍 Location: "+location;
 
-
 message +=
 "\n🏠 Address: "+address;
-
 
 message +=
 "\n💳 Payment: "+payment;
@@ -1859,37 +2148,25 @@ WHATSAPP+
 encodeURIComponent(message);
 
 
+/*
+OPEN WHATSAPP
+*/
+
 window.open(url,"_blank");
 
 }
 
 
-/* DIRECT PAY BUTTON */
+/* =========================
+   BASIC ANTI-COPY PROTECTION
+========================= */
 
-function payNow(name,price){
-
-const upiUrl =
-"upi://pay?pa="+
-encodeURIComponent(UPI_ID)+
-"&pn="+
-encodeURIComponent("The Cafe Town")+
-"&am="+
-price+
-"&cu=INR"+
-"&tn="+
-encodeURIComponent(name);
-
-
-window.location.href=upiUrl;
-
-}
-
-
-/* BASIC ANTI-COPY PROTECTION */
 
 /* Right click */
 
-document.addEventListener("contextmenu",function(e){
+document.addEventListener(
+"contextmenu",
+function(e){
 
 e.preventDefault();
 
@@ -1898,7 +2175,9 @@ e.preventDefault();
 
 /* Text selection */
 
-document.addEventListener("selectstart",function(e){
+document.addEventListener(
+"selectstart",
+function(e){
 
 if(
 e.target.tagName !== "INPUT" &&
@@ -1914,7 +2193,9 @@ e.preventDefault();
 
 /* Drag protection */
 
-document.addEventListener("dragstart",function(e){
+document.addEventListener(
+"dragstart",
+function(e){
 
 e.preventDefault();
 
@@ -1923,13 +2204,21 @@ e.preventDefault();
 
 /* Common copy/source shortcuts */
 
-document.addEventListener("keydown",function(e){
+document.addEventListener(
+"keydown",
+function(e){
 
-const key=e.key.toLowerCase();
+const key =
+e.key.toLowerCase();
 
 if(
-(e.ctrlKey && ["u","s","c"].includes(key)) ||
-(e.ctrlKey && e.shiftKey && ["i","j","c"].includes(key)) ||
+(e.ctrlKey &&
+["u","s","c"].includes(key)) ||
+
+(e.ctrlKey &&
+e.shiftKey &&
+["i","j","c"].includes(key)) ||
+
 e.key === "F12"
 ){
 
@@ -1940,7 +2229,9 @@ e.preventDefault();
 });
 
 
-/* START */
+/* =========================
+   START
+========================= */
 
 renderMenu();
 
