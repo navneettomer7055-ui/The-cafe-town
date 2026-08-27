@@ -9,7 +9,7 @@ content="bRfOK-Ro06qe3K-JPiKjO3mRjdfqmC-kBP45Ulfhewo">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <meta name="description"
-content="The Cafe Town Pilkhuwa - Delicious food, great taste and good vibes. Order online near Rama Hospital, Pilkhuwa.">
+content="The Cafe Town Pilkhuwa - Delicious food, great taste and good vibes.">
 
 <meta name="referrer" content="strict-origin-when-cross-origin">
 
@@ -36,8 +36,6 @@ color:#333;
 -webkit-user-select:none;
 user-select:none;
 }
-
-/* HERO */
 
 .hero{
 min-height:90vh;
@@ -77,13 +75,11 @@ animation-delay:2s;
 .hero-content{
 position:relative;
 z-index:2;
-animation:fadeUp 1.2s ease;
 }
 
 .logo{
 font-size:58px;
 margin-bottom:10px;
-animation:bounce 2s infinite;
 }
 
 .hero h1{
@@ -110,15 +106,7 @@ text-decoration:none;
 font-weight:bold;
 color:white;
 background:#e39a43;
-transition:.3s;
 }
-
-.btn:hover{
-transform:scale(1.08);
-background:#f2b35f;
-}
-
-/* SECTIONS */
 
 section{
 max-width:1000px;
@@ -133,22 +121,13 @@ font-size:30px;
 margin-bottom:30px;
 }
 
-/* CARD */
-
 .card{
 background:white;
 padding:25px;
 border-radius:18px;
 margin:15px 0;
 box-shadow:0 5px 18px rgba(0,0,0,.08);
-transition:.3s;
 }
-
-.card:hover{
-transform:translateY(-5px);
-}
-
-/* OFFER */
 
 .offer{
 background:linear-gradient(135deg,#fff0d7,#ffe0b2);
@@ -156,20 +135,12 @@ border:2px solid #e29a43;
 border-radius:20px;
 padding:30px 20px;
 text-align:center;
-box-shadow:0 8px 25px rgba(0,0,0,.1);
-animation:pulse 3s infinite;
-}
-
-.offer h2{
-margin-bottom:12px;
 }
 
 .offer strong{
 font-size:24px;
 color:#a94718;
 }
-
-/* VIDEOS */
 
 .video-gallery{
 display:grid;
@@ -183,11 +154,6 @@ background:white;
 padding:12px;
 border-radius:18px;
 box-shadow:0 5px 18px rgba(0,0,0,.10);
-transition:.3s;
-}
-
-.video-box:hover{
-transform:translateY(-5px);
 }
 
 .video-box video{
@@ -195,8 +161,6 @@ width:100%;
 display:block;
 border-radius:12px;
 }
-
-/* MENU */
 
 .category{
 margin-bottom:30px;
@@ -217,12 +181,7 @@ gap:10px;
 padding:14px 15px;
 background:white;
 border-bottom:1px solid #eee;
-transition:.25s;
 flex-wrap:wrap;
-}
-
-.item:hover{
-background:#fff2df;
 }
 
 .price{
@@ -259,8 +218,6 @@ background:#673ab7;
 background:#e39a43;
 }
 
-/* REVIEWS */
-
 .reviews{
 display:grid;
 grid-template-columns:repeat(3,1fr);
@@ -272,21 +229,11 @@ background:white;
 padding:22px;
 border-radius:18px;
 box-shadow:0 5px 18px rgba(0,0,0,.08);
-transition:.3s;
-}
-
-.review-card:hover{
-transform:translateY(-5px);
 }
 
 .stars{
 font-size:22px;
-letter-spacing:2px;
 margin-bottom:10px;
-}
-
-.review-card p{
-line-height:1.6;
 }
 
 .review-name{
@@ -304,8 +251,6 @@ border-radius:10px;
 background:#fff0d7;
 color:#7b351d;
 }
-
-/* CART */
 
 .cart-bar{
 position:fixed;
@@ -338,8 +283,6 @@ font-weight:bold;
 cursor:pointer;
 }
 
-/* MODAL */
-
 .modal{
 display:none;
 position:fixed;
@@ -353,8 +296,8 @@ padding:15px;
 
 .modal-box{
 background:#fff8f0;
-width:min(500px,100%);
-max-height:90vh;
+width:min(550px,100%);
+max-height:92vh;
 overflow:auto;
 border-radius:20px;
 padding:22px;
@@ -386,7 +329,8 @@ cursor:pointer;
 }
 
 .input,
-.select{
+.select,
+.admin-input{
 width:100%;
 padding:12px;
 margin:7px 0;
@@ -406,21 +350,11 @@ border-radius:12px;
 border:1px solid #eee;
 }
 
-.payment-title{
-font-weight:bold;
-margin-bottom:10px;
-}
-
 .payment-option{
 display:flex;
 align-items:center;
 gap:8px;
 padding:9px 0;
-}
-
-.payment-option input{
-width:18px;
-height:18px;
 }
 
 .cod-note{
@@ -466,13 +400,14 @@ background:#673ab7;
 color:white;
 text-decoration:none;
 display:block;
+padding:13px;
+border-radius:25px;
+font-weight:bold;
 }
 
 .close{
 background:#ddd;
 }
-
-/* QR PAYMENT */
 
 .qr-box{
 text-align:center;
@@ -501,13 +436,11 @@ padding:15px;
 border-radius:15px;
 margin:15px auto;
 width:max-content;
-box-shadow:0 4px 15px rgba(0,0,0,.10);
 }
 
 .upi-id{
 font-size:13px;
 color:#666;
-margin-top:8px;
 word-break:break-all;
 }
 
@@ -527,12 +460,6 @@ font-size:13px;
 color:#7b351d;
 }
 
-/* CONTACT */
-
-.contact{
-text-align:center;
-}
-
 .phone{
 display:inline-block;
 margin-top:15px;
@@ -542,14 +469,7 @@ background:#2e8b57;
 color:white;
 text-decoration:none;
 font-weight:bold;
-transition:.3s;
 }
-
-.phone:hover{
-transform:scale(1.08);
-}
-
-/* FOOTER */
 
 footer{
 background:#35170e;
@@ -558,59 +478,194 @@ text-align:center;
 padding:30px 15px;
 }
 
-/* ANIMATION */
+/* ADMIN */
 
-@keyframes fadeUp{
-
-from{
-opacity:0;
-transform:translateY(40px);
+.admin-open{
+position:fixed;
+right:8px;
+bottom:8px;
+width:22px;
+height:22px;
+opacity:.04;
+z-index:2000;
+border:0;
+background:#000;
+border-radius:50%;
 }
 
-to{
-opacity:1;
-transform:translateY(0);
+.admin-dashboard{
+display:none;
+position:fixed;
+inset:0;
+z-index:5000;
+background:#f5f5f5;
+overflow:auto;
+padding:15px;
+}
+
+.admin-wrap{
+max-width:1100px;
+margin:auto;
+}
+
+.admin-header{
+background:#542516;
+color:white;
+padding:18px;
+border-radius:15px;
+margin-bottom:15px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+gap:10px;
+}
+
+.admin-header button{
+border:0;
+padding:9px 14px;
+border-radius:20px;
+cursor:pointer;
+}
+
+.admin-grid{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:12px;
+margin-bottom:15px;
+}
+
+.admin-stat{
+background:white;
+padding:18px;
+border-radius:14px;
+box-shadow:0 3px 10px rgba(0,0,0,.08);
+}
+
+.admin-stat h4{
+color:#777;
+font-size:13px;
+}
+
+.admin-stat strong{
+display:block;
+font-size:25px;
+margin-top:8px;
+color:#542516;
+}
+
+.admin-card{
+background:white;
+padding:18px;
+border-radius:15px;
+margin-bottom:15px;
+}
+
+.admin-card h3{
+color:#542516;
+margin-bottom:12px;
+}
+
+.admin-buttons{
+display:flex;
+gap:8px;
+flex-wrap:wrap;
+}
+
+.admin-buttons button{
+border:0;
+padding:11px 15px;
+border-radius:20px;
+font-weight:bold;
+cursor:pointer;
+}
+
+.online{
+background:#dff7e7;
+}
+
+.offline{
+background:#ffe7c2;
+}
+
+.collection{
+background:#e6ddff;
+}
+
+.danger{
+background:#ffd9d9;
+}
+
+.history-row{
+padding:12px 0;
+border-bottom:1px solid #eee;
+}
+
+.history-row small{
+color:#777;
+}
+
+.history-actions button{
+border:0;
+padding:6px 9px;
+border-radius:12px;
+cursor:pointer;
+margin-top:5px;
+}
+
+.calc-display{
+width:100%;
+padding:15px;
+font-size:24px;
+text-align:right;
+border:1px solid #ddd;
+border-radius:10px;
+margin-bottom:10px;
+background:#fafafa;
+}
+
+.calc-grid{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:7px;
+}
+
+.calc-grid button{
+padding:15px;
+border:0;
+border-radius:10px;
+background:#eee;
+font-size:18px;
+font-weight:bold;
+cursor:pointer;
+}
+
+.calc-grid button:hover{
+background:#ddd;
+}
+
+.month-summary{
+padding:12px;
+background:#fff0d7;
+border-radius:10px;
+margin-bottom:10px;
+font-weight:bold;
+}
+
+@media(max-width:700px){
+
+.admin-grid{
+grid-template-columns:repeat(2,1fr);
+}
+
+.video-gallery{
+grid-template-columns:1fr;
+}
+
+.reviews{
+grid-template-columns:1fr;
 }
 
 }
-
-@keyframes float{
-
-0%,100%{
-transform:translateY(0);
-}
-
-50%{
-transform:translateY(-30px);
-}
-
-}
-
-@keyframes bounce{
-
-0%,100%{
-transform:translateY(0);
-}
-
-50%{
-transform:translateY(-8px);
-}
-
-}
-
-@keyframes pulse{
-
-0%,100%{
-transform:scale(1);
-}
-
-50%{
-transform:scale(1.02);
-}
-
-}
-
-/* MOBILE */
 
 @media(max-width:600px){
 
@@ -630,92 +685,72 @@ h2{
 font-size:26px;
 }
 
-.video-gallery{
-grid-template-columns:1fr;
-}
-
-.reviews{
-grid-template-columns:1fr;
-}
-
-.item{
-font-size:14px;
-}
-
-.item-buttons{
-width:100%;
-}
-
 .modal-actions{
 flex-direction:column;
+}
+
+.admin-header{
+flex-direction:column;
+align-items:stretch;
+}
+
+}
+
+@keyframes float{
+
+0%,100%{
+transform:translateY(0);
+}
+
+50%{
+transform:translateY(-30px);
 }
 
 }
 
 </style>
-
 </head>
 
 <body>
-
-<!-- HERO -->
 
 <header class="hero">
 
 <div class="hero-content">
 
-<div class="logo">
-🍕
-</div>
+<div class="logo">🍕</div>
 
-<h1>
-The Cafe Town
-</h1>
+<h1>The Cafe Town</h1>
 
-<p>
-Delicious Food • Great Taste • Good Vibes
-</p>
+<p>Delicious Food • Great Taste • Good Vibes</p>
 
 <div class="tagline">
 Take a Bite, Make Your Future Bright!
 </div>
 
-<a href="#menu" class="btn">
-🍽️ View Menu
-</a>
+<a href="#menu" class="btn">🍽️ View Menu</a>
 
-<a href="tel:7452849258" class="btn">
-📞 Call Now
-</a>
+<a href="tel:7452849258" class="btn">📞 Call Now</a>
 
 </div>
 
 </header>
 
 
-<!-- ABOUT -->
-
 <section>
 
-<h2>
-❤️ Welcome to The Cafe Town
-</h2>
+<h2>❤️ Welcome to The Cafe Town</h2>
 
 <div class="card" style="text-align:center;">
 
 <p>
-
 Welcome to <strong>The Cafe Town</strong> —
 a friendly place to enjoy delicious food,
 refreshing drinks and great moments
 with your family and friends.
-
 </p>
 
 <p style="margin-top:15px;">
-
 📍 Rama Hospital, Near Hindalpur Marg, Pilkhuwa
-
 </p>
 
 </div>
@@ -723,24 +758,16 @@ with your family and friends.
 </section>
 
 
-<!-- OFFER -->
-
 <section>
 
 <div class="offer">
 
-<h2>
-🛵 Special Delivery Offer
-</h2>
+<h2>🛵 Special Delivery Offer</h2>
 
-<p>
-Order for <strong>₹500 or more</strong>
-</p>
+<p>Order for <strong>₹500 or more</strong></p>
 
 <p style="margin-top:10px;font-size:19px;">
-
 🎉 <strong>5 KM Delivery FREE!</strong>
-
 </p>
 
 <p style="margin-top:10px;">
@@ -756,64 +783,49 @@ Terms & conditions may apply.
 </section>
 
 
-<!-- MENU -->
-
 <section id="menu">
 
-<h2>
-🎥 Menu Video Gallery
-</h2>
+<h2>🎥 Menu Video Gallery</h2>
 
 <div class="video-gallery">
 
 <div class="video-box">
 <video controls preload="metadata" playsinline>
 <source src="br.mp4" type="video/mp4">
-Your browser does not support video playback.
 </video>
 </div>
 
 <div class="video-box">
 <video controls preload="metadata" playsinline>
 <source src="cv.mp4" type="video/mp4">
-Your browser does not support video playback.
 </video>
 </div>
 
 <div class="video-box">
 <video controls preload="metadata" playsinline>
 <source src="ki.mp4" type="video/mp4">
-Your browser does not support video playback.
 </video>
 </div>
 
 <div class="video-box">
 <video controls preload="metadata" playsinline>
 <source src="piz.mp4" type="video/mp4">
-Your browser does not support video playback.
 </video>
 </div>
 
 </div>
 
 
-<h2>
-🍽️ Our Menu & Online Order
-</h2>
+<h2>🍽️ Our Menu & Online Order</h2>
 
-<div id="menuContainer">
-</div>
+<div id="menuContainer"></div>
 
 </section>
 
 
-<!-- REVIEWS -->
-
 <section id="reviews">
 
-<h2>
-⭐ Customer Reviews
-</h2>
+<h2>⭐ Customer Reviews</h2>
 
 <p style="text-align:center;margin-bottom:25px;color:#666;">
 These are sample review placeholders. Replace them with genuine customer feedback.
@@ -822,65 +834,24 @@ These are sample review placeholders. Replace them with genuine customer feedbac
 <div class="reviews">
 
 <div class="review-card">
-
-<div class="stars">
-⭐⭐⭐⭐⭐
+<div class="stars">⭐⭐⭐⭐⭐</div>
+<p>“Food aur service bahut achhi lagi. Family ke saath achha experience raha.”</p>
+<div class="review-name">Sample Customer</div>
+<span class="demo-label">SAMPLE REVIEW</span>
 </div>
-
-<p>
-“Food aur service bahut achhi lagi. Family ke saath achha experience raha.”
-</p>
-
-<div class="review-name">
-Sample Customer
-</div>
-
-<span class="demo-label">
-SAMPLE REVIEW
-</span>
-
-</div>
-
 
 <div class="review-card">
-
-<div class="stars">
-⭐⭐⭐⭐⭐
+<div class="stars">⭐⭐⭐⭐⭐</div>
+<p>“Cafe ka atmosphere achha hai aur food tasty laga.”</p>
+<div class="review-name">Sample Customer</div>
+<span class="demo-label">SAMPLE REVIEW</span>
 </div>
-
-<p>
-“Cafe ka atmosphere achha hai aur food tasty laga. Definitely try karna chahiye.”
-</p>
-
-<div class="review-name">
-Sample Customer
-</div>
-
-<span class="demo-label">
-SAMPLE REVIEW
-</span>
-
-</div>
-
 
 <div class="review-card">
-
-<div class="stars">
-⭐⭐⭐⭐⭐
-</div>
-
-<p>
-“Menu mein kaafi options hain aur ordering process simple hai.”
-</p>
-
-<div class="review-name">
-Sample Customer
-</div>
-
-<span class="demo-label">
-SAMPLE REVIEW
-</span>
-
+<div class="stars">⭐⭐⭐⭐⭐</div>
+<p>“Menu mein kaafi options hain aur ordering process simple hai.”</p>
+<div class="review-name">Sample Customer</div>
+<span class="demo-label">SAMPLE REVIEW</span>
 </div>
 
 </div>
@@ -888,76 +859,51 @@ SAMPLE REVIEW
 </section>
 
 
-<!-- CART BAR -->
-
 <div class="cart-bar" id="cartBar">
 
 🛒
 
-<span class="cart-count" id="cartCount">
-0
-</span>
+<span class="cart-count" id="cartCount">0</span>
 
-<span id="cartTotal">
-₹0
-</span>
+<span id="cartTotal">₹0</span>
 
-<button onclick="openCart()">
-View Cart
-</button>
+<button onclick="openCart()">View Cart</button>
 
 </div>
 
 
-<!-- CART MODAL -->
+<!-- CART -->
 
 <div class="modal" id="cartModal">
 
 <div class="modal-box">
 
-<h2>
-🛒 Your Order
-</h2>
+<h2>🛒 Your Order</h2>
 
-<div id="cartItems">
-</div>
+<div id="cartItems"></div>
 
 <h3 style="text-align:right;margin-top:15px;">
-
-Total:
-₹<span id="modalTotal">0</span>
-
+Total: ₹<span id="modalTotal">0</span>
 </h3>
 
-
-<input
-id="customerName"
+<input id="customerName"
 class="input"
-placeholder="Your Name"
-required
->
+placeholder="Your Name">
 
-
-<input
-id="customerPhone"
+<input id="customerPhone"
 class="input"
 placeholder="Mobile Number"
 type="tel"
 inputmode="numeric"
-maxlength="10"
-required
->
-
+maxlength="10">
 
 <label style="font-weight:bold;">
 📍 Delivery Location
 </label>
 
-<select
-id="deliveryLocation"
+<select id="deliveryLocation"
 class="select"
-onchange="checkLocation()"
->
+onchange="checkLocation()">
 
 <option value="">
 -- Select Delivery Location --
@@ -977,23 +923,15 @@ onchange="checkLocation()"
 COD is available only inside Rama Hospital.
 </p>
 
-
-<textarea
-id="customerAddress"
+<textarea id="customerAddress"
 class="input"
 rows="3"
-placeholder="Delivery Address / Room / Location Details"
-required
-></textarea>
+placeholder="Delivery Address / Room / Location Details"></textarea>
 
-
-<!-- PAYMENT -->
 
 <div class="payment-box">
 
-<div class="payment-title">
-💳 Payment Method
-</div>
+<strong>💳 Payment Method</strong>
 
 <label class="payment-option">
 
@@ -1002,40 +940,27 @@ type="radio"
 name="paymentMethod"
 value="Online Payment"
 checked
-onchange="checkPayment()"
->
+onchange="checkPayment()">
 
 Online Payment - QR Scan
 
 </label>
 
-
-<label
-class="payment-option"
-id="codOption"
->
+<label class="payment-option">
 
 <input
 type="radio"
 name="paymentMethod"
 value="Cash on Delivery"
-onchange="checkPayment()"
->
+onchange="checkPayment()">
 
 Cash on Delivery
 
 </label>
 
+<div class="cod-note" id="codNote">
 
-<div
-class="cod-note"
-id="codNote"
->
-
-🏥 <strong>COD Available Only at Rama Hospital</strong><br>
-
-Cash payment will be accepted only when the
-delivery location is inside Rama Hospital.
+🏥 <strong>COD Available Only at Rama Hospital</strong>
 
 </div>
 
@@ -1044,19 +969,15 @@ delivery location is inside Rama Hospital.
 
 <div class="modal-actions">
 
-<button
-class="whatsapp"
-onclick="placeOrder()"
->
+<button class="whatsapp"
+onclick="placeOrder()">
 
 📲 Continue Order
 
 </button>
 
-<button
-class="close"
-onclick="closeCart()"
->
+<button class="close"
+onclick="closeCart()">
 
 Close
 
@@ -1069,7 +990,7 @@ Close
 </div>
 
 
-<!-- QR PAYMENT MODAL -->
+<!-- QR -->
 
 <div class="modal" id="qrModal">
 
@@ -1087,8 +1008,7 @@ Scan this QR Code using PhonePe / Google Pay / other UPI app
 Amount: ₹<span id="qrAmount">0</span>
 </div>
 
-<div id="qrcode">
-</div>
+<div id="qrcode"></div>
 
 <div class="upi-id">
 UPI ID: paytm.s25oklx@pty
@@ -1098,55 +1018,38 @@ UPI ID: paytm.s25oklx@pty
 
 📱 Open your UPI app<br>
 📷 Scan the QR Code<br>
-💰 Check the amount and merchant name<br>
-🔐 Complete the payment
+💰 Check amount and merchant name<br>
+🔐 Complete payment
 
 </div>
 
-<!-- DIRECT UPI BUTTON -->
-
-<a
-id="upiPayButton"
+<a id="upiPayButton"
 class="upi-button"
-href="#"
-style="margin-top:15px;"
->
+href="#">
 
 📱 Open UPI App & Pay
 
 </a>
 
-
 <div class="payment-warning">
 
 <strong>Important:</strong><br>
-
-Please complete the payment first.
-
-Then press
-<strong>I Have Paid — Send Order</strong>.
-
-This website does not automatically verify
-the bank transaction.
+Payment is not automatically verified by this website.
+Please pay first and then press the button below.
 
 </div>
 
-
 <div class="modal-actions">
 
-<button
-class="whatsapp"
-onclick="confirmQRPayment()"
->
+<button class="whatsapp"
+onclick="confirmQRPayment()">
 
 ✅ I Have Paid — Send Order
 
 </button>
 
-<button
-class="close"
-onclick="closeQR()"
->
+<button class="close"
+onclick="closeQR()">
 
 Close
 
@@ -1163,41 +1066,29 @@ Close
 
 <section class="contact">
 
-<h2>
-📞 Contact Us
-</h2>
+<h2>📞 Contact Us</h2>
 
 <div class="card">
 
-<p>
-<strong>
-The Cafe Town
-</strong>
-</p>
+<p><strong>The Cafe Town</strong></p>
 
 <p style="margin-top:8px;">
 Deepak Tomar
 </p>
 
-<a
-class="phone"
-href="tel:7452849258"
->
+<a class="phone"
+href="tel:7452849258">
 
 📲 74528 49258
 
 </a>
 
 <p style="margin-top:18px;">
-
 📍 Rama Hospital, Near Hindalpur Marg, Pilkhuwa
-
 </p>
 
 <p style="margin-top:18px;font-weight:bold;">
-
 Take a Bite, Make Your Future Bright! ❤️
-
 </p>
 
 </div>
@@ -1205,13 +1096,9 @@ Take a Bite, Make Your Future Bright! ❤️
 </section>
 
 
-<!-- FOOTER -->
-
 <footer>
 
-<p>
-<strong>The Cafe Town</strong>
-</p>
+<p><strong>The Cafe Town</strong></p>
 
 <p style="margin-top:8px;">
 Delicious Food • Great Taste • Good Vibes
@@ -1224,15 +1111,269 @@ Delicious Food • Great Taste • Good Vibes
 </footer>
 
 
+<!-- INVISIBLE ADMIN TRIGGER -->
+
+<button
+class="admin-open"
+onclick="openAdminLogin()"
+aria-label="Admin">
+</button>
+
+
+<!-- ADMIN LOGIN -->
+
+<div class="modal" id="adminLogin">
+
+<div class="modal-box">
+
+<h2>🔐 Admin Login</h2>
+
+<input
+type="password"
+id="adminPassword"
+class="admin-input"
+placeholder="Admin Password">
+
+<div class="modal-actions">
+
+<button
+class="whatsapp"
+onclick="adminLogin()">
+
+Login
+
+</button>
+
+<button
+class="close"
+onclick="closeAdminLogin()">
+
+Close
+
+</button>
+
+</div>
+
+<p style="font-size:12px;color:#777;margin-top:12px;">
+Demo/local admin protection only. Change the password in the JavaScript.
+</p>
+
+</div>
+
+</div>
+
+
+<!-- ADMIN DASHBOARD -->
+
+<div id="adminDashboard" class="admin-dashboard">
+
+<div class="admin-wrap">
+
+<div class="admin-header">
+
+<div>
+<h2 style="color:white;margin:0;">
+🔐 The Cafe Town Admin
+</h2>
+
+<small>
+Private Sales & Collection
+</small>
+</div>
+
+<button onclick="closeAdmin()">
+✕ Close
+</button>
+
+</div>
+
+
+<!-- STATS -->
+
+<div class="admin-grid">
+
+<div class="admin-stat">
+<h4>🟢 Online Sales</h4>
+<strong id="onlineTotal">₹0</strong>
+</div>
+
+<div class="admin-stat">
+<h4>🟠 Offline Sales</h4>
+<strong id="offlineTotal">₹0</strong>
+</div>
+
+<div class="admin-stat">
+<h4>💰 Collection</h4>
+<strong id="collectionTotal">₹0</strong>
+</div>
+
+<div class="admin-stat">
+<h4>📊 Total Sales</h4>
+<strong id="salesTotal">₹0</strong>
+</div>
+
+</div>
+
+
+<!-- ADD SALE -->
+
+<div class="admin-card">
+
+<h3>➕ Add Sale</h3>
+
+<input
+id="saleAmount"
+class="admin-input"
+type="number"
+min="0"
+placeholder="Sale Amount ₹">
+
+<input
+id="saleNote"
+class="admin-input"
+placeholder="Note / Customer / Order">
+
+<div class="admin-buttons">
+
+<button
+class="online"
+onclick="addSale('Online')">
+
+🟢 Add Online Sale
+
+</button>
+
+<button
+class="offline"
+onclick="addSale('Offline')">
+
+🟠 Add Offline Sale
+
+</button>
+
+<button
+class="collection"
+onclick="addCollection()">
+
+💰 Add Collection
+
+</button>
+
+</div>
+
+</div>
+
+
+<!-- FILTER -->
+
+<div class="admin-card">
+
+<h3>📅 Month-wise History</h3>
+
+<input
+type="month"
+id="monthFilter"
+class="admin-input"
+onchange="renderHistory()">
+
+<div id="monthSummary"
+class="month-summary">
+
+Select a month to view summary.
+
+</div>
+
+<div id="historyList"></div>
+
+</div>
+
+
+<!-- CALCULATOR -->
+
+<div class="admin-card">
+
+<h3>🧮 Calculator</h3>
+
+<input
+id="calcDisplay"
+class="calc-display"
+readonly>
+
+<div class="calc-grid">
+
+<button onclick="calcInput('7')">7</button>
+<button onclick="calcInput('8')">8</button>
+<button onclick="calcInput('9')">9</button>
+<button onclick="calcInput('/')">÷</button>
+
+<button onclick="calcInput('4')">4</button>
+<button onclick="calcInput('5')">5</button>
+<button onclick="calcInput('6')">6</button>
+<button onclick="calcInput('*')">×</button>
+
+<button onclick="calcInput('1')">1</button>
+<button onclick="calcInput('2')">2</button>
+<button onclick="calcInput('3')">3</button>
+<button onclick="calcInput('-')">−</button>
+
+<button onclick="calcInput('0')">0</button>
+<button onclick="calcInput('.')">.</button>
+<button onclick="calculate()">=</button>
+<button onclick="calcInput('+')">+</button>
+
+<button onclick="clearCalc()" style="grid-column:span 4;">
+Clear
+</button>
+
+</div>
+
+</div>
+
+
+<!-- DATA -->
+
+<div class="admin-card">
+
+<h3>⚙️ Data Management</h3>
+
+<div class="admin-buttons">
+
+<button onclick="exportSales()">
+📤 Export History
+</button>
+
+<button
+class="danger"
+onclick="clearSales()">
+
+🗑️ Clear All Sales
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+
 <script>
 
 /* =========================
-   BASIC SETTINGS
+ BASIC SETTINGS
 ========================= */
 
 const WHATSAPP = "917452849258";
 
 const UPI_ID = "paytm.s25oklx@pty";
+
+/*
+ CHANGE THIS PASSWORD
+*/
+
+const ADMIN_PASSWORD = "1234";
 
 let cart = [];
 
@@ -1240,14 +1381,13 @@ let currentQROrder = null;
 
 
 /* =========================
-   MENU
+ MENU
 ========================= */
 
 const menu = [
 
 {
 category:"🍕 Pizza",
-
 items:[
 ["Margherita Pizza",100],
 ["Onion Pizza",110],
@@ -1255,12 +1395,10 @@ items:[
 ["Veggie Pizza",150],
 ["Paneer Tikka Pizza",160]
 ]
-
 },
 
 {
 category:"🍔 Burger",
-
 items:[
 ["Aloo Tikki Burger",50],
 ["Aloo Tikki Cheese Burger",60],
@@ -1268,12 +1406,10 @@ items:[
 ["Chicken Burger",90],
 ["Chicken Cheese Burger",100]
 ]
-
 },
 
 {
 category:"🥪 Sandwich",
-
 items:[
 ["Coleslaw Sandwich",60],
 ["Veg Cheese Sandwich",80],
@@ -1281,12 +1417,10 @@ items:[
 ["Paneer Cheese Sandwich",100],
 ["Chicken Cheese Sandwich",120]
 ]
-
 },
 
 {
 category:"🥤 Shakes & Drinks",
-
 items:[
 ["Cold Coffee",70],
 ["Oreo Shake",70],
@@ -1296,48 +1430,40 @@ items:[
 ["Chocolate Shake",80],
 ["Strawberry Shake",90]
 ]
-
 },
 
 {
 category:"🍟 Fries",
-
 items:[
 ["French Fries",60],
 ["Peri Peri Fries",80],
 ["Cheese Fries",80],
 ["Peri Peri Cheese Fries",100]
 ]
-
 },
 
 {
 category:"🍝 Pasta",
-
 items:[
 ["Red Sauce Pasta",80],
 ["White Sauce Pasta",80],
 ["Mix Sauce Pasta",110],
 ["Tandoori Sauce Pasta",100]
 ]
-
 },
 
 {
 category:"🌯 Rolls",
-
 items:[
 ["Veg Roll",60],
 ["Paneer Roll",90],
 ["Chicken Roll",100],
 ["Double Egg Chicken Roll",120]
 ]
-
 },
 
 {
 category:"🍜 Noodles",
-
 items:[
 ["Veg Noodles",50,80],
 ["Paneer Noodles",70,90],
@@ -1345,12 +1471,10 @@ items:[
 ["Singapore Noodles",70,100],
 ["Hakka Noodles",70,100]
 ]
-
 },
 
 {
 category:"🥟 Momos & Maggi",
-
 items:[
 ["Veg Momos",50,90],
 ["Paneer Momos",70,120],
@@ -1359,14 +1483,13 @@ items:[
 ["Butter Maggi",50],
 ["Veg Maggi",60]
 ]
-
 }
 
 ];
 
 
 /* =========================
-   RENDER MENU
+ RENDER MENU
 ========================= */
 
 function renderMenu(){
@@ -1435,9 +1558,7 @@ row.innerHTML=`
 
 <div>
 
-<strong>
-${name}
-</strong>
+<strong>${name}</strong>
 
 <br>
 
@@ -1483,7 +1604,7 @@ container.appendChild(section);
 
 
 /* =========================
-   CART
+ CART
 ========================= */
 
 function addToCart(name,price){
@@ -1498,13 +1619,9 @@ existing.qty++;
 }else{
 
 cart.push({
-
 name:name,
-
 price:price,
-
 qty:1
-
 });
 
 }
@@ -1543,17 +1660,14 @@ total += item.price*item.qty;
 
 });
 
-document.getElementById("cartCount")
-.innerText=count;
+document.getElementById("cartCount").innerText=count;
 
-document.getElementById("cartTotal")
-.innerText="₹"+total;
+document.getElementById("cartTotal").innerText="₹"+total;
 
-document.getElementById("modalTotal")
-.innerText=total;
+document.getElementById("modalTotal").innerText=total;
 
-document.getElementById("cartBar")
-.style.display=count ? "flex" : "none";
+document.getElementById("cartBar").style.display=
+count ? "flex" : "none";
 
 renderCart();
 
@@ -1567,8 +1681,7 @@ document.getElementById("cartItems");
 
 if(cart.length===0){
 
-box.innerHTML =
-"<p>Your cart is empty.</p>";
+box.innerHTML="<p>Your cart is empty.</p>";
 
 return;
 
@@ -1584,9 +1697,7 @@ box.innerHTML += `
 
 <div>
 
-<strong>
-${item.name}
-</strong>
+<strong>${item.name}</strong>
 
 <br>
 
@@ -1596,13 +1707,11 @@ ${item.name}
 
 <div class="qty">
 
-<button
-onclick="changeQty(${index},-1)">
+<button onclick="changeQty(${index},-1)">
 −
 </button>
 
-<button
-onclick="changeQty(${index},1)">
+<button onclick="changeQty(${index},1)">
 +
 </button>
 
@@ -1618,7 +1727,7 @@ onclick="changeQty(${index},1)">
 
 
 /* =========================
-   CART MODAL
+ CART MODAL
 ========================= */
 
 function openCart(){
@@ -1648,7 +1757,7 @@ document.getElementById("cartModal")
 
 
 /* =========================
-   LOCATION
+ LOCATION
 ========================= */
 
 function checkLocation(){
@@ -1656,34 +1765,31 @@ function checkLocation(){
 const location =
 document.getElementById("deliveryLocation").value;
 
-const codRadio =
+const cod =
 document.querySelector(
 'input[name="paymentMethod"][value="Cash on Delivery"]'
 );
 
-const codNote =
+const note =
 document.getElementById("codNote");
 
-if(location === "Rama Hospital"){
+if(location==="Rama Hospital"){
 
-codRadio.disabled=false;
+cod.disabled=false;
 
-codNote.style.display="block";
+note.style.display="block";
 
 }else{
 
-codRadio.disabled=true;
+cod.disabled=true;
 
-codRadio.checked=false;
+cod.checked=false;
 
-codNote.style.display="none";
+note.style.display="none";
 
-const online =
 document.querySelector(
 'input[name="paymentMethod"][value="Online Payment"]'
-);
-
-online.checked=true;
+).checked=true;
 
 }
 
@@ -1691,7 +1797,7 @@ online.checked=true;
 
 
 /* =========================
-   PAYMENT SELECTION
+ PAYMENT
 ========================= */
 
 function checkPayment(){
@@ -1704,17 +1810,12 @@ document.querySelector(
 'input[name="paymentMethod"]:checked'
 );
 
-if(!selected){
+if(!selected)return;
 
-return;
-
-}
-
-const payment =
-selected.value;
-
-if(payment === "Cash on Delivery" &&
-location !== "Rama Hospital"){
+if(
+selected.value==="Cash on Delivery" &&
+location!=="Rama Hospital"
+){
 
 alert(
 "Cash on Delivery is available only inside Rama Hospital."
@@ -1730,7 +1831,7 @@ document.querySelector(
 
 
 /* =========================
-   PLACE ORDER
+ PLACE ORDER
 ========================= */
 
 function placeOrder(){
@@ -1744,37 +1845,21 @@ return;
 }
 
 const name =
-document.getElementById("customerName")
-.value.trim();
+document.getElementById("customerName").value.trim();
 
 const phone =
-document.getElementById("customerPhone")
-.value.trim();
+document.getElementById("customerPhone").value.trim();
 
 const location =
-document.getElementById("deliveryLocation")
-.value;
+document.getElementById("deliveryLocation").value;
 
 const address =
-document.getElementById("customerAddress")
-.value.trim();
+document.getElementById("customerAddress").value.trim();
 
-const selectedPayment =
+const selected =
 document.querySelector(
 'input[name="paymentMethod"]:checked'
 );
-
-if(!selectedPayment){
-
-alert("Please select a payment method.");
-
-return;
-
-}
-
-const payment =
-selectedPayment.value;
-
 
 if(!name){
 
@@ -1784,44 +1869,42 @@ return;
 
 }
 
-
-/* MOBILE VALIDATION */
-
 if(!/^[0-9]{10}$/.test(phone)){
 
-alert(
-"Please enter a valid 10-digit mobile number."
-);
+alert("Please enter a valid 10-digit mobile number.");
 
 return;
 
 }
-
 
 if(!location){
 
-alert(
-"Please select your delivery location."
-);
+alert("Please select delivery location.");
 
 return;
 
 }
-
 
 if(!address){
 
-alert(
-"Please enter your delivery address."
-);
+alert("Please enter delivery address.");
 
 return;
 
 }
 
+if(!selected){
 
-if(payment === "Cash on Delivery" &&
-location !== "Rama Hospital"){
+alert("Please select payment method.");
+
+return;
+
+}
+
+if(
+selected.value==="Cash on Delivery" &&
+location!=="Rama Hospital"
+){
 
 alert(
 "COD is available only inside Rama Hospital."
@@ -1831,8 +1914,7 @@ return;
 
 }
 
-
-if(payment === "Online Payment"){
+if(selected.value==="Online Payment"){
 
 payForCart(
 name,
@@ -1844,12 +1926,18 @@ address
 }else{
 
 sendWhatsApp(
-payment,
+"Cash on Delivery",
 name,
 phone,
 location,
 address
 );
+
+/*
+ Record customer online/offline sale
+ only when business owner manually
+ confirms collection in admin.
+*/
 
 }
 
@@ -1857,7 +1945,7 @@ address
 
 
 /* =========================
-   CREATE UPI URL
+ UPI
 ========================= */
 
 function createUPIUrl(amount,note){
@@ -1878,7 +1966,7 @@ encodeURIComponent(note)
 
 
 /* =========================
-   QR ONLINE PAYMENT
+ QR
 ========================= */
 
 function payForCart(
@@ -1892,99 +1980,59 @@ let total=0;
 
 cart.forEach(item=>{
 
-total += item.price * item.qty;
+total += item.price*item.qty;
 
 });
 
-
-const orderDetails =
-"The Cafe Town Order - " + name;
-
-
 const upiUrl =
-createUPIUrl(total,orderDetails);
+createUPIUrl(
+total,
+"The Cafe Town Order - "+name
+);
 
-
-/* SAVE ORDER DETAILS */
-
-currentQROrder = {
+currentQROrder={
 
 name:name,
-
 phone:phone,
-
 location:location,
-
 address:address,
-
 total:total
 
 };
-
-
-/* CLEAR OLD QR */
 
 const qrBox =
 document.getElementById("qrcode");
 
 qrBox.innerHTML="";
 
+if(typeof QRCode==="undefined"){
 
-/* CREATE QR */
-
-if(typeof QRCode === "undefined"){
-
-alert(
-"QR Code library load nahi hui. Internet connection check karein."
-);
+alert("QR library load nahi hui.");
 
 return;
 
 }
 
-
 new QRCode(qrBox,{
 
 text:upiUrl,
-
 width:260,
-
 height:260,
-
 correctLevel:QRCode.CorrectLevel.M
 
 });
 
-
-/* SHOW AMOUNT */
-
 document.getElementById("qrAmount")
 .innerText=total;
 
-
-/* OPEN UPI APP BUTTON */
-
-const upiButton =
-document.getElementById("upiPayButton");
-
-if(upiButton){
-
-upiButton.href=upiUrl;
-
-}
-
-
-/* SHOW QR MODAL */
+document.getElementById("upiPayButton")
+.href=upiUrl;
 
 document.getElementById("qrModal")
 .style.display="flex";
 
 }
 
-
-/* =========================
-   CLOSE QR
-========================= */
 
 function closeQR(){
 
@@ -1997,30 +2045,20 @@ currentQROrder=null;
 
 
 /* =========================
-   PAYMENT DONE
+ CONFIRM PAYMENT
 ========================= */
 
 function confirmQRPayment(){
 
 if(!currentQROrder){
 
-alert(
-"Order information not found. Please start the order again from the cart."
-);
+alert("Order information not found.");
 
 return;
 
 }
 
-const order =
-currentQROrder;
-
-
-/*
-Customer confirms payment manually.
-The website does NOT claim automatic
-bank verification.
-*/
+const order=currentQROrder;
 
 sendWhatsApp(
 "Online Payment",
@@ -2036,81 +2074,38 @@ closeQR();
 
 
 /* =========================
-   DIRECT PAY BUTTON
+ DIRECT PAY
 ========================= */
 
 function payNow(name,price){
 
-const orderDetails =
-"The Cafe Town - " + name;
-
 const upiUrl =
-createUPIUrl(price,orderDetails);
-
-
-/* CLEAR OLD QR */
+createUPIUrl(
+price,
+"The Cafe Town - "+name
+);
 
 const qrBox =
 document.getElementById("qrcode");
 
 qrBox.innerHTML="";
 
-
-if(typeof QRCode === "undefined"){
-
-alert(
-"QR Code library load nahi hui. Internet connection check karein."
-);
-
-return;
-
-}
-
-
-/* CREATE QR */
-
 new QRCode(qrBox,{
 
 text:upiUrl,
-
 width:260,
-
 height:260,
-
 correctLevel:QRCode.CorrectLevel.M
 
 });
 
-
-/* SHOW AMOUNT */
-
 document.getElementById("qrAmount")
 .innerText=price;
 
-
-/* OPEN UPI APP */
-
-const upiButton =
-document.getElementById("upiPayButton");
-
-if(upiButton){
-
-upiButton.href=upiUrl;
-
-}
-
-
-/*
-Direct Pay button does not have
-customer/order details.
-Therefore we don't send an
-order from this route.
-*/
+document.getElementById("upiPayButton")
+.href=upiUrl;
 
 currentQROrder=null;
-
-
-/* SHOW QR */
 
 document.getElementById("qrModal")
 .style.display="flex";
@@ -2119,7 +2114,7 @@ document.getElementById("qrModal")
 
 
 /* =========================
-   WHATSAPP
+ WHATSAPP
 ========================= */
 
 function sendWhatsApp(
@@ -2130,98 +2125,744 @@ location,
 address
 ){
 
-let message =
+let message=
 "Hello The Cafe Town 👋\n\n";
 
-message +=
-"🍽️ NEW ORDER\n\n";
+message+="🍽️ NEW ORDER\n\n";
 
-message +=
-"Order Items:\n";
+message+="Order Items:\n";
 
 let total=0;
 
 cart.forEach(item=>{
 
-const amount =
-item.price * item.qty;
+const amount=item.price*item.qty;
 
-total += amount;
+total+=amount;
 
-message +=
+message+=
 "• "+item.name+
 " × "+item.qty+
 " = ₹"+amount+"\n";
 
 });
 
-
-message +=
+message+=
 "\n💰 Total: ₹"+total;
 
-message +=
+message+=
 "\n\n👤 Name: "+name;
 
-message +=
+message+=
 "\n📞 Mobile: "+phone;
 
-message +=
+message+=
 "\n📍 Location: "+location;
 
-message +=
+message+=
 "\n🏠 Address: "+address;
 
-message +=
+message+=
 "\n💳 Payment: "+payment;
 
-
-if(payment === "Cash on Delivery"){
-
-message +=
-"\n\n🏥 COD: Rama Hospital Inside Only";
-
-}else{
-
-message +=
-"\n\n💳 Online Payment Selected";
-
-}
-
-
-const url =
+const url=
 "https://wa.me/"+
 WHATSAPP+
 "?text="+
 encodeURIComponent(message);
-
-
-/* OPEN WHATSAPP */
 
 window.open(url,"_blank");
 
 }
 
 
+/* =================================================
+ ADMIN SYSTEM
+================================================= */
+
+function getSales(){
+
+try{
+
+return JSON.parse(
+localStorage.getItem("cafeTownSales")
+)||[];
+
+}catch(e){
+
+return[];
+
+}
+
+}
+
+
+function saveSales(data){
+
+localStorage.setItem(
+"cafeTownSales",
+JSON.stringify(data)
+);
+
+}
+
+
 /* =========================
-   BASIC ANTI-COPY PROTECTION
+ ADMIN LOGIN
+========================= */
+
+function openAdminLogin(){
+
+document.getElementById("adminLogin")
+.style.display="flex";
+
+document.getElementById("adminPassword")
+.value="";
+
+setTimeout(()=>{
+
+document.getElementById("adminPassword")
+.focus();
+
+},100);
+
+}
+
+
+function closeAdminLogin(){
+
+document.getElementById("adminLogin")
+.style.display="none";
+
+}
+
+
+function adminLogin(){
+
+const password=
+document.getElementById("adminPassword")
+.value;
+
+if(password!==ADMIN_PASSWORD){
+
+alert("Wrong admin password.");
+
+return;
+
+}
+
+closeAdminLogin();
+
+document.getElementById("adminDashboard")
+.style.display="block";
+
+setDefaultMonth();
+
+updateAdminStats();
+
+renderHistory();
+
+}
+
+
+/* =========================
+ CLOSE ADMIN
+========================= */
+
+function closeAdmin(){
+
+document.getElementById("adminDashboard")
+.style.display="none";
+
+}
+
+
+/* =========================
+ ADD SALE
+========================= */
+
+function addSale(type){
+
+const amount=
+Number(
+document.getElementById("saleAmount").value
+);
+
+const note=
+document.getElementById("saleNote").value.trim();
+
+if(!amount || amount<=0){
+
+alert("Please enter a valid amount.");
+
+return;
+
+}
+
+const sales=getSales();
+
+sales.push({
+
+id:Date.now(),
+
+type:type,
+
+amount:amount,
+
+note:note || type+" Sale",
+
+date:new Date().toISOString()
+
+});
+
+saveSales(sales);
+
+document.getElementById("saleAmount").value="";
+
+document.getElementById("saleNote").value="";
+
+updateAdminStats();
+
+renderHistory();
+
+alert(
+type+" sale ₹"+amount+" added."
+);
+
+}
+
+
+/* =========================
+ COLLECTION
+========================= */
+
+function addCollection(){
+
+const amount=
+Number(
+document.getElementById("saleAmount").value
+);
+
+const note=
+document.getElementById("saleNote").value.trim();
+
+if(!amount || amount<=0){
+
+alert("Please enter a valid collection amount.");
+
+return;
+
+}
+
+const sales=getSales();
+
+sales.push({
+
+id:Date.now(),
+
+type:"Collection",
+
+amount:amount,
+
+note:note || "Collection",
+
+date:new Date().toISOString()
+
+});
+
+saveSales(sales);
+
+document.getElementById("saleAmount").value="";
+
+document.getElementById("saleNote").value="";
+
+updateAdminStats();
+
+renderHistory();
+
+alert(
+"Collection ₹"+amount+" added."
+);
+
+}
+
+
+/* =========================
+ STATS
+========================= */
+
+function updateAdminStats(){
+
+const sales=getSales();
+
+let online=0;
+let offline=0;
+let collection=0;
+
+sales.forEach(item=>{
+
+if(item.type==="Online"){
+
+online+=Number(item.amount);
+
+}
+
+if(item.type==="Offline"){
+
+offline+=Number(item.amount);
+
+}
+
+if(item.type==="Collection"){
+
+collection+=Number(item.amount);
+
+}
+
+});
+
+document.getElementById("onlineTotal")
+.innerText="₹"+online;
+
+document.getElementById("offlineTotal")
+.innerText="₹"+offline;
+
+document.getElementById("collectionTotal")
+.innerText="₹"+collection;
+
+document.getElementById("salesTotal")
+.innerText="₹"+(online+offline);
+
+}
+
+
+/* =========================
+ MONTH
+========================= */
+
+function setDefaultMonth(){
+
+const input=
+document.getElementById("monthFilter");
+
+if(!input.value){
+
+const d=new Date();
+
+const month=
+d.getFullYear()+
+"-"+
+String(d.getMonth()+1).padStart(2,"0");
+
+input.value=month;
+
+}
+
+}
+
+
+/* =========================
+ HISTORY
+========================= */
+
+function renderHistory(){
+
+const month=
+document.getElementById("monthFilter").value;
+
+const box=
+document.getElementById("historyList");
+
+const summary=
+document.getElementById("monthSummary");
+
+const sales=getSales();
+
+if(!month){
+
+summary.innerText=
+"Select a month to view summary.";
+
+box.innerHTML="";
+
+return;
+
+}
+
+const filtered=sales.filter(item=>{
+
+const d=new Date(item.date);
+
+const itemMonth=
+d.getFullYear()+
+"-"+
+String(d.getMonth()+1).padStart(2,"0");
+
+return itemMonth===month;
+
+});
+
+
+let online=0;
+let offline=0;
+let collection=0;
+
+filtered.forEach(item=>{
+
+if(item.type==="Online")
+online+=Number(item.amount);
+
+if(item.type==="Offline")
+offline+=Number(item.amount);
+
+if(item.type==="Collection")
+collection+=Number(item.amount);
+
+});
+
+summary.innerHTML=
+"🟢 Online: ₹"+online+
+" &nbsp; | &nbsp; "+
+"🟠 Offline: ₹"+offline+
+" &nbsp; | &nbsp; "+
+"💰 Collection: ₹"+collection+
+" &nbsp; | &nbsp; "+
+"📊 Sales: ₹"+(online+offline);
+
+
+if(filtered.length===0){
+
+box.innerHTML=
+"<p>No entries found for this month.</p>";
+
+return;
+
+}
+
+
+filtered.sort(
+(a,b)=>
+new Date(b.date)-
+new Date(a.date)
+);
+
+
+box.innerHTML="";
+
+
+filtered.forEach(item=>{
+
+const d=
+new Date(item.date);
+
+const dateText=
+d.toLocaleDateString("en-IN");
+
+const timeText=
+d.toLocaleTimeString("en-IN",{
+hour:"2-digit",
+minute:"2-digit"
+});
+
+
+const row=
+document.createElement("div");
+
+row.className="history-row";
+
+row.innerHTML=`
+
+<strong>
+${typeIcon(item.type)}
+${item.type}
+— ₹${Number(item.amount)}
+</strong>
+
+<br>
+
+<small>
+${dateText} ${timeText}
+<br>
+${escapeHTML(item.note || "")}
+</small>
+
+<br>
+
+<div class="history-actions">
+
+<button
+class="danger"
+onclick="deleteSale(${item.id})">
+
+🗑️ Delete
+
+</button>
+
+</div>
+
+`;
+
+box.appendChild(row);
+
+});
+
+}
+
+
+/* =========================
+ ICON
+========================= */
+
+function typeIcon(type){
+
+if(type==="Online")
+return "🟢";
+
+if(type==="Offline")
+return "🟠";
+
+if(type==="Collection")
+return "💰";
+
+return "🧾";
+
+}
+
+
+/* =========================
+ DELETE
+========================= */
+
+function deleteSale(id){
+
+if(!confirm(
+"Delete this entry?"
+)){
+
+return;
+
+}
+
+const sales=
+getSales().filter(
+item=>item.id!==id
+);
+
+saveSales(sales);
+
+updateAdminStats();
+
+renderHistory();
+
+}
+
+
+/* =========================
+ CLEAR ALL
+========================= */
+
+function clearSales(){
+
+if(!confirm(
+"WARNING: Delete ALL sales history?"
+)){
+
+return;
+
+}
+
+if(!confirm(
+"Are you absolutely sure?"
+)){
+
+return;
+
+}
+
+localStorage.removeItem(
+"cafeTownSales"
+);
+
+updateAdminStats();
+
+renderHistory();
+
+alert("All sales history deleted.");
+
+}
+
+
+/* =========================
+ EXPORT
+========================= */
+
+function exportSales(){
+
+const sales=getSales();
+
+if(!sales.length){
+
+alert("No sales history available.");
+
+return;
+
+}
+
+const data=
+JSON.stringify(
+sales,
+null,
+2
+);
+
+const blob=
+new Blob(
+[data],
+{type:"application/json"}
+);
+
+const url=
+URL.createObjectURL(blob);
+
+const a=
+document.createElement("a");
+
+a.href=url;
+
+a.download=
+"the-cafe-town-sales-history.json";
+
+a.click();
+
+URL.revokeObjectURL(url);
+
+}
+
+
+/* =========================
+ SAFE HTML
+========================= */
+
+function escapeHTML(text){
+
+return String(text)
+
+.replace(/&/g,"&amp;")
+
+.replace(/</g,"&lt;")
+
+.replace(/>/g,"&gt;")
+
+.replace(/"/g,"&quot;")
+
+.replace(/'/g,"&#039;");
+
+}
+
+
+/* =================================================
+ CALCULATOR
+================================================= */
+
+let calcValue="";
+
+
+function calcInput(value){
+
+calcValue+=value;
+
+document.getElementById("calcDisplay")
+.value=calcValue;
+
+}
+
+
+function clearCalc(){
+
+calcValue="";
+
+document.getElementById("calcDisplay")
+.value="";
+
+}
+
+
+function calculate(){
+
+if(!calcValue){
+
+return;
+
+}
+
+if(!/^[0-9+\-*/(). ]+$/.test(calcValue)){
+
+alert("Invalid calculation.");
+
+return;
+
+}
+
+try{
+
+const result=
+Function(
+'"use strict";return ('+
+calcValue+
+')'
+)();
+
+if(!Number.isFinite(result)){
+
+throw new Error();
+
+}
+
+calcValue=String(result);
+
+document.getElementById("calcDisplay")
+.value=calcValue;
+
+}catch(e){
+
+alert("Invalid calculation.");
+
+clearCalc();
+
+}
+
+}
+
+
+/* =========================
+ KEYBOARD ADMIN LOGIN
+========================= */
+
+document.getElementById("adminPassword")
+.addEventListener(
+"keydown",
+function(e){
+
+if(e.key==="Enter"){
+
+adminLogin();
+
+}
+
+});
+
+
+/* =========================
+ BASIC PROTECTION
 ========================= */
 
 document.addEventListener(
 "contextmenu",
 function(e){
 
-e.preventDefault();
-
-});
-
-
-document.addEventListener(
-"selectstart",
-function(e){
-
 if(
-e.target.tagName !== "INPUT" &&
-e.target.tagName !== "TEXTAREA"
+e.target.tagName!=="INPUT" &&
+e.target.tagName!=="TEXTAREA"
 ){
 
 e.preventDefault();
@@ -2240,33 +2881,8 @@ e.preventDefault();
 });
 
 
-document.addEventListener(
-"keydown",
-function(e){
-
-const key =
-e.key.toLowerCase();
-
-if(
-(e.ctrlKey &&
-["u","s","c"].includes(key)) ||
-
-(e.ctrlKey &&
-e.shiftKey &&
-["i","j","c"].includes(key)) ||
-
-e.key === "F12"
-){
-
-e.preventDefault();
-
-}
-
-});
-
-
 /* =========================
-   START
+ START
 ========================= */
 
 renderMenu();
