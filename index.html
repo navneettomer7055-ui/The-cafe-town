@@ -4,10 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<title>The Cafe Town | Pilkhuwa</title>
+
 <meta name="description"
 content="The Cafe Town Pilkhuwa - Delicious food, great taste and good vibes.">
-
-<title>The Cafe Town | Pilkhuwa</title>
 
 <style>
 *{
@@ -32,23 +32,20 @@ body{
   padding:40px 20px;
   background:
     linear-gradient(rgba(53,23,14,.75),rgba(53,23,14,.75)),
-    radial-gradient(circle at center,#c96,#542516);
+    radial-gradient(circle,#c96,#542516);
   color:white;
 }
 
 .hero-content{
   max-width:700px;
-  animation:fadeUp .8s ease;
 }
 
 .logo{
   font-size:70px;
-  margin-bottom:10px;
 }
 
 .hero h1{
   font-size:48px;
-  margin-bottom:10px;
 }
 
 .hero p{
@@ -59,7 +56,7 @@ body{
   display:inline-block;
   margin:20px 0;
   padding:10px 18px;
-  border:1px solid #fff;
+  border:1px solid white;
   border-radius:30px;
 }
 
@@ -68,15 +65,10 @@ body{
   margin:7px;
   padding:13px 22px;
   border-radius:30px;
-  background:#fff;
+  background:white;
   color:#542516;
   text-decoration:none;
   font-weight:bold;
-  transition:.25s;
-}
-
-.btn:hover{
-  transform:scale(1.05);
 }
 
 section{
@@ -118,7 +110,6 @@ h2{
   width:100%;
   border-radius:14px;
   background:#111;
-  min-height:200px;
 }
 
 .category{
@@ -137,7 +128,6 @@ h2{
 .item{
   display:flex;
   justify-content:space-between;
-  align-items:center;
   padding:13px 15px;
   background:white;
   border-bottom:1px solid #eee;
@@ -166,25 +156,31 @@ footer{
   padding:30px 15px;
 }
 
-/* OWNER BUTTON */
-.owner-trigger{
+/* OWNER LOGIN */
+
+.owner-login{
   position:fixed;
-  right:5px;
-  bottom:5px;
-  width:20px;
-  height:20px;
-  opacity:.03;
-  border:0;
-  background:#000;
+  right:15px;
+  bottom:15px;
+  z-index:999;
+  background:#542516;
+  color:white;
+  border:none;
+  padding:12px 17px;
+  border-radius:25px;
+  font-weight:bold;
+  box-shadow:0 4px 12px rgba(0,0,0,.3);
+  cursor:pointer;
 }
 
 /* OWNER PANEL */
+
 #ownerPanel{
   display:none;
   position:fixed;
   inset:0;
   z-index:9999;
-  background:rgba(0,0,0,.7);
+  background:rgba(0,0,0,.75);
   overflow:auto;
   padding:15px;
 }
@@ -192,7 +188,7 @@ footer{
 .owner-box{
   max-width:950px;
   margin:30px auto;
-  background:#fff;
+  background:white;
   border-radius:18px;
   padding:20px;
 }
@@ -201,7 +197,6 @@ footer{
   display:flex;
   justify-content:space-between;
   align-items:center;
-  gap:10px;
   margin-bottom:20px;
 }
 
@@ -217,7 +212,6 @@ footer{
   display:grid;
   grid-template-columns:repeat(4,1fr);
   gap:12px;
-  margin-bottom:20px;
 }
 
 .stat{
@@ -298,13 +292,6 @@ input,select{
   color:white;
 }
 
-.empty{
-  text-align:center;
-  padding:20px;
-  color:#777;
-}
-
-/* CALCULATOR */
 .calculator{
   max-width:350px;
   margin:auto;
@@ -333,26 +320,7 @@ input,select{
   background:#eee;
 }
 
-.calc-buttons button:hover{
-  background:#ddd;
-}
-
-@keyframes fadeUp{
-  from{
-    opacity:0;
-    transform:translateY(30px);
-  }
-  to{
-    opacity:1;
-    transform:translateY(0);
-  }
-}
-
 @media(max-width:600px){
-
-  .hero{
-    min-height:470px;
-  }
 
   .hero h1{
     font-size:34px;
@@ -360,14 +328,6 @@ input,select{
 
   .logo{
     font-size:50px;
-  }
-
-  .hero p{
-    font-size:16px;
-  }
-
-  h2{
-    font-size:26px;
   }
 
   .video-gallery{
@@ -381,95 +341,81 @@ input,select{
   .form-grid{
     grid-template-columns:1fr;
   }
-
-  .item{
-    font-size:15px;
-  }
 }
 </style>
 </head>
 
 <body>
 
-<!-- ================= HERO ================= -->
-
 <header class="hero">
-  <div class="hero-content">
 
-    <div class="logo">🍕</div>
+<div class="hero-content">
 
-    <h1>The Cafe Town</h1>
+<div class="logo">🍕</div>
 
-    <p>Delicious Food • Great Taste • Good Vibes</p>
+<h1>The Cafe Town</h1>
 
-    <div class="tagline">
-      Take a Bite, Make Your Future Bright!
-    </div>
+<p>Delicious Food • Great Taste • Good Vibes</p>
 
-    <br>
+<div class="tagline">
+Take a Bite, Make Your Future Bright!
+</div>
 
-    <a href="#menu" class="btn">🍽️ View Menu</a>
+<br>
 
-    <a href="tel:7452849258" class="btn">📞 Call Now</a>
+<a href="#menu" class="btn">🍽️ View Menu</a>
 
-  </div>
+<a href="tel:7452849258" class="btn">📞 Call Now</a>
+
+</div>
+
 </header>
 
 
-<!-- ================= ABOUT ================= -->
-
 <section>
 
-  <h2>❤️ Welcome to The Cafe Town</h2>
+<h2>❤️ Welcome to The Cafe Town</h2>
 
-  <div class="card" style="text-align:center;">
+<div class="card" style="text-align:center">
 
-    <p>
-      Welcome to <strong>The Cafe Town</strong> —
-      a friendly place to enjoy delicious food,
-      refreshing drinks and great moments with
-      your family and friends.
-    </p>
+<p>
+Welcome to <strong>The Cafe Town</strong> —
+a friendly place to enjoy delicious food,
+refreshing drinks and great moments with
+your family and friends.
+</p>
 
-    <p style="margin-top:15px;">
-      📍 Rama Hospital, Near Hindalpur Marg, Pilkhuwa
-    </p>
+<p style="margin-top:15px">
+📍 Rama Hospital, Near Hindalpur Marg, Pilkhuwa
+</p>
 
-  </div>
+</div>
 
 </section>
 
 
-<!-- ================= OFFER ================= -->
-
 <section>
 
-  <div class="offer">
+<div class="offer">
 
-    <h2>🛵 Special Delivery Offer</h2>
+<h2>🛵 Special Delivery Offer</h2>
 
-    <p>
-      Order for <strong>₹500 or more</strong>
-    </p>
+<p>
+Order for <strong>₹500 or more</strong>
+</p>
 
-    <p style="margin-top:10px;font-size:19px;">
-      🎉 <strong>5 KM Delivery FREE!</strong>
-    </p>
+<p style="margin-top:10px;font-size:19px">
+🎉 <strong>5 KM Delivery FREE!</strong>
+</p>
 
-    <p style="margin-top:10px;">
-      One FREE delivery per day.
-    </p>
+<p style="margin-top:10px">
+One FREE delivery per day.
+</p>
 
-    <p style="margin-top:12px;font-size:13px;">
-      Terms & conditions may apply.
-    </p>
-
-  </div>
+</div>
 
 </section>
 
-
-<!-- ================= MENU ================= -->
 
 <section id="menu">
 
@@ -477,33 +423,27 @@ input,select{
 
 <div class="video-gallery">
 
-  <video controls playsinline preload="metadata">
-    <source src="./br.mp4" type="video/mp4">
-    Your browser does not support HTML5 video.
-  </video>
+<video controls playsinline preload="metadata">
+<source src="./br.mp4" type="video/mp4">
+</video>
 
-  <video controls playsinline preload="metadata">
-    <source src="./cv.mp4" type="video/mp4">
-    Your browser does not support HTML5 video.
-  </video>
+<video controls playsinline preload="metadata">
+<source src="./cv.mp4" type="video/mp4">
+</video>
 
-  <video controls playsinline preload="metadata">
-    <source src="./ki.mp4" type="video/mp4">
-    Your browser does not support HTML5 video.
-  </video>
+<video controls playsinline preload="metadata">
+<source src="./ki.mp4" type="video/mp4">
+</video>
 
-  <video controls playsinline preload="metadata">
-    <source src="./piz.mp4" type="video/mp4">
-    Your browser does not support HTML5 video.
-  </video>
+<video controls playsinline preload="metadata">
+<source src="./piz.mp4" type="video/mp4">
+</video>
 
 </div>
 
 
 <h2>🍽️ Our Menu</h2>
 
-
-<!-- PIZZA -->
 
 <div class="category">
 
@@ -537,8 +477,6 @@ input,select{
 </div>
 
 
-<!-- ROLLS -->
-
 <div class="category">
 
 <h3>🌯 Rolls</h3>
@@ -565,8 +503,6 @@ input,select{
 
 </div>
 
-
-<!-- NOODLES -->
 
 <div class="category">
 
@@ -599,8 +535,6 @@ input,select{
 
 </div>
 
-
-<!-- MOMOS -->
 
 <div class="category">
 
@@ -641,17 +575,15 @@ input,select{
 </section>
 
 
-<!-- ================= CONTACT ================= -->
-
 <section>
 
 <h2>📞 Contact Us</h2>
 
-<div class="card" style="text-align:center;">
+<div class="card" style="text-align:center">
 
 <p><strong>The Cafe Town</strong></p>
 
-<p style="margin-top:8px;">
+<p style="margin-top:8px">
 Deepak Tomar
 </p>
 
@@ -659,12 +591,8 @@ Deepak Tomar
 📲 74528 49258
 </a>
 
-<p style="margin-top:18px;">
+<p style="margin-top:18px">
 📍 Rama Hospital, Near Hindalpur Marg, Pilkhuwa
-</p>
-
-<p style="margin-top:18px;font-weight:bold;">
-Take a Bite, Make Your Future Bright! ❤️
 </p>
 
 </div>
@@ -672,33 +600,27 @@ Take a Bite, Make Your Future Bright! ❤️
 </section>
 
 
-<!-- ================= FOOTER ================= -->
-
 <footer>
 
 <p><strong>The Cafe Town</strong></p>
 
-<p style="margin-top:8px;">
-Delicious Food • Great Taste • Good Vibes
-</p>
+<p>Delicious Food • Great Taste • Good Vibes</p>
 
-<p style="margin-top:10px;">
-© 2026 The Cafe Town
-</p>
+<p>© 2026 The Cafe Town</p>
 
 </footer>
 
 
-<!-- HIDDEN OWNER TRIGGER -->
+<!-- OWNER LOGIN -->
 
 <button
-class="owner-trigger"
-id="ownerTrigger"
-aria-label="Owner">
+class="owner-login"
+onclick="ownerLogin()">
+🔐 Owner Login
 </button>
 
 
-<!-- ================= OWNER PANEL ================= -->
+<!-- OWNER PANEL -->
 
 <div id="ownerPanel">
 
@@ -706,18 +628,18 @@ aria-label="Owner">
 
 <div class="owner-head">
 
-<h2 style="margin:0;">
+<h2 style="margin:0">
 🔐 Owner Dashboard
 </h2>
 
-<button class="close-btn" onclick="closeOwner()">
+<button
+class="close-btn"
+onclick="closeOwner()">
 ✕ Close
 </button>
 
 </div>
 
-
-<!-- STATS -->
 
 <div class="stats">
 
@@ -744,8 +666,6 @@ Total Sales
 </div>
 
 
-<!-- ADD SALE -->
-
 <div class="owner-section">
 
 <h3>➕ Add Sale</h3>
@@ -753,47 +673,70 @@ Total Sales
 <div class="form-grid">
 
 <div>
+
 <label>Sale Type</label>
+
 <select id="saleType">
-<option value="online">Online Order</option>
-<option value="offline">Offline Order</option>
+
+<option value="online">
+Online Order
+</option>
+
+<option value="offline">
+Offline Order
+</option>
+
 </select>
+
 </div>
 
+
 <div>
+
 <label>Amount ₹</label>
+
 <input
 type="number"
 id="saleAmount"
 placeholder="Enter amount"
 min="0">
+
 </div>
 
+
 <div>
-<label>Customer / Order Note</label>
+
+<label>Order Note</label>
+
 <input
 type="text"
 id="saleNote"
 placeholder="Optional">
+
 </div>
 
+
 <div>
+
 <label>Date</label>
+
 <input
 type="date"
 id="saleDate">
-</div>
 
 </div>
 
-<button class="action-btn green" onclick="addSale()">
+</div>
+
+
+<button
+class="action-btn green"
+onclick="addSale()">
 ➕ Save Sale
 </button>
 
 </div>
 
-
-<!-- COLLECTION -->
 
 <div class="owner-section">
 
@@ -802,32 +745,40 @@ id="saleDate">
 <div class="form-grid">
 
 <div>
-<label>Collection Amount ₹</label>
+
+<label>Amount ₹</label>
+
 <input
 type="number"
 id="collectionAmount"
 placeholder="Enter amount"
 min="0">
+
 </div>
 
+
 <div>
-<label>Collection Note</label>
+
+<label>Note</label>
+
 <input
 type="text"
 id="collectionNote"
 placeholder="Optional">
-</div>
 
 </div>
 
-<button class="action-btn green" onclick="addCollection()">
+</div>
+
+
+<button
+class="action-btn green"
+onclick="addCollection()">
 💰 Save Collection
 </button>
 
 </div>
 
-
-<!-- FILTER -->
 
 <div class="owner-section">
 
@@ -836,11 +787,16 @@ placeholder="Optional">
 <div class="form-grid">
 
 <div>
+
 <label>Month</label>
 
-<select id="monthFilter" onchange="renderDashboard()">
+<select
+id="monthFilter"
+onchange="renderDashboard()">
 
-<option value="all">All Months</option>
+<option value="all">
+All Months
+</option>
 
 <option value="01">January</option>
 <option value="02">February</option>
@@ -859,12 +815,18 @@ placeholder="Optional">
 
 </div>
 
+
 <div>
+
 <label>Year</label>
 
-<select id="yearFilter" onchange="renderDashboard()">
+<select
+id="yearFilter"
+onchange="renderDashboard()">
 
-<option value="all">All Years</option>
+<option value="all">
+All Years
+</option>
 
 </select>
 
@@ -875,11 +837,9 @@ placeholder="Optional">
 </div>
 
 
-<!-- HISTORY -->
-
 <div class="owner-section">
 
-<h3>📋 Sales & Collection History</h3>
+<h3>📋 History</h3>
 
 <div class="history">
 
@@ -888,17 +848,18 @@ placeholder="Optional">
 <thead>
 
 <tr>
+
 <th>Date</th>
 <th>Type</th>
 <th>Amount</th>
 <th>Note</th>
 <th>Action</th>
+
 </tr>
 
 </thead>
 
-<tbody id="historyBody">
-</tbody>
+<tbody id="historyBody"></tbody>
 
 </table>
 
@@ -906,8 +867,6 @@ placeholder="Optional">
 
 </div>
 
-
-<!-- CALCULATOR -->
 
 <div class="owner-section">
 
@@ -942,7 +901,9 @@ readonly>
 <button onclick="calculateResult()">=</button>
 <button onclick="calc('+')">+</button>
 
-<button onclick="clearCalc()" style="grid-column:span 4">
+<button
+onclick="clearCalc()"
+style="grid-column:span 4">
 CLEAR
 </button>
 
@@ -953,18 +914,20 @@ CLEAR
 </div>
 
 
-<!-- DATA BUTTONS -->
-
 <div class="owner-section">
 
-<h3>⚙️ Data Management</h3>
+<h3>⚙️ Data</h3>
 
-<button class="action-btn blue" onclick="exportData()">
+<button
+class="action-btn blue"
+onclick="exportData()">
 📤 Export Data
 </button>
 
-<button class="action-btn red" onclick="clearAllData()">
-🗑️ Delete All Data
+<button
+class="action-btn red"
+onclick="clearAllData()">
+🗑️ Delete All
 </button>
 
 </div>
@@ -976,648 +939,512 @@ CLEAR
 
 <script>
 
-/* =====================================
-   OWNER SETTINGS
-===================================== */
+/* OWNER PIN */
 
 const OWNER_PIN = "1122";
 
-let ownerTaps = 0;
-let tapTimer;
 
-
-/* =====================================
-   LOCAL STORAGE
-===================================== */
+/* STORAGE */
 
 function getData(){
 
-  return JSON.parse(
-    localStorage.getItem("cafeTownData") || "[]"
-  );
+return JSON.parse(
+localStorage.getItem("cafeTownData") || "[]"
+);
 
 }
 
 function saveData(data){
 
-  localStorage.setItem(
-    "cafeTownData",
-    JSON.stringify(data)
-  );
+localStorage.setItem(
+"cafeTownData",
+JSON.stringify(data)
+);
 
 }
 
 
-/* =====================================
-   OWNER SECRET TRIGGER
-===================================== */
+/* OWNER LOGIN */
 
-document
-.getElementById("ownerTrigger")
-.addEventListener("click",function(){
+function ownerLogin(){
 
-  ownerTaps++;
+let pin=prompt("Enter Owner PIN:");
 
-  clearTimeout(tapTimer);
+if(pin===OWNER_PIN){
 
-  tapTimer=setTimeout(function(){
-    ownerTaps=0;
-  },1500);
+openOwner();
 
-  if(ownerTaps>=5){
+}else{
 
-    ownerTaps=0;
+alert("Wrong PIN ❌");
 
-    let pin=prompt("Enter Owner PIN:");
+}
 
-    if(pin===OWNER_PIN){
+}
 
-      openOwner();
 
-    }else{
+function openOwner(){
 
-      alert("Wrong PIN");
+document.getElementById("ownerPanel")
+.style.display="block";
 
-    }
+setDefaultDate();
 
-  }
+populateYears();
+
+renderDashboard();
+
+}
+
+
+function closeOwner(){
+
+document.getElementById("ownerPanel")
+.style.display="none";
+
+}
+
+
+/* DATE */
+
+function setDefaultDate(){
+
+let input=
+document.getElementById("saleDate");
+
+if(!input.value){
+
+let d=new Date();
+
+input.value=
+d.getFullYear()+"-"+
+String(d.getMonth()+1).padStart(2,"0")+"-"+
+String(d.getDate()).padStart(2,"0");
+
+}
+
+}
+
+
+/* ADD SALE */
+
+function addSale(){
+
+let type=
+document.getElementById("saleType").value;
+
+let amount=
+Number(document.getElementById("saleAmount").value);
+
+let note=
+document.getElementById("saleNote").value;
+
+let date=
+document.getElementById("saleDate").value;
+
+if(!amount || amount<=0){
+
+alert("Enter valid amount.");
+
+return;
+
+}
+
+let data=getData();
+
+data.push({
+
+id:Date.now(),
+
+kind:"sale",
+
+type:type,
+
+amount:amount,
+
+note:note,
+
+date:date
+
+});
+
+saveData(data);
+
+document.getElementById("saleAmount").value="";
+document.getElementById("saleNote").value="";
+
+renderDashboard();
+
+alert("Sale saved ✅");
+
+}
+
+
+/* ADD COLLECTION */
+
+function addCollection(){
+
+let amount=
+Number(
+document.getElementById("collectionAmount").value
+);
+
+let note=
+document.getElementById("collectionNote").value;
+
+let date=
+document.getElementById("saleDate").value;
+
+if(!amount || amount<=0){
+
+alert("Enter valid amount.");
+
+return;
+
+}
+
+let data=getData();
+
+data.push({
+
+id:Date.now(),
+
+kind:"collection",
+
+type:"Collection",
+
+amount:amount,
+
+note:note,
+
+date:date
+
+});
+
+saveData(data);
+
+document.getElementById("collectionAmount").value="";
+document.getElementById("collectionNote").value="";
+
+renderDashboard();
+
+alert("Collection saved ✅");
+
+}
+
+
+/* YEARS */
+
+function populateYears(){
+
+let select=
+document.getElementById("yearFilter");
+
+let data=getData();
+
+let years=[...new Set(
+data.map(x=>x.date.substring(0,4))
+)];
+
+let current=
+String(new Date().getFullYear());
+
+if(!years.includes(current)){
+years.push(current);
+}
+
+years.sort().reverse();
+
+select.innerHTML=
+'<option value="all">All Years</option>';
+
+years.forEach(year=>{
+
+let option=
+document.createElement("option");
+
+option.value=year;
+
+option.textContent=year;
+
+select.appendChild(option);
+
+});
+
+}
+
+
+/* FILTER */
+
+function getFilteredData(){
+
+let data=getData();
+
+let month=
+document.getElementById("monthFilter").value;
+
+let year=
+document.getElementById("yearFilter").value;
+
+return data.filter(item=>{
+
+let y=item.date.substring(0,4);
+let m=item.date.substring(5,7);
+
+return
+(year==="all" || y===year) &&
+(month==="all" || m===month);
+
+});
+
+}
+
+
+/* DASHBOARD */
+
+function renderDashboard(){
+
+let data=getFilteredData();
+
+let online=0;
+let offline=0;
+let collection=0;
+let totalSales=0;
+
+data.forEach(item=>{
+
+if(item.kind==="sale"){
+
+totalSales+=Number(item.amount);
+
+if(item.type==="online")
+online+=Number(item.amount);
+
+if(item.type==="offline")
+offline+=Number(item.amount);
+
+}
+
+if(item.kind==="collection"){
+
+collection+=Number(item.amount);
+
+}
 
 });
 
 
-/* =====================================
-   OWNER OPEN/CLOSE
-===================================== */
+document.getElementById("onlineTotal")
+.textContent="₹"+online;
 
-function openOwner(){
+document.getElementById("offlineTotal")
+.textContent="₹"+offline;
 
-  document.getElementById("ownerPanel").style.display="block";
+document.getElementById("collectionTotal")
+.textContent="₹"+collection;
 
-  setDefaultDate();
-
-  populateYears();
-
-  renderDashboard();
-
-}
-
-function closeOwner(){
-
-  document.getElementById("ownerPanel").style.display="none";
-
-}
+document.getElementById("salesTotal")
+.textContent="₹"+totalSales;
 
 
-/* =====================================
-   DEFAULT DATE
-===================================== */
+let body=
+document.getElementById("historyBody");
 
-function setDefaultDate(){
+body.innerHTML="";
 
-  const input=document.getElementById("saleDate");
 
-  if(!input.value){
+data.sort((a,b)=>b.id-a.id);
 
-    const d=new Date();
+if(data.length===0){
 
-    const month=String(d.getMonth()+1).padStart(2,"0");
+body.innerHTML=
+'<tr><td colspan="5">No records found</td></tr>';
 
-    const day=String(d.getDate()).padStart(2,"0");
-
-    input.value=
-      d.getFullYear()+"-"+month+"-"+day;
-
-  }
+return;
 
 }
 
 
-/* =====================================
-   ADD SALE
-===================================== */
+data.forEach(item=>{
 
-function addSale(){
+let row=document.createElement("tr");
 
-  const type=
-    document.getElementById("saleType").value;
+let type=
+item.kind==="collection"
+?"💰 Collection"
+:item.type==="online"
+?"🟢 Online"
+:"🔵 Offline";
 
-  const amount=
-    Number(document.getElementById("saleAmount").value);
+row.innerHTML=`
 
-  const note=
-    document.getElementById("saleNote").value;
+<td>${item.date}</td>
 
-  const date=
-    document.getElementById("saleDate").value;
+<td>${type}</td>
 
-  if(!amount || amount<=0){
+<td><strong>₹${item.amount}</strong></td>
 
-    alert("Please enter a valid amount.");
+<td>${escapeHTML(item.note || "-")}</td>
 
-    return;
+<td>
+<button
+class="action-btn red"
+onclick="deleteRecord(${item.id})">
+Delete
+</button>
+</td>
 
-  }
+`;
 
-  if(!date){
+body.appendChild(row);
 
-    alert("Please select date.");
-
-    return;
-
-  }
-
-  const data=getData();
-
-  data.push({
-
-    id:Date.now(),
-
-    kind:"sale",
-
-    type:type,
-
-    amount:amount,
-
-    note:note,
-
-    date:date
-
-  });
-
-  saveData(data);
-
-  document.getElementById("saleAmount").value="";
-
-  document.getElementById("saleNote").value="";
-
-  renderDashboard();
-
-  alert("Sale saved successfully.");
+});
 
 }
 
 
-/* =====================================
-   ADD COLLECTION
-===================================== */
-
-function addCollection(){
-
-  const amount=
-    Number(
-      document.getElementById("collectionAmount").value
-    );
-
-  const note=
-    document.getElementById("collectionNote").value;
-
-  const date=
-    document.getElementById("saleDate").value;
-
-  if(!amount || amount<=0){
-
-    alert("Please enter a valid amount.");
-
-    return;
-
-  }
-
-  const data=getData();
-
-  data.push({
-
-    id:Date.now(),
-
-    kind:"collection",
-
-    type:"Collection",
-
-    amount:amount,
-
-    note:note,
-
-    date:date
-
-  });
-
-  saveData(data);
-
-  document.getElementById("collectionAmount").value="";
-
-  document.getElementById("collectionNote").value="";
-
-  renderDashboard();
-
-  alert("Collection saved successfully.");
-
-}
-
-
-/* =====================================
-   FILTER YEARS
-===================================== */
-
-function populateYears(){
-
-  const select=
-    document.getElementById("yearFilter");
-
-  const data=getData();
-
-  const years=[...new Set(
-
-    data.map(x=>x.date.substring(0,4))
-
-  )];
-
-  const currentYear=
-    new Date().getFullYear().toString();
-
-  if(!years.includes(currentYear)){
-
-    years.push(currentYear);
-
-  }
-
-  years.sort().reverse();
-
-  select.innerHTML=
-    '<option value="all">All Years</option>';
-
-  years.forEach(year=>{
-
-    const option=
-      document.createElement("option");
-
-    option.value=year;
-
-    option.textContent=year;
-
-    select.appendChild(option);
-
-  });
-
-}
-
-
-/* =====================================
-   FILTER DATA
-===================================== */
-
-function getFilteredData(){
-
-  const data=getData();
-
-  const month=
-    document.getElementById("monthFilter").value;
-
-  const year=
-    document.getElementById("yearFilter").value;
-
-  return data.filter(item=>{
-
-    const itemYear=
-      item.date.substring(0,4);
-
-    const itemMonth=
-      item.date.substring(5,7);
-
-    const yearMatch=
-      year==="all" || itemYear===year;
-
-    const monthMatch=
-      month==="all" || itemMonth===month;
-
-    return yearMatch && monthMatch;
-
-  });
-
-}
-
-
-/* =====================================
-   DASHBOARD
-===================================== */
-
-function renderDashboard(){
-
-  const data=getFilteredData();
-
-  let online=0;
-  let offline=0;
-  let collection=0;
-  let totalSales=0;
-
-  data.forEach(item=>{
-
-    if(item.kind==="sale"){
-
-      totalSales+=Number(item.amount);
-
-      if(item.type==="online"){
-
-        online+=Number(item.amount);
-
-      }
-
-      if(item.type==="offline"){
-
-        offline+=Number(item.amount);
-
-      }
-
-    }
-
-    if(item.kind==="collection"){
-
-      collection+=Number(item.amount);
-
-    }
-
-  });
-
-
-  document.getElementById("onlineTotal")
-    .textContent="₹"+online;
-
-  document.getElementById("offlineTotal")
-    .textContent="₹"+offline;
-
-  document.getElementById("collectionTotal")
-    .textContent="₹"+collection;
-
-  document.getElementById("salesTotal")
-    .textContent="₹"+totalSales;
-
-
-  const body=
-    document.getElementById("historyBody");
-
-  body.innerHTML="";
-
-
-  if(data.length===0){
-
-    body.innerHTML=
-      '<tr><td colspan="5" class="empty">'+
-      'No records found'+
-      '</td></tr>';
-
-    return;
-
-  }
-
-
-  data.sort((a,b)=>{
-
-    return b.id-a.id;
-
-  });
-
-
-  data.forEach(item=>{
-
-    const row=
-      document.createElement("tr");
-
-    let typeText="";
-
-    if(item.kind==="collection"){
-
-      typeText="💰 Collection";
-
-    }else{
-
-      typeText=
-        item.type==="online"
-        ? "🟢 Online"
-        : "🔵 Offline";
-
-    }
-
-
-    row.innerHTML=`
-
-      <td>${item.date}</td>
-
-      <td>${typeText}</td>
-
-      <td><strong>₹${Number(item.amount)}</strong></td>
-
-      <td>${escapeHTML(item.note || "-")}</td>
-
-      <td>
-        <button
-          class="action-btn red"
-          onclick="deleteRecord(${item.id})">
-          Delete
-        </button>
-      </td>
-
-    `;
-
-    body.appendChild(row);
-
-  });
-
-}
-
-
-/* =====================================
-   ESCAPE HTML
-===================================== */
+/* SECURITY */
 
 function escapeHTML(text){
 
-  return String(text)
-    .replaceAll("&","&amp;")
-    .replaceAll("<","&lt;")
-    .replaceAll(">","&gt;")
-    .replaceAll('"',"&quot;")
-    .replaceAll("'","&#039;");
+return String(text)
+.replaceAll("&","&amp;")
+.replaceAll("<","&lt;")
+.replaceAll(">","&gt;")
+.replaceAll('"',"&quot;")
+.replaceAll("'","&#039;");
 
 }
 
 
-/* =====================================
-   DELETE RECORD
-===================================== */
+/* DELETE */
 
 function deleteRecord(id){
 
-  if(!confirm("Delete this record?")){
+if(!confirm("Delete this record?"))
+return;
 
-    return;
+let data=
+getData().filter(x=>x.id!==id);
 
-  }
+saveData(data);
 
-  const data=getData()
-    .filter(item=>item.id!==id);
+populateYears();
 
-  saveData(data);
-
-  populateYears();
-
-  renderDashboard();
+renderDashboard();
 
 }
 
 
-/* =====================================
-   DELETE ALL
-===================================== */
+/* DELETE ALL */
 
 function clearAllData(){
 
-  if(!confirm(
-    "WARNING!\n\nDelete ALL sales and collection records?"
-  )){
+if(!confirm(
+"Delete ALL sales and collection records?"
+))
+return;
 
-    return;
+localStorage.removeItem("cafeTownData");
 
-  }
+populateYears();
 
-  localStorage.removeItem("cafeTownData");
-
-  populateYears();
-
-  renderDashboard();
-
-  alert("All data deleted.");
+renderDashboard();
 
 }
 
 
-/* =====================================
-   EXPORT DATA
-===================================== */
+/* EXPORT */
 
 function exportData(){
 
-  const data=getData();
+let data=getData();
 
-  if(data.length===0){
+if(!data.length){
 
-    alert("No data available.");
+alert("No data available.");
 
-    return;
+return;
 
-  }
+}
 
-  const text=
-    JSON.stringify(data,null,2);
+let blob=new Blob(
+[JSON.stringify(data,null,2)],
+{type:"application/json"}
+);
 
-  const blob=
-    new Blob([text],{
-      type:"application/json"
-    });
+let url=URL.createObjectURL(blob);
 
-  const url=
-    URL.createObjectURL(blob);
+let a=document.createElement("a");
 
-  const a=
-    document.createElement("a");
+a.href=url;
 
-  a.href=url;
+a.download=
+"cafe-town-sales.json";
 
-  a.download=
-    "cafe-town-sales-"+Date.now()+".json";
+a.click();
 
-  a.click();
-
-  URL.revokeObjectURL(url);
+URL.revokeObjectURL(url);
 
 }
 
 
-/* =====================================
-   CALCULATOR
-===================================== */
+/* CALCULATOR */
 
 let calcValue="";
 
 function calc(value){
 
-  calcValue+=value;
+calcValue+=value;
 
-  document.getElementById("calcDisplay")
-    .value=calcValue;
+document.getElementById("calcDisplay")
+.value=calcValue;
 
 }
 
 function clearCalc(){
 
-  calcValue="";
+calcValue="";
 
-  document.getElementById("calcDisplay")
-    .value="";
+document.getElementById("calcDisplay")
+.value="";
 
 }
 
 function calculateResult(){
 
-  try{
+try{
 
-    if(!calcValue){
+if(!/^[0-9+\-*/.() ]+$/.test(calcValue))
+throw new Error();
 
-      return;
+let result=
+Function(
+'"use strict";return ('+
+calcValue+
+')'
+)();
 
-    }
+calcValue=String(result);
 
-    /*
-      Basic calculator.
-      Only numbers and math operators
-      are accepted.
-    */
+document.getElementById("calcDisplay")
+.value=calcValue;
 
-    if(!/^[0-9+\-*/.() ]+$/.test(calcValue)){
+}catch(e){
 
-      throw new Error();
+calcValue="";
 
-    }
+document.getElementById("calcDisplay")
+.value="Error";
 
-    const result=
-      Function(
-        '"use strict";return ('+
-        calcValue+
-        ')'
-      )();
-
-    calcValue=String(result);
-
-    document.getElementById("calcDisplay")
-      .value=calcValue;
-
-  }catch(e){
-
-    document.getElementById("calcDisplay")
-      .value="Error";
-
-    calcValue="";
-
-  }
+}
 
 }
 
 
-/* =====================================
-   INITIAL DATE
-===================================== */
+/* INITIAL DATE */
 
-(function(){
-
-  const d=new Date();
-
-  const month=
-    String(d.getMonth()+1).padStart(2,"0");
-
-  const day=
-    String(d.getDate()).padStart(2,"0");
-
-  document.getElementById("saleDate").value=
-    d.getFullYear()+"-"+month+"-"+day;
-
-})();
+setDefaultDate();
 
 </script>
 
