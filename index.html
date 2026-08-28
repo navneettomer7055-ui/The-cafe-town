@@ -1,208 +1,151 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta name="google-site-verification"
-content="bRfOK-Ro06qe3K-JPiKjO3mRjdfqmC-kBP45Ulfhewo">
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="description"
+content="The Cafe Town Pilkhuwa - Delicious food, great taste and good vibes.">
 
 <title>The Cafe Town | Pilkhuwa</title>
 
 <style>
 *{
+  box-sizing:border-box;
   margin:0;
   padding:0;
-  box-sizing:border-box;
-}
-
-html{
-  scroll-behavior:smooth;
 }
 
 body{
   font-family:Arial,sans-serif;
-  background:#fff8f0;
-  color:#333;
+  background:#fff8ef;
+  color:#35170e;
+  line-height:1.6;
 }
 
-/* HERO */
 .hero{
-  min-height:90vh;
+  min-height:520px;
   display:flex;
-  justify-content:center;
   align-items:center;
+  justify-content:center;
   text-align:center;
+  padding:40px 20px;
+  background:
+    linear-gradient(rgba(53,23,14,.75),rgba(53,23,14,.75)),
+    radial-gradient(circle at center,#c96,#542516);
   color:white;
-  padding:30px 20px;
-  background:linear-gradient(135deg,#35170e,#7b351d,#c97935);
-  position:relative;
-  overflow:hidden;
-}
-
-.hero:before,
-.hero:after{
-  content:"";
-  position:absolute;
-  width:220px;
-  height:220px;
-  border-radius:50%;
-  background:rgba(255,255,255,.08);
-  animation:float 6s infinite ease-in-out;
-}
-
-.hero:before{
-  top:-60px;
-  left:-60px;
-}
-
-.hero:after{
-  bottom:-80px;
-  right:-50px;
-  animation-delay:2s;
 }
 
 .hero-content{
-  position:relative;
-  z-index:2;
-  animation:fadeUp 1.2s ease;
+  max-width:700px;
+  animation:fadeUp .8s ease;
 }
 
 .logo{
-  font-size:58px;
+  font-size:70px;
   margin-bottom:10px;
-  animation:bounce 2s infinite;
 }
 
 .hero h1{
-  font-size:44px;
+  font-size:48px;
   margin-bottom:10px;
 }
 
 .hero p{
-  font-size:18px;
+  font-size:19px;
 }
 
 .tagline{
-  margin-top:15px;
-  font-size:20px;
-  font-weight:bold;
+  display:inline-block;
+  margin:20px 0;
+  padding:10px 18px;
+  border:1px solid #fff;
+  border-radius:30px;
 }
 
 .btn{
   display:inline-block;
-  margin:25px 8px 0;
-  padding:13px 25px;
+  margin:7px;
+  padding:13px 22px;
   border-radius:30px;
+  background:#fff;
+  color:#542516;
   text-decoration:none;
   font-weight:bold;
-  color:white;
-  background:#e39a43;
-  transition:.3s;
+  transition:.25s;
 }
 
 .btn:hover{
-  transform:scale(1.08);
-  background:#f2b35f;
+  transform:scale(1.05);
 }
 
-/* SECTIONS */
 section{
-  max-width:1000px;
+  max-width:950px;
   margin:auto;
-  padding:55px 18px;
+  padding:45px 18px;
 }
 
 h2{
   text-align:center;
-  color:#542516;
   font-size:30px;
-  margin-bottom:30px;
+  margin-bottom:25px;
+  color:#542516;
 }
 
-/* OFFER */
-.offer{
-  background:linear-gradient(135deg,#fff0d7,#ffe0b2);
-  border:2px solid #e29a43;
-  border-radius:20px;
-  padding:30px 20px;
-  text-align:center;
-  box-shadow:0 8px 25px rgba(0,0,0,.1);
-  animation:pulse 3s infinite;
-}
-
-.offer h2{
-  margin-bottom:12px;
-}
-
-.offer strong{
-  font-size:24px;
-  color:#a94718;
-}
-
-/* CARDS */
 .card{
   background:white;
   padding:25px;
-  border-radius:18px;
-  margin:15px 0;
-  box-shadow:0 5px 18px rgba(0,0,0,.08);
-  transition:.3s;
+  border-radius:15px;
+  box-shadow:0 5px 20px rgba(0,0,0,.08);
 }
 
-.card:hover{
-  transform:translateY(-6px);
-  box-shadow:0 10px 25px rgba(0,0,0,.13);
+.offer{
+  text-align:center;
+  background:#fff0d8;
+  border:2px dashed #a94718;
+  padding:25px;
+  border-radius:15px;
 }
 
-/* MENU */
+.video-gallery{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:18px;
+  margin-bottom:35px;
+}
+
+.video-gallery video{
+  width:100%;
+  border-radius:14px;
+  background:#111;
+  min-height:200px;
+}
+
 .category{
   margin-bottom:30px;
+  border-radius:12px;
+  overflow:hidden;
+  box-shadow:0 4px 15px rgba(0,0,0,.07);
 }
 
 .category h3{
   background:#542516;
   color:white;
   padding:13px 16px;
-  border-radius:12px 12px 0 0;
 }
 
 .item{
   display:flex;
   justify-content:space-between;
+  align-items:center;
   padding:13px 15px;
   background:white;
   border-bottom:1px solid #eee;
-  transition:.25s;
-}
-
-.item:hover{
-  padding-left:22px;
-  background:#fff2df;
 }
 
 .price{
   font-weight:bold;
   color:#a94718;
-}
-
-/* VIDEO */
-.video-gallery{
-  display:grid;
-  grid-template-columns:repeat(2,1fr);
-  gap:15px;
-  margin-bottom:35px;
-}
-
-.video-gallery video{
-  width:100%;
-  border-radius:15px;
-  background:#000;
-}
-
-/* CONTACT */
-.contact{
-  text-align:center;
 }
 
 .phone{
@@ -214,14 +157,8 @@ h2{
   color:white;
   text-decoration:none;
   font-weight:bold;
-  transition:.3s;
 }
 
-.phone:hover{
-  transform:scale(1.08);
-}
-
-/* FOOTER */
 footer{
   background:#35170e;
   color:white;
@@ -229,11 +166,181 @@ footer{
   padding:30px 15px;
 }
 
-/* ANIMATIONS */
+/* OWNER BUTTON */
+.owner-trigger{
+  position:fixed;
+  right:5px;
+  bottom:5px;
+  width:20px;
+  height:20px;
+  opacity:.03;
+  border:0;
+  background:#000;
+}
+
+/* OWNER PANEL */
+#ownerPanel{
+  display:none;
+  position:fixed;
+  inset:0;
+  z-index:9999;
+  background:rgba(0,0,0,.7);
+  overflow:auto;
+  padding:15px;
+}
+
+.owner-box{
+  max-width:950px;
+  margin:30px auto;
+  background:#fff;
+  border-radius:18px;
+  padding:20px;
+}
+
+.owner-head{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:10px;
+  margin-bottom:20px;
+}
+
+.close-btn{
+  border:0;
+  background:#c62828;
+  color:white;
+  padding:10px 15px;
+  border-radius:8px;
+}
+
+.stats{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:12px;
+  margin-bottom:20px;
+}
+
+.stat{
+  background:#fff5e6;
+  border-radius:12px;
+  padding:15px;
+  text-align:center;
+}
+
+.stat b{
+  display:block;
+  font-size:23px;
+  color:#a94718;
+}
+
+.owner-section{
+  margin-top:25px;
+  border-top:1px solid #ddd;
+  padding-top:20px;
+}
+
+.form-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:10px;
+}
+
+input,select{
+  width:100%;
+  padding:12px;
+  border:1px solid #ccc;
+  border-radius:8px;
+  font-size:16px;
+}
+
+.action-btn{
+  border:0;
+  padding:12px 16px;
+  border-radius:8px;
+  cursor:pointer;
+  font-weight:bold;
+  background:#542516;
+  color:white;
+  margin:5px 3px;
+}
+
+.green{
+  background:#2e8b57;
+}
+
+.red{
+  background:#c62828;
+}
+
+.blue{
+  background:#1565c0;
+}
+
+.history{
+  overflow-x:auto;
+}
+
+.history table{
+  width:100%;
+  border-collapse:collapse;
+  min-width:650px;
+}
+
+.history th,
+.history td{
+  border:1px solid #ddd;
+  padding:9px;
+  text-align:center;
+}
+
+.history th{
+  background:#542516;
+  color:white;
+}
+
+.empty{
+  text-align:center;
+  padding:20px;
+  color:#777;
+}
+
+/* CALCULATOR */
+.calculator{
+  max-width:350px;
+  margin:auto;
+}
+
+.calc-display{
+  width:100%;
+  height:60px;
+  font-size:25px;
+  text-align:right;
+  padding:10px;
+  margin-bottom:10px;
+}
+
+.calc-buttons{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:7px;
+}
+
+.calc-buttons button{
+  padding:18px 5px;
+  border:0;
+  border-radius:8px;
+  font-size:18px;
+  background:#eee;
+}
+
+.calc-buttons button:hover{
+  background:#ddd;
+}
+
 @keyframes fadeUp{
   from{
     opacity:0;
-    transform:translateY(40px);
+    transform:translateY(30px);
   }
   to{
     opacity:1;
@@ -241,30 +348,18 @@ footer{
   }
 }
 
-@keyframes float{
-  0%,100%{transform:translateY(0)}
-  50%{transform:translateY(-30px)}
-}
-
-@keyframes bounce{
-  0%,100%{transform:translateY(0)}
-  50%{transform:translateY(-8px)}
-}
-
-@keyframes pulse{
-  0%,100%{transform:scale(1)}
-  50%{transform:scale(1.02)}
-}
-
-/* MOBILE */
 @media(max-width:600px){
+
+  .hero{
+    min-height:470px;
+  }
 
   .hero h1{
     font-size:34px;
   }
 
   .logo{
-    font-size:45px;
+    font-size:50px;
   }
 
   .hero p{
@@ -275,12 +370,20 @@ footer{
     font-size:26px;
   }
 
-  .item{
-    font-size:15px;
-  }
-
   .video-gallery{
     grid-template-columns:1fr;
+  }
+
+  .stats{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .form-grid{
+    grid-template-columns:1fr;
+  }
+
+  .item{
+    font-size:15px;
   }
 }
 </style>
@@ -288,7 +391,8 @@ footer{
 
 <body>
 
-<!-- HERO -->
+<!-- ================= HERO ================= -->
+
 <header class="hero">
   <div class="hero-content">
 
@@ -302,6 +406,8 @@ footer{
       Take a Bite, Make Your Future Bright!
     </div>
 
+    <br>
+
     <a href="#menu" class="btn">🍽️ View Menu</a>
 
     <a href="tel:7452849258" class="btn">📞 Call Now</a>
@@ -310,88 +416,94 @@ footer{
 </header>
 
 
-<!-- ABOUT -->
+<!-- ================= ABOUT ================= -->
+
 <section>
 
-<h2>❤️ Welcome to The Cafe Town</h2>
+  <h2>❤️ Welcome to The Cafe Town</h2>
 
-<div class="card" style="text-align:center;">
+  <div class="card" style="text-align:center;">
 
-<p>
-Welcome to <strong>The Cafe Town</strong> — a friendly place
-to enjoy delicious food, refreshing drinks and great moments
-with your family and friends.
-</p>
+    <p>
+      Welcome to <strong>The Cafe Town</strong> —
+      a friendly place to enjoy delicious food,
+      refreshing drinks and great moments with
+      your family and friends.
+    </p>
 
-<p style="margin-top:15px;">
-📍 Rama Hospital, Near Hindalpur Marg, Pilkhuwa
-</p>
+    <p style="margin-top:15px;">
+      📍 Rama Hospital, Near Hindalpur Marg, Pilkhuwa
+    </p>
 
-</div>
+  </div>
 
 </section>
 
 
-<!-- DELIVERY OFFER -->
+<!-- ================= OFFER ================= -->
+
 <section>
 
-<div class="offer">
+  <div class="offer">
 
-<h2>🛵 Special Delivery Offer</h2>
+    <h2>🛵 Special Delivery Offer</h2>
 
-<p>
-Order for <strong>₹500 or more</strong>
-</p>
+    <p>
+      Order for <strong>₹500 or more</strong>
+    </p>
 
-<p style="margin-top:10px;font-size:19px;">
-🎉 <strong>5 KM Delivery FREE!</strong>
-</p>
+    <p style="margin-top:10px;font-size:19px;">
+      🎉 <strong>5 KM Delivery FREE!</strong>
+    </p>
 
-<p style="margin-top:10px;">
-One FREE delivery per day.
-</p>
+    <p style="margin-top:10px;">
+      One FREE delivery per day.
+    </p>
 
-<p style="margin-top:12px;font-size:13px;">
-Terms & conditions may apply.
-</p>
+    <p style="margin-top:12px;font-size:13px;">
+      Terms & conditions may apply.
+    </p>
 
-</div>
+  </div>
 
 </section>
 
 
-<!-- MENU -->
+<!-- ================= MENU ================= -->
+
 <section id="menu">
 
-<h2>Menu Video Gallery</h2>
+<h2>🎥 Menu Video Gallery</h2>
 
 <div class="video-gallery">
 
-<video controls preload="metadata">
-  <source src="br.mp4" type="video/mp4">
-  Your browser does not support video.
-</video>
+  <video controls playsinline preload="metadata">
+    <source src="./br.mp4" type="video/mp4">
+    Your browser does not support HTML5 video.
+  </video>
 
-<video controls preload="metadata">
-  <source src="cv.mp4" type="video/mp4">
-  Your browser does not support video.
-</video>
+  <video controls playsinline preload="metadata">
+    <source src="./cv.mp4" type="video/mp4">
+    Your browser does not support HTML5 video.
+  </video>
 
-<video controls preload="metadata">
-  <source src="ki.mp4" type="video/mp4">
-  Your browser does not support video.
-</video>
+  <video controls playsinline preload="metadata">
+    <source src="./ki.mp4" type="video/mp4">
+    Your browser does not support HTML5 video.
+  </video>
 
-<video controls preload="metadata">
-  <source src="piz.mp4" type="video/mp4">
-  Your browser does not support video.
-</video>
+  <video controls playsinline preload="metadata">
+    <source src="./piz.mp4" type="video/mp4">
+    Your browser does not support HTML5 video.
+  </video>
 
 </div>
 
 
 <h2>🍽️ Our Menu</h2>
 
+
+<!-- PIZZA -->
 
 <div class="category">
 
@@ -425,165 +537,7 @@ Terms & conditions may apply.
 </div>
 
 
-<div class="category">
-
-<h3>🍔 Burger</h3>
-
-<div class="item">
-<span>Aloo Tikki Burger</span>
-<span class="price">₹50</span>
-</div>
-
-<div class="item">
-<span>Aloo Tikki Cheese Burger</span>
-<span class="price">₹60</span>
-</div>
-
-<div class="item">
-<span>Paneer Tikki Burger</span>
-<span class="price">₹90</span>
-</div>
-
-<div class="item">
-<span>Chicken Burger</span>
-<span class="price">₹90</span>
-</div>
-
-<div class="item">
-<span>Chicken Cheese Burger</span>
-<span class="price">₹100</span>
-</div>
-
-</div>
-
-
-<div class="category">
-
-<h3>🥪 Sandwich</h3>
-
-<div class="item">
-<span>Coleslaw Sandwich</span>
-<span class="price">₹60</span>
-</div>
-
-<div class="item">
-<span>Veg Cheese Sandwich</span>
-<span class="price">₹80</span>
-</div>
-
-<div class="item">
-<span>Paneer Sandwich</span>
-<span class="price">₹90</span>
-</div>
-
-<div class="item">
-<span>Paneer Cheese Sandwich</span>
-<span class="price">₹100</span>
-</div>
-
-<div class="item">
-<span>Chicken Cheese Sandwich</span>
-<span class="price">₹120</span>
-</div>
-
-</div>
-
-
-<div class="category">
-
-<h3>🥤 Shakes & Drinks</h3>
-
-<div class="item">
-<span>Cold Coffee</span>
-<span class="price">₹70</span>
-</div>
-
-<div class="item">
-<span>Oreo Shake</span>
-<span class="price">₹70</span>
-</div>
-
-<div class="item">
-<span>Kit Kat Shake</span>
-<span class="price">₹90</span>
-</div>
-
-<div class="item">
-<span>Banana Shake</span>
-<span class="price">₹50</span>
-</div>
-
-<div class="item">
-<span>Mango Shake</span>
-<span class="price">₹60</span>
-</div>
-
-<div class="item">
-<span>Chocolate Shake</span>
-<span class="price">₹80</span>
-</div>
-
-<div class="item">
-<span>Strawberry Shake</span>
-<span class="price">₹90</span>
-</div>
-
-</div>
-
-
-<div class="category">
-
-<h3>🍟 Fries</h3>
-
-<div class="item">
-<span>French Fries</span>
-<span class="price">₹60</span>
-</div>
-
-<div class="item">
-<span>Peri Peri Fries</span>
-<span class="price">₹80</span>
-</div>
-
-<div class="item">
-<span>Cheese Fries</span>
-<span class="price">₹80</span>
-</div>
-
-<div class="item">
-<span>Peri Peri Cheese Fries</span>
-<span class="price">₹100</span>
-</div>
-
-</div>
-
-
-<div class="category">
-
-<h3>🍝 Pasta</h3>
-
-<div class="item">
-<span>Red Sauce Pasta</span>
-<span class="price">₹80</span>
-</div>
-
-<div class="item">
-<span>White Sauce Pasta</span>
-<span class="price">₹80</span>
-</div>
-
-<div class="item">
-<span>Mix Sauce Pasta</span>
-<span class="price">₹110</span>
-</div>
-
-<div class="item">
-<span>Tandoori Sauce Pasta</span>
-<span class="price">₹100</span>
-</div>
-
-</div>
-
+<!-- ROLLS -->
 
 <div class="category">
 
@@ -611,6 +565,8 @@ Terms & conditions may apply.
 
 </div>
 
+
+<!-- NOODLES -->
 
 <div class="category">
 
@@ -643,6 +599,8 @@ Terms & conditions may apply.
 
 </div>
 
+
+<!-- MOMOS -->
 
 <div class="category">
 
@@ -683,12 +641,13 @@ Terms & conditions may apply.
 </section>
 
 
-<!-- CONTACT -->
-<section class="contact">
+<!-- ================= CONTACT ================= -->
+
+<section>
 
 <h2>📞 Contact Us</h2>
 
-<div class="card">
+<div class="card" style="text-align:center;">
 
 <p><strong>The Cafe Town</strong></p>
 
@@ -713,7 +672,8 @@ Take a Bite, Make Your Future Bright! ❤️
 </section>
 
 
-<!-- FOOTER -->
+<!-- ================= FOOTER ================= -->
+
 <footer>
 
 <p><strong>The Cafe Town</strong></p>
@@ -728,5 +688,938 @@ Delicious Food • Great Taste • Good Vibes
 
 </footer>
 
+
+<!-- HIDDEN OWNER TRIGGER -->
+
+<button
+class="owner-trigger"
+id="ownerTrigger"
+aria-label="Owner">
+</button>
+
+
+<!-- ================= OWNER PANEL ================= -->
+
+<div id="ownerPanel">
+
+<div class="owner-box">
+
+<div class="owner-head">
+
+<h2 style="margin:0;">
+🔐 Owner Dashboard
+</h2>
+
+<button class="close-btn" onclick="closeOwner()">
+✕ Close
+</button>
+
+</div>
+
+
+<!-- STATS -->
+
+<div class="stats">
+
+<div class="stat">
+Online Sale
+<b id="onlineTotal">₹0</b>
+</div>
+
+<div class="stat">
+Offline Sale
+<b id="offlineTotal">₹0</b>
+</div>
+
+<div class="stat">
+Collection
+<b id="collectionTotal">₹0</b>
+</div>
+
+<div class="stat">
+Total Sales
+<b id="salesTotal">₹0</b>
+</div>
+
+</div>
+
+
+<!-- ADD SALE -->
+
+<div class="owner-section">
+
+<h3>➕ Add Sale</h3>
+
+<div class="form-grid">
+
+<div>
+<label>Sale Type</label>
+<select id="saleType">
+<option value="online">Online Order</option>
+<option value="offline">Offline Order</option>
+</select>
+</div>
+
+<div>
+<label>Amount ₹</label>
+<input
+type="number"
+id="saleAmount"
+placeholder="Enter amount"
+min="0">
+</div>
+
+<div>
+<label>Customer / Order Note</label>
+<input
+type="text"
+id="saleNote"
+placeholder="Optional">
+</div>
+
+<div>
+<label>Date</label>
+<input
+type="date"
+id="saleDate">
+</div>
+
+</div>
+
+<button class="action-btn green" onclick="addSale()">
+➕ Save Sale
+</button>
+
+</div>
+
+
+<!-- COLLECTION -->
+
+<div class="owner-section">
+
+<h3>💰 Add Collection</h3>
+
+<div class="form-grid">
+
+<div>
+<label>Collection Amount ₹</label>
+<input
+type="number"
+id="collectionAmount"
+placeholder="Enter amount"
+min="0">
+</div>
+
+<div>
+<label>Collection Note</label>
+<input
+type="text"
+id="collectionNote"
+placeholder="Optional">
+</div>
+
+</div>
+
+<button class="action-btn green" onclick="addCollection()">
+💰 Save Collection
+</button>
+
+</div>
+
+
+<!-- FILTER -->
+
+<div class="owner-section">
+
+<h3>📅 History Filter</h3>
+
+<div class="form-grid">
+
+<div>
+<label>Month</label>
+
+<select id="monthFilter" onchange="renderDashboard()">
+
+<option value="all">All Months</option>
+
+<option value="01">January</option>
+<option value="02">February</option>
+<option value="03">March</option>
+<option value="04">April</option>
+<option value="05">May</option>
+<option value="06">June</option>
+<option value="07">July</option>
+<option value="08">August</option>
+<option value="09">September</option>
+<option value="10">October</option>
+<option value="11">November</option>
+<option value="12">December</option>
+
+</select>
+
+</div>
+
+<div>
+<label>Year</label>
+
+<select id="yearFilter" onchange="renderDashboard()">
+
+<option value="all">All Years</option>
+
+</select>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- HISTORY -->
+
+<div class="owner-section">
+
+<h3>📋 Sales & Collection History</h3>
+
+<div class="history">
+
+<table>
+
+<thead>
+
+<tr>
+<th>Date</th>
+<th>Type</th>
+<th>Amount</th>
+<th>Note</th>
+<th>Action</th>
+</tr>
+
+</thead>
+
+<tbody id="historyBody">
+</tbody>
+
+</table>
+
+</div>
+
+</div>
+
+
+<!-- CALCULATOR -->
+
+<div class="owner-section">
+
+<h3>🧮 Calculator</h3>
+
+<div class="calculator">
+
+<input
+id="calcDisplay"
+class="calc-display"
+readonly>
+
+<div class="calc-buttons">
+
+<button onclick="calc('7')">7</button>
+<button onclick="calc('8')">8</button>
+<button onclick="calc('9')">9</button>
+<button onclick="calc('/')">÷</button>
+
+<button onclick="calc('4')">4</button>
+<button onclick="calc('5')">5</button>
+<button onclick="calc('6')">6</button>
+<button onclick="calc('*')">×</button>
+
+<button onclick="calc('1')">1</button>
+<button onclick="calc('2')">2</button>
+<button onclick="calc('3')">3</button>
+<button onclick="calc('-')">−</button>
+
+<button onclick="calc('0')">0</button>
+<button onclick="calc('.')">.</button>
+<button onclick="calculateResult()">=</button>
+<button onclick="calc('+')">+</button>
+
+<button onclick="clearCalc()" style="grid-column:span 4">
+CLEAR
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- DATA BUTTONS -->
+
+<div class="owner-section">
+
+<h3>⚙️ Data Management</h3>
+
+<button class="action-btn blue" onclick="exportData()">
+📤 Export Data
+</button>
+
+<button class="action-btn red" onclick="clearAllData()">
+🗑️ Delete All Data
+</button>
+
+</div>
+
+
+</div>
+</div>
+
+
+<script>
+
+/* =====================================
+   OWNER SETTINGS
+===================================== */
+
+const OWNER_PIN = "1122";
+
+let ownerTaps = 0;
+let tapTimer;
+
+
+/* =====================================
+   LOCAL STORAGE
+===================================== */
+
+function getData(){
+
+  return JSON.parse(
+    localStorage.getItem("cafeTownData") || "[]"
+  );
+
+}
+
+function saveData(data){
+
+  localStorage.setItem(
+    "cafeTownData",
+    JSON.stringify(data)
+  );
+
+}
+
+
+/* =====================================
+   OWNER SECRET TRIGGER
+===================================== */
+
+document
+.getElementById("ownerTrigger")
+.addEventListener("click",function(){
+
+  ownerTaps++;
+
+  clearTimeout(tapTimer);
+
+  tapTimer=setTimeout(function(){
+    ownerTaps=0;
+  },1500);
+
+  if(ownerTaps>=5){
+
+    ownerTaps=0;
+
+    let pin=prompt("Enter Owner PIN:");
+
+    if(pin===OWNER_PIN){
+
+      openOwner();
+
+    }else{
+
+      alert("Wrong PIN");
+
+    }
+
+  }
+
+});
+
+
+/* =====================================
+   OWNER OPEN/CLOSE
+===================================== */
+
+function openOwner(){
+
+  document.getElementById("ownerPanel").style.display="block";
+
+  setDefaultDate();
+
+  populateYears();
+
+  renderDashboard();
+
+}
+
+function closeOwner(){
+
+  document.getElementById("ownerPanel").style.display="none";
+
+}
+
+
+/* =====================================
+   DEFAULT DATE
+===================================== */
+
+function setDefaultDate(){
+
+  const input=document.getElementById("saleDate");
+
+  if(!input.value){
+
+    const d=new Date();
+
+    const month=String(d.getMonth()+1).padStart(2,"0");
+
+    const day=String(d.getDate()).padStart(2,"0");
+
+    input.value=
+      d.getFullYear()+"-"+month+"-"+day;
+
+  }
+
+}
+
+
+/* =====================================
+   ADD SALE
+===================================== */
+
+function addSale(){
+
+  const type=
+    document.getElementById("saleType").value;
+
+  const amount=
+    Number(document.getElementById("saleAmount").value);
+
+  const note=
+    document.getElementById("saleNote").value;
+
+  const date=
+    document.getElementById("saleDate").value;
+
+  if(!amount || amount<=0){
+
+    alert("Please enter a valid amount.");
+
+    return;
+
+  }
+
+  if(!date){
+
+    alert("Please select date.");
+
+    return;
+
+  }
+
+  const data=getData();
+
+  data.push({
+
+    id:Date.now(),
+
+    kind:"sale",
+
+    type:type,
+
+    amount:amount,
+
+    note:note,
+
+    date:date
+
+  });
+
+  saveData(data);
+
+  document.getElementById("saleAmount").value="";
+
+  document.getElementById("saleNote").value="";
+
+  renderDashboard();
+
+  alert("Sale saved successfully.");
+
+}
+
+
+/* =====================================
+   ADD COLLECTION
+===================================== */
+
+function addCollection(){
+
+  const amount=
+    Number(
+      document.getElementById("collectionAmount").value
+    );
+
+  const note=
+    document.getElementById("collectionNote").value;
+
+  const date=
+    document.getElementById("saleDate").value;
+
+  if(!amount || amount<=0){
+
+    alert("Please enter a valid amount.");
+
+    return;
+
+  }
+
+  const data=getData();
+
+  data.push({
+
+    id:Date.now(),
+
+    kind:"collection",
+
+    type:"Collection",
+
+    amount:amount,
+
+    note:note,
+
+    date:date
+
+  });
+
+  saveData(data);
+
+  document.getElementById("collectionAmount").value="";
+
+  document.getElementById("collectionNote").value="";
+
+  renderDashboard();
+
+  alert("Collection saved successfully.");
+
+}
+
+
+/* =====================================
+   FILTER YEARS
+===================================== */
+
+function populateYears(){
+
+  const select=
+    document.getElementById("yearFilter");
+
+  const data=getData();
+
+  const years=[...new Set(
+
+    data.map(x=>x.date.substring(0,4))
+
+  )];
+
+  const currentYear=
+    new Date().getFullYear().toString();
+
+  if(!years.includes(currentYear)){
+
+    years.push(currentYear);
+
+  }
+
+  years.sort().reverse();
+
+  select.innerHTML=
+    '<option value="all">All Years</option>';
+
+  years.forEach(year=>{
+
+    const option=
+      document.createElement("option");
+
+    option.value=year;
+
+    option.textContent=year;
+
+    select.appendChild(option);
+
+  });
+
+}
+
+
+/* =====================================
+   FILTER DATA
+===================================== */
+
+function getFilteredData(){
+
+  const data=getData();
+
+  const month=
+    document.getElementById("monthFilter").value;
+
+  const year=
+    document.getElementById("yearFilter").value;
+
+  return data.filter(item=>{
+
+    const itemYear=
+      item.date.substring(0,4);
+
+    const itemMonth=
+      item.date.substring(5,7);
+
+    const yearMatch=
+      year==="all" || itemYear===year;
+
+    const monthMatch=
+      month==="all" || itemMonth===month;
+
+    return yearMatch && monthMatch;
+
+  });
+
+}
+
+
+/* =====================================
+   DASHBOARD
+===================================== */
+
+function renderDashboard(){
+
+  const data=getFilteredData();
+
+  let online=0;
+  let offline=0;
+  let collection=0;
+  let totalSales=0;
+
+  data.forEach(item=>{
+
+    if(item.kind==="sale"){
+
+      totalSales+=Number(item.amount);
+
+      if(item.type==="online"){
+
+        online+=Number(item.amount);
+
+      }
+
+      if(item.type==="offline"){
+
+        offline+=Number(item.amount);
+
+      }
+
+    }
+
+    if(item.kind==="collection"){
+
+      collection+=Number(item.amount);
+
+    }
+
+  });
+
+
+  document.getElementById("onlineTotal")
+    .textContent="₹"+online;
+
+  document.getElementById("offlineTotal")
+    .textContent="₹"+offline;
+
+  document.getElementById("collectionTotal")
+    .textContent="₹"+collection;
+
+  document.getElementById("salesTotal")
+    .textContent="₹"+totalSales;
+
+
+  const body=
+    document.getElementById("historyBody");
+
+  body.innerHTML="";
+
+
+  if(data.length===0){
+
+    body.innerHTML=
+      '<tr><td colspan="5" class="empty">'+
+      'No records found'+
+      '</td></tr>';
+
+    return;
+
+  }
+
+
+  data.sort((a,b)=>{
+
+    return b.id-a.id;
+
+  });
+
+
+  data.forEach(item=>{
+
+    const row=
+      document.createElement("tr");
+
+    let typeText="";
+
+    if(item.kind==="collection"){
+
+      typeText="💰 Collection";
+
+    }else{
+
+      typeText=
+        item.type==="online"
+        ? "🟢 Online"
+        : "🔵 Offline";
+
+    }
+
+
+    row.innerHTML=`
+
+      <td>${item.date}</td>
+
+      <td>${typeText}</td>
+
+      <td><strong>₹${Number(item.amount)}</strong></td>
+
+      <td>${escapeHTML(item.note || "-")}</td>
+
+      <td>
+        <button
+          class="action-btn red"
+          onclick="deleteRecord(${item.id})">
+          Delete
+        </button>
+      </td>
+
+    `;
+
+    body.appendChild(row);
+
+  });
+
+}
+
+
+/* =====================================
+   ESCAPE HTML
+===================================== */
+
+function escapeHTML(text){
+
+  return String(text)
+    .replaceAll("&","&amp;")
+    .replaceAll("<","&lt;")
+    .replaceAll(">","&gt;")
+    .replaceAll('"',"&quot;")
+    .replaceAll("'","&#039;");
+
+}
+
+
+/* =====================================
+   DELETE RECORD
+===================================== */
+
+function deleteRecord(id){
+
+  if(!confirm("Delete this record?")){
+
+    return;
+
+  }
+
+  const data=getData()
+    .filter(item=>item.id!==id);
+
+  saveData(data);
+
+  populateYears();
+
+  renderDashboard();
+
+}
+
+
+/* =====================================
+   DELETE ALL
+===================================== */
+
+function clearAllData(){
+
+  if(!confirm(
+    "WARNING!\n\nDelete ALL sales and collection records?"
+  )){
+
+    return;
+
+  }
+
+  localStorage.removeItem("cafeTownData");
+
+  populateYears();
+
+  renderDashboard();
+
+  alert("All data deleted.");
+
+}
+
+
+/* =====================================
+   EXPORT DATA
+===================================== */
+
+function exportData(){
+
+  const data=getData();
+
+  if(data.length===0){
+
+    alert("No data available.");
+
+    return;
+
+  }
+
+  const text=
+    JSON.stringify(data,null,2);
+
+  const blob=
+    new Blob([text],{
+      type:"application/json"
+    });
+
+  const url=
+    URL.createObjectURL(blob);
+
+  const a=
+    document.createElement("a");
+
+  a.href=url;
+
+  a.download=
+    "cafe-town-sales-"+Date.now()+".json";
+
+  a.click();
+
+  URL.revokeObjectURL(url);
+
+}
+
+
+/* =====================================
+   CALCULATOR
+===================================== */
+
+let calcValue="";
+
+function calc(value){
+
+  calcValue+=value;
+
+  document.getElementById("calcDisplay")
+    .value=calcValue;
+
+}
+
+function clearCalc(){
+
+  calcValue="";
+
+  document.getElementById("calcDisplay")
+    .value="";
+
+}
+
+function calculateResult(){
+
+  try{
+
+    if(!calcValue){
+
+      return;
+
+    }
+
+    /*
+      Basic calculator.
+      Only numbers and math operators
+      are accepted.
+    */
+
+    if(!/^[0-9+\-*/.() ]+$/.test(calcValue)){
+
+      throw new Error();
+
+    }
+
+    const result=
+      Function(
+        '"use strict";return ('+
+        calcValue+
+        ')'
+      )();
+
+    calcValue=String(result);
+
+    document.getElementById("calcDisplay")
+      .value=calcValue;
+
+  }catch(e){
+
+    document.getElementById("calcDisplay")
+      .value="Error";
+
+    calcValue="";
+
+  }
+
+}
+
+
+/* =====================================
+   INITIAL DATE
+===================================== */
+
+(function(){
+
+  const d=new Date();
+
+  const month=
+    String(d.getMonth()+1).padStart(2,"0");
+
+  const day=
+    String(d.getDate()).padStart(2,"0");
+
+  document.getElementById("saleDate").value=
+    d.getFullYear()+"-"+month+"-"+day;
+
+})();
+
+</script>
+
 </body>
- </html>
+</html>
