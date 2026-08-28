@@ -6,368 +6,338 @@
 
 <title>The Cafe Town | Pilkhuwa</title>
 
-<meta name="description"
-content="The Cafe Town Pilkhuwa - Delicious food, great taste and good vibes.">
-
 <style>
-*{
-  box-sizing:border-box;
-  margin:0;
-  padding:0;
-}
+*{box-sizing:border-box;margin:0;padding:0}
 
 body{
-  font-family:Arial,sans-serif;
-  background:#fff8ef;
-  color:#35170e;
-  line-height:1.6;
+font-family:Arial,sans-serif;
+background:#fff8ef;
+color:#35170e;
+line-height:1.6
 }
 
 .hero{
-  min-height:520px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  text-align:center;
-  padding:40px 20px;
-  background:
-    linear-gradient(rgba(53,23,14,.75),rgba(53,23,14,.75)),
-    radial-gradient(circle,#c96,#542516);
-  color:white;
+min-height:500px;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+padding:40px 20px;
+background:linear-gradient(rgba(53,23,14,.75),rgba(53,23,14,.75)),
+radial-gradient(circle,#c96,#542516);
+color:white
 }
 
-.hero-content{
-  max-width:700px;
-}
-
-.logo{
-  font-size:70px;
-}
-
-.hero h1{
-  font-size:48px;
-}
-
-.hero p{
-  font-size:19px;
-}
-
-.tagline{
-  display:inline-block;
-  margin:20px 0;
-  padding:10px 18px;
-  border:1px solid white;
-  border-radius:30px;
-}
+.hero-content{max-width:700px}
+.logo{font-size:65px}
+.hero h1{font-size:45px}
 
 .btn{
-  display:inline-block;
-  margin:7px;
-  padding:13px 22px;
-  border-radius:30px;
-  background:white;
-  color:#542516;
-  text-decoration:none;
-  font-weight:bold;
-  border:0;
-  cursor:pointer;
+display:inline-block;
+margin:7px;
+padding:13px 22px;
+border-radius:30px;
+background:white;
+color:#542516;
+text-decoration:none;
+font-weight:bold;
+border:0;
+cursor:pointer
 }
 
 section{
-  max-width:950px;
-  margin:auto;
-  padding:45px 18px;
+max-width:950px;
+margin:auto;
+padding:40px 18px
 }
 
 h2{
-  text-align:center;
-  font-size:30px;
-  margin-bottom:25px;
-  color:#542516;
+text-align:center;
+font-size:30px;
+margin-bottom:25px;
+color:#542516
 }
 
-.card{
-  background:white;
-  padding:25px;
-  border-radius:15px;
-  box-shadow:0 5px 20px rgba(0,0,0,.08);
+.card,.order-box{
+background:white;
+padding:22px;
+border-radius:15px;
+box-shadow:0 5px 20px rgba(0,0,0,.08)
 }
 
 .offer{
-  text-align:center;
-  background:#fff0d8;
-  border:2px dashed #a94718;
-  padding:25px;
-  border-radius:15px;
+text-align:center;
+background:#fff0d8;
+border:2px dashed #a94718;
+padding:25px;
+border-radius:15px
 }
 
 .video-gallery{
-  display:grid;
-  grid-template-columns:repeat(2,1fr);
-  gap:18px;
-  margin-bottom:35px;
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:18px
 }
 
 .video-gallery video{
-  width:100%;
-  border-radius:14px;
-  background:#111;
+width:100%;
+border-radius:14px;
+background:#111
 }
 
 .category{
-  margin-bottom:30px;
-  border-radius:12px;
-  overflow:hidden;
-  box-shadow:0 4px 15px rgba(0,0,0,.07);
+margin-bottom:25px;
+border-radius:12px;
+overflow:hidden;
+box-shadow:0 4px 15px rgba(0,0,0,.07)
 }
 
 .category h3{
-  background:#542516;
-  color:white;
-  padding:13px 16px;
+background:#542516;
+color:white;
+padding:13px 16px
 }
 
 .item{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  padding:13px 15px;
-  background:white;
-  border-bottom:1px solid #eee;
-  gap:10px;
-}
-
-.price{
-  font-weight:bold;
-  color:#a94718;
+display:flex;
+justify-content:space-between;
+align-items:center;
+gap:10px;
+padding:13px 15px;
+background:white;
+border-bottom:1px solid #eee;
+flex-wrap:wrap
 }
 
 .add-btn{
-  border:0;
-  background:#2e8b57;
-  color:white;
-  padding:7px 12px;
-  border-radius:20px;
-  cursor:pointer;
-  font-weight:bold;
-}
-
-.phone{
-  display:inline-block;
-  margin-top:15px;
-  padding:13px 24px;
-  border-radius:30px;
-  background:#2e8b57;
-  color:white;
-  text-decoration:none;
-  font-weight:bold;
-}
-
-footer{
-  background:#35170e;
-  color:white;
-  text-align:center;
-  padding:30px 15px;
-}
-
-/* ORDER BOX */
-
-.order-box{
-  background:white;
-  border-radius:18px;
-  padding:20px;
-  box-shadow:0 5px 20px rgba(0,0,0,.08);
+border:0;
+background:#2e8b57;
+color:white;
+padding:7px 12px;
+border-radius:20px;
+cursor:pointer;
+font-weight:bold
 }
 
 .cart-item{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  padding:10px 0;
-  border-bottom:1px solid #eee;
-  gap:10px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:10px 0;
+border-bottom:1px solid #eee;
+gap:10px
 }
 
 .qty{
-  display:flex;
-  align-items:center;
-  gap:7px;
+display:flex;
+align-items:center;
+gap:8px
 }
 
 .qty button{
-  width:30px;
-  height:30px;
-  border:0;
-  border-radius:50%;
-  background:#542516;
-  color:white;
-  cursor:pointer;
+width:30px;
+height:30px;
+border:0;
+border-radius:50%;
+background:#542516;
+color:white
 }
 
 .order-total{
-  font-size:23px;
-  font-weight:bold;
-  text-align:right;
-  margin-top:15px;
-  color:#a94718;
+font-size:23px;
+font-weight:bold;
+text-align:right;
+margin-top:15px;
+color:#a94718
 }
 
 .form-grid{
-  display:grid;
-  grid-template-columns:repeat(2,1fr);
-  gap:10px;
-  margin-top:15px;
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:12px;
+margin-top:15px
 }
 
 input,select,textarea{
-  width:100%;
-  padding:12px;
-  border:1px solid #ccc;
-  border-radius:8px;
-  font-size:16px;
-  font-family:Arial,sans-serif;
+width:100%;
+padding:12px;
+border:1px solid #ccc;
+border-radius:8px;
+font-size:16px
 }
 
 textarea{
-  min-height:90px;
-  resize:vertical;
+min-height:90px
 }
 
 .full{
-  grid-column:1/-1;
+grid-column:1/-1
 }
 
-.payment-box{
-  display:none;
-  margin-top:20px;
-  padding:20px;
-  border-radius:15px;
-  background:#fff5e6;
-  border:2px dashed #a94718;
-  text-align:center;
+/* DELIVERY AREA */
+
+.area-box{
+margin-top:20px;
+padding:18px;
+background:#fff5e6;
+border:2px solid #ddd;
+border-radius:15px
 }
 
-.payment-box img{
-  width:230px;
-  max-width:100%;
-  border-radius:10px;
-  margin:12px auto;
-  display:block;
+.area-buttons{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:12px;
+margin-top:12px
+}
+
+.area-btn{
+padding:15px;
+border:2px solid #542516;
+background:white;
+color:#542516;
+border-radius:12px;
+font-size:17px;
+font-weight:bold;
+cursor:pointer
+}
+
+.area-btn.active{
+background:#542516;
+color:white
+}
+
+/* PAYMENT */
+
+#paymentSection{
+display:none;
+margin-top:20px
+}
+
+.payment-info{
+padding:18px;
+border-radius:14px;
+background:#fff5e6;
+border:2px dashed #a94718
+}
+
+.payment-info img{
+width:230px;
+max-width:100%;
+display:block;
+margin:15px auto;
+border-radius:10px
+}
+
+#onlinePaymentBox{
+display:none
 }
 
 .screenshot-box{
-  margin-top:15px;
-  text-align:left;
+margin-top:15px
 }
 
 #screenshotPreview{
-  display:none;
-  width:160px;
-  max-height:220px;
-  object-fit:contain;
-  margin-top:10px;
-  border-radius:10px;
+display:none;
+width:150px;
+margin-top:10px;
+border-radius:10px
 }
 
 .whatsapp-btn{
-  background:#25D366;
-  color:white;
-  width:100%;
-  padding:15px;
-  border:0;
-  border-radius:30px;
-  font-size:17px;
-  font-weight:bold;
-  cursor:pointer;
-  margin-top:18px;
+width:100%;
+margin-top:20px;
+padding:15px;
+border:0;
+border-radius:30px;
+background:#25D366;
+color:white;
+font-size:17px;
+font-weight:bold
 }
 
 /* OWNER */
 
 .owner-login{
-  position:fixed;
-  right:15px;
-  bottom:15px;
-  z-index:999;
-  background:#542516;
-  color:white;
-  border:none;
-  padding:12px 17px;
-  border-radius:25px;
-  font-weight:bold;
-  box-shadow:0 4px 12px rgba(0,0,0,.3);
-  cursor:pointer;
+position:fixed;
+right:15px;
+bottom:15px;
+z-index:999;
+background:#542516;
+color:white;
+border:0;
+padding:12px 17px;
+border-radius:25px;
+font-weight:bold
 }
 
 #ownerPanel{
-  display:none;
-  position:fixed;
-  inset:0;
-  z-index:9999;
-  background:rgba(0,0,0,.75);
-  overflow:auto;
-  padding:15px;
+display:none;
+position:fixed;
+inset:0;
+z-index:9999;
+background:rgba(0,0,0,.75);
+overflow:auto;
+padding:15px
 }
 
 .owner-box{
-  max-width:1100px;
-  margin:30px auto;
-  background:white;
-  border-radius:18px;
-  padding:20px;
+max-width:1100px;
+margin:30px auto;
+background:white;
+border-radius:18px;
+padding:20px
 }
 
 .owner-head{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  margin-bottom:20px;
-  gap:10px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+margin-bottom:20px
 }
 
 .close-btn{
-  border:0;
-  background:#c62828;
-  color:white;
-  padding:10px 15px;
-  border-radius:8px;
-  cursor:pointer;
+border:0;
+background:#c62828;
+color:white;
+padding:10px 15px;
+border-radius:8px
 }
 
 .stats{
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  gap:12px;
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:12px
 }
 
 .stat{
-  background:#fff5e6;
-  border-radius:12px;
-  padding:15px;
-  text-align:center;
+background:#fff5e6;
+border-radius:12px;
+padding:15px;
+text-align:center
 }
 
 .stat b{
-  display:block;
-  font-size:23px;
-  color:#a94718;
+display:block;
+font-size:23px;
+color:#a94718
 }
 
 .owner-section{
-  margin-top:25px;
-  border-top:1px solid #ddd;
-  padding-top:20px;
+margin-top:25px;
+border-top:1px solid #ddd;
+padding-top:20px
 }
 
 .action-btn{
-  border:0;
-  padding:12px 16px;
-  border-radius:8px;
-  cursor:pointer;
-  font-weight:bold;
-  background:#542516;
-  color:white;
-  margin:5px 3px;
+border:0;
+padding:10px 14px;
+border-radius:8px;
+cursor:pointer;
+font-weight:bold;
+background:#542516;
+color:white;
+margin:4px
 }
 
 .green{background:#2e8b57}
@@ -376,126 +346,66 @@ textarea{
 .orange{background:#ef6c00}
 
 .history{
-  overflow-x:auto;
+overflow-x:auto
 }
 
 .history table{
-  width:100%;
-  border-collapse:collapse;
-  min-width:750px;
+width:100%;
+border-collapse:collapse;
+min-width:700px
 }
 
-.history th,
-.history td{
-  border:1px solid #ddd;
-  padding:9px;
-  text-align:center;
+.history th,.history td{
+border:1px solid #ddd;
+padding:9px;
+text-align:center
 }
 
 .history th{
-  background:#542516;
-  color:white;
+background:#542516;
+color:white
 }
 
 .order-card{
-  background:#fff8ef;
-  border:1px solid #ddd;
-  border-radius:14px;
-  padding:15px;
-  margin-bottom:15px;
-}
-
-.order-head{
-  display:flex;
-  justify-content:space-between;
-  gap:10px;
-  flex-wrap:wrap;
-  margin-bottom:10px;
-}
-
-.order-id{
-  font-weight:bold;
-  color:#a94718;
+background:#fff8ef;
+border:1px solid #ddd;
+border-radius:14px;
+padding:15px;
+margin-bottom:15px
 }
 
 .status{
-  padding:6px 10px;
-  border-radius:15px;
-  font-weight:bold;
-  background:#ffe0b2;
-}
-
-.order-items{
-  background:white;
-  padding:10px;
-  border-radius:10px;
-  margin:10px 0;
-}
-
-.order-actions{
-  display:flex;
-  flex-wrap:wrap;
-  gap:5px;
-}
-
-.calculator{
-  max-width:350px;
-  margin:auto;
-}
-
-.calc-display{
-  width:100%;
-  height:60px;
-  font-size:25px;
-  text-align:right;
-  padding:10px;
-  margin-bottom:10px;
-}
-
-.calc-buttons{
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  gap:7px;
-}
-
-.calc-buttons button{
-  padding:18px 5px;
-  border:0;
-  border-radius:8px;
-  font-size:18px;
-  background:#eee;
-}
-
-.empty{
-  text-align:center;
-  padding:20px;
-  color:#777;
+display:inline-block;
+padding:5px 10px;
+border-radius:15px;
+background:#ffe0b2;
+font-weight:bold
 }
 
 @media(max-width:600px){
 
-  .hero h1{font-size:34px}
-  .logo{font-size:50px}
+.hero h1{font-size:34px}
+.logo{font-size:50px}
 
-  .video-gallery{
-    grid-template-columns:1fr;
-  }
+.video-gallery{
+grid-template-columns:1fr
+}
 
-  .stats{
-    grid-template-columns:repeat(2,1fr);
-  }
+.stats{
+grid-template-columns:repeat(2,1fr)
+}
 
-  .form-grid{
-    grid-template-columns:1fr;
-  }
+.form-grid{
+grid-template-columns:1fr
+}
 
-  .full{
-    grid-column:auto;
-  }
+.full{
+grid-column:auto
+}
 
-  .item{
-    flex-wrap:wrap;
-  }
+.area-buttons{
+grid-template-columns:1fr
+}
 }
 </style>
 </head>
@@ -503,19 +413,23 @@ textarea{
 <body>
 
 <header class="hero">
+
 <div class="hero-content">
+
 <div class="logo">🍕</div>
+
 <h1>The Cafe Town</h1>
+
 <p>Delicious Food • Great Taste • Good Vibes</p>
 
-<div class="tagline">
+<div style="margin:20px 0">
 Take a Bite, Make Your Future Bright!
 </div>
 
-<br>
-
 <a href="#menu" class="btn">🍽️ View Menu</a>
+
 <a href="#order" class="btn">🛒 Order Now</a>
+
 <a href="tel:7452849258" class="btn">📞 Call Now</a>
 
 </div>
@@ -523,34 +437,40 @@ Take a Bite, Make Your Future Bright!
 
 
 <section>
+
 <h2>❤️ Welcome to The Cafe Town</h2>
 
 <div class="card" style="text-align:center">
+
 <p>
 Welcome to <strong>The Cafe Town</strong> —
 a friendly place to enjoy delicious food,
-refreshing drinks and great moments with
-your family and friends.
+refreshing drinks and great moments.
 </p>
 
 <p style="margin-top:15px">
 📍 Rama Hospital, Near Hindalpur Marg, Pilkhuwa
 </p>
+
 </div>
+
 </section>
 
 
 <section>
+
 <div class="offer">
+
 <h2>🛵 Special Delivery Offer</h2>
+
 <p>Order for <strong>₹500 or more</strong></p>
-<p style="margin-top:10px;font-size:19px">
+
+<p style="font-size:19px;margin-top:10px">
 🎉 <strong>5 KM Delivery FREE!</strong>
 </p>
-<p style="margin-top:10px">
-One FREE delivery per day.
-</p>
+
 </div>
+
 </section>
 
 
@@ -583,128 +503,196 @@ One FREE delivery per day.
 
 
 <div class="category">
+
 <h3>🍕 Pizza</h3>
 
 <div class="item">
 <span>Margherita Pizza — ₹100</span>
-<button class="add-btn" onclick="addToCart('Margherita Pizza',100)">ADD</button>
+<button class="add-btn"
+onclick="addToCart('Margherita Pizza',100)">
+ADD
+</button>
 </div>
 
 <div class="item">
 <span>Onion Pizza — ₹110</span>
-<button class="add-btn" onclick="addToCart('Onion Pizza',110)">ADD</button>
+<button class="add-btn"
+onclick="addToCart('Onion Pizza',110)">
+ADD
+</button>
 </div>
 
 <div class="item">
 <span>Sweet Corn Pizza — ₹110</span>
-<button class="add-btn" onclick="addToCart('Sweet Corn Pizza',110)">ADD</button>
+<button class="add-btn"
+onclick="addToCart('Sweet Corn Pizza',110)">
+ADD
+</button>
 </div>
 
 <div class="item">
 <span>Veggie Pizza — ₹150</span>
-<button class="add-btn" onclick="addToCart('Veggie Pizza',150)">ADD</button>
+<button class="add-btn"
+onclick="addToCart('Veggie Pizza',150)">
+ADD
+</button>
 </div>
 
 <div class="item">
 <span>Paneer Tikka Pizza — ₹160</span>
-<button class="add-btn" onclick="addToCart('Paneer Tikka Pizza',160)">ADD</button>
+<button class="add-btn"
+onclick="addToCart('Paneer Tikka Pizza',160)">
+ADD
+</button>
 </div>
+
 </div>
 
 
 <div class="category">
+
 <h3>🌯 Rolls</h3>
 
 <div class="item">
 <span>Veg Roll — ₹60</span>
-<button class="add-btn" onclick="addToCart('Veg Roll',60)">ADD</button>
+<button class="add-btn"
+onclick="addToCart('Veg Roll',60)">
+ADD
+</button>
 </div>
 
 <div class="item">
 <span>Paneer Roll — ₹90</span>
-<button class="add-btn" onclick="addToCart('Paneer Roll',90)">ADD</button>
+<button class="add-btn"
+onclick="addToCart('Paneer Roll',90)">
+ADD
+</button>
 </div>
 
 <div class="item">
 <span>Chicken Roll — ₹100</span>
-<button class="add-btn" onclick="addToCart('Chicken Roll',100)">ADD</button>
+<button class="add-btn"
+onclick="addToCart('Chicken Roll',100)">
+ADD
+</button>
 </div>
 
 <div class="item">
 <span>Double Egg Chicken Roll — ₹120</span>
-<button class="add-btn" onclick="addToCart('Double Egg Chicken Roll',120)">ADD</button>
+<button class="add-btn"
+onclick="addToCart('Double Egg Chicken Roll',120)">
+ADD
+</button>
 </div>
+
 </div>
 
 
 <div class="category">
+
 <h3>🍜 Noodles</h3>
 
 <div class="item">
-<span>Veg Noodles — ₹50 / ₹80</span>
-<button class="add-btn" onclick="addToCart('Veg Noodles',50)">ADD ₹50</button>
+<span>Veg Noodles — ₹50</span>
+<button class="add-btn"
+onclick="addToCart('Veg Noodles',50)">
+ADD
+</button>
 </div>
 
 <div class="item">
-<span>Paneer Noodles — ₹70 / ₹90</span>
-<button class="add-btn" onclick="addToCart('Paneer Noodles',70)">ADD ₹70</button>
+<span>Paneer Noodles — ₹70</span>
+<button class="add-btn"
+onclick="addToCart('Paneer Noodles',70)">
+ADD
+</button>
 </div>
 
 <div class="item">
-<span>Egg Noodles — ₹60 / ₹80</span>
-<button class="add-btn" onclick="addToCart('Egg Noodles',60)">ADD ₹60</button>
+<span>Egg Noodles — ₹60</span>
+<button class="add-btn"
+onclick="addToCart('Egg Noodles',60)">
+ADD
+</button>
 </div>
 
 <div class="item">
-<span>Singapore Noodles — ₹70 / ₹100</span>
-<button class="add-btn" onclick="addToCart('Singapore Noodles',70)">ADD ₹70</button>
+<span>Singapore Noodles — ₹70</span>
+<button class="add-btn"
+onclick="addToCart('Singapore Noodles',70)">
+ADD
+</button>
 </div>
 
 <div class="item">
-<span>Hakka Noodles — ₹70 / ₹100</span>
-<button class="add-btn" onclick="addToCart('Hakka Noodles',70)">ADD ₹70</button>
+<span>Hakka Noodles — ₹70</span>
+<button class="add-btn"
+onclick="addToCart('Hakka Noodles',70)">
+ADD
+</button>
 </div>
+
 </div>
 
 
 <div class="category">
+
 <h3>🥟 Momos & Maggi</h3>
 
 <div class="item">
-<span>Veg Momos — ₹50 / ₹90</span>
-<button class="add-btn" onclick="addToCart('Veg Momos',50)">ADD ₹50</button>
+<span>Veg Momos — ₹50</span>
+<button class="add-btn"
+onclick="addToCart('Veg Momos',50)">
+ADD
+</button>
 </div>
 
 <div class="item">
-<span>Paneer Momos — ₹70 / ₹120</span>
-<button class="add-btn" onclick="addToCart('Paneer Momos',70)">ADD ₹70</button>
+<span>Paneer Momos — ₹70</span>
+<button class="add-btn"
+onclick="addToCart('Paneer Momos',70)">
+ADD
+</button>
 </div>
 
 <div class="item">
 <span>Plain Maggi — ₹40</span>
-<button class="add-btn" onclick="addToCart('Plain Maggi',40)">ADD</button>
+<button class="add-btn"
+onclick="addToCart('Plain Maggi',40)">
+ADD
+</button>
 </div>
 
 <div class="item">
 <span>Cheese Maggi — ₹60</span>
-<button class="add-btn" onclick="addToCart('Cheese Maggi',60)">ADD</button>
+<button class="add-btn"
+onclick="addToCart('Cheese Maggi',60)">
+ADD
+</button>
 </div>
 
 <div class="item">
 <span>Butter Maggi — ₹50</span>
-<button class="add-btn" onclick="addToCart('Butter Maggi',50)">ADD</button>
+<button class="add-btn"
+onclick="addToCart('Butter Maggi',50)">
+ADD
+</button>
 </div>
 
 <div class="item">
 <span>Veg Maggi — ₹60</span>
-<button class="add-btn" onclick="addToCart('Veg Maggi',60)">ADD</button>
+<button class="add-btn"
+onclick="addToCart('Veg Maggi',60)">
+ADD
+</button>
 </div>
+
 </div>
 
 </section>
 
 
-<!-- CUSTOMER ORDER -->
+<!-- ORDER -->
 
 <section id="order">
 
@@ -714,8 +702,8 @@ One FREE delivery per day.
 
 <h3>🛍️ Your Cart</h3>
 
-<div id="cartItems" class="empty">
-Your cart is empty. Menu से items ADD करें.
+<div id="cartItems">
+Your cart is empty.
 </div>
 
 <div class="order-total">
@@ -727,82 +715,125 @@ Total: ₹<span id="cartTotal">0</span>
 
 <div>
 <label>Customer Name *</label>
-<input id="customerName" type="text" placeholder="Enter your name">
+
+<input id="customerName"
+type="text"
+placeholder="Enter your name">
 </div>
+
 
 <div>
 <label>Mobile Number *</label>
-<input id="customerMobile" type="tel" maxlength="10"
+
+<input id="customerMobile"
+type="tel"
+maxlength="10"
 placeholder="10 digit mobile number">
 </div>
 
+
 <div class="full">
-<label>Address *</label>
+
+<label>Delivery Address *</label>
+
 <textarea id="customerAddress"
 placeholder="Enter complete delivery address"></textarea>
-</div>
 
 </div>
 
-
-<div style="margin-top:15px">
-<label>
-<input type="checkbox" id="ramaArea"
-onchange="updatePaymentOptions()"
-style="width:auto">
- My address is in/near Rama Hospital area
-</label>
 </div>
 
 
-<div id="paymentChoice" style="margin-top:15px">
+<!-- IMPORTANT AREA SELECTION -->
 
-<label><strong>Payment Method *</strong></label>
+<div class="area-box">
 
-<select id="paymentMethod" onchange="showPaymentBox()">
-<option value="">Select Payment Method</option>
-<option value="online">Online Payment</option>
-<option value="cod">Cash on Delivery</option>
-</select>
+<h3>📍 Delivery Area Select करें *</h3>
 
-<p id="outsideRamaNote"
-style="display:none;color:#c62828;margin-top:8px;font-weight:bold">
-⚠️ Out of Rama area: केवल Online Payment available.
+<p style="margin-top:5px">
+Payment option इसी selection के अनुसार आएगा.
 </p>
 
+<div class="area-buttons">
+
+<button
+id="inRamaBtn"
+class="area-btn"
+onclick="selectArea('in')">
+
+🏥 IN RAMA
+
+<br>
+
+<small>COD + Online Payment</small>
+
+</button>
+
+
+<button
+id="outRamaBtn"
+class="area-btn"
+onclick="selectArea('out')">
+
+📍 OUT OF RAMA
+
+<br>
+
+<small>Only Online Payment</small>
+
+</button>
+
+</div>
+
 </div>
 
 
-<div id="paymentBox" class="payment-box">
+<!-- PAYMENT SECTION -->
+
+<div id="paymentSection">
+
+<h3 style="margin-top:20px">
+💳 Payment Method
+</h3>
+
+
+<select id="paymentMethod"
+onchange="paymentChanged()">
+
+</select>
+
+
+<div id="onlinePaymentBox"
+class="payment-info"
+style="margin-top:15px">
 
 <h3>💳 Online Payment</h3>
 
-<p>UPI ID:</p>
+<p>
+UPI ID:
+</p>
 
 <p style="font-size:20px;font-weight:bold">
 Paytm.s21aaef@pty
 </p>
 
 <p style="margin-top:8px">
-नीचे QR scan करके payment करें:
+QR scan करके payment करें:
 </p>
 
-<!-- अपनी QR image का नाम rama-qr.png रखें -->
-<img src="./rama-qr.png"
-alt="Rama Hospital Online Payment QR"
-onerror="this.style.display='none';document.getElementById('qrMissing').style.display='block';">
 
-<p id="qrMissing"
-style="display:none;color:#c62828">
-QR image नहीं मिली। अपनी QR फोटो का नाम
-<strong>rama-qr.png</strong> रखें।
-</p>
+<img
+src="./rama-qr.png"
+alt="Rama Hospital Online Payment QR">
+
 
 <a
 class="btn"
 style="background:#1565c0;color:white"
 href="upi://pay?pa=Paytm.s21aaef@pty&pn=The%20Cafe%20Town&cu=INR">
-📱 Pay via UPI App
+
+📱 Pay via UPI
+
 </a>
 
 
@@ -818,13 +849,33 @@ id="paymentScreenshot"
 accept="image/*"
 onchange="previewScreenshot()">
 
+
 <img id="screenshotPreview">
 
-<p style="font-size:13px;margin-top:6px">
-Online order भेजने के लिए payment screenshot लगाना जरूरी है।
+<p style="font-size:13px;margin-top:5px">
+Online payment में screenshot लगाना जरूरी है.
 </p>
 
 </div>
+
+</div>
+
+
+<div id="codInfo"
+style="
+display:none;
+margin-top:15px;
+padding:15px;
+background:#e8f5e9;
+border-radius:12px;
+border:2px solid #2e8b57;
+">
+
+<h3>💵 Cash on Delivery</h3>
+
+<p>
+आपका payment delivery के समय cash में लिया जाएगा.
+</p>
 
 </div>
 
@@ -832,55 +883,65 @@ Online order भेजने के लिए payment screenshot लगाना
 <button
 class="whatsapp-btn"
 onclick="placeOrder()">
+
 💬 Submit Order on WhatsApp
+
 </button>
 
-<p style="font-size:13px;text-align:center;margin-top:10px;color:#666">
-Order submit करने पर WhatsApp खुलेगा और पूरा order message तैयार होगा।
-</p>
+</div>
 
 </div>
+
 </section>
 
 
 <section>
+
 <h2>📞 Contact Us</h2>
 
 <div class="card" style="text-align:center">
 
 <p><strong>The Cafe Town</strong></p>
 
-<p style="margin-top:8px">
-Deepak Tomar
-</p>
+<p>Deepak Tomar</p>
 
-<a class="phone" href="tel:7452849258">
+<a class="phone"
+href="tel:7452849258">
+
 📲 74528 49258
+
 </a>
 
-<p style="margin-top:18px">
+<p style="margin-top:15px">
 📍 Rama Hospital, Near Hindalpur Marg, Pilkhuwa
 </p>
 
 </div>
+
 </section>
 
 
 <footer>
+
 <p><strong>The Cafe Town</strong></p>
+
 <p>Delicious Food • Great Taste • Good Vibes</p>
+
 <p>© 2026 The Cafe Town</p>
+
 </footer>
 
 
-<!-- OWNER LOGIN -->
+<!-- OWNER -->
 
-<button class="owner-login" onclick="ownerLogin()">
+<button
+class="owner-login"
+onclick="ownerLogin()">
+
 🔐 Owner Login
+
 </button>
 
-
-<!-- OWNER PANEL -->
 
 <div id="ownerPanel">
 
@@ -892,8 +953,12 @@ Deepak Tomar
 🔐 Owner Dashboard
 </h2>
 
-<button class="close-btn" onclick="closeOwner()">
+<button
+class="close-btn"
+onclick="closeOwner()">
+
 ✕ Close
+
 </button>
 
 </div>
@@ -924,35 +989,14 @@ Total Sales
 </div>
 
 
-<!-- ONLINE ORDERS -->
-
 <div class="owner-section">
 
 <h3>📦 Online Orders</h3>
-
-<div style="margin:12px 0">
-
-<select id="orderFilter"
-onchange="renderOrders()">
-
-<option value="all">All Orders</option>
-<option value="Pending">Pending</option>
-<option value="Confirmed">Confirmed</option>
-<option value="Preparing">Preparing</option>
-<option value="Out for Delivery">Out for Delivery</option>
-<option value="Delivered">Delivered</option>
-<option value="Cancelled">Cancelled</option>
-
-</select>
-
-</div>
 
 <div id="ordersList"></div>
 
 </div>
 
-
-<!-- SALES -->
 
 <div class="owner-section">
 
@@ -964,46 +1008,60 @@ onchange="renderOrders()">
 <label>Sale Type</label>
 
 <select id="saleType">
-<option value="online">Online Order</option>
-<option value="offline">Offline Order</option>
+
+<option value="online">
+Online Order
+</option>
+
+<option value="offline">
+Offline Order
+</option>
+
 </select>
 </div>
+
 
 <div>
 <label>Amount ₹</label>
 
-<input type="number"
+<input
+type="number"
 id="saleAmount"
-placeholder="Enter amount"
-min="0">
+placeholder="Enter amount">
 </div>
 
-<div>
-<label>Order Note</label>
 
-<input type="text"
+<div>
+<label>Note</label>
+
+<input
 id="saleNote"
 placeholder="Optional">
 </div>
 
+
 <div>
 <label>Date</label>
 
-<input type="date"
+<input
+type="date"
 id="saleDate">
-</div>
 
 </div>
 
-<button class="action-btn green"
+</div>
+
+
+<button
+class="action-btn green"
 onclick="addSale()">
+
 ➕ Save Sale
+
 </button>
 
 </div>
 
-
-<!-- COLLECTION -->
 
 <div class="owner-section">
 
@@ -1012,88 +1070,43 @@ onclick="addSale()">
 <div class="form-grid">
 
 <div>
+
 <label>Amount ₹</label>
 
-<input type="number"
+<input
+type="number"
 id="collectionAmount"
-placeholder="Enter amount"
-min="0">
+placeholder="Amount">
+
 </div>
 
 <div>
+
 <label>Note</label>
 
-<input type="text"
+<input
 id="collectionNote"
 placeholder="Optional">
-</div>
 
 </div>
 
-<button class="action-btn green"
+</div>
+
+
+<button
+class="action-btn green"
 onclick="addCollection()">
+
 💰 Save Collection
+
 </button>
 
 </div>
 
 
-<!-- FILTER -->
-
 <div class="owner-section">
 
-<h3>📅 History Filter</h3>
-
-<div class="form-grid">
-
-<div>
-
-<label>Month</label>
-
-<select id="monthFilter"
-onchange="renderDashboard()">
-
-<option value="all">All Months</option>
-
-<option value="01">January</option>
-<option value="02">February</option>
-<option value="03">March</option>
-<option value="04">April</option>
-<option value="05">May</option>
-<option value="06">June</option>
-<option value="07">July</option>
-<option value="08">August</option>
-<option value="09">September</option>
-<option value="10">October</option>
-<option value="11">November</option>
-<option value="12">December</option>
-
-</select>
-
-</div>
-
-<div>
-
-<label>Year</label>
-
-<select id="yearFilter"
-onchange="renderDashboard()">
-
-<option value="all">All Years</option>
-
-</select>
-
-</div>
-
-</div>
-</div>
-
-
-<!-- HISTORY -->
-
-<div class="owner-section">
-
-<h3>📋 Sales & Collection History</h3>
+<h3>📋 Sales History</h3>
 
 <div class="history">
 
@@ -1119,80 +1132,8 @@ onchange="renderDashboard()">
 
 </div>
 
-
-<!-- CALCULATOR -->
-
-<div class="owner-section">
-
-<h3>🧮 Calculator</h3>
-
-<div class="calculator">
-
-<input id="calcDisplay"
-class="calc-display"
-readonly>
-
-<div class="calc-buttons">
-
-<button onclick="calc('7')">7</button>
-<button onclick="calc('8')">8</button>
-<button onclick="calc('9')">9</button>
-<button onclick="calc('/')">÷</button>
-
-<button onclick="calc('4')">4</button>
-<button onclick="calc('5')">5</button>
-<button onclick="calc('6')">6</button>
-<button onclick="calc('*')">×</button>
-
-<button onclick="calc('1')">1</button>
-<button onclick="calc('2')">2</button>
-<button onclick="calc('3')">3</button>
-<button onclick="calc('-')">−</button>
-
-<button onclick="calc('0')">0</button>
-<button onclick="calc('.')">.</button>
-<button onclick="calculateResult()">=</button>
-<button onclick="calc('+')">+</button>
-
-<button onclick="clearCalc()"
-style="grid-column:span 4">
-CLEAR
-</button>
-
-</div>
-</div>
 </div>
 
-
-<!-- DATA -->
-
-<div class="owner-section">
-
-<h3>⚙️ Data</h3>
-
-<button class="action-btn blue"
-onclick="exportData()">
-📤 Export Sales Data
-</button>
-
-<button class="action-btn blue"
-onclick="exportOrders()">
-📦 Export Orders
-</button>
-
-<button class="action-btn red"
-onclick="clearAllData()">
-🗑️ Delete All Sales
-</button>
-
-<button class="action-btn red"
-onclick="clearAllOrders()">
-🗑️ Delete All Orders
-</button>
-
-</div>
-
-</div>
 </div>
 
 
@@ -1202,34 +1143,37 @@ onclick="clearAllOrders()">
    SETTINGS
 ========================= */
 
-const OWNER_PIN = "1122";
+const OWNER_PIN="1122";
 
-/* WhatsApp number - change if needed */
-const WHATSAPP_NUMBER = "917452849258";
+const WHATSAPP_NUMBER="917452849258";
 
-const UPI_ID = "Paytm.s21aaef@pty";
+const UPI_ID="Paytm.s21aaef@pty";
 
 
 /* =========================
    CART
 ========================= */
 
-let cart = [];
+let cart=[];
+
+let selectedArea="";
+
 
 function addToCart(name,price){
 
-let existing =
-cart.find(item=>item.name===name);
+let item=cart.find(
+x=>x.name===name
+);
 
-if(existing){
+if(item){
 
-existing.qty++;
+item.qty++;
 
 }else{
 
 cart.push({
 name:name,
-price:Number(price),
+price:price,
 qty:1
 });
 
@@ -1239,8 +1183,7 @@ renderCart();
 
 document.getElementById("order")
 .scrollIntoView({
-behavior:"smooth",
-block:"start"
+behavior:"smooth"
 });
 
 }
@@ -1250,7 +1193,7 @@ function changeQty(index,change){
 
 if(!cart[index]) return;
 
-cart[index].qty += change;
+cart[index].qty+=change;
 
 if(cart[index].qty<=0){
 
@@ -1266,7 +1209,8 @@ renderCart();
 function getCartTotal(){
 
 return cart.reduce(
-(sum,item)=>sum+(item.price*item.qty),
+(sum,item)=>
+sum+(item.price*item.qty),
 0
 );
 
@@ -1278,15 +1222,13 @@ function renderCart(){
 let box=
 document.getElementById("cartItems");
 
-let total=
-document.getElementById("cartTotal");
-
-total.textContent=getCartTotal();
+document.getElementById("cartTotal")
+.textContent=getCartTotal();
 
 if(!cart.length){
 
 box.innerHTML=
-'<div class="empty">Your cart is empty. Menu से items ADD करें.</div>';
+'<p style="padding:15px;color:#777">Your cart is empty. Menu से items ADD करें.</p>';
 
 return;
 
@@ -1310,17 +1252,21 @@ div.innerHTML=`
 
 <div class="qty">
 
-<button onclick="changeQty(${index},-1)">−</button>
+<button onclick="changeQty(${index},-1)">
+−
+</button>
 
 <strong>${item.qty}</strong>
 
-<button onclick="changeQty(${index},1)">+</button>
+<button onclick="changeQty(${index},1)">
++
+</button>
 
 </div>
 
-<div>
-<strong>₹${item.price*item.qty}</strong>
-</div>
+<strong>
+₹${item.price*item.qty}
+</strong>
 
 `;
 
@@ -1332,69 +1278,150 @@ box.appendChild(div);
 
 
 /* =========================
-   PAYMENT
+   AREA SELECTION
 ========================= */
 
-function updatePaymentOptions(){
+function selectArea(area){
 
-let rama =
-document.getElementById("ramaArea").checked;
+selectedArea=area;
 
-let select =
+let inBtn=
+document.getElementById("inRamaBtn");
+
+let outBtn=
+document.getElementById("outRamaBtn");
+
+inBtn.classList.remove("active");
+outBtn.classList.remove("active");
+
+if(area==="in"){
+
+inBtn.classList.add("active");
+
+setPaymentOptions(true);
+
+}else{
+
+outBtn.classList.add("active");
+
+setPaymentOptions(false);
+
+}
+
+document.getElementById("paymentSection")
+.style.display="block";
+
+}
+
+
+/* =========================
+   PAYMENT OPTIONS
+========================= */
+
+function setPaymentOptions(isInRama){
+
+let select=
 document.getElementById("paymentMethod");
 
-let note =
-document.getElementById("outsideRamaNote");
+if(isInRama){
 
-if(rama){
-
-note.style.display="none";
+/*
+ IN RAMA:
+ COD + ONLINE
+*/
 
 select.innerHTML=`
 
-<option value="">Select Payment Method</option>
-
-<option value="online">
-Online Payment
+<option value="">
+Select Payment Method
 </option>
 
 <option value="cod">
-Cash on Delivery
+💵 Cash on Delivery
+</option>
+
+<option value="online">
+💳 Online Payment
 </option>
 
 `;
 
 }else{
 
-note.style.display="block";
+/*
+ OUT OF RAMA:
+ ONLY ONLINE
+*/
 
 select.innerHTML=`
 
-<option value="">Select Payment Method</option>
+<option value="">
+Select Payment Method
+</option>
 
 <option value="online">
-Online Payment
+💳 Online Payment
 </option>
 
 `;
 
 }
 
-showPaymentBox();
+select.value="";
+
+document.getElementById("onlinePaymentBox")
+.style.display="none";
+
+document.getElementById("codInfo")
+.style.display="none";
 
 }
 
 
-function showPaymentBox(){
+function paymentChanged(){
 
-let method =
+let method=
 document.getElementById("paymentMethod").value;
 
-let box =
-document.getElementById("paymentBox");
+let onlineBox=
+document.getElementById("onlinePaymentBox");
 
-box.style.display =
-method==="online" ? "block" : "none";
+let codBox=
+document.getElementById("codInfo");
+
+onlineBox.style.display="none";
+
+codBox.style.display="none";
+
+
+if(method==="online"){
+
+onlineBox.style.display="block";
+
+}
+
+if(method==="cod"){
+
+/*
+ EXTRA SAFETY:
+ COD can NEVER work outside Rama.
+*/
+
+if(selectedArea!=="in"){
+
+alert(
+"❌ Out of Rama में COD available नहीं है."
+);
+
+setPaymentOptions(false);
+
+return;
+
+}
+
+codBox.style.display="block";
+
+}
 
 }
 
@@ -1403,41 +1430,37 @@ method==="online" ? "block" : "none";
    SCREENSHOT
 ========================= */
 
-let screenshotData = "";
+let screenshotData="";
 
 function previewScreenshot(){
 
-let input =
-document.getElementById("paymentScreenshot");
+let file=
+document.getElementById(
+"paymentScreenshot"
+).files[0];
 
-let preview =
-document.getElementById("screenshotPreview");
+let preview=
+document.getElementById(
+"screenshotPreview"
+);
 
-if(!input.files || !input.files[0]){
+if(!file){
 
 screenshotData="";
+
 preview.style.display="none";
 
 return;
 
 }
 
-let file=input.files[0];
-
 if(!file.type.startsWith("image/")){
 
 alert("Please select an image.");
 
-input.value="";
-
 return;
 
 }
-
-/*
- Do not store the screenshot itself in localStorage.
- It is attached visually for the WhatsApp step.
-*/
 
 let reader=new FileReader();
 
@@ -1464,29 +1487,35 @@ function placeOrder(){
 
 if(!cart.length){
 
-alert("Please add items to cart first.");
+alert(
+"Please add items to cart first."
+);
 
 return;
 
 }
 
-let name =
-document.getElementById("customerName")
-.value.trim();
 
-let mobile =
-document.getElementById("customerMobile")
-.value.trim();
+let name=
+document.getElementById(
+"customerName"
+).value.trim();
 
-let address =
-document.getElementById("customerAddress")
-.value.trim();
+let mobile=
+document.getElementById(
+"customerMobile"
+).value.trim();
 
-let rama =
-document.getElementById("ramaArea").checked;
+let address=
+document.getElementById(
+"customerAddress"
+).value.trim();
 
-let method =
-document.getElementById("paymentMethod").value;
+let method=
+document.getElementById(
+"paymentMethod"
+).value;
+
 
 if(!name){
 
@@ -1496,13 +1525,17 @@ return;
 
 }
 
+
 if(!/^[0-9]{10}$/.test(mobile)){
 
-alert("Please enter a valid 10 digit mobile number.");
+alert(
+"Please enter valid 10 digit mobile number."
+);
 
 return;
 
 }
+
 
 if(!address){
 
@@ -1512,26 +1545,16 @@ return;
 
 }
 
-if(!method){
 
-alert("Please select payment method.");
+/*
+ AREA IS REQUIRED
+*/
 
-return;
-
-}
-
-if(!rama && method!=="online"){
-
-alert("Out of Rama area: only Online Payment is available.");
-
-return;
-
-}
-
-if(method==="online" && !screenshotData){
+if(selectedArea!=="in" &&
+selectedArea!=="out"){
 
 alert(
-"Payment screenshot लगाना जरूरी है।"
+"पहले IN RAMA या OUT OF RAMA select करें."
 );
 
 return;
@@ -1539,42 +1562,113 @@ return;
 }
 
 
-/* ORDER ID */
+/*
+ OUT RAMA = ONLINE ONLY
+*/
 
-let orderId =
-"CT"+Date.now().toString().slice(-8);
+if(
+selectedArea==="out" &&
+method!=="online"
+){
 
-let now = new Date();
+alert(
+"❌ OUT OF RAMA में केवल Online Payment available है."
+);
 
-let date =
+setPaymentOptions(false);
+
+return;
+
+}
+
+
+/*
+ IN RAMA = COD OR ONLINE
+*/
+
+if(
+selectedArea==="in" &&
+method!=="cod" &&
+method!=="online"
+){
+
+alert(
+"Please select COD या Online Payment."
+);
+
+return;
+
+}
+
+
+/*
+ ONLINE = SCREENSHOT REQUIRED
+*/
+
+if(
+method==="online" &&
+!screenshotData
+){
+
+alert(
+"Online payment के बाद payment screenshot लगाना जरूरी है."
+);
+
+return;
+
+}
+
+
+let orderId=
+"CT"+
+Date.now()
+.toString()
+.slice(-8);
+
+let now=new Date();
+
+let date=
 now.getFullYear()+"-"+
-String(now.getMonth()+1).padStart(2,"0")+"-"+
-String(now.getDate()).padStart(2,"0");
+String(now.getMonth()+1)
+.padStart(2,"0")+"-"+
+String(now.getDate())
+.padStart(2,"0");
 
-let time =
-String(now.getHours()).padStart(2,"0")+":"+
-String(now.getMinutes()).padStart(2,"0");
+let time=
+String(now.getHours())
+.padStart(2,"0")+":"+
+String(now.getMinutes())
+.padStart(2,"0");
 
 
 let total=getCartTotal();
 
-let paymentText =
+
+let paymentText=
 method==="cod"
 ?"Cash on Delivery"
 :"Online Payment";
 
-let itemText =
+
+let areaText=
+selectedArea==="in"
+?"IN RAMA"
+:"OUT OF RAMA";
+
+
+let itemText=
 cart.map(item=>
-"• "+item.name+
-" x "+item.qty+
-" = ₹"+(item.price*item.qty)
+"• "+
+item.name+
+" x "+
+item.qty+
+" = ₹"+
+(item.price*item.qty)
 ).join("\n");
 
 
 /*
- Store order information locally.
- Screenshot file itself is NOT stored because browser
- localStorage is not suitable for payment images.
+ SAVE ORDER
 */
 
 let orders=getOrders();
@@ -1582,23 +1676,31 @@ let orders=getOrders();
 orders.push({
 
 id:orderId,
+
 date:date,
+
 time:time,
 
 name:name,
+
 mobile:mobile,
+
 address:address,
 
-ramaArea:rama,
+area:areaText,
 
 payment:paymentText,
 
 amount:total,
 
-items:cart.map(x=>({
-name:x.name,
-price:x.price,
-qty:x.qty
+items:cart.map(item=>({
+
+name:item.name,
+
+price:item.price,
+
+qty:item.qty
+
 })),
 
 status:"Pending",
@@ -1613,7 +1715,9 @@ createdAt:Date.now()
 saveOrders(orders);
 
 
-/* SALES RECORD FOR ONLINE ORDER */
+/*
+ ONLINE SALE AUTOMATICALLY
+*/
 
 if(method==="online"){
 
@@ -1622,10 +1726,19 @@ let sales=getData();
 sales.push({
 
 id:Date.now(),
+
 kind:"sale",
+
 type:"online",
+
 amount:total,
-note:"Order "+orderId+" - "+name,
+
+note:
+"Order "+
+orderId+
+" - "+
+name,
+
 date:date
 
 });
@@ -1635,56 +1748,102 @@ saveData(sales);
 }
 
 
-/* WHATSAPP MESSAGE */
+/*
+ WHATSAPP MESSAGE
+*/
 
-let message =
+let message=
 "🍕 *THE CAFE TOWN - NEW ORDER*%0A"+
 "━━━━━━━━━━━━━━━━%0A"+
-"🆔 Order ID: "+orderId+"%0A"+
-"👤 Customer: "+encodeURIComponent(name)+"%0A"+
-"📱 Mobile: "+mobile+"%0A"+
-"📍 Address: "+encodeURIComponent(address)+"%0A"+
-"🏥 Rama Area: "+(rama?"Yes":"No")+"%0A"+
-"💳 Payment: "+encodeURIComponent(paymentText)+"%0A"+
-"📸 Screenshot: "+(method==="online"?"Submitted":"Not Required")+"%0A"+
+"🆔 Order ID: "+
+orderId+
+"%0A"+
+"👤 Customer: "+
+encodeURIComponent(name)+
+"%0A"+
+"📱 Mobile: "+
+mobile+
+"%0A"+
+"📍 Address: "+
+encodeURIComponent(address)+
+"%0A"+
+"🏥 Area: "+
+encodeURIComponent(areaText)+
+"%0A"+
+"💳 Payment: "+
+encodeURIComponent(paymentText)+
+"%0A"+
+"📸 Screenshot: "+
+(method==="online"
+?"Submitted"
+:"Not Required")+
+"%0A"+
 "━━━━━━━━━━━━━━━━%0A"+
-"🛒 *ORDER ITEMS*%0A"+
-encodeURIComponent(itemText)+"%0A"+
+"🛒 *ITEMS*%0A"+
+encodeURIComponent(itemText)+
+"%0A"+
 "━━━━━━━━━━━━━━━━%0A"+
-"💰 *TOTAL: ₹"+total+"*%0A"+
-"🕐 Date: "+date+" "+time+"%0A"+
-"━━━━━━━━━━━━━━━━";
+"💰 *TOTAL: ₹"+
+total+
+"*%0A"+
+"🆔 Order ID: "+
+orderId;
 
-let url =
+
+let whatsappURL=
 "https://wa.me/"+
 WHATSAPP_NUMBER+
-"?text="+message;
+"?text="+
+message;
+
 
 alert(
-"Order "+orderId+
-" ready ✅\n\nWhatsApp open hoga."
+"Order "+
+orderId+
+" तैयार है ✅\n\nWhatsApp खुलेगा."
 );
 
-window.open(url,"_blank");
+window.open(
+whatsappURL,
+"_blank"
+);
 
 
-/* RESET */
+/*
+ RESET CART
+*/
 
 cart=[];
 
-document.getElementById("customerName").value="";
-document.getElementById("customerMobile").value="";
-document.getElementById("customerAddress").value="";
-
-document.getElementById("paymentMethod").value="";
-
-document.getElementById("paymentScreenshot").value="";
-
-document.getElementById("screenshotPreview").style.display="none";
+selectedArea="";
 
 screenshotData="";
 
 renderCart();
+
+document.getElementById(
+"customerName"
+).value="";
+
+document.getElementById(
+"customerMobile"
+).value="";
+
+document.getElementById(
+"customerAddress"
+).value="";
+
+document.getElementById(
+"paymentScreenshot"
+).value="";
+
+document.getElementById(
+"screenshotPreview"
+).style.display="none";
+
+document.getElementById(
+"paymentSection"
+).style.display="none";
 
 }
 
@@ -1696,10 +1855,13 @@ renderCart();
 function getOrders(){
 
 return JSON.parse(
-localStorage.getItem("cafeTownOrders") || "[]"
+localStorage.getItem(
+"cafeTownOrders"
+)||"[]"
 );
 
 }
+
 
 function saveOrders(data){
 
@@ -1712,84 +1874,19 @@ JSON.stringify(data)
 
 
 /* =========================
-   OWNER LOGIN
-========================= */
-
-function ownerLogin(){
-
-let pin=prompt("Enter Owner PIN:");
-
-if(pin===OWNER_PIN){
-
-openOwner();
-
-}else{
-
-alert("Wrong PIN ❌");
-
-}
-
-}
-
-
-function openOwner(){
-
-document.getElementById("ownerPanel")
-.style.display="block";
-
-setDefaultDate();
-
-populateYears();
-
-renderDashboard();
-
-renderOrders();
-
-}
-
-
-function closeOwner(){
-
-document.getElementById("ownerPanel")
-.style.display="none";
-
-}
-
-
-/* =========================
-   DATE
-========================= */
-
-function setDefaultDate(){
-
-let input=
-document.getElementById("saleDate");
-
-if(!input.value){
-
-let d=new Date();
-
-input.value=
-d.getFullYear()+"-"+
-String(d.getMonth()+1).padStart(2,"0")+"-"+
-String(d.getDate()).padStart(2,"0");
-
-}
-
-}
-
-
-/* =========================
    SALES STORAGE
 ========================= */
 
 function getData(){
 
 return JSON.parse(
-localStorage.getItem("cafeTownData") || "[]"
+localStorage.getItem(
+"cafeTownData"
+)||"[]"
 );
 
 }
+
 
 function saveData(data){
 
@@ -1802,174 +1899,38 @@ JSON.stringify(data)
 
 
 /* =========================
-   ADD SALE
+   OWNER
 ========================= */
 
-function addSale(){
+function ownerLogin(){
 
-let type=
-document.getElementById("saleType").value;
+let pin=
+prompt("Enter Owner PIN:");
 
-let amount=
-Number(document.getElementById("saleAmount").value);
+if(pin===OWNER_PIN){
 
-let note=
-document.getElementById("saleNote").value;
-
-let date=
-document.getElementById("saleDate").value;
-
-if(!amount || amount<=0){
-
-alert("Enter valid amount.");
-
-return;
-
-}
-
-let data=getData();
-
-data.push({
-
-id:Date.now(),
-kind:"sale",
-type:type,
-amount:amount,
-note:note,
-date:date
-
-});
-
-saveData(data);
-
-document.getElementById("saleAmount").value="";
-document.getElementById("saleNote").value="";
+document.getElementById(
+"ownerPanel"
+).style.display="block";
 
 renderDashboard();
-populateYears();
 
-alert("Sale saved ✅");
+renderOrders();
+
+}else{
+
+alert("Wrong PIN ❌");
+
+}
 
 }
 
 
-/* =========================
-   ADD COLLECTION
-========================= */
+function closeOwner(){
 
-function addCollection(){
-
-let amount=
-Number(
-document.getElementById("collectionAmount").value
-);
-
-let note=
-document.getElementById("collectionNote").value;
-
-let date=
-document.getElementById("saleDate").value;
-
-if(!amount || amount<=0){
-
-alert("Enter valid amount.");
-
-return;
-
-}
-
-let data=getData();
-
-data.push({
-
-id:Date.now(),
-kind:"collection",
-type:"Collection",
-amount:amount,
-note:note,
-date:date
-
-});
-
-saveData(data);
-
-document.getElementById("collectionAmount").value="";
-document.getElementById("collectionNote").value="";
-
-renderDashboard();
-populateYears();
-
-alert("Collection saved ✅");
-
-}
-
-
-/* =========================
-   YEARS
-========================= */
-
-function populateYears(){
-
-let select=
-document.getElementById("yearFilter");
-
-let data=getData();
-
-let years=[...new Set(
-data.map(x=>String(x.date).substring(0,4))
-)];
-
-let current=
-String(new Date().getFullYear());
-
-if(!years.includes(current)){
-years.push(current);
-}
-
-years.sort().reverse();
-
-select.innerHTML=
-'<option value="all">All Years</option>';
-
-years.forEach(year=>{
-
-let option=
-document.createElement("option");
-
-option.value=year;
-option.textContent=year;
-
-select.appendChild(option);
-
-});
-
-}
-
-
-/* =========================
-   FILTER
-========================= */
-
-function getFilteredData(){
-
-let data=getData();
-
-let month=
-document.getElementById("monthFilter").value;
-
-let year=
-document.getElementById("yearFilter").value;
-
-return data.filter(item=>{
-
-let y=String(item.date).substring(0,4);
-let m=String(item.date).substring(5,7);
-
-return
-(year==="all" || y===year) &&
-(month==="all" || m===month);
-
-});
+document.getElementById(
+"ownerPanel"
+).style.display="none";
 
 }
 
@@ -1980,18 +1941,22 @@ return
 
 function renderDashboard(){
 
-let data=getFilteredData();
+let data=getData();
 
 let online=0;
+
 let offline=0;
+
 let collection=0;
-let totalSales=0;
+
+let total=0;
+
 
 data.forEach(item=>{
 
 if(item.kind==="sale"){
 
-totalSales+=Number(item.amount);
+total+=Number(item.amount);
 
 if(item.type==="online")
 online+=Number(item.amount);
@@ -2010,39 +1975,40 @@ collection+=Number(item.amount);
 });
 
 
-document.getElementById("onlineTotal")
-.textContent="₹"+online;
+document.getElementById(
+"onlineTotal"
+).textContent="₹"+online;
 
-document.getElementById("offlineTotal")
-.textContent="₹"+offline;
+document.getElementById(
+"offlineTotal"
+).textContent="₹"+offline;
 
-document.getElementById("collectionTotal")
-.textContent="₹"+collection;
+document.getElementById(
+"collectionTotal"
+).textContent="₹"+collection;
 
-document.getElementById("salesTotal")
-.textContent="₹"+totalSales;
+document.getElementById(
+"salesTotal"
+).textContent="₹"+total;
 
 
 let body=
-document.getElementById("historyBody");
+document.getElementById(
+"historyBody"
+);
 
 body.innerHTML="";
 
-data.sort((a,b)=>b.id-a.id);
 
-if(data.length===0){
-
-body.innerHTML=
-'<tr><td colspan="5">No records found</td></tr>';
-
-return;
-
-}
+data.sort(
+(a,b)=>b.id-a.id
+);
 
 
 data.forEach(item=>{
 
-let row=document.createElement("tr");
+let row=
+document.createElement("tr");
 
 let type=
 item.kind==="collection"
@@ -2051,15 +2017,20 @@ item.kind==="collection"
 ?"🟢 Online"
 :"🔵 Offline";
 
+
 row.innerHTML=`
 
 <td>${escapeHTML(item.date)}</td>
 
 <td>${type}</td>
 
-<td><strong>₹${Number(item.amount)}</strong></td>
+<td>
+<strong>₹${item.amount}</strong>
+</td>
 
-<td>${escapeHTML(item.note || "-")}</td>
+<td>
+${escapeHTML(item.note||"-")}
+</td>
 
 <td>
 <button
@@ -2079,86 +2050,68 @@ body.appendChild(row);
 
 
 /* =========================
-   ONLINE ORDERS OWNER PAGE
+   OWNER ORDERS
 ========================= */
 
 function renderOrders(){
 
-let box =
-document.getElementById("ordersList");
-
-let filter =
-document.getElementById("orderFilter").value;
+let box=
+document.getElementById(
+"ordersList"
+);
 
 let orders=getOrders();
 
-if(filter!=="all"){
-
-orders=orders.filter(
-order=>order.status===filter
-);
-
-}
-
-orders.sort(
-(a,b)=>b.createdAt-a.createdAt
-);
-
 box.innerHTML="";
+
 
 if(!orders.length){
 
 box.innerHTML=
-'<div class="empty">No online orders found.</div>';
+"<p style='padding:15px;color:#777'>No online orders yet.</p>";
 
 return;
 
 }
 
+
+orders.sort(
+(a,b)=>b.createdAt-a.createdAt
+);
+
+
 orders.forEach(order=>{
 
-let div=document.createElement("div");
+let div=
+document.createElement("div");
 
 div.className="order-card";
 
-let items =
+
+let items=
 order.items.map(item=>
 escapeHTML(item.name)+
-" × "+item.qty+
-" = ₹"+(item.price*item.qty)
+" × "+
+item.qty+
+" = ₹"+
+(item.price*item.qty)
 ).join("<br>");
+
 
 div.innerHTML=`
 
-<div class="order-head">
-
-<div>
-
-<div class="order-id">
+<h3>
 🆔 ${escapeHTML(order.id)}
-</div>
-
-<div>
-🕐 ${escapeHTML(order.date)}
- ${escapeHTML(order.time)}
-</div>
-
-</div>
-
-<div class="status">
-${escapeHTML(order.status)}
-</div>
-
-</div>
+</h3>
 
 <p>
-👤 <strong>${escapeHTML(order.name)}</strong>
+👤 <strong>
+${escapeHTML(order.name)}
+</strong>
 </p>
 
 <p>
-📱 <a href="tel:${escapeHTML(order.mobile)}">
-${escapeHTML(order.mobile)}
-</a>
+📱 ${escapeHTML(order.mobile)}
 </p>
 
 <p>
@@ -2166,8 +2119,8 @@ ${escapeHTML(order.mobile)}
 </p>
 
 <p>
-🏥 Rama Area:
-<strong>${order.ramaArea?"Yes":"No"}</strong>
+🏥 Area:
+<strong>${escapeHTML(order.area)}</strong>
 </p>
 
 <p>
@@ -2175,55 +2128,75 @@ ${escapeHTML(order.mobile)}
 <strong>${escapeHTML(order.payment)}</strong>
 </p>
 
-<div class="order-items">
-<strong>🛒 Items</strong><br>
+<div style="background:white;padding:10px;margin:10px 0;border-radius:10px">
+
+<strong>🛒 Items</strong>
+
+<br>
+
 ${items}
-<hr style="margin:8px 0">
-<strong>💰 Total: ₹${Number(order.amount)}</strong>
+
+<hr>
+
+<strong>
+💰 Total: ₹${order.amount}
+</strong>
+
 </div>
 
 <p>
-📸 Payment Screenshot:
+📸 Screenshot:
 <strong>
-${order.screenshotSubmitted?"Submitted":"Not Required"}
+${order.screenshotSubmitted
+?"Submitted"
+:"Not Required"}
 </strong>
 </p>
 
-<div class="order-actions">
+<p>
+Status:
+<span class="status">
+${escapeHTML(order.status)}
+</span>
+</p>
 
-<button class="action-btn green"
+
+<div>
+
+<button
+class="action-btn green"
 onclick="updateOrderStatus('${order.id}','Confirmed')">
 ✅ Confirm
 </button>
 
-<button class="action-btn orange"
+<button
+class="action-btn orange"
 onclick="updateOrderStatus('${order.id}','Preparing')">
 🍳 Preparing
 </button>
 
-<button class="action-btn blue"
+<button
+class="action-btn blue"
 onclick="updateOrderStatus('${order.id}','Out for Delivery')">
 🛵 Delivery
 </button>
 
-<button class="action-btn green"
+<button
+class="action-btn green"
 onclick="updateOrderStatus('${order.id}','Delivered')">
 ✅ Delivered
 </button>
 
-<button class="action-btn red"
+<button
+class="action-btn red"
 onclick="updateOrderStatus('${order.id}','Cancelled')">
 ❌ Cancel
 </button>
 
-<button class="action-btn red"
+<button
+class="action-btn red"
 onclick="deleteOrder('${order.id}')">
 🗑️ Delete
-</button>
-
-<button class="action-btn blue"
-onclick="sendOrderAgain('${order.id}')">
-💬 WhatsApp
 </button>
 
 </div>
@@ -2245,9 +2218,8 @@ function updateOrderStatus(id,status){
 
 let orders=getOrders();
 
-let order=orders.find(
-x=>x.id===id
-);
+let order=
+orders.find(x=>x.id===id);
 
 if(!order) return;
 
@@ -2257,68 +2229,17 @@ saveOrders(orders);
 
 renderOrders();
 
-alert(
-"Order "+id+
-" status: "+status+" ✅"
-);
-
 }
 
 
 /* =========================
-   SEND ORDER AGAIN
-========================= */
-
-function sendOrderAgain(id){
-
-let orders=getOrders();
-
-let order=orders.find(
-x=>x.id===id
-);
-
-if(!order) return;
-
-let itemText =
-order.items.map(item=>
-"• "+item.name+
-" x "+item.qty+
-" = ₹"+(item.price*item.qty)
-).join("\n");
-
-let message =
-"🍕 *THE CAFE TOWN - ORDER*%0A"+
-"━━━━━━━━━━━━━━━━%0A"+
-"🆔 Order ID: "+order.id+"%0A"+
-"👤 Customer: "+encodeURIComponent(order.name)+"%0A"+
-"📱 Mobile: "+order.mobile+"%0A"+
-"📍 Address: "+encodeURIComponent(order.address)+"%0A"+
-"💳 Payment: "+encodeURIComponent(order.payment)+"%0A"+
-"📦 Status: "+encodeURIComponent(order.status)+"%0A"+
-"━━━━━━━━━━━━━━━━%0A"+
-"🛒 *ITEMS*%0A"+
-encodeURIComponent(itemText)+"%0A"+
-"━━━━━━━━━━━━━━━━%0A"+
-"💰 *TOTAL: ₹"+order.amount+"*";
-
-window.open(
-"https://wa.me/"+
-WHATSAPP_NUMBER+
-"?text="+message,
-"_blank"
-);
-
-}
-
-
-/* =========================
-   DELETE ORDER
+   DELETE
 ========================= */
 
 function deleteOrder(id){
 
 if(!confirm(
-"Delete this online order?"
+"Delete this order?"
 )) return;
 
 let orders=
@@ -2333,27 +2254,26 @@ renderOrders();
 }
 
 
-/* =========================
-   DELETE ALL ORDERS
-========================= */
-
-function clearAllOrders(){
+function deleteRecord(id){
 
 if(!confirm(
-"Delete ALL online orders?"
+"Delete this record?"
 )) return;
 
-localStorage.removeItem(
-"cafeTownOrders"
+let data=
+getData().filter(
+x=>x.id!==id
 );
 
-renderOrders();
+saveData(data);
+
+renderDashboard();
 
 }
 
 
 /* =========================
-   SECURITY / HTML
+   ESCAPE HTML
 ========================= */
 
 function escapeHTML(text){
@@ -2369,180 +2289,9 @@ return String(text)
 
 
 /* =========================
-   DELETE SALE
-========================= */
-
-function deleteRecord(id){
-
-if(!confirm(
-"Delete this record?"
-)) return;
-
-let data=
-getData().filter(
-x=>x.id!==id
-);
-
-saveData(data);
-
-populateYears();
-
-renderDashboard();
-
-}
-
-
-/* =========================
-   DELETE ALL SALES
-========================= */
-
-function clearAllData(){
-
-if(!confirm(
-"Delete ALL sales and collection records?"
-)) return;
-
-localStorage.removeItem(
-"cafeTownData"
-);
-
-populateYears();
-
-renderDashboard();
-
-}
-
-
-/* =========================
-   EXPORT SALES
-========================= */
-
-function exportData(){
-
-let data=getData();
-
-if(!data.length){
-
-alert("No data available.");
-
-return;
-
-}
-
-let blob=new Blob(
-[JSON.stringify(data,null,2)],
-{type:"application/json"}
-);
-
-let url=URL.createObjectURL(blob);
-
-let a=document.createElement("a");
-
-a.href=url;
-a.download="cafe-town-sales.json";
-
-a.click();
-
-URL.revokeObjectURL(url);
-
-}
-
-
-/* =========================
-   EXPORT ORDERS
-========================= */
-
-function exportOrders(){
-
-let data=getOrders();
-
-if(!data.length){
-
-alert("No orders available.");
-
-return;
-
-}
-
-let blob=new Blob(
-[JSON.stringify(data,null,2)],
-{type:"application/json"}
-);
-
-let url=URL.createObjectURL(blob);
-
-let a=document.createElement("a");
-
-a.href=url;
-a.download="cafe-town-online-orders.json";
-
-a.click();
-
-URL.revokeObjectURL(url);
-
-}
-
-
-/* =========================
-   CALCULATOR
-========================= */
-
-let calcValue="";
-
-function calc(value){
-
-calcValue+=value;
-
-document.getElementById("calcDisplay")
-.value=calcValue;
-
-}
-
-function clearCalc(){
-
-calcValue="";
-
-document.getElementById("calcDisplay")
-.value="";
-
-}
-
-function calculateResult(){
-
-try{
-
-if(!/^[0-9+\-*/.() ]+$/.test(calcValue))
-throw new Error();
-
-let result=
-Function(
-'"use strict";return ('+
-calcValue+
-')'
-)();
-
-calcValue=String(result);
-
-document.getElementById("calcDisplay")
-.value=calcValue;
-
-}catch(e){
-
-calcValue="";
-
-document.getElementById("calcDisplay")
-.value="Error";
-
-}
-
-}
-
-
-/* =========================
    INITIAL
 ========================= */
 
-setDefaultDate();
 renderCart();
 
 </script>
