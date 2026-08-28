@@ -488,4 +488,1769 @@ refreshing drinks and great moments.
 <source src="./br.mp4" type="video/mp4">
 </video>
 
-<video controls playsinline preload="
+<video controls playsinline preload="metadata">
+<source src="./cv.mp4" type="video/mp4">
+</video>
+
+<video controls playsinline preload="metadata">
+<source src="./ki.mp4" type="video/mp4">
+</video>
+
+<video controls playsinline preload="metadata">
+<source src="./piz.mp4" type="video/mp4">
+</video>
+
+</div>
+
+<h2>🍽️ Our Menu</h2>
+
+<div class="category">
+
+<h3>🍕 Pizza</h3>
+
+<div class="item">
+<span>Margherita Pizza — ₹100</span>
+<button class="add-btn" onclick="addToCart('Margherita Pizza',100)">ADD</button>
+</div>
+
+<div class="item">
+<span>Onion Pizza — ₹110</span>
+<button class="add-btn" onclick="addToCart('Onion Pizza',110)">ADD</button>
+</div>
+
+<div class="item">
+<span>Sweet Corn Pizza — ₹110</span>
+<button class="add-btn" onclick="addToCart('Sweet Corn Pizza',110)">ADD</button>
+</div>
+
+<div class="item">
+<span>Veggie Pizza — ₹150</span>
+<button class="add-btn" onclick="addToCart('Veggie Pizza',150)">ADD</button>
+</div>
+
+<div class="item">
+<span>Paneer Tikka Pizza — ₹160</span>
+<button class="add-btn" onclick="addToCart('Paneer Tikka Pizza',160)">ADD</button>
+</div>
+
+</div>
+
+<div class="category">
+
+<h3>🌯 Rolls</h3>
+
+<div class="item">
+<span>Veg Roll — ₹60</span>
+<button class="add-btn" onclick="addToCart('Veg Roll',60)">ADD</button>
+</div>
+
+<div class="item">
+<span>Paneer Roll — ₹90</span>
+<button class="add-btn" onclick="addToCart('Paneer Roll',90)">ADD</button>
+</div>
+
+<div class="item">
+<span>Chicken Roll — ₹100</span>
+<button class="add-btn" onclick="addToCart('Chicken Roll',100)">ADD</button>
+</div>
+
+<div class="item">
+<span>Double Egg Chicken Roll — ₹120</span>
+<button class="add-btn" onclick="addToCart('Double Egg Chicken Roll',120)">ADD</button>
+</div>
+
+</div>
+
+<div class="category">
+
+<h3>🍜 Noodles</h3>
+
+<div class="item">
+<span>Veg Noodles — ₹50</span>
+<button class="add-btn" onclick="addToCart('Veg Noodles',50)">ADD</button>
+</div>
+
+<div class="item">
+<span>Paneer Noodles — ₹70</span>
+<button class="add-btn" onclick="addToCart('Paneer Noodles',70)">ADD</button>
+</div>
+
+<div class="item">
+<span>Egg Noodles — ₹60</span>
+<button class="add-btn" onclick="addToCart('Egg Noodles',60)">ADD</button>
+</div>
+
+<div class="item">
+<span>Singapore Noodles — ₹70</span>
+<button class="add-btn" onclick="addToCart('Singapore Noodles',70)">ADD</button>
+</div>
+
+<div class="item">
+<span>Hakka Noodles — ₹70</span>
+<button class="add-btn" onclick="addToCart('Hakka Noodles',70)">ADD</button>
+</div>
+
+</div>
+
+<div class="category">
+
+<h3>🥟 Momos & Maggi</h3>
+
+<div class="item">
+<span>Veg Momos — ₹50</span>
+<button class="add-btn" onclick="addToCart('Veg Momos',50)">ADD</button>
+</div>
+
+<div class="item">
+<span>Paneer Momos — ₹70</span>
+<button class="add-btn" onclick="addToCart('Paneer Momos',70)">ADD</button>
+</div>
+
+<div class="item">
+<span>Plain Maggi — ₹40</span>
+<button class="add-btn" onclick="addToCart('Plain Maggi',40)">ADD</button>
+</div>
+
+<div class="item">
+<span>Cheese Maggi — ₹60</span>
+<button class="add-btn" onclick="addToCart('Cheese Maggi',60)">ADD</button>
+</div>
+
+<div class="item">
+<span>Butter Maggi — ₹50</span>
+<button class="add-btn" onclick="addToCart('Butter Maggi',50)">ADD</button>
+</div>
+
+<div class="item">
+<span>Veg Maggi — ₹60</span>
+<button class="add-btn" onclick="addToCart('Veg Maggi',60)">ADD</button>
+</div>
+
+</div>
+
+</section>
+
+<section id="order">
+
+<h2>🛒 Place Your Order</h2>
+
+<div class="order-box">
+
+<h3>🛍️ Your Cart</h3>
+
+<div id="cartItems">
+Your cart is empty.
+</div>
+
+<div class="order-total">
+Total: ₹<span id="cartTotal">0</span>
+</div>
+
+<div class="form-grid">
+
+<div>
+<label>Customer Name *</label>
+<input id="customerName" type="text" placeholder="Enter your name">
+</div>
+
+<div>
+<label>Mobile Number *</label>
+<input id="customerMobile" type="tel" maxlength="10" placeholder="10 digit mobile number">
+</div>
+
+<div class="full">
+<label>Delivery Address *</label>
+<textarea id="customerAddress" placeholder="Enter complete delivery address"></textarea>
+</div>
+
+</div>
+
+<div class="area-box">
+
+<h3>📍 Delivery Area Select करें *</h3>
+
+<p style="margin-top:5px">
+Payment option इसी selection के अनुसार आएगा.
+</p>
+
+<div class="area-buttons">
+
+<button id="inRamaBtn" class="area-btn" onclick="selectArea('in')">
+🏥 IN RAMA
+<br>
+<small>COD + Online Payment</small>
+</button>
+
+<button id="outRamaBtn" class="area-btn" onclick="selectArea('out')">
+📍 OUT OF RAMA
+<br>
+<small>Only Online Payment</small>
+</button>
+
+</div>
+</div>
+
+<div id="paymentSection">
+
+<h3 style="margin-top:20px">
+💳 Payment Method
+</h3>
+
+<select id="paymentMethod" onchange="paymentChanged()">
+</select>
+
+<div id="onlinePaymentBox" class="payment-info" style="margin-top:15px">
+
+<h3>📱 Scan & Pay</h3>
+
+<p style="margin-top:8px">
+नीचे दिए गए QR/Barcode को scan करके payment करें.
+</p>
+
+<img src="./paytm-qr.png" alt="Payment QR Code">
+
+<a
+id="payNowButton"
+class="pay-now-btn"
+href="#"
+onclick="openUPIPayment(event)">
+💳 Pay Now
+</a>
+
+<p style="font-size:13px;margin-top:10px">
+QR scan या Pay Now से payment करने के बाद नीचे screenshot upload करें.
+</p>
+
+<div class="screenshot-box">
+
+<label>
+<strong>📸 Payment Screenshot *</strong>
+</label>
+
+<input
+type="file"
+id="paymentScreenshot"
+accept="image/*"
+onchange="previewScreenshot()">
+
+<img id="screenshotPreview">
+
+<p style="font-size:13px;margin-top:5px">
+Online payment में screenshot लगाना जरूरी है.
+</p>
+
+</div>
+
+</div>
+
+<div id="codInfo"
+style="
+display:none;
+margin-top:15px;
+padding:15px;
+background:#e8f5e9;
+border-radius:12px;
+border:2px solid #2e8b57;
+">
+
+<h3>💵 Cash on Delivery</h3>
+
+<p>
+आपका payment delivery के समय cash में लिया जाएगा.
+</p>
+
+</div>
+
+<button class="whatsapp-btn" onclick="placeOrder()">
+💬 Submit Order on WhatsApp
+</button>
+
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<h2>📞 Contact Us</h2>
+
+<div class="card" style="text-align:center">
+
+<p><strong>The Cafe Town</strong></p>
+
+<p>Deepak Tomar</p>
+
+<a class="phone" href="tel:7452849258">
+📲 74528 49258
+</a>
+
+<p style="margin-top:15px">
+📍 Rama Hospital, Near Hindalpur Marg, Pilkhuwa
+</p>
+
+</div>
+
+</section>
+
+<footer style="text-align:center;padding:30px 15px">
+
+<p><strong>The Cafe Town</strong></p>
+<p>Delicious Food • Great Taste • Good Vibes</p>
+<p>© 2026 The Cafe Town</p>
+
+</footer>
+
+<button class="owner-login" onclick="ownerLogin()">
+🔐 Owner Login
+</button>
+
+<div id="ownerPanel">
+
+<div class="owner-box">
+
+<div class="owner-head">
+
+<h2 style="margin:0">
+🔐 Owner Dashboard
+</h2>
+
+<button class="close-btn" onclick="closeOwner()">
+✕ Close
+</button>
+
+</div>
+
+<div class="stats">
+
+<div class="stat">
+Online Sale
+<b id="onlineTotal">₹0</b>
+</div>
+
+<div class="stat">
+Offline Sale
+<b id="offlineTotal">₹0</b>
+</div>
+
+<div class="stat">
+Collection
+<b id="collectionTotal">₹0</b>
+</div>
+
+<div class="stat">
+Total Sales
+<b id="salesTotal">₹0</b>
+</div>
+
+</div>
+
+<div class="owner-section">
+
+<h3>📦 Online Orders</h3>
+
+<div id="ordersList"></div>
+
+</div>
+
+<div class="owner-section">
+
+<h3>➕ Add Sale</h3>
+
+<div class="form-grid">
+
+<div>
+<label>Sale Type</label>
+
+<select id="saleType">
+
+<option value="online">
+Online Order
+</option>
+
+<option value="offline">
+Offline Order
+</option>
+
+</select>
+</div>
+
+<div>
+<label>Amount ₹</label>
+
+<input type="number" id="saleAmount" placeholder="Enter amount">
+</div>
+
+<div>
+<label>Note</label>
+
+<input id="saleNote" placeholder="Optional">
+</div>
+
+<div>
+<label>Date</label>
+
+<input type="date" id="saleDate">
+</div>
+
+</div>
+
+<button class="action-btn green" onclick="addSale()">
+➕ Save Sale
+</button>
+
+</div>
+
+<div class="owner-section">
+
+<h3>💰 Add Collection</h3>
+
+<div class="form-grid">
+
+<div>
+<label>Amount ₹</label>
+
+<input type="number" id="collectionAmount" placeholder="Amount">
+</div>
+
+<div>
+<label>Note</label>
+
+<input id="collectionNote" placeholder="Optional">
+</div>
+
+</div>
+
+<button class="action-btn green" onclick="addCollection()">
+💰 Save Collection
+</button>
+
+</div>
+
+<div class="owner-section">
+
+<h3>📋 Sales History</h3>
+
+<div class="history">
+
+<table>
+
+<thead>
+
+<tr>
+<th>Date</th>
+<th>Type</th>
+<th>Amount</th>
+<th>Note</th>
+<th>Action</th>
+</tr>
+
+</thead>
+
+<tbody id="historyBody"></tbody>
+
+</table>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+<script>
+
+/* =========================
+   SETTINGS
+========================= */
+
+const OWNER_PIN="1122";
+
+const WHATSAPP_NUMBER="917452849258";
+
+/*
+ आपका payment UPI address यहाँ सिर्फ
+ Pay Now button के लिए इस्तेमाल होगा.
+ Website पर text में दिखाई नहीं देगा.
+*/
+const UPI_ID="Paytm.s21aaef@pty";
+
+
+/* =========================
+   CART
+========================= */
+
+let cart=[];
+
+let selectedArea="";
+
+
+function addToCart(name,price){
+
+let item=cart.find(
+x=>x.name===name
+);
+
+if(item){
+
+item.qty++;
+
+}else{
+
+cart.push({
+name:name,
+price:price,
+qty:1
+});
+
+}
+
+renderCart();
+
+document.getElementById("order")
+.scrollIntoView({
+behavior:"smooth"
+});
+
+}
+
+
+function changeQty(index,change){
+
+if(!cart[index]) return;
+
+cart[index].qty+=change;
+
+if(cart[index].qty<=0){
+
+cart.splice(index,1);
+
+}
+
+renderCart();
+
+}
+
+
+function getCartTotal(){
+
+return cart.reduce(
+(sum,item)=>
+sum+(item.price*item.qty),
+0
+);
+
+}
+
+
+function renderCart(){
+
+let box=
+document.getElementById("cartItems");
+
+document.getElementById("cartTotal")
+.textContent=getCartTotal();
+
+if(!cart.length){
+
+box.innerHTML=
+'<p style="padding:15px;color:#777">Your cart is empty. Menu से items ADD करें.</p>';
+
+return;
+
+}
+
+box.innerHTML="";
+
+cart.forEach((item,index)=>{
+
+let div=document.createElement("div");
+
+div.className="cart-item";
+
+div.innerHTML=`
+
+<div>
+<strong>${escapeHTML(item.name)}</strong>
+<br>
+₹${item.price} × ${item.qty}
+</div>
+
+<div class="qty">
+
+<button onclick="changeQty(${index},-1)">
+−
+</button>
+
+<strong>${item.qty}</strong>
+
+<button onclick="changeQty(${index},1)">
++
+</button>
+
+</div>
+
+<strong>
+₹${item.price*item.qty}
+</strong>
+
+`;
+
+box.appendChild(div);
+
+});
+
+}
+
+
+/* =========================
+   AREA
+========================= */
+
+function selectArea(area){
+
+selectedArea=area;
+
+let inBtn=
+document.getElementById("inRamaBtn");
+
+let outBtn=
+document.getElementById("outRamaBtn");
+
+inBtn.classList.remove("active");
+outBtn.classList.remove("active");
+
+if(area==="in"){
+
+inBtn.classList.add("active");
+
+setPaymentOptions(true);
+
+}else{
+
+outBtn.classList.add("active");
+
+setPaymentOptions(false);
+
+}
+
+document.getElementById("paymentSection")
+.style.display="block";
+
+}
+
+
+/* =========================
+   PAYMENT OPTIONS
+========================= */
+
+function setPaymentOptions(isInRama){
+
+let select=
+document.getElementById("paymentMethod");
+
+if(isInRama){
+
+select.innerHTML=`
+
+<option value="">
+Select Payment Method
+</option>
+
+<option value="cod">
+💵 Cash on Delivery
+</option>
+
+<option value="online">
+💳 Online Payment
+</option>
+
+`;
+
+}else{
+
+select.innerHTML=`
+
+<option value="">
+Select Payment Method
+</option>
+
+<option value="online">
+💳 Online Payment
+</option>
+
+`;
+
+}
+
+select.value="";
+
+document.getElementById("onlinePaymentBox")
+.style.display="none";
+
+document.getElementById("codInfo")
+.style.display="none";
+
+}
+
+
+/* =========================
+   PAYMENT CHANGED
+========================= */
+
+function paymentChanged(){
+
+let method=
+document.getElementById("paymentMethod").value;
+
+let onlineBox=
+document.getElementById("onlinePaymentBox");
+
+let codBox=
+document.getElementById("codInfo");
+
+onlineBox.style.display="none";
+
+codBox.style.display="none";
+
+if(method==="online"){
+
+onlineBox.style.display="block";
+
+updatePayButton();
+
+}
+
+if(method==="cod"){
+
+if(selectedArea!=="in"){
+
+alert(
+"❌ Out of Rama में COD available नहीं है."
+);
+
+setPaymentOptions(false);
+
+return;
+
+}
+
+codBox.style.display="block";
+
+}
+
+}
+
+
+/* =========================
+   PAY NOW
+========================= */
+
+function updatePayButton(){
+
+let total=getCartTotal();
+
+let button=
+document.getElementById("payNowButton");
+
+if(!button) return;
+
+if(total<=0){
+
+button.href="#";
+
+return;
+
+}
+
+/*
+ UPI payment link.
+ Amount automatically cart total के अनुसार आएगा.
+*/
+
+let upiURL=
+"upi://pay?pa="+
+encodeURIComponent(UPI_ID)+
+"&pn="+
+encodeURIComponent("The Cafe Town")+
+"&am="+
+encodeURIComponent(total.toFixed(2))+
+"&cu=INR";
+
+button.href=upiURL;
+
+}
+
+
+function openUPIPayment(event){
+
+event.preventDefault();
+
+if(!cart.length){
+
+alert("पहले cart में items ADD करें.");
+
+return;
+
+}
+
+let total=getCartTotal();
+
+let upiURL=
+"upi://pay?pa="+
+encodeURIComponent(UPI_ID)+
+"&pn="+
+encodeURIComponent("The Cafe Town")+
+"&am="+
+encodeURIComponent(total.toFixed(2))+
+"&cu=INR";
+
+window.location.href=upiURL;
+
+}
+
+
+/* =========================
+   SCREENSHOT
+========================= */
+
+let screenshotData="";
+
+
+function previewScreenshot(){
+
+let file=
+document.getElementById(
+"paymentScreenshot"
+).files[0];
+
+let preview=
+document.getElementById(
+"screenshotPreview"
+);
+
+if(!file){
+
+screenshotData="";
+
+preview.style.display="none";
+
+return;
+
+}
+
+if(!file.type.startsWith("image/")){
+
+alert("Please select an image.");
+
+return;
+
+}
+
+let reader=new FileReader();
+
+reader.onload=function(e){
+
+screenshotData=e.target.result;
+
+preview.src=e.target.result;
+
+preview.style.display="block";
+
+};
+
+reader.readAsDataURL(file);
+
+}
+
+
+/* =========================
+   PLACE ORDER
+========================= */
+
+function placeOrder(){
+
+if(!cart.length){
+
+alert(
+"Please add items to cart first."
+);
+
+return;
+
+}
+
+let name=
+document.getElementById(
+"customerName"
+).value.trim();
+
+let mobile=
+document.getElementById(
+"customerMobile"
+).value.trim();
+
+let address=
+document.getElementById(
+"customerAddress"
+).value.trim();
+
+let method=
+document.getElementById(
+"paymentMethod"
+).value;
+
+if(!name){
+
+alert("Customer name required.");
+
+return;
+
+}
+
+if(!/^[0-9]{10}$/.test(mobile)){
+
+alert(
+"Please enter valid 10 digit mobile number."
+);
+
+return;
+
+}
+
+if(!address){
+
+alert("Delivery address required.");
+
+return;
+
+}
+
+if(selectedArea!=="in" &&
+selectedArea!=="out"){
+
+alert(
+"पहले IN RAMA या OUT OF RAMA select करें."
+);
+
+return;
+
+}
+
+if(
+selectedArea==="out" &&
+method!=="online"
+){
+
+alert(
+"❌ OUT OF RAMA में केवल Online Payment available है."
+);
+
+setPaymentOptions(false);
+
+return;
+
+}
+
+if(
+selectedArea==="in" &&
+method!=="cod" &&
+method!=="online"
+){
+
+alert(
+"Please select COD या Online Payment."
+);
+
+return;
+
+}
+
+if(
+method==="online" &&
+!screenshotData
+){
+
+alert(
+"Online payment के बाद payment screenshot लगाना जरूरी है."
+);
+
+return;
+
+}
+
+let orderId=
+"CT"+
+Date.now()
+.toString()
+.slice(-8);
+
+let now=new Date();
+
+let date=
+now.getFullYear()+"-"+
+String(now.getMonth()+1)
+.padStart(2,"0")+"-"+
+String(now.getDate())
+.padStart(2,"0");
+
+let time=
+String(now.getHours())
+.padStart(2,"0")+":"+
+String(now.getMinutes())
+.padStart(2,"0");
+
+let total=getCartTotal();
+
+let paymentText=
+method==="cod"
+?"Cash on Delivery"
+:"Online Payment";
+
+let areaText=
+selectedArea==="in"
+?"IN RAMA"
+:"OUT OF RAMA";
+
+let itemText=
+cart.map(item=>
+"• "+
+item.name+
+" x "+
+item.qty+
+" = ₹"+
+(item.price*item.qty)
+).join("\n");
+
+
+/* SAVE ORDER */
+
+let orders=getOrders();
+
+orders.push({
+
+id:orderId,
+
+date:date,
+
+time:time,
+
+name:name,
+
+mobile:mobile,
+
+address:address,
+
+area:areaText,
+
+payment:paymentText,
+
+amount:total,
+
+items:cart.map(item=>({
+
+name:item.name,
+
+price:item.price,
+
+qty:item.qty
+
+})),
+
+status:"Pending",
+
+screenshotSubmitted:
+method==="online",
+
+createdAt:Date.now()
+
+});
+
+saveOrders(orders);
+
+
+/* ONLINE SALE */
+
+if(method==="online"){
+
+let sales=getData();
+
+sales.push({
+
+id:Date.now(),
+
+kind:"sale",
+
+type:"online",
+
+amount:total,
+
+note:
+"Order "+
+orderId+
+" - "+
+name,
+
+date:date
+
+});
+
+saveData(sales);
+
+}
+
+
+/* WHATSAPP */
+
+let message=
+"🍕 *THE CAFE TOWN - NEW ORDER*%0A"+
+"━━━━━━━━━━━━━━━━%0A"+
+"🆔 Order ID: "+
+orderId+
+"%0A"+
+"👤 Customer: "+
+encodeURIComponent(name)+
+"%0A"+
+"📱 Mobile: "+
+mobile+
+"%0A"+
+"📍 Address: "+
+encodeURIComponent(address)+
+"%0A"+
+"🏥 Area: "+
+encodeURIComponent(areaText)+
+"%0A"+
+"💳 Payment: "+
+encodeURIComponent(paymentText)+
+"%0A"+
+"📸 Screenshot: "+
+(method==="online"
+?"Submitted"
+:"Not Required")+
+"%0A"+
+"━━━━━━━━━━━━━━━━%0A"+
+"🛒 *ITEMS*%0A"+
+encodeURIComponent(itemText)+
+"%0A"+
+"━━━━━━━━━━━━━━━━%0A"+
+"💰 *TOTAL: ₹"+
+total+
+"*%0A"+
+"🆔 Order ID: "+
+orderId;
+
+let whatsappURL=
+"https://wa.me/"+
+WHATSAPP_NUMBER+
+"?text="+
+message;
+
+alert(
+"Order "+
+orderId+
+" तैयार है ✅\n\nWhatsApp खुलेगा."
+);
+
+window.open(
+whatsappURL,
+"_blank"
+);
+
+
+/* RESET */
+
+cart=[];
+
+selectedArea="";
+
+screenshotData="";
+
+renderCart();
+
+document.getElementById(
+"customerName"
+).value="";
+
+document.getElementById(
+"customerMobile"
+).value="";
+
+document.getElementById(
+"customerAddress"
+).value="";
+
+document.getElementById(
+"paymentScreenshot"
+).value="";
+
+document.getElementById(
+"screenshotPreview"
+).style.display="none";
+
+document.getElementById(
+"paymentSection"
+).style.display="none";
+
+}
+
+
+/* =========================
+   ORDER STORAGE
+========================= */
+
+function getOrders(){
+
+return JSON.parse(
+localStorage.getItem(
+"cafeTownOrders"
+)||"[]"
+);
+
+}
+
+function saveOrders(data){
+
+localStorage.setItem(
+"cafeTownOrders",
+JSON.stringify(data)
+);
+
+}
+
+
+/* =========================
+   SALES STORAGE
+========================= */
+
+function getData(){
+
+return JSON.parse(
+localStorage.getItem(
+"cafeTownData"
+)||"[]"
+);
+
+}
+
+function saveData(data){
+
+localStorage.setItem(
+"cafeTownData",
+JSON.stringify(data)
+);
+
+}
+
+
+/* =========================
+   OWNER
+========================= */
+
+function ownerLogin(){
+
+let pin=
+prompt("Enter Owner PIN:");
+
+if(pin===OWNER_PIN){
+
+document.getElementById(
+"ownerPanel"
+).style.display="block";
+
+renderDashboard();
+
+renderOrders();
+
+}else{
+
+alert("Wrong PIN ❌");
+
+}
+
+}
+
+function closeOwner(){
+
+document.getElementById(
+"ownerPanel"
+).style.display="none";
+
+}
+
+
+/* =========================
+   DASHBOARD
+========================= */
+
+function renderDashboard(){
+
+let data=getData();
+
+let online=0;
+
+let offline=0;
+
+let collection=0;
+
+let total=0;
+
+data.forEach(item=>{
+
+if(item.kind==="sale"){
+
+total+=Number(item.amount);
+
+if(item.type==="online")
+online+=Number(item.amount);
+
+if(item.type==="offline")
+offline+=Number(item.amount);
+
+}
+
+if(item.kind==="collection"){
+
+collection+=Number(item.amount);
+
+}
+
+});
+
+document.getElementById(
+"onlineTotal"
+).textContent="₹"+online;
+
+document.getElementById(
+"offlineTotal"
+).textContent="₹"+offline;
+
+document.getElementById(
+"collectionTotal"
+).textContent="₹"+collection;
+
+document.getElementById(
+"salesTotal"
+).textContent="₹"+total;
+
+let body=
+document.getElementById(
+"historyBody"
+);
+
+body.innerHTML="";
+
+data.sort(
+(a,b)=>b.id-a.id
+);
+
+data.forEach(item=>{
+
+let row=
+document.createElement("tr");
+
+let type=
+item.kind==="collection"
+?"💰 Collection"
+:item.type==="online"
+?"🟢 Online"
+:"🔵 Offline";
+
+row.innerHTML=`
+
+<td>${escapeHTML(item.date)}</td>
+
+<td>${type}</td>
+
+<td>
+<strong>₹${item.amount}</strong>
+</td>
+
+<td>
+${escapeHTML(item.note||"-")}
+</td>
+
+<td>
+<button
+class="action-btn red"
+onclick="deleteRecord(${item.id})">
+Delete
+</button>
+</td>
+
+`;
+
+body.appendChild(row);
+
+});
+
+}
+
+
+/* =========================
+   OWNER ORDERS
+========================= */
+
+function renderOrders(){
+
+let box=
+document.getElementById(
+"ordersList"
+);
+
+let orders=getOrders();
+
+box.innerHTML="";
+
+if(!orders.length){
+
+box.innerHTML=
+"<p style='padding:15px;color:#777'>No online orders yet.</p>";
+
+return;
+
+}
+
+orders.sort(
+(a,b)=>b.createdAt-a.createdAt
+);
+
+orders.forEach(order=>{
+
+let div=
+document.createElement("div");
+
+div.className="order-card";
+
+let items=
+order.items.map(item=>
+escapeHTML(item.name)+
+" × "+
+item.qty+
+" = ₹"+
+(item.price*item.qty)
+).join("<br>");
+
+div.innerHTML=`
+
+<h3>
+🆔 ${escapeHTML(order.id)}
+</h3>
+
+<p>
+👤 <strong>
+${escapeHTML(order.name)}
+</strong>
+</p>
+
+<p>
+📱 ${escapeHTML(order.mobile)}
+</p>
+
+<p>
+📍 ${escapeHTML(order.address)}
+</p>
+
+<p>
+🏥 Area:
+<strong>${escapeHTML(order.area)}</strong>
+</p>
+
+<p>
+💳 Payment:
+<strong>${escapeHTML(order.payment)}</strong>
+</p>
+
+<div style="background:white;padding:10px;margin:10px 0;border-radius:10px">
+
+<strong>🛒 Items</strong>
+
+<br>
+
+${items}
+
+<hr>
+
+<strong>
+💰 Total: ₹${order.amount}
+</strong>
+
+</div>
+
+<p>
+📸 Screenshot:
+<strong>
+${order.screenshotSubmitted
+?"Submitted"
+:"Not Required"}
+</strong>
+</p>
+
+<p>
+Status:
+<span class="status">
+${escapeHTML(order.status)}
+</span>
+</p>
+
+<div>
+
+<button
+class="action-btn green"
+onclick="updateOrderStatus('${order.id}','Confirmed')">
+✅ Confirm
+</button>
+
+<button
+class="action-btn orange"
+onclick="updateOrderStatus('${order.id}','Preparing')">
+🍳 Preparing
+</button>
+
+<button
+class="action-btn blue"
+onclick="updateOrderStatus('${order.id}','Out for Delivery')">
+🛵 Delivery
+</button>
+
+<button
+class="action-btn green"
+onclick="updateOrderStatus('${order.id}','Delivered')">
+✅ Delivered
+</button>
+
+<button
+class="action-btn red"
+onclick="updateOrderStatus('${order.id}','Cancelled')">
+❌ Cancel
+</button>
+
+<button
+class="action-btn red"
+onclick="deleteOrder('${order.id}')">
+🗑️ Delete
+</button>
+
+</div>
+
+`;
+
+box.appendChild(div);
+
+});
+
+}
+
+
+/* =========================
+   ORDER STATUS
+========================= */
+
+function updateOrderStatus(id,status){
+
+let orders=getOrders();
+
+let order=
+orders.find(x=>x.id===id);
+
+if(!order) return;
+
+order.status=status;
+
+saveOrders(orders);
+
+renderOrders();
+
+}
+
+
+/* =========================
+   DELETE
+========================= */
+
+function deleteOrder(id){
+
+if(!confirm(
+"Delete this order?"
+)) return;
+
+let orders=
+getOrders().filter(
+x=>x.id!==id
+);
+
+saveOrders(orders);
+
+renderOrders();
+
+}
+
+function deleteRecord(id){
+
+if(!confirm(
+"Delete this record?"
+)) return;
+
+let data=
+getData().filter(
+x=>x.id!==id
+);
+
+saveData(data);
+
+renderDashboard();
+
+}
+
+
+/* =========================
+   ADD SALE
+========================= */
+
+function addSale(){
+
+let amount=
+Number(
+document.getElementById("saleAmount").value
+);
+
+if(!amount || amount<=0){
+
+alert("Valid amount enter करें.");
+
+return;
+
+}
+
+let type=
+document.getElementById("saleType").value;
+
+let note=
+document.getElementById("saleNote").value.trim();
+
+let date=
+document.getElementById("saleDate").value;
+
+if(!date){
+
+let now=new Date();
+
+date=
+now.getFullYear()+"-"+
+String(now.getMonth()+1).padStart(2,"0")+"-"+
+String(now.getDate()).padStart(2,"0");
+
+}
+
+let data=getData();
+
+data.push({
+
+id:Date.now(),
+
+kind:"sale",
+
+type:type,
+
+amount:amount,
+
+note:note,
+
+date:date
+
+});
+
+saveData(data);
+
+document.getElementById("saleAmount").value="";
+document.getElementById("saleNote").value="";
+
+renderDashboard();
+
+alert("Sale saved ✅");
+
+}
+
+
+/* =========================
+   ADD COLLECTION
+========================= */
+
+function addCollection(){
+
+let amount=
+Number(
+document.getElementById("collectionAmount").value
+);
+
+if(!amount || amount<=0){
+
+alert("Valid amount enter करें.");
+
+return;
+
+}
+
+let note=
+document.getElementById("collectionNote").value.trim();
+
+let now=new Date();
+
+let date=
+now.getFullYear()+"-"+
+String(now.getMonth()+1).padStart(2,"0")+"-"+
+String(now.getDate()).padStart(2,"0");
+
+let data=getData();
+
+data.push({
+
+id:Date.now(),
+
+kind:"collection",
+
+amount:amount,
+
+note:note,
+
+date:date
+
+});
+
+saveData(data);
+
+document.getElementById("collectionAmount").value="";
+document.getElementById("collectionNote").value="";
+
+renderDashboard();
+
+alert("Collection saved ✅");
+
+}
+
+
+/* =========================
+   ESCAPE HTML
+========================= */
+
+function escapeHTML(text){
+
+return String(text)
+.replaceAll("&","&amp;")
+.replaceAll("<","&lt;")
+.replaceAll(">","&gt;")
+.replaceAll('"',"&quot;")
+.replaceAll("'","&#039;");
+
+}
+
+
+/* =========================
+   INITIAL
+========================= */
+
+renderCart();
+
+</script>
+
+</body>
+</html>
