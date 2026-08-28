@@ -1,139 +1,732 @@
-🍕
-The Cafe Town
-Delicious Food • Great Taste • Good Vibes
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="google-site-verification"
+content="bRfOK-Ro06qe3K-JPiKjO3mRjdfqmC-kBP45Ulfhewo">
 
-Take a Bite, Make Your Future Bright!
-🍽️ View Menu 📞 Call Now
-❤️ Welcome to The Cafe Town
-Welcome to The Cafe Town — a friendly place to enjoy delicious food, refreshing drinks and great moments with your family and friends.
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<title>The Cafe Town | Pilkhuwa</title>
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  font-family:Arial,sans-serif;
+  background:#fff8f0;
+  color:#333;
+}
+
+/* HERO */
+.hero{
+  min-height:90vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  color:white;
+  padding:30px 20px;
+  background:linear-gradient(135deg,#35170e,#7b351d,#c97935);
+  position:relative;
+  overflow:hidden;
+}
+
+.hero:before,
+.hero:after{
+  content:"";
+  position:absolute;
+  width:220px;
+  height:220px;
+  border-radius:50%;
+  background:rgba(255,255,255,.08);
+  animation:float 6s infinite ease-in-out;
+}
+
+.hero:before{
+  top:-60px;
+  left:-60px;
+}
+
+.hero:after{
+  bottom:-80px;
+  right:-50px;
+  animation-delay:2s;
+}
+
+.hero-content{
+  position:relative;
+  z-index:2;
+  animation:fadeUp 1.2s ease;
+}
+
+.logo{
+  font-size:58px;
+  margin-bottom:10px;
+  animation:bounce 2s infinite;
+}
+
+.hero h1{
+  font-size:44px;
+  margin-bottom:10px;
+}
+
+.hero p{
+  font-size:18px;
+}
+
+.tagline{
+  margin-top:15px;
+  font-size:20px;
+  font-weight:bold;
+}
+
+.btn{
+  display:inline-block;
+  margin:25px 8px 0;
+  padding:13px 25px;
+  border-radius:30px;
+  text-decoration:none;
+  font-weight:bold;
+  color:white;
+  background:#e39a43;
+  transition:.3s;
+}
+
+.btn:hover{
+  transform:scale(1.08);
+  background:#f2b35f;
+}
+
+/* SECTIONS */
+section{
+  max-width:1000px;
+  margin:auto;
+  padding:55px 18px;
+}
+
+h2{
+  text-align:center;
+  color:#542516;
+  font-size:30px;
+  margin-bottom:30px;
+}
+
+/* OFFER */
+.offer{
+  background:linear-gradient(135deg,#fff0d7,#ffe0b2);
+  border:2px solid #e29a43;
+  border-radius:20px;
+  padding:30px 20px;
+  text-align:center;
+  box-shadow:0 8px 25px rgba(0,0,0,.1);
+  animation:pulse 3s infinite;
+}
+
+.offer h2{
+  margin-bottom:12px;
+}
+
+.offer strong{
+  font-size:24px;
+  color:#a94718;
+}
+
+/* CARDS */
+.card{
+  background:white;
+  padding:25px;
+  border-radius:18px;
+  margin:15px 0;
+  box-shadow:0 5px 18px rgba(0,0,0,.08);
+  transition:.3s;
+}
+
+.card:hover{
+  transform:translateY(-6px);
+  box-shadow:0 10px 25px rgba(0,0,0,.13);
+}
+
+/* MENU */
+.category{
+  margin-bottom:30px;
+}
+
+.category h3{
+  background:#542516;
+  color:white;
+  padding:13px 16px;
+  border-radius:12px 12px 0 0;
+}
+
+.item{
+  display:flex;
+  justify-content:space-between;
+  padding:13px 15px;
+  background:white;
+  border-bottom:1px solid #eee;
+  transition:.25s;
+}
+
+.item:hover{
+  padding-left:22px;
+  background:#fff2df;
+}
+
+.price{
+  font-weight:bold;
+  color:#a94718;
+}
+
+/* VIDEO */
+.video-gallery{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:15px;
+  margin-bottom:35px;
+}
+
+.video-gallery video{
+  width:100%;
+  border-radius:15px;
+  background:#000;
+}
+
+/* CONTACT */
+.contact{
+  text-align:center;
+}
+
+.phone{
+  display:inline-block;
+  margin-top:15px;
+  padding:13px 24px;
+  border-radius:30px;
+  background:#2e8b57;
+  color:white;
+  text-decoration:none;
+  font-weight:bold;
+  transition:.3s;
+}
+
+.phone:hover{
+  transform:scale(1.08);
+}
+
+/* FOOTER */
+footer{
+  background:#35170e;
+  color:white;
+  text-align:center;
+  padding:30px 15px;
+}
+
+/* ANIMATIONS */
+@keyframes fadeUp{
+  from{
+    opacity:0;
+    transform:translateY(40px);
+  }
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+
+@keyframes float{
+  0%,100%{transform:translateY(0)}
+  50%{transform:translateY(-30px)}
+}
+
+@keyframes bounce{
+  0%,100%{transform:translateY(0)}
+  50%{transform:translateY(-8px)}
+}
+
+@keyframes pulse{
+  0%,100%{transform:scale(1)}
+  50%{transform:scale(1.02)}
+}
+
+/* MOBILE */
+@media(max-width:600px){
+
+  .hero h1{
+    font-size:34px;
+  }
+
+  .logo{
+    font-size:45px;
+  }
+
+  .hero p{
+    font-size:16px;
+  }
+
+  h2{
+    font-size:26px;
+  }
+
+  .item{
+    font-size:15px;
+  }
+
+  .video-gallery{
+    grid-template-columns:1fr;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="hero-content">
+
+    <div class="logo">🍕</div>
+
+    <h1>The Cafe Town</h1>
+
+    <p>Delicious Food • Great Taste • Good Vibes</p>
+
+    <div class="tagline">
+      Take a Bite, Make Your Future Bright!
+    </div>
+
+    <a href="#menu" class="btn">🍽️ View Menu</a>
+
+    <a href="tel:7452849258" class="btn">📞 Call Now</a>
+
+  </div>
+</header>
+
+
+<!-- ABOUT -->
+<section>
+
+<h2>❤️ Welcome to The Cafe Town</h2>
+
+<div class="card" style="text-align:center;">
+
+<p>
+Welcome to <strong>The Cafe Town</strong> — a friendly place
+to enjoy delicious food, refreshing drinks and great moments
+with your family and friends.
+</p>
+
+<p style="margin-top:15px;">
 📍 Rama Hospital, Near Hindalpur Marg, Pilkhuwa
+</p>
 
-🛵 Special Delivery Offer
-Order for ₹500 or more
+</div>
 
-🎉 5 KM Delivery FREE!
+</section>
 
+
+<!-- DELIVERY OFFER -->
+<section>
+
+<div class="offer">
+
+<h2>🛵 Special Delivery Offer</h2>
+
+<p>
+Order for <strong>₹500 or more</strong>
+</p>
+
+<p style="margin-top:10px;font-size:19px;">
+🎉 <strong>5 KM Delivery FREE!</strong>
+</p>
+
+<p style="margin-top:10px;">
 One FREE delivery per day.
+</p>
 
+<p style="margin-top:12px;font-size:13px;">
 Terms & conditions may apply.
+</p>
 
-Menu Video Gallery
- 
- 
- 
-🍽️ Our Menu
-🍕 Pizza
-Margherita Pizza
-₹100
-Onion Pizza
-₹110
-Sweet Corn Pizza
-₹110
-Veggie Pizza
-₹150
-Paneer Tikka Pizza
-₹160
-🍔 Burger
-Aloo Tikki Burger
-₹50
-Aloo Tikki Cheese Burger
-₹60
-Paneer Tikki Burger
-₹90
-Chicken Burger
-₹90
-Chicken Cheese Burger
-₹100
-🥪 Sandwich
-Coleslaw Sandwich
-₹60
-Veg Cheese Sandwich
-₹80
-Paneer Sandwich
-₹90
-Paneer Cheese Sandwich
-₹100
-Chicken Cheese Sandwich
-₹120
-🥤 Shakes & Drinks
-Cold Coffee
-₹70
-Oreo Shake
-₹70
-Kit Kat Shake
-₹90
-Banana Shake
-₹50
-Mango Shake
-₹60
-Chocolate Shake
-₹80
-Strawberry Shake
-₹90
-🍟 Fries
-French Fries
-₹60
-Peri Peri Fries
-₹80
-Cheese Fries
-₹80
-Peri Peri Cheese Fries
-₹100
-🍝 Pasta
-Red Sauce Pasta
-₹80
-White Sauce Pasta
-₹80
-Mix Sauce Pasta
-₹110
-Tandoori Sauce Pasta
-₹100
-🌯 Rolls
-Veg Roll
-₹60
-Paneer Roll
-₹90
-Chicken Roll
-₹100
-Double Egg Chicken Roll
-₹120
-🍜 Noodles
-Veg Noodles
-₹50 / ₹80
-Paneer Noodles
-₹70 / ₹90
-Egg Noodles
-₹60 / ₹80
-Singapore Noodles
-₹70 / ₹100
-Hakka Noodles
-₹70 / ₹100
-🥟 Momos & Maggi
-Veg Momos
-₹50 / ₹90
-Paneer Momos
-₹70 / ₹120
-Plain Maggi
-₹40
-Cheese Maggi
-₹60
-Butter Maggi
-₹50
-Veg Maggi
-₹60
-📞 Contact Us
-The Cafe Town
+</div>
 
+</section>
+
+
+<!-- MENU -->
+<section id="menu">
+
+<h2>Menu Video Gallery</h2>
+
+<div class="video-gallery">
+
+<video controls preload="metadata">
+  <source src="br.mp4" type="video/mp4">
+  Your browser does not support video.
+</video>
+
+<video controls preload="metadata">
+  <source src="cv.mp4" type="video/mp4">
+  Your browser does not support video.
+</video>
+
+<video controls preload="metadata">
+  <source src="ki.mp4" type="video/mp4">
+  Your browser does not support video.
+</video>
+
+<video controls preload="metadata">
+  <source src="piz.mp4" type="video/mp4">
+  Your browser does not support video.
+</video>
+
+</div>
+
+
+<h2>🍽️ Our Menu</h2>
+
+
+<div class="category">
+
+<h3>🍕 Pizza</h3>
+
+<div class="item">
+<span>Margherita Pizza</span>
+<span class="price">₹100</span>
+</div>
+
+<div class="item">
+<span>Onion Pizza</span>
+<span class="price">₹110</span>
+</div>
+
+<div class="item">
+<span>Sweet Corn Pizza</span>
+<span class="price">₹110</span>
+</div>
+
+<div class="item">
+<span>Veggie Pizza</span>
+<span class="price">₹150</span>
+</div>
+
+<div class="item">
+<span>Paneer Tikka Pizza</span>
+<span class="price">₹160</span>
+</div>
+
+</div>
+
+
+<div class="category">
+
+<h3>🍔 Burger</h3>
+
+<div class="item">
+<span>Aloo Tikki Burger</span>
+<span class="price">₹50</span>
+</div>
+
+<div class="item">
+<span>Aloo Tikki Cheese Burger</span>
+<span class="price">₹60</span>
+</div>
+
+<div class="item">
+<span>Paneer Tikki Burger</span>
+<span class="price">₹90</span>
+</div>
+
+<div class="item">
+<span>Chicken Burger</span>
+<span class="price">₹90</span>
+</div>
+
+<div class="item">
+<span>Chicken Cheese Burger</span>
+<span class="price">₹100</span>
+</div>
+
+</div>
+
+
+<div class="category">
+
+<h3>🥪 Sandwich</h3>
+
+<div class="item">
+<span>Coleslaw Sandwich</span>
+<span class="price">₹60</span>
+</div>
+
+<div class="item">
+<span>Veg Cheese Sandwich</span>
+<span class="price">₹80</span>
+</div>
+
+<div class="item">
+<span>Paneer Sandwich</span>
+<span class="price">₹90</span>
+</div>
+
+<div class="item">
+<span>Paneer Cheese Sandwich</span>
+<span class="price">₹100</span>
+</div>
+
+<div class="item">
+<span>Chicken Cheese Sandwich</span>
+<span class="price">₹120</span>
+</div>
+
+</div>
+
+
+<div class="category">
+
+<h3>🥤 Shakes & Drinks</h3>
+
+<div class="item">
+<span>Cold Coffee</span>
+<span class="price">₹70</span>
+</div>
+
+<div class="item">
+<span>Oreo Shake</span>
+<span class="price">₹70</span>
+</div>
+
+<div class="item">
+<span>Kit Kat Shake</span>
+<span class="price">₹90</span>
+</div>
+
+<div class="item">
+<span>Banana Shake</span>
+<span class="price">₹50</span>
+</div>
+
+<div class="item">
+<span>Mango Shake</span>
+<span class="price">₹60</span>
+</div>
+
+<div class="item">
+<span>Chocolate Shake</span>
+<span class="price">₹80</span>
+</div>
+
+<div class="item">
+<span>Strawberry Shake</span>
+<span class="price">₹90</span>
+</div>
+
+</div>
+
+
+<div class="category">
+
+<h3>🍟 Fries</h3>
+
+<div class="item">
+<span>French Fries</span>
+<span class="price">₹60</span>
+</div>
+
+<div class="item">
+<span>Peri Peri Fries</span>
+<span class="price">₹80</span>
+</div>
+
+<div class="item">
+<span>Cheese Fries</span>
+<span class="price">₹80</span>
+</div>
+
+<div class="item">
+<span>Peri Peri Cheese Fries</span>
+<span class="price">₹100</span>
+</div>
+
+</div>
+
+
+<div class="category">
+
+<h3>🍝 Pasta</h3>
+
+<div class="item">
+<span>Red Sauce Pasta</span>
+<span class="price">₹80</span>
+</div>
+
+<div class="item">
+<span>White Sauce Pasta</span>
+<span class="price">₹80</span>
+</div>
+
+<div class="item">
+<span>Mix Sauce Pasta</span>
+<span class="price">₹110</span>
+</div>
+
+<div class="item">
+<span>Tandoori Sauce Pasta</span>
+<span class="price">₹100</span>
+</div>
+
+</div>
+
+
+<div class="category">
+
+<h3>🌯 Rolls</h3>
+
+<div class="item">
+<span>Veg Roll</span>
+<span class="price">₹60</span>
+</div>
+
+<div class="item">
+<span>Paneer Roll</span>
+<span class="price">₹90</span>
+</div>
+
+<div class="item">
+<span>Chicken Roll</span>
+<span class="price">₹100</span>
+</div>
+
+<div class="item">
+<span>Double Egg Chicken Roll</span>
+<span class="price">₹120</span>
+</div>
+
+</div>
+
+
+<div class="category">
+
+<h3>🍜 Noodles</h3>
+
+<div class="item">
+<span>Veg Noodles</span>
+<span class="price">₹50 / ₹80</span>
+</div>
+
+<div class="item">
+<span>Paneer Noodles</span>
+<span class="price">₹70 / ₹90</span>
+</div>
+
+<div class="item">
+<span>Egg Noodles</span>
+<span class="price">₹60 / ₹80</span>
+</div>
+
+<div class="item">
+<span>Singapore Noodles</span>
+<span class="price">₹70 / ₹100</span>
+</div>
+
+<div class="item">
+<span>Hakka Noodles</span>
+<span class="price">₹70 / ₹100</span>
+</div>
+
+</div>
+
+
+<div class="category">
+
+<h3>🥟 Momos & Maggi</h3>
+
+<div class="item">
+<span>Veg Momos</span>
+<span class="price">₹50 / ₹90</span>
+</div>
+
+<div class="item">
+<span>Paneer Momos</span>
+<span class="price">₹70 / ₹120</span>
+</div>
+
+<div class="item">
+<span>Plain Maggi</span>
+<span class="price">₹40</span>
+</div>
+
+<div class="item">
+<span>Cheese Maggi</span>
+<span class="price">₹60</span>
+</div>
+
+<div class="item">
+<span>Butter Maggi</span>
+<span class="price">₹50</span>
+</div>
+
+<div class="item">
+<span>Veg Maggi</span>
+<span class="price">₹60</span>
+</div>
+
+</div>
+
+</section>
+
+
+<!-- CONTACT -->
+<section class="contact">
+
+<h2>📞 Contact Us</h2>
+
+<div class="card">
+
+<p><strong>The Cafe Town</strong></p>
+
+<p style="margin-top:8px;">
 Deepak Tomar
+</p>
 
+<a class="phone" href="tel:7452849258">
 📲 74528 49258
+</a>
+
+<p style="margin-top:18px;">
 📍 Rama Hospital, Near Hindalpur Marg, Pilkhuwa
+</p>
 
+<p style="margin-top:18px;font-weight:bold;">
 Take a Bite, Make Your Future Bright! ❤️
+</p>
 
-The Cafe Town
+</div>
 
+</section>
+
+
+<!-- FOOTER -->
+<footer>
+
+<p><strong>The Cafe Town</strong></p>
+
+<p style="margin-top:8px;">
 Delicious Food • Great Taste • Good Vibes
+</p>
 
+<p style="margin-top:10px;">
 © 2026 The Cafe Town
+</p>
+
+</footer>
+
+</body>
+ </html>
