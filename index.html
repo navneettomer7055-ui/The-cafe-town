@@ -4,326 +4,169 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>The Cafe Town | Pilkhuwa - Premium Ordering</title>
-<!-- QR Code Library -->
-<script src="https://cdnjs.cloudflare
-<h3>.com/ajax/libs/q🍕 Pizza</h3>
-<div class="rcodejs/1.0.0/qrcode.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
 body{font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;background:#fff8ef;color:#35170e;line-height:1.6}
-.hero{min-height:500px;display:flex;align-items:center;justify-content:center;text-align:center;padding:40px 20px;background:linear-gradient(rgba(53item"><span>M,23,argherita Pizza14,.8),rgba(53,23,14,.8)),url('https://images.unsplash — ₹100</span><button class="add.com/photo-1-btn" onclick="5172addToCart('Margherita Pizza',100)">48135467-4c7ADD</button></div>
-<divedcad34c4?ix class="item"><lib=rb-span>Onion Pizza — ₹11.2.10</span><button class="1&auto=format&fit=cropadd-btn" onclick&w=1350&q=="addToCart('Onion Pizza',110)">ADD</button></div>
-<div class="item"><span>Sweet Corn Pizza — ₹110</span80');background-size:cover;color:white}
+.hero{min-height:500px;display:flex;align-items:center;justify-content:center;text-align:center;padding:40px 20px;background:linear-gradient(rgba(53,23,14,.8),rgba(53,23,14,.8)),url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');background-size:cover;color:white}
 .hero-content{max-width:700px}
-.logo{font-size:65px}><button class="
-.hero h1add-btn" onclick{font-size:45px;text-shadow:2px 2px 4px rgba(="addToCart('Sweet Corn Pizza',110)">ADD</button></div>
-<div class="item"><0,0,0,0.5)}
-.btnspan>Veggie{display:inline-block Pizza — ₹150</span;margin:7px><button class=";padding:13px 22px;border-radius:add-btn" onclick="addToCart('Veggie Pizza',150)">ADD</button></div>
-<div class="item"><span>Paneer Tikka Pizza — ₹160</span><button class="add-btn" onclick="addToCart('Paneer Tikka Pizza',160)">ADD</button></div>
-</div>
-<!-- Rolls -->
-<div class="category">
-<h3>🌯 Rolls</h3>
-<div class="item"><span>Veg Roll — ₹60</span><button class="add-btn" onclick="addToCart('Veg Roll',60)">ADD</button></div>
-<div class="item"><span>Paneer Roll — ₹90</span><30px;background:white;color:#542516;text-decoration:none;font-weight:bold;border:0;cursor:pointer;transition:transform 0.2s}
+.logo{font-size:65px}
+.hero h1{font-size:45px;text-shadow:2px 2px 4px rgba(0,0,0,0.5)}
+.btn{display:inline-block;margin:7px;padding:13px 22px;border-radius:30px;background:white;color:#542516;text-decoration:none;font-weight:bold;border:0;cursor:pointer;transition:transform 0.2s}
 .btn:hover{transform:scale(1.05)}
 section{max-width:950px;margin:auto;padding:40px 18px}
 h2{text-align:center;font-size:30px;margin-bottom:25px;color:#542516}
 .card,.order-box{background:white;padding:22px;border-radius:15px;box-shadow:0 5px 20px rgba(0,0,0,.1)}
-.offerbutton class="add{text-align:center;background:#fff0d8;border:2px dashed #a-btn" onclick="9471addToCart('Pane8;padding:2er Roll',90)">ADD</button></div>
-<div class="5px;border-radius:15px}
-.video-galleryitem"><span>{display:grid;grid-template-columnsChicken Roll — ₹:repeat(2,1fr);gap:18px}
-.video-gallery video{width100</span><button class="add-btn" onclick="addToCart('Chicken Roll',:100100)">%;border-radius:ADD</button></div>
-<div class="item"><span>Double Egg Chicken Roll — ₹120</span><button class="add-btn" onclick="addToCart('Double Egg Chicken14px;background:#111}
-.category{margin-bottom:25px;border-radius:12px;overflow:hidden;box-shadow:0 4px  Roll',1215px rgba0)">ADD</(0,0,0,.07)}
-.categorybutton></div>
-</div>
-<!-- Noodles h3{background -->
-<div class:#542="category">
-516;color<h3>:white;padding:13px 1🍜 Noodles</h3>6px}
-
-<div class=".item{display:flexitem"><span>V;justify-content:eg Noodles — ₹50</span><button classspace-between;align-items:center;gap:10px="add-btn";padding:13 onclick="addToCartpx 15('Veg Npx;background:white;borderoodles',50)">ADD</button-bottom:1px solid #eee;flex-wrap:wrap></div>
-<div class="item}
-.add-btn"><span>Paneer Noodles — ₹70</span><button class="add-btn" onclick="addToCart('Paneer Noodles',70)">ADD</button></div>
-<div class="item"><span>Egg Noodles — ₹60</span><button class="add-btn" onclick="addToCart('Egg Noodles',60)">ADD</button></div>
-<div class="item"><span>Singapore Noodles — ₹70</span><button class="add-btn" onclick="addToCart('Singapore Noodles',70)">ADD</button></div>
-<div class="item"><span>Hakka Noodles — ₹70</span><button class="add-btn" onclick="addToCart('Hakka Noodles',70)">ADD</button></div>
-</{border:0div>
-<!-- Momos & Maggi;background:#2e8b57;color:white;padding:7px 12px;border-radius:20px;cursor:pointer;font-weight:bold}
+.offer{text-align:center;background:#fff0d8;border:2px dashed #a94718;padding:25px;border-radius:15px}
+.video-gallery{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+.video-gallery video{width:100%;border-radius:14px;background:#111}
+.category{margin-bottom:25px;border-radius:12px;overflow:hidden;box-shadow:0 4px 15px rgba(0,0,0,.07)}
+.category h3{background:#542516;color:white;padding:13px 16px}
+.item{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:13px 15px;background:white;border-bottom:1px solid #eee;flex-wrap:wrap}
+.add-btn{border:0;background:#2e8b57;color:white;padding:7px 12px;border-radius:20px;cursor:pointer;font-weight:bold}
 .cart-item{display:flex;justify-content:space-between;align-items:center;padding:10px 0;border-bottom:1px solid #eee;gap:10px}
 .qty{display:flex;align-items:center;gap:8px}
 .qty button{width:30px;height:30px;border:0;border-radius:50%;background:#542516;color:white}
 .order-total{font-size:23px;font-weight:bold;text-align:right;margin-top:15px;color:#a94718}
-.form-grid -->
-<div class{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:15px}="category">
-
-input,select,textarea{width:100%;padding:1<h3>🥟 Momos & Maggi</h3>
-<div2px;border: class="item"><span>Veg Momos — ₹50</span><1px solid #ccc;border-radius:8px;font-size:16pxbutton class="add}
-textarea{-btn" onclick="min-height:90px}
-addToCart('V.full{grid-column:1/-1}
-.area-boxeg Momos',50)">ADD</button></div{margin-top:>
-<div class20px;padding="item"><span:18px>Paneer Momos — ₹70</span><button class="add;background:#fff5e6;border:2px solid #ddd;border-radius:15px}
+.form-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:15px}
+input,select,textarea{width:100%;padding:12px;border:1px solid #ccc;border-radius:8px;font-size:16px}
+textarea{min-height:90px}
+.full{grid-column:1/-1}
+.area-box{margin-top:20px;padding:18px;background:#fff5e6;border:2px solid #ddd;border-radius:15px}
 .area-buttons{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px}
-.area-btn{padding:15px;border:2px solid #542-btn" onclick="addToCart('Paneer Momos',70)">ADD</button></div>
-<div class="item"><span>Plain Maggi — ₹40</span><button class="add-btn" onclick="addToCart('Plain Maggi',40)">ADD516;background</button></div>
-<div class:white;color:#5="item"><span4251>Cheese Maggi — ₹60</span><button class="add-btn" onclick="addToCart('Cheese Maggi',60)">ADD</button6;border-radius:12px;font-size:17px;font-weight:bold;cursor:pointer}
-.area-btn.active{background:#54251></div>
-6;color:white}<div class="item
+.area-btn{padding:15px;border:2px solid #542516;background:white;color:#542516;border-radius:12px;font-size:17px;font-weight:bold;cursor:pointer}
+.area-btn.active{background:#542516;color:white}
 #paymentSection{display:none;margin-top:20px}
-.payment-info{padding:25px;border-radius:14"><span>Butter Maggi — ₹50</span><button class="px;background:#fff;border:2pxadd-btn" onclick solid #e0e0e0;text-align:center;box-shadow:0 4px 10px rgba(0,0,0,0.05)}="addToCart('Butter Maggi',50)">ADD</button></div>
-<div class="item"><span>Veg Maggi —
+.payment-info{padding:25px;border-radius:14px;background:#fff;border:2px solid #e0e0e0;text-align:center;box-shadow:0 4px 10px rgba(0,0,0,0.05)}
 
-/* Premium QR & Payment Box */
 #qr-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 20px auto; ₹60</
-    padding: 20pxspan><button class="add-btn" onclick="addToCart('Veg Maggi',60)">ADD</button></div>
-</div>
-</section>
-
-<section id="order">
-<h2>🛒 Place Your Order</h2>
-<div class="order-box">
-<h3>🛍️ Your Cart</;
+    margin: 20px auto;
+    padding: 20px;
     background: white;
-h3>
     border-radius: 15px;
     box-shadow: 0 0 25px rgba(84, 37, 22, 0.15);
     width: fit-content;
     border: 2px solid #542516;
-    cursor: pointer;
-    transition: transform 0.2s, box-shadow 0.2s;
-}
-#qr-container:hover {
-    transform: scale(1.02);
-    box-shadow<div id="cart: 0 0 35Items">Your cart is empty.</div>
-<div class="order-total">Total: ₹<span id="cartTotal">0</span></div>
-
-<div class="form-grid">
-<div><label>Customer Name *</label><input id="customerName" type="text" placeholder="Enter your name"></div>
-<div><label>Mobile Number *</label><input id="customerMobile" type="tel" maxlength="10" placeholder="10 digit mobile number"></div>
-<div class="full"><label>Delivery Address *</label><textareapx rgba(84, 37, 22, 0.25);
 }
 
-/* NEW: Big Pay Now Button */
-.pay-now-btn {
-    display id="customerAddress: block;
-" placeholder="Enter complete delivery address"></textarea></div>
-</div>
-
-<div class="area-box">
-<h3>📍 Delivery Area Select करें *</h3>
-<p    width: 100%;
-    max-width: 300px;
-    margin: 15px auto;
-    padding: 18px 30px style="margin-top:5px;font-size:14px;color:#666">Payment option इसी selection के अनुसार आएगा.</p>
-<div class="area-buttons">
-<button id="inRamaBtn" class="area-btn";
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+/* NEW: App Chooser Buttons */
+.app-chooser {
+    margin: 20px auto;
+    max-width: 400px;
+}
+.app-chooser h4 {
+    color: #542516;
+    margin-bottom: 12px;
+    font-size: 16px;
+}
+.app-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+.app-btn {
+    padding: 14px 10px;
+    border: 0;
+    border-radius: 12px;
     color: white;
-    border: none;
-    border-radius: 3 onclick="selectArea0px;
-    font-size: 20px('in')">🏥 IN RAMA<br><small>COD + Online Payment</small></button>
-<button id="outRamaBtn" class="area-btn" onclick="selectArea('out')">📍 OUT OF RAMA<br><small>Only Online Payment</small></;
+    font-size: 15px;
     font-weight: bold;
     cursor: pointer;
-    box-shadow: 0 6px 20px rgba(102, button>
-</126,div>
-</div>
-
-<div id="paymentSection">
-<h3 style="margin-top:20px">💳 Secure Payment</h3>
-<select id="paymentMethod" 234, 0.4);
-    transition: all 0.3s;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    transition: transform 0.2s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
 }
-.pay-now-btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 25 onchange="paymentChangedpx rgba(102, 126, 234, 0.5);
-}
-.pay-now-btn:active {
-    transform: translateY(0);
-()" style="margin-bottom:15px"></select>
+.app-btn:hover { transform: translateY(-2px); }
+.app-btn:active { transform: scale(0.97); }
+.app-btn .app-icon { font-size: 24px; }
 
-<!-- SOLID ONLINE PAYMENT BOX -->
-<div id="onlinePaymentBox" class="payment-info">
-    <h3 style="color:#d32f2f">📱 Step 1: Payment करें</h3>
-    <p>नीचे दिए गए बटन पर टैप करें या QR कोड स्कैन}
+.app-phonepe { background: linear-gradient(135deg, #5f259f 0%, #3a1566 100%); }
+.app-gpay { background: linear-gradient(135deg, #4285F4 0%, #34A853 50%, #FBBC05 100%); }
+.app-paytm { background: linear-gradient(135deg, #00BAF2 0%, #002970 100%); }
+.app-bhim { background: linear-gradient(135deg, #ff9933 0%, #138808 100%); }
 
-.tap-ind करें।</picator {
-    background: #>
-
-    <!-- Dynamic QR Code Container -->
-    <2e8b57;
-div id="qr    color: white-container" onclick=";
-    paddingopenUPIPayment()">
-        <div: 8px id="qrcode 16px"></div>
-;
-    border    </div>-radius: 2
-    <div0px;
- class="tap-ind    font-size:icator"> 14px👆 QR कोड;
-    font पर-weight: bold; टैप करें
-    margin-top</div>
-    <p class: 10="px;
+.tap-indicator {
+    background: #2e8b57;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 10px;
     display: inline-block;
 }
 
-pay-status" id.upi-display-box="qrStatus">Add items to cart to see QR code {
-    background: #f0.</p>
-
-f4f8    <!-- NEW:;
-    border: 2px Big Pay Now Button -->
-    < dashed #54button class="pay2516-now-btn" onclick="openUPIPayment;
-    border-radius: 1()">
-       0px;
- 📱 Pay Now    padding:  - PhonePe / GPay / Pay15px;
-    margin: 15pxtm
-    </ auto;
-   button>
-
-    <!-- UPI ID max-width:  Copy Box -->
-350px    <div class;
+.upi-display-box {
+    background: #f0f4f8;
+    border: 2px dashed #542516;
+    border-radius: 10px;
+    padding: 15px;
+    margin: 15px auto;
+    max-width: 350px;
 }
-="upi-display-box.upi-id-text">
-        < {
-    fontp style="font-size:14px;color:#5-size: 20px;
+.upi-id-text {
+    font-size: 20px;
     font-weight: bold;
-    color: #d55;margin-bottom:5px">32f2या UPI ID कॉपी करें:</f;
-   p>
-        <div class=" letter-spacing: 1px;
-    word-break:upi-id-text" break-all;
- id="upiText}
+    color: #d32f2f;
+    letter-spacing: 1px;
+    word-break: break-all;
+}
 .copy-btn {
-    background">Paytm.s21aaef@pty</div>
-        <: #54button class="copy2516-btn" onclick=";
+    background: #542516;
     color: white;
-copyUPI()">📋 Copy U    border: none;
-    paddingPI ID</button: 8px>
-    </ 16px;
+    border: none;
+    padding: 8px 16px;
     border-radius: 20px;
-div>
-
-    <div id="paymentTimer" class    margin-top:="timer-box"> 10px⏳ Payment Complete करें (5 mins)</div>
-
-    <hr style="margin:;
+    margin-top: 10px;
     cursor: pointer;
     font-weight: bold;
     font-size: 14px;
 }
-.copy-btn:active { transform: scale(20px 0;border:1px dashed #ccc">
+.copy-btn:active { transform: scale(0.95); }
 
-    <0.95h3 style="color:#2e); }
-
-#8b57onlinePaymentBox{">📸display:none}
-.pay-status{font Step 2:-size:16 Screenshot लेंpx;color:#2</h3>
-    <p style="font-size:14pxe8b57;margin-top:10px;font-weight:bold}
-;color:#55.screenshot-box{5">Payment Successfulmargin-top:2 होने के बाद उसका <strong>S0px;text-aligncreenshot</strong>:left;background:#fff ले लें।8ef;padding:15px;border</p>
-
-    <div class-radius:10px;border:1="screenshot-box">
-        <label><strong>px solid #ddd}
-#screenshotPreview{display📤 Step 3: S:none;width:1creenshot यहाँ Upload00%;max-width:20 करें *</strong></label>
-       0px;margin-top <input type=":10pxfile" id=";border-radius:1paymentScreenshot" accept0px;border:="image/*" onchange="previewScreenshot()" style="margin2px solid #2e8b57}
--top:8px.whatsapp-btn{">
-        <width:10img id="screenshotPreview" alt0%;margin-top:20px="Screenshot Preview">;padding:16
-    </divpx;border:0>
-</div;border-radius:3>
-
-<div id0px;background:#="codInfo" style="display:none25D3;margin-top:166;color:white5px;padding:;font-size:115px;background8px;font-weight:bold;cursor:pointer:#e8f5e9;border;box-shadow:-radius:120 4px 15px rgba(37, 21px;border:21, 1px solid #2e8b502, 0.4);transition:transform 0.2s}
+#onlinePaymentBox{display:none}
+.pay-status{font-size:16px;color:#2e8b57;margin-top:10px;font-weight:bold}
+.screenshot-box{margin-top:20px;text-align:left;background:#fff8ef;padding:15px;border-radius:10px;border:1px solid #ddd}
+#screenshotPreview{display:none;width:100%;max-width:200px;margin-top:10px;border-radius:10px;border:2px solid #2e8b57}
+.whatsapp-btn{width:100%;margin-top:20px;padding:16px;border:0;border-radius:30px;background:#25D366;color:white;font-size:18px;font-weight:bold;cursor:pointer;box-shadow:0 4px 15px rgba(37, 211, 102, 0.4);transition:transform 0.2s}
 .whatsapp-btn:hover{transform:scale(1.02)}
 
-.owner-login{position:fixed;right:15px;bottom:15px;z-index:999;background:#542516;color:white;border:0;padding:12px 17px;border7">
-<h-radius:253>💵 Cash on Delivery</h3>
-<p>आपका payment delivery के समय cash में लिया जाएगा.</p>
-</div>
-
-<button class="whatsapp-btn" id="submitOrderBtn" onclick="placeOrder()">
-🚀 Submit Order & Open WhatsApp
-</button>
-<p style="text-align:center;font-size:13px;color:#d32f2px;font-weight:bold;box-shadow:f;margin-top:0 4px10px;font 10px rgba(0,0,0,0.3)}
+.owner-login{position:fixed;right:15px;bottom:15px;z-index:999;background:#542516;color:white;border:0;padding:12px 17px;border-radius:25px;font-weight:bold;box-shadow:0 4px 10px rgba(0,0,0,0.3)}
 #ownerPanel{display:none;position:fixed;inset:0;z-index:9999;background:rgba(0,0,0,.8);overflow:auto;padding:15px}
--weight:bold">
-.owner-box{max⚠️ WhatsApp खुलने के बाद सबसे पहले अपना Screenshot अटैच करें, फिर Send करें।
-</p>
-</div>
-</div>
-</section>
-
-<section>
-<h2>📞 Contact Us</h2-width:1100px;margin:30px auto;background:white;border-radius:18px;padding:20px}
+.owner-box{max-width:1100px;margin:30px auto;background:white;border-radius:18px;padding:20px}
 .owner-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:20px}
-.close-btn{border:>
-<div class="card" style="text-align:center">
-<p><strong>The Cafe Town</strong></p>
-<p>Deepak Tomar</p>
-<a class="phone" href="tel0;background:#c:745284962828;color:white;padding258" style="font-size:10px 15px;border-radius:8px}
+.close-btn{border:0;background:#c62828;color:white;padding:10px 15px;border-radius:8px}
 .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
-.stat{background:#fff5e6;border-radius:12px;padding:1:20px5px;text-align:center}
-.stat b{display:block;color:#542516;text-decoration:none;font-weight:bold">📲 74528 49258</a>
-<p style="margin-top:15px">📍 Rama Hospital, Near Hindalpur Marg, Pilkhuwa</p>
-</div>
-</;font-size:23px;color:#a94718}
+.stat{background:#fff5e6;border-radius:12px;padding:15px;text-align:center}
+.stat b{display:block;font-size:23px;color:#a94718}
 .owner-section{margin-top:25px;border-top:1px solid #ddd;padding-top:20px}
-.action-btn{border:0;padding:10px 14px;border-radius:8px;cursor:pointer;font-weight:bold;background:#542section>
-
-<footer style="text-align:center;padding:30px 15px;background:#542516;color:white">
-<p><strong>The Cafe Town</strong></p>
-<p>Delicious Food • Great Taste • Good Vibes</p>
-<p>© 2026 The Cafe Town</p>
-</footer>516;color:white;margin:4px}
+.action-btn{border:0;padding:10px 14px;border-radius:8px;cursor:pointer;font-weight:bold;background:#542516;color:white;margin:4px}
 .green{background:#2e8b57}
-.red{background:#c6282
-
-<button class="8}
+.red{background:#c62828}
 .blue{background:#1565c0}
 .orange{background:#ef6c00}
-.history{overflow-x:auto}owner-login" onclick="ownerLogin()">🔐 Owner Login</button>
-
-<div id="ownerPanel">
-<div class="owner-box">
-<div class="owner-head">
-<h2 style="margin:0">🔐 Owner Dashboard</h2>
-<button class="close
+.history{overflow-x:auto}
 .history table{width:100%;border-collapse:collapse;min-width:700px}
-.history th,.history td{border:1px solid #-btn" onclick="ddd;padding:9closeOwner()">✕ Close</button>
-</div>
-<div class="stats">
-<div class="stat">Online Sale<b id="onlineTotal">₹0</b></divpx;text-align:center}
+.history th,.history td{border:1px solid #ddd;padding:9px;text-align:center}
 .history th{background:#542516;color:white}
-.order-card{>
-<div class="stat">Offline Sale<b id="offlineTotal">₹0</b></div>
-<div class="stat">Collection<b id="collectionTotal">background:#fff8ef;border:1px solid #ddd;border-radius:14px;padding:15px;margin-bottom:15px}
-.status{display:inline-block;padding:5px 10px;border-radius:15px;background:#₹0</ffe0b2;font-weight:bold}
-.timer-box{b></div>
-<div class="stat">Total Sales<b id="salesTotal">₹0</b></div>
-</div>
-<div class="owner-section">
-<h3>📦 Online Orders</hbackground:#e3f2fd;color:#0d43>
-<div7a1;padding id="ordersList"></div>
-</div>
-:12px<div class="owner;border-radius:8-section">
-<h3>➕ Add Sale</hpx;margin-bottom:3>
-<div15px;text-align:center;font-weight class="form-grid:bold;display:none;border">
-<div><label>Sale Type</label><select id="saleType"><option value="online">Online Order</option><option value="offline">Offline Order</option:1px solid #bbdefb}
+.order-card{background:#fff8ef;border:1px solid #ddd;border-radius:14px;padding:15px;margin-bottom:15px}
+.status{display:inline-block;padding:5px 10px;border-radius:15px;background:#ffe0b2;font-weight:bold}
 
 @media(max-width:600px){
 .hero h1{font-size:34px}
-.logo{font-size></select></div:50px>
-<div><}
-.video-gallerylabel>Amount ₹{grid-template-columns</label><input:1fr} type="number" id="saleAmount
-.stats{grid" placeholder="Enter-template-columns:repeat(2,1fr)}
-.form-grid{grid-template-columns:1fr amount"></div>
-<div><label>Note</label><input id="sale}
-.full{Note" placeholder="Optional"></div>
-<div><label>Date</label><input type="date" id="saleDate"></div>
-</div>
-<button class="action-btn green" onclick="addSale()">➕ Save Sale</button>
-</div>
-<div class="owner-section">
-grid-column:auto}<h3>💰 Add Collection</h3>
-<div class="form-grid">
-<div
+.logo{font-size:50px}
+.video-gallery{grid-template-columns:1fr}
+.stats{grid-template-columns:repeat(2,1fr)}
+.form-grid{grid-template-columns:1fr}
+.full{grid-column:auto}
 .area-buttons{grid-template-columns:1fr}
+.app-grid{grid-template-columns:1fr 1fr}
 }
 </style>
 </head>
@@ -333,534 +176,242 @@ grid-column:auto}<h3>💰 Add Collection</h3>
 <div class="hero-content">
 <div class="logo">🍕</div>
 <h1>The Cafe Town</h1>
-><label>Amount<p>Delicious Food • Great Taste • Good Vibes</p>
-<div style="margin ₹</label><input type="number:20px" id="collection 0">Take a Bite, Make Your Future Bright!</div>
-<a href="#menu" class="btn">Amount" placeholder="Amount"></div>
-<div><label>Note</label><🍽️input id="collectionNote" placeholder="Optional"></div>
-</div>
-<button class=" View Menu</a>
-<a href="#order" class="btn">action-btn green"🛒 Order Now onclick="addCollection()">💰 Save Collection</button>
-</div></a>
-<a href="tel:7452849258"
-<div class=" class="btn">owner-section">
-<h3>📞 Call Now</a>📜 Sales History
+<p>Delicious Food • Great Taste • Good Vibes</p>
+<div style="margin:20px 0">Take a Bite, Make Your Future Bright!</div>
+<a href="#menu" class="btn">🍽️ View Menu</a>
+<a href="#order" class="btn">🛒 Order Now</a>
+<a href="tel:7452849258" class="btn">📞 Call Now</a>
 </div>
 </header>
 
 <section>
-</h3>
-<div class="history"><table><<h2>❤thead><tr><️ Welcome to Theth>Date</th><th>Type</th><th>Amount</th>< Cafe Town</h2>
-<div class="card" style="text-alignth>Note</th><th>Action</th></tr></thead><tbody id:center">
-<p>Welcome to <strong>The Cafe Town</="historyBody"></strong> — atbody></table></ friendly place to enjoydiv>
-</div>
-</div>
-</div>
-
-<script>
-/* ========================= SETTINGS ========================= */
-const OWNER delicious food.</p>
-<p style="margin-top:15px">📍 Rama Hospital, Near Hindalpur Marg,_PIN = "1 Pilkhuwa</p>
-</122";
-const WHATSdiv>
-</APP_NUMBER = "9174section>
-
-<section>
-<div class52849258="offer">
-";
-const U<h2>🛵 Special DeliveryPI_ID = "Paytm Offer</h2>
-<p>.s21aaOrder for <strongef@pty"; // ⚠>₹500 or more️</strong></p>
-<p style अपनी सही UPI ID यहाँ="font-size: चेक कर लें
-
-/* =================19px;margin-top:10px">======== CART =========================🎉 <strong>5 KM Delivery FREE */
-let cart = [];
-let selectedArea = "";!</strong></p
-let paymentInit>
-</div>
-</sectioniated = false;
-let qrCode>
-
-<section idObj = null;="menu">
-
-let currentUPI<h2>🎬 Menu VideoString = "";
-
- Gallery</h2function addToCart(name>
-<div class="video-gallery">
-<video controls, price) {
-    let item = cart.find(x playsinline preload=" => x.name === name);
-   metadata"><source src if (item) { item.qty++;="./br.mp4" type="video/mp4"></video>
-<video } else { cart controls playsinline preload="metadata"><source.push({ name: name, price: price, qty: src="./cv.mp 1 }); }
-    renderCart();
-    update4" type="video/mp4"></video>
-<QRCode();
-    document.getElementById("order").scrollIntovideo controls playsinline preload="metadata"><source src="./ki.mp4" typeView({ behavior:="video/mp4 "smooth" });
-}
-
-function changeQty(index, change) {
-"></video>
-<video controls plays    if (!cart[index]) return;
-    cart[indexinline preload="metadata"><source src="./].qty += changepiz.mp4" type="video/mp4"></video;
-    if>
-</div (cart[index].qty <= 0) { cart.splice>
-
-<h2>📜 Our Menu</h(index, 12>
-<!-- Pizza -->
-<div); }
-    renderCart();
-    updateQRCode class="category">();
-}
-
-
-<h3>🍕 Pizzafunction getCartTotal</h3>
-<div class="() {
-    return cart.reduce((item"><span>Msum, item)argherita Pizza — ₹10 => sum + (item.price * item.qty), 0);
-}
-
-function renderCart() {
-    let box = document.getElementById("cartItems");
-    document.getElementById("cartTotal").textContent = getCartTotal();
-    if (!cart.length) {
-        box.innerHTML = '<p style="padding0</span><:15pxbutton class="add-btn" onclick="addToCart('Margherita Pizza',100)">ADD</button></div>
-<div class="item"><span>Onion Pizza — ₹110</span><button class=";color:#77add-btn" onclick7">Your cart is empty. Menu से items ADD करें="addToCart('Onion Pizza',110)">ADD</button></div>
-<div class="item"><.</p>';
-span>Sweet Corn Pizza — ₹110</span><button class="        return;
-    }
-    box.innerHTML = "";
-    cart.forEach((item, indexadd-btn" onclick) => {
-        let div = document.createElement("div");
-        div.className = "cart="addToCart('Sweet Corn Pizza',110)">ADD</button></div>
-<div class="item"><-item";
-       span>Veggie div.innerHTML = `
-        <div><strong>${escape Pizza — ₹150</span><button class="HTML(item.name)}</add-btn" onclickstrong><br>₹${item="addToCart('.price} × ${item.qty}</div>
-        <div class="qty">
-            <button onclick="changeQty(${index},-1)">−</button>
-Veggie Pizza',150)">ADD</button></div>
-<div class="item"><span>Paneer Tikka Pizza — ₹16            <strong>${0</span><item.qty}</strongbutton class="add>
-            <-btn" onclick="button onclick="changeaddToCart('PaneQty(${index},er Tikka Pizza1)">+</button',160>
-        </)">ADD</buttondiv>
-       ></div>
- <strong>₹${item.price</div>
-<!-- Rolls -->
-<div class="category * item.qty}</">
-<h3strong>`;
-        box>🌯.appendChild(div);
- Rolls</h3>
-<div class    });
-}="item"><span
-
-/* ========================= QR CODE & U>Veg Roll — ₹60</span><button class="add-btn" onclick="addToCart('Veg Roll',60)">ADD</button></div>
-<div class="item"><PI PAYMENT =================span>Paneer Roll — ₹90</span><button class="add-btn" onclick="addToCart('Paneer Roll',9======== */
-function generateQR(amount) {
-    const container = document.getElementById("qrcode");
-    container.innerHTML = ""; 
-    
-    if(amount <= 0) {
-        document.getElementById("qrStatus").textContent = "Add items to cart to see QR code.";
-        return;
-    }
-
-0)">ADD</button></div>
-<div class="item"><span>Chicken Roll — ₹100</span><button class="add-btn" onclick="addToCart('Chicken Roll',100)">ADD</button></div>
-<div class="item"><span>Double Egg Chicken Roll — ₹120</span><button class    currentUPIString = `upi://pay?pa=${encodeURIComponent(UPI_ID)}&pn=${encodeURIComponent("The Cafe Town")}&am="add-btn" onclick="addToCart('Double Egg Chicken Roll',120)">ADD</button></div>
-</div>
-<!-- Noodles -->
-<div class="category">
-=${amount.toFixed(2)}&cu=INR`;
-
-    qrCodeObj = new QRCode(container, {
-        text: currentUPIString,
-        width: 220,
-        height: 220,
-        colorDark : "#000000",
-        colorLight : "#ffffff",
-        correctLevel : QRCode.Correct<h3>🍜 Noodles</h3>
-<div class="item"><span>Veg Noodles — ₹50</span><button class="add-btn" onclick="addToCart('Veg NLevel.H
-   oodles',50)">ADD</button></div>
-<div class="item });
-
-    document.getElementById("qrStatus").innerHTML = `✅ Total: <strong>₹${amount}</strong>`;
-    paymentInitiated = true;
-}
-
-// IMPROVED: Open UPI Payment"><span>Paneer Noodles — ₹70</span><button class="add-btn" onclick="addToCart('Paneer Noodles',70 with better fallback
-)">ADD</button></div>
-function openUPIPayment() {
-    if (!currentUPIString) {
-        alert("पहले Cart में Items Add करें।");
-        return<div class="item"><span>Egg Noodles — ₹60</span><button class="add-btn" onclick;
-    }="addToCart('Egg Noodles
-    
-    // Try to open UPI intent
-    const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|',60)">Opera Mini/i.test(nADD</button></div>
-<divavigator.userAgent);
-    
-    if ( class="item"><isMobile) {
-        // Onspan>Singapore Noodles — ₹70</span><button class=" mobile, try toadd-btn" onclick="addToCart('Singapore Noodles',70)">ADD</button></div open UPI app
-        window.location.href = currentUPIString;
-        
-        // If U>
-<div classPI intent doesn't="item"><span>Hakka Noodles — ₹70</span>< work, show fallback after 2 seconds
-        setTimeoutbutton class="add(() => {
-            if (!document.hidden) {
--btn" onclick="addToCart('Hakka Noodles                // User is still on the page, UPI intent might not have worked
-                showFallbackMessage();
-            }
-        }, 2000);
-    } else {
-       ',70)"> // On desktop,ADD</button></div>
-</div>
-<!-- Momos & Maggi -->
-<div class show message to scan QR
-        alert("📱 कृपया अपने फोन से QR="category">
-<h3>🥟 Momos & Maggi</h3>
-<div class="item"><span>Veg Momos — ₹50</span><button class="add-btn" onclick="addToCart('Veg Momos',50)">ADD</button></div कोड स्कैन करें।\n\nया 'Copy UPI ID'>
-<div class="item"><span>Paneer Momos — ₹7 बटन दबाकर UPI0</span>< ID कॉbutton class="add-btn" onclick="पी करें।");
-    }
-addToCart('Pane}
-
-er Momos',70)">ADD</button></divfunction showFallbackMessage() {
-    const confirmed = confirm(">
-<div class="item"><span>Plain Maggi — ₹40</span><button class⚠️ अगर Payment App नहीं खुला, तो:\n="add-btn"\n1. ' onclick="addToCartCopy UPI ID' बटन दबाएं\n2. PhonePe/GPay/Paytm खोल('Plain Maggi',40)">ADD</button></div>
-<div class="item"><span>Cheese Maggi — ₹60</span><button class="add-btn" onclick="addToें\n3. 'Scan QR' या 'Pay to Contact' में जाकर UPI IDCart('Cheese पेस्ट करें\n Maggi',60\nक्या आप UPI ID कॉपी करना चाहते हैं?");
-    
-    if (confirmed) {
-)">ADD</button></div>
-<div class="item"><span>Butter Maggi — ₹50</span        copyUPI();><button class="add-btn" onclick="addToCart('Butter Maggi',50)">ADD</button></div>
-<div class
-    }
-}
-
-function updateQRCode() {
-    const total = getCartTotal();
-   ="item"><span if(total > 0 && document.getElementById>Veg Maggi — ₹60</("onlinePaymentBox").style.display !== "none") {span><button class
-        generateQR="add-btn"(total);
-    onclick="addToCart('Veg Maggi',60)"> }
-}
-
-function copyUPI()ADD</button></ {
-    navigatordiv>
+<h2>❤️ Welcome to The Cafe Town</h2>
+<div class="card" style="text-align:center">
+<p>Welcome to <strong>The Cafe Town</strong> — a friendly place to enjoy delicious food.</p>
+<p style="margin-top:15px">📍 Rama Hospital, Near Hindalpur Marg, Pilkhuwa</p>
 </div>
 </section>
 
-<section.clipboard.writeText(UPI_ID).then(() => { id="order">
-        alert("
-<h2>✅ UPI ID🛒 Place Copied!\n Your Order</h2>
+<section>
+<div class="offer">
+<h2>🛵 Special Delivery Offer</h2>
+<p>Order for <strong>₹500 or more</strong></p>
+<p style="font-size:19px;margin-top:10px">🎉 <strong>5 KM Delivery FREE!</strong></p>
+</div>
+</section>
+
+<section id="menu">
+<h2>🎬 Menu Video Gallery</h2>
+<div class="video-gallery">
+<video controls playsinline preload="metadata"><source src="./br.mp4" type="video/mp4"></video>
+<video controls playsinline preload="metadata"><source src="./cv.mp4" type="video/mp4"></video>
+<video controls playsinline preload="metadata"><source src="./ki.mp4" type="video/mp4"></video>
+<video controls playsinline preload="metadata"><source src="./piz.mp4" type="video/mp4"></video>
+</div>
+
+<h2>📜 Our Menu</h2>
+<div class="category">
+<h3>🍕 Pizza</h3>
+<div class="item"><span>Margherita Pizza — ₹100</span><button class="add-btn" onclick="addToCart('Margherita Pizza',100)">ADD</button></div>
+<div class="item"><span>Onion Pizza — ₹110</span><button class="add-btn" onclick="addToCart('Onion Pizza',110)">ADD</button></div>
+<div class="item"><span>Sweet Corn Pizza — ₹110</span><button class="add-btn" onclick="addToCart('Sweet Corn Pizza',110)">ADD</button></div>
+<div class="item"><span>Veggie Pizza — ₹150</span><button class="add-btn" onclick="addToCart('Veggie Pizza',150)">ADD</button></div>
+<div class="item"><span>Paneer Tikka Pizza — ₹160</span><button class="add-btn" onclick="addToCart('Paneer Tikka Pizza',160)">ADD</button></div>
+</div>
+<div class="category">
+<h3>🌯 Rolls</h3>
+<div class="item"><span>Veg Roll — ₹60</span><button class="add-btn" onclick="addToCart('Veg Roll',60)">ADD</button></div>
+<div class="item"><span>Paneer Roll — ₹90</span><button class="add-btn" onclick="addToCart('Paneer Roll',90)">ADD</button></div>
+<div class="item"><span>Chicken Roll — ₹100</span><button class="add-btn" onclick="addToCart('Chicken Roll',100)">ADD</button></div>
+<div class="item"><span>Double Egg Chicken Roll — ₹120</span><button class="add-btn" onclick="addToCart('Double Egg Chicken Roll',120)">ADD</button></div>
+</div>
+<div class="category">
+<h3>🍜 Noodles</h3>
+<div class="item"><span>Veg Noodles — ₹50</span><button class="add-btn" onclick="addToCart('Veg Noodles',50)">ADD</button></div>
+<div class="item"><span>Paneer Noodles — ₹70</span><button class="add-btn" onclick="addToCart('Paneer Noodles',70)">ADD</button></div>
+<div class="item"><span>Egg Noodles — ₹60</span><button class="add-btn" onclick="addToCart('Egg Noodles',60)">ADD</button></div>
+<div class="item"><span>Singapore Noodles — ₹70</span><button class="add-btn" onclick="addToCart('Singapore Noodles',70)">ADD</button></div>
+<div class="item"><span>Hakka Noodles — ₹70</span><button class="add-btn" onclick="addToCart('Hakka Noodles',70)">ADD</button></div>
+</div>
+<div class="category">
+<h3>🥟 Momos & Maggi</h3>
+<div class="item"><span>Veg Momos — ₹50</span><button class="add-btn" onclick="addToCart('Veg Momos',50)">ADD</button></div>
+<div class="item"><span>Paneer Momos — ₹70</span><button class="add-btn" onclick="addToCart('Paneer Momos',70)">ADD</button></div>
+<div class="item"><span>Plain Maggi — ₹40</span><button class="add-btn" onclick="addToCart('Plain Maggi',40)">ADD</button></div>
+<div class="item"><span>Cheese Maggi — ₹60</span><button class="add-btn" onclick="addToCart('Cheese Maggi',60)">ADD</button></div>
+<div class="item"><span>Butter Maggi — ₹50</span><button class="add-btn" onclick="addToCart('Butter Maggi',50)">ADD</button></div>
+<div class="item"><span>Veg Maggi — ₹60</span><button class="add-btn" onclick="addToCart('Veg Maggi',60)">ADD</button></div>
+</div>
+</section>
+
+<section id="order">
+<h2>🛒 Place Your Order</h2>
 <div class="order-box">
 <h3>🛍️ Your Cart</h3>
-<div id="cartItems">Your cart is empty.</div\nअब PhonePe/GPay/Paytm खोलें और 'Pay to Contact' में पेस्ट करें।");
-    }).catch(err => {
-        const textArea = document.createElement("textarea");
-        textArea.value = UPI>
-<div class_ID;
-       ="order-total">Total: ₹<span id="cartTotal">0</span></div>
+<div id="cartItems">Your cart is empty.</div>
+<div class="order-total">Total: ₹<span id="cartTotal">0</span></div>
 
 <div class="form-grid">
-<div><label>Customer Name *</label><input id=" document.body.appendChild(textArea);
-        textArea.select();
-        document.execCommand("copy");
-        document.bodycustomerName" type.removeChild(textArea);
-        alert("✅ UPI ID Copied!\n\nअब PhonePe/GPay/P="text" placeholder="Enter your name"></div>
-<div><label>Mobile Number *</label><input id="customerMobile" typeaytm खोल="tel" maxlength="10" placeholder="10 digit mobile number"></ें और 'Pay to Contact' में पेस्ट करें।");
-    });
-}
-
-/*div>
-<div ========================= AREA & PAYMENT ========================= class="full">< */
-function selectlabel>Delivery Address *</label><textarea id="customerAddressArea(area) {
-    selectedArea" placeholder="Enter = area;
-    let inBtn = document.getElementById("inRamaBtn");
-    let outBtn = document complete delivery address"></textarea></div>
+<div><label>Customer Name *</label><input id="customerName" type="text" placeholder="Enter your name"></div>
+<div><label>Mobile Number *</label><input id="customerMobile" type="tel" maxlength="10" placeholder="10 digit mobile number"></div>
+<div class="full"><label>Delivery Address *</label><textarea id="customerAddress" placeholder="Enter complete delivery address"></textarea></div>
 </div>
 
 <div class="area-box">
-<h3>.getElementById("outR📍 Delivery AreaamaBtn");
-    inBtn.classList.remove("active");
-    outBtn Select करें *</h3>
-<p style="margin-top:5px;font-size:14.classList.remove("activepx;color:#666">Payment option इसी selection");
-    if (area === "in") {
-        inBtn.classList के अनुसार आएगा.add("active");.</p>
-<div class="area
-        setPayment-buttons">
-<buttonOptions(true);
-    } else {
-        outBtn.classList.add("active id="inRamaBtn" class="area-btn" onclick="selectArea");
-        set('in')">🏥 IN RAMA<br><small>COD + OnlinePaymentOptions(false);
-    }
-    document.getElementById("paymentSection").style.display = "block Payment</small></";
-}
-
-function setPaymentOptions(isInRama) {
-    let select = documentbutton>
-<button id="outRamaBtn" class="area-btn" onclick="selectArea('out')">.getElementById("paymentMethod📍 OUT OF RAMA<br><");
-    if (isInRama) {
-        select.innerHTML = `<option value="">Select Payment Method</small>Only Online Payment</small></button>
+<h3>📍 Delivery Area Select करें *</h3>
+<p style="margin-top:5px;font-size:14px;color:#666">Payment option इसी selection के अनुसार आएगा.</p>
+<div class="area-buttons">
+<button id="inRamaBtn" class="area-btn" onclick="selectArea('in')">🏥 IN RAMA<br><small>COD + Online Payment</small></button>
+<button id="outRamaBtn" class="area-btn" onclick="selectArea('out')">📍 OUT OF RAMA<br><small>Only Online Payment</small></button>
 </div>
-</option><option valuediv>
+</div>
 
-<div id="paymentSection="cod">💵 Cash on Delivery">
-<h3</option><option value="online">💳 Online Payment (Scan QR / UPI)</option>`;
-    style="margin-top:20px">💳 Secure Payment</h3>
-<select id="paymentMethod" } else {
- onchange="paymentChanged        select.innerHTML = `<option value="">Select Payment Method</option><option value="online">💳 Online Payment (Scan QR / UPI)</option>`()" style="margin-bottom:15px"></select>
+<div id="paymentSection">
+<h3 style="margin-top:20px">💳 Secure Payment</h3>
+<select id="paymentMethod" onchange="paymentChanged()" style="margin-bottom:15px"></select>
 
-<!-- SOLID ONLINE PAYMENT BOX -->
 <div id="onlinePaymentBox" class="payment-info">
-   ;
-    }
-    select.value <h3 style = "";
-    document.getElementById("onlinePaymentBox").style.display = "none";
-    document="color:#d32f2f">📱 Step 1: Payment करें</.getElementById("codInfoh3>
-    <p>नीचे दिए गए बटन पर टैप करें या QR कोड स्कैन करें।</p>
+    <h3 style="color:#d32f2f">📱 Step 1: Payment App चुनें</h3>
+    <p>नीचे अपने पसंदीदा Payment App पर टैप करें। Amount ऑटोमैटिक भरा होगा।</p>
 
-    <!--").style.display = "none";
-    paymentInitiated = false;
-    document.getElementById("paymentTimer").style.display = "none";
-    document.getElementById("qrcode").innerHTML = ""; Dynamic QR Code Container -->
-    <
-}
+    <!-- Dynamic QR Code Container -->
+    <div id="qr-container">
+        <div id="qrcode"></div>
+    </div>
+    <div class="tap-indicator">📷 या किसी भी App से QR स्कैन करें</div>
+    <p class="pay-status" id="qrStatus">Add items to cart to see QR code.</p>
 
-functiondiv id="qr-container" onclick="openUPIPayment()"> paymentChanged() {
-    let method = document.getElementById("paymentMethod").value
-        <div;
-    let id="qrcode"></div>
-    </div> onlineBox = document.getElementById("onlinePayment
-    <divBox");
-    class="tap-ind let codBox = document.getElementById("codInfo");
-    onlineBox.style.display = "none";icator">👆 QR कोड पर टैप करें</div>
+    <!-- NEW: App Chooser - NO WHATSAPP -->
+    <div class="app-chooser">
+        <h4>👇 अपना Payment App चुनें (WhatsApp नहीं)</h4>
+        <div class="app-grid">
+            <button class="app-btn app-phonepe" onclick="openSpecificApp('phonepe')">
+                <span class="app-icon">🟣</span>
+                <span>PhonePe</span>
+            </button>
+            <button class="app-btn app-gpay" onclick="openSpecificApp('gpay')">
+                <span class="app-icon">🟢</span>
+                <span>Google Pay</span>
+            </button>
+            <button class="app-btn app-paytm" onclick="openSpecificApp('paytm')">
+                <span class="app-icon">🔵</span>
+                <span>Paytm</span>
+            </button>
+            <button class="app-btn app-bhim" onclick="openSpecificApp('bhim')">
+                <span class="app-icon">🟠</span>
+                <span>BHIM / Other</span>
+            </button>
+        </div>
+    </div>
 
-    codBox    <p class.style.display = "none";
-    paymentInitiated = false;
-   ="pay-status" id="qrStatus"> document.getElementById("paymentAdd items to cart to see QR code.</p>
-
-Timer").style.display = "none";    <!-- NEW:
-
-    if (method === "online") {
-        onlineBox.style.display = "block"; Big Pay Now Button -->
-    <button class="pay-now-btn" onclick="openUPIPayment
-        updateQR()">
-        📱 Pay Now - PhonePe / GPay / Paytm
-    </button>
-
-    <!-- UPI IDCode();
-    }
-    if (method === "cod") {
-        if (selectedArea !== "in") {
-            alert("❌ Copy Box -->
-    <div class Out of Rama में="upi-display-box">
-        <p style="font-size:14 COD available नहीं है।");
-            setPaymentOptions(false);
-            return;
-        }px;color:#555;margin-bottom:5px">या UPI ID कॉपी करें:</p>
+    <!-- UPI ID Copy Box -->
+    <div class="upi-display-box">
+        <p style="font-size:14px;color:#555;margin-bottom:5px">या UPI ID कॉपी करें:</p>
         <div class="upi-id-text" id="upiText">Paytm.s21aaef@pty</div>
-        <button class="copy-btn" onclick="copyUPI()">
-        codBox📋 Copy UPI ID</button.style.display = ">
-    </block";
-    }
-}
+        <button class="copy-btn" onclick="copyUPI()">📋 Copy UPI ID</button>
+    </div>
 
-/* ========================= SCREENSHOT ========================= */
-let screenshotData = "";
+    <hr style="margin:20px 0;border:1px dashed #ccc">
 
-function previewScreenshot() {
-    let file = document.getElementById("paymentScreenshot").files[0];
-    let preview = document.getElementById("screenshotPreview");
-    if (!filediv>
+    <h3 style="color:#2e8b57">📸 Step 2: Screenshot लें</h3>
+    <p style="font-size:14px;color:#555">Payment Successful होने के बाद <strong>Screenshot</strong> ले लें।</p>
 
-   ) {
-        <div id="paymentTimer" class="timer-box">⏳ Payment screenshotData = "";
-        preview.style.display = "none";
-        return Complete करें (5;
-    } mins)</div>
-
-    <hr style="margin:
-    if (!file.type.startsWith("image/")) {
-        alert("20px 0;border:1Please select an imagepx dashed #ccc">
-
-    <h3 style="color:#2e8b57">📸 file.");
-        return;
-    }
-    let reader = new FileReader();
-    reader.onload = function(e Step 2:) {
-        Screenshot लें</h3>
-    <p style="font-size:14px screenshotData = e.target.result;
-        preview.src = e.target.result;
-        preview.style;color:#55.display = "block";
-    };5">Payment Successful होने के बाद उस
-    reader.readAsका <strong>Screenshot</strong> ले लें।DataURL(file);
-}
-
-/* ========================= PLACE ORDER ========================= */
-function</p>
-
- placeOrder() {    <div class="screenshot-box">
-        <label><strong>
-    if (!cart.length) { alert("Please add items to cart first📤 Step."); return; }
-
-    let name 3: S = document.getElementById("customerName").value.trim();
-   creenshot यहाँ Upload करें *</strong></ let mobile = documentlabel>
-       .getElementById("customerMobile <input type="file" id="paymentScreenshot" accept").value.trim();="image/*"
-    let address onchange="previewScreenshot = document.getElementById("()" style="margin-top:8pxcustomerAddress").value.trim();
-    let method = document">
-        <.getElementById("paymentMethod").value;
-
-img id="screenshotPreview" alt    if (!name="Screenshot Preview">
+    <div class="screenshot-box">
+        <label><strong>📤 Step 3: Screenshot Upload करें *</strong></label>
+        <input type="file" id="paymentScreenshot" accept="image/*" onchange="previewScreenshot()" style="margin-top:8px">
+        <img id="screenshotPreview" alt="Screenshot Preview">
     </div>
 </div>
 
-<div id="codInfo" style="display:none;margin-top:1) { alert("Customer name required."); return; }
-    if (!/^[0-9]{10}$5px;padding:/.test(mobile)) { alert("15px;backgroundPlease enter valid :#e8f10 digit mobile number."); return;5e9;border-radius:12px;border:2 }
-    ifpx solid #2 (!address) { alert("Delivery address required."); return; }
-    ife8b57">
-<h3>💵 (selectedArea !== Cash on Delivery</ "in" && selectedArea !== "h3>
-<p>आपout") { alertका payment delivery के समय cash में लिया("पहले IN RAMA या जाएगा.</p> OUT OF RAMA
-</div> select करें।");
+<div id="codInfo" style="display:none;margin-top:15px;padding:15px;background:#e8f5e9;border-radius:12px;border:2px solid #2e8b57">
+<h3>💵 Cash on Delivery</h3>
+<p>आपका payment delivery के समय cash में लिया जाएगा.</p>
+</div>
 
 <button class="whatsapp-btn" id="submitOrderBtn" onclick="placeOrder()">
-🚀 Submit Order & Open WhatsApp return; }
-
-    if (method === "online") {
-        if (!paymentInitiated) {
-           
-</button> alert("⚠️ कृपया QR कोड पर टैप करें
-<p style="text-align:center;font-size:13px;color:#d32f2f;margin-top: या UPI ID10px;font-weight:bold">
-⚠️ से पेमेंट करें।");
-            return;
-        }
-        if (! WhatsApp खुलनेscreenshotData) के बाद सबसे पहले अपना Screenshot अ {
-            alertटैच करें, फिर Send करें।
-</p("⚠️ Payment Screenshot>
-</div लगाना अन>
+🚀 Submit Order & Open WhatsApp
+</button>
+<p style="text-align:center;font-size:13px;color:#d32f2f;margin-top:10px;font-weight:bold">
+⚠️ WhatsApp खुलने के बाद सबसे पहले अपना Screenshot अटैच करें, फिर Send करें।
+</p>
+</div>
 </div>
 </section>
 
-<section>िवार्य है। कृपया फोटो चुनें।
-<h2>");
-            return📞 Contact;
-        } Us</h2
-    }
-
->
-<div class    if (selectedArea === "out" && method !==="card" style="text-align:center">
-<p>< "online") {strong>The Cafe Town
-        alert("❌ OUT OF RAMA में केवल Online Payment available</strong></p>
+<section>
+<h2>📞 Contact Us</h2>
+<div class="card" style="text-align:center">
+<p><strong>The Cafe Town</strong></p>
 <p>Deepak Tomar</p>
-<a class="phone है।");
-" href="tel        return;
-:745    }
-   2849258" style="font-size if (selectedArea === "in" && method !== "cod" && method:20px;color:#542516;text-decoration:none;font-weight:bold">📲 74528 49258</a>
+<a class="phone" href="tel:7452849258" style="font-size:20px;color:#542516;text-decoration:none;font-weight:bold">📲 74528 49258</a>
 <p style="margin-top:15px">📍 Rama Hospital, Near Hindalpur Marg, Pilkhuwa</p>
-</ !== "online")div>
+</div>
 </section>
 
-<footer {
-        alert("Please select COD या Online Payment.");
-        return;
-    }
-
-    let orderId = "CT" + Date.now().toString().slice(-8);
-    let now = new Date();
-    let date = now.getFullYear() + "-" + String(now.getMonth()+1).padStart(2,"0") + "-" + style="text-align String(now.getDate()).padStart(2,"0:center;padding:30px 1");
-    let5px;background:#542516;color:white">
-<p><strong>The Cafe Town time = String(now.getHours()).padStart(2,"0") + ":" +</strong></p String(now.getMinutes()).>
-<p>padStart(2,"0");
-    let total =Delicious Food • getCartTotal(); Great Taste • Good Vibes</p
-    let paymentText = method === "cod" ?>
-<p>© 2026 The Cafe Town</p> "Cash on Delivery
+<footer style="text-align:center;padding:30px 15px;background:#542516;color:white">
+<p><strong>The Cafe Town</strong></p>
+<p>Delicious Food • Great Taste • Good Vibes</p>
+<p>© 2026 The Cafe Town</p>
 </footer>
 
-<button class="" : "Onlineowner-login" onclick="ownerLogin()">🔐 Owner Payment (QR/UPI)";
-    let areaText = selectedArea === "in" ? Login</button>
+<button class="owner-login" onclick="ownerLogin()">🔐 Owner Login</button>
 
-<div id=" "IN RAMA" : "OUTownerPanel">
-<div class="owner OF RAMA";-box">
+<div id="ownerPanel">
+<div class="owner-box">
 <div class="owner-head">
 <h2 style="margin:0">🔐 Owner Dashboard</h2>
 <button class="close-btn" onclick="closeOwner()">✕ Close</button>
 </div>
-<div class
-    
-    let="stats">
-<div class="stat">Online Sale<b id="onlineTotal itemText = cart.map(item => "• "+item.name+" x "+item.qty+" = ₹"+(item.price*item.qty)).join("\n");
-
-    let orders = getOrders();
-    orders.push({
-        id: orderId, date: date, time: time, name: name,">₹0 mobile: mobile,
-        address: address, area: areaText, payment: paymentText, amount: total,</b></div>
-<div class="stat">Offline Sale<b id="offlineTotal">₹0</b
-        items:></div>
-<div class="stat">Collection<b id="collectionTotal"> cart.map(item=>({name:item.name, price:item.price, qty:item.qty₹0</})),
-        status: "Pending", screenshotSubmitted:b></div>
-<div class="stat">Total Sales<b id="sales method==="online",Total">₹0</b></ createdAt: Date.now()
-    });
-    saveOrders(orders);
-
-    if (method === "online") {
-        letdiv>
+<div class="stats">
+<div class="stat">Online Sale<b id="onlineTotal">₹0</b></div>
+<div class="stat">Offline Sale<b id="offlineTotal">₹0</b></div>
+<div class="stat">Collection<b id="collectionTotal">₹0</b></div>
+<div class="stat">Total Sales<b id="salesTotal">₹0</b></div>
 </div>
 <div class="owner-section">
-<h3>📦 Online Orders</h sales = getData();3>
+<h3>📦 Online Orders</h3>
 <div id="ordersList"></div>
-
-        sales.push({ id: Date.now(), kind:</div>
- "sale", type<div class="owner-section">
+</div>
+<div class="owner-section">
 <h3>➕ Add Sale</h3>
-<div: "online", amount: total, note: "Order "+orderId+" - "+name, date: date });
-        saveData(s class="form-grid">
-<div><ales);
-    }
-
-    let message = "label>Sale Type</label><select id="saleType"><option value="🍕 *THE CAFE Tonline">Online Order</option><option value="offline">OWN - NEW ORDEROffline Order</option></select></div*%0A"+
-        ">
+<div class="form-grid">
+<div><label>Sale Type</label><select id="saleType"><option value="online">Online Order</option><option value="offline">Offline Order</option></select></div>
 <div><label>Amount ₹</label><input type="number" id="saleAmount" placeholder="Enter amount"></div>
-<div><label>Note</label><input id="sale━━━━━━━━━━━━━━━━%0Note" placeholder="Optional"></div>A"+
-        "🆔 Order ID: "+orderId+"%0A"+
-        "👤 Customer: "+encodeURIComponent(name)+"%0A"+
-        "📱 Mobile: "+mobile
+<div><label>Note</label><input id="saleNote" placeholder="Optional"></div>
 <div><label>Date</label><input type="date" id="saleDate"></div>
-</div>+"%0A"+
-        "📍 Address: "+encodeURIComponent(address)+"%0A"+
-        "🏥 Area: "+encodeURIComponent(areaText)+"%0A"+
-       
+</div>
 <button class="action-btn green" onclick="addSale()">➕ Save Sale</button>
 </div>
 <div class="owner-section">
-<h3> "💳 Payment: "+encodeURIComponent(paymentText)+"%0💰 Add Collection</h3>
+<h3>💰 Add Collection</h3>
 <div class="form-grid">
-<div><label>Amount ₹</label><input type="numberA"+
-       " id="collectionAmount" placeholder="Amount"></div> "━━━━━━━━━━━━━━━━%0A"+
-        "🛒 *ITEMS*%0A"+encodeURIComponent(itemText)+"%0A"+
-        "━━━━━━━━━━━━━━━━%0A"+
-        "💰 *
+<div><label>Amount ₹</label><input type="number" id="collectionAmount" placeholder="Amount"></div>
 <div><label>Note</label><input id="collectionNote" placeholder="Optional"></div>
 </div>
 <button class="action-btn green" onclick="addCollection()">💰 Save Collection</button>
-</div>TOTAL: ₹"+total+"*%0A"+
-        "━━━━━━━━━━━━━━━━%0A"+
-        "
-<div class="⚠️ *नोट: कृपया इस मैसेज केowner-section">
- साथ अपना Payment S<h3>📜 Sales Historycreenshot अटै</h3>च करके भ
-<div class="history"><table><thead><tr><th>Date</th><th>Type</th><th>Amount</th><ेजें।*";
-
-    let whatsappURL = "https://wa.me/"+WHATSAPP_NUMBER+"?text="+message;
-    
-    alert("✅ Order तैयार है!\n\nअगलेth>Note</th><th>Action</th></tr></thead><tbody id="historyBody"></tbody></table></div>
+</div>
+<div class="owner-section">
+<h3>📜 Sales History</h3>
+<div class="history"><table><thead><tr><th>Date</th><th>Type</th><th>Amount</th><th>Note</th><th>Action</th></tr></thead><tbody id="historyBody"></tbody></table></div>
 </div>
 </div>
 </div>
 
 <script>
 /* ========================= SETTINGS ========================= */
-const OWNER स्टे_PIN = "1प में WhatsApp खुलेगा।\122";
-const WHATSn\nAPP_NUMBER = "⚠️ जरू917452849258";
+const OWNER_PIN = "1122";
+const WHATSAPP_NUMBER = "917452849258";
 const UPI_ID = "Paytm.s21aaef@pty"; // ⚠️ अपनी सही UPI ID यहाँ चेक कर लें
+const MERCHANT_NAME = "The Cafe Town";
 
 /* ========================= CART ========================= */
 let cart = [];
 let selectedArea = "";
 let paymentInitiated = false;
 let qrCodeObj = null;
-let currentUPIString = "";
+let currentAmount = 0;
 
-function addToCart(name, price) {री: WhatsApp खु
+function addToCart(name, price) {
     let item = cart.find(x => x.name === name);
     if (item) { item.qty++; } else { cart.push({ name: name, price: price, qty: 1 }); }
     renderCart();
@@ -903,7 +454,7 @@ function renderCart() {
     });
 }
 
-/* ========================= QR CODE & UPI PAYMENT ========================= */
+/* ========================= QR CODE ========================= */
 function generateQR(amount) {
     const container = document.getElementById("qrcode");
     container.innerHTML = ""; 
@@ -913,10 +464,11 @@ function generateQR(amount) {
         return;
     }
 
-    currentUPIString = `upi://pay?pa=${encodeURIComponent(UPI_ID)}&pn=${encodeURIComponent("The Cafe Town")}&am=${amount.toFixed(2)}&cuलते ही सबसे=INR`;
+    currentAmount = amount;
+    const upiString = `upi://pay?pa=${encodeURIComponent(UPI_ID)}&pn=${encodeURIComponent(MERCHANT_NAME)}&am=${amount.toFixed(2)}&cu=INR`;
 
     qrCodeObj = new QRCode(container, {
-        text: currentUPIString,
+        text: upiString,
         width: 220,
         height: 220,
         colorDark : "#000000",
@@ -924,43 +476,72 @@ function generateQR(amount) {
         correctLevel : QRCode.CorrectLevel.H
     });
 
-    document.getElementById("qrStatus").innerHTML = `✅ Total: <strong>₹${amount}</strong>`;
+    document.getElementById("qrStatus").innerHTML = `✅ Amount: <strong>₹${amount}</strong>`;
     paymentInitiated = true;
 }
 
-// IMPROVED: Open UPI Payment with better fallback
-function openUPIPayment() {
-    if (!currentUPIString) {
-        alert("पहले Cart में Items Add करें।");
+/* ========================= NEW: SPECIFIC APP OPENER ========================= */
+// यह फंक्शन सीधे PhonePe/GPay/Paytm/BHIM खोलेगा - WhatsApp नहीं!
+function openSpecificApp(appName) {
+    if (currentAmount <= 0) {
+        alert("⚠️ पहले Cart में Items Add करें।");
         return;
     }
-    
-    // Try to open UPI intent
+
+    const pa = encodeURIComponent(UPI_ID);
+    const pn = encodeURIComponent(MERCHANT_NAME);
+    const am = currentAmount.toFixed(2);
+    const tn = encodeURIComponent("Order Payment - The Cafe Town");
+
+    let deepLink = "";
+    let appDisplayName = "";
+
+    switch(appName) {
+        case "phonepe":
+            // PhonePe का अपना deep link
+            deepLink = `phonepe://pay?pa=${pa}&pn=${pn}&am=${am}&tn=${tn}&cu=INR`;
+            appDisplayName = "PhonePe";
+            break;
+        case "gpay":
+            // Google Pay (Tez) का deep link
+            deepLink = `tez://upi/pay?pa=${pa}&pn=${pn}&am=${am}&tn=${tn}&cu=INR`;
+            appDisplayName = "Google Pay";
+            break;
+        case "paytm":
+            // Paytm का deep link
+            deepLink = `paytmmp://pay?pa=${pa}&pn=${pn}&am=${am}&tn=${tn}&cu=INR`;
+            appDisplayName = "Paytm";
+            break;
+        case "bhim":
+        default:
+            // BHIM या कोई भी UPI ऐप (Android app chooser)
+            deepLink = `upi://pay?pa=${pa}&pn=${pn}&am=${am}&tn=${tn}&cu=INR`;
+            appDisplayName = "BHIM / Other UPI App";
+            break;
+    }
+
+    // Mobile पर ही काम करेगा
     const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
     
-    if (isMobile) {
-        // On mobile, try to open UPI app
-        window.location.href = currentUPIString;
-        
-        // If UPI intent doesn't work, show fallback after 2 seconds
-        setTimeout(() => {
-            if (!document.hidden) {
-                // User is still on the page, UPI intent might not have worked
-                showFallbackMessage();
-            }
-        }, 2000);
-    } else {
-        // On desktop, show message to scan QR
-        alert("📱 कृपया अपने फोन से QR कोड स्कैन करें।\n\nया 'Copy UPI ID' बटन दबाकर UPI ID कॉपी करें।");
+    if (!isMobile) {
+        alert("📱 यह फीचर केवल मोबाइल फोन पर काम करता है।\n\nDesktop पर कृपया QR कोड स्कैन करें या UPI ID कॉपी करें।");
+        return;
     }
-}
 
-function showFallbackMessage() {
-    const confirmed = confirm("⚠️ अगर Payment App नहीं खुला, तो:\n\n1. 'Copy UPI ID' बटन दबाएं\n2. PhonePe/GPay/Paytm खोलें\n3. 'Scan QR' या 'Pay to Contact' में जाकर UPI ID पेस्ट करें\n\nक्या आप UPI ID कॉपी करना चाहते हैं?");
-    
-    if ( पहले अपना Payment Sconfirmed) {
-        copyUPI();
-    }
+    // App को खोलने की कोशिश
+    window.location.href = deepLink;
+
+    // 2.5 सेकंड बाद चेक करें - अगर ऐप नहीं खुला तो fallback
+    setTimeout(() => {
+        if (!document.hidden) {
+            // User अभी भी पेज पर है, मतलब app नहीं खुला
+            const retry = confirm(`⚠️ ${appDisplayName} ऐप नहीं खुला।\n\nसंभवतः यह ऐप आपके फोन में इंस्टॉल नहीं है।\n\nक्या आप कोई दूसरा ऐप आज़माना चाहते हैं?`);
+            if (retry) {
+                // Scroll to app chooser
+                document.querySelector(".app-chooser").scrollIntoView({ behavior: "smooth" });
+            }
+        }
+    }, 2500);
 }
 
 function updateQRCode() {
@@ -1004,15 +585,14 @@ function selectArea(area) {
 function setPaymentOptions(isInRama) {
     let select = document.getElementById("paymentMethod");
     if (isInRama) {
-        select.innerHTML = `<option value="">Select Payment Method</option><option value="cod">💵 Cash on Delivery</option><option value="online">💳 Online Payment (Scan QR / UPI)</option>`;
+        select.innerHTML = `<option value="">Select Payment Method</option><option value="cod">💵 Cash on Delivery</option><option value="online">💳 Online Payment</option>`;
     } else {
-        select.innerHTML = `<option value="">Select Payment Method</option><option value="online">💳 Online Payment (Scan QR / UPI)</option>`;
+        select.innerHTML = `<option value="">Select Payment Method</option><option value="online">💳 Online Payment</option>`;
     }
     select.value = "";
     document.getElementById("onlinePaymentBox").style.display = "none";
     document.getElementById("codInfo").style.display = "none";
     paymentInitiated = false;
-    document.getElementById("paymentTimer").style.display = "none";
     document.getElementById("qrcode").innerHTML = "";
 }
 
@@ -1023,14 +603,13 @@ function paymentChanged() {
     onlineBox.style.display = "none";
     codBox.style.display = "none";
     paymentInitiated = false;
-    document.getElementById("paymentTimer").style.display = "none";
 
     if (method === "online") {
         onlineBox.style.display = "block";
         updateQRCode();
     }
     if (method === "cod") {
-        if (selectedcreenshot अटैArea !== "in") {
+        if (selectedArea !== "in") {
             alert("❌ Out of Rama में COD available नहीं है।");
             setPaymentOptions(false);
             return;
@@ -1079,7 +658,7 @@ function placeOrder() {
 
     if (method === "online") {
         if (!paymentInitiated) {
-            alert("⚠️ कृपया QR कोड पर टैप करें या UPI ID से पेमेंट करें।");
+            alert("⚠️ कृपया Payment App से पेमेंट करें।");
             return;
         }
         if (!screenshotData) {
@@ -1097,12 +676,12 @@ function placeOrder() {
         return;
     }
 
-च करें, उसके    let orderId = "CT" + Date.now().toString().slice(-8);
+    let orderId = "CT" + Date.now().toString().slice(-8);
     let now = new Date();
     let date = now.getFullYear() + "-" + String(now.getMonth()+1).padStart(2,"0") + "-" + String(now.getDate()).padStart(2,"0");
     let time = String(now.getHours()).padStart(2,"0") + ":" + String(now.getMinutes()).padStart(2,"0");
     let total = getCartTotal();
-    let paymentText = method === "cod" ? "Cash on Delivery" : "Online Payment (QR/UPI)";
+    let paymentText = method === "cod" ? "Cash on Delivery" : "Online Payment";
     let areaText = selectedArea === "in" ? "IN RAMA" : "OUT OF RAMA";
     
     let itemText = cart.map(item => "• "+item.name+" x "+item.qty+" = ₹"+(item.price*item.qty)).join("\n");
@@ -1118,7 +697,7 @@ function placeOrder() {
 
     if (method === "online") {
         let sales = getData();
-        sales.push बाद मैसेज({ id: Date.now(), kind: "sale", type: "online", amount: total, note: "Order "+orderId+" - "+name, date: date });
+        sales.push({ id: Date.now(), kind: "sale", type: "online", amount: total, note: "Order "+orderId+" - "+name, date: date });
         saveData(sales);
     }
 
@@ -1139,248 +718,125 @@ function placeOrder() {
 
     let whatsappURL = "https://wa.me/"+WHATSAPP_NUMBER+"?text="+message;
     
-    alert("✅ Order तैयार है!\n\nअगले स्टेप में WhatsApp खुलेगा।\n\n⚠️ जरूरी: WhatsApp खुलते ही सबसे पहले अपना Payment Screenshot अटैच करें, उसके बाद मैसेज Send करें।"); Send करें।");
+    alert("✅ Order तैयार है!\n\nWhatsApp खुलेगा। कृपया Payment Screenshot अटैच करके मैसेज Send करें।");
     
-    window
-    
-    window.open(whatsapp.open(whatsappURL, "_blankURL, "_blank");
+    window.open(whatsappURL, "_blank");
 
-    cart");
-
-    cart = []; selectedArea = []; selectedArea = ""; screenshotData = ""; screenshotData = ""; paymentInit = ""; paymentInitiated = false;iated = false;
-    renderCart
+    cart = []; selectedArea = ""; screenshotData = ""; paymentInitiated = false; currentAmount = 0;
     renderCart();
-    document();
-    document.getElementById("qrcode.getElementById("qrcode").innerHTML = "";").innerHTML = "";
-    document.getElementById
-    document.getElementById("customerName").("customerName").value = "";
-value = "";
-    document.getElementById("    document.getElementById("customerMobile").valuecustomerMobile").value = "";
-    = "";
-    document.getElementById("customer document.getElementById("customerAddress").value =Address").value = "";
-    document "";
-    document.getElementById("paymentScreenshot.getElementById("paymentScreenshot").value = "";").value = "";
-    document.getElementById
-    document.getElementById("screenshotPreview("screenshotPreview").style.display =").style.display = "none";
- "none";
-    document.getElementById("    document.getElementById("paymentSection").stylepaymentSection").style.display = "none.display = "none";
-    document";
-    document.getElementById("paymentTimer.getElementById("paymentTimer").style.display =").style.display = "none";
- "none";
+    document.getElementById("qrcode").innerHTML = "";
+    document.getElementById("customerName").value = "";
+    document.getElementById("customerMobile").value = "";
+    document.getElementById("customerAddress").value = "";
+    document.getElementById("paymentScreenshot").value = "";
+    document.getElementById("screenshotPreview").style.display = "none";
+    document.getElementById("paymentSection").style.display = "none";
 }
 
-/* =================}
-
-/* ========================= STORAGE & OWNER======== STORAGE & OWNER ========================= */
- ========================= */
-function getOrders(){function getOrders(){ return JSON.parse(localStorage return JSON.parse(localStorage.getItem("cafe.getItem("cafeTownOrders")||TownOrders")||"[]"); }"[]"); }
-function saveOrders
+/* ========================= STORAGE & OWNER ========================= */
+function getOrders(){ return JSON.parse(localStorage.getItem("cafeTownOrders")||"[]"); }
 function saveOrders(data){ localStorage.setItem("cafeTownOrders", JSON.stringify(data)); }
-(data){ localStorage.setItem("cafeTownOrders", JSON.stringify(data)); }
-function getData(){ returnfunction getData(){ return JSON.parse(localStorage.getItem JSON.parse(localStorage.getItem("cafeTown("cafeTownData")||"Data")||"[]"); }
-[]"); }
-function saveData(datafunction saveData(data){ localStorage.setItem("){ localStorage.setItem("cafeTownDatacafeTownData", JSON.stringify(data", JSON.stringify(data)); }
-
-function)); }
+function getData(){ return JSON.parse(localStorage.getItem("cafeTownData")||"[]"); }
+function saveData(data){ localStorage.setItem("cafeTownData", JSON.stringify(data)); }
 
 function ownerLogin(){
- ownerLogin(){
-    let pin =    let pin = prompt("Enter Owner prompt("Enter Owner PIN:");
- PIN:");
-    if(pin===    if(pin===OWNER_PIN){
-OWNER_PIN){
-        document.getElementById("        document.getElementById("ownerPanel").styleownerPanel").style.display="block";.display="block";
-        renderDashboard
-        renderDashboard(); renderOrders();(); renderOrders();
-    } else
-    } else { alert("Wrong { alert("Wrong PIN ❌"); PIN ❌"); }
+    let pin = prompt("Enter Owner PIN:");
+    if(pin===OWNER_PIN){
+        document.getElementById("ownerPanel").style.display="block";
+        renderDashboard(); renderOrders();
+    } else { alert("Wrong PIN ❌"); }
 }
- }
-}
-function closeOwner(){function closeOwner(){ document.getElementById("owner document.getElementById("ownerPanel").style.displayPanel").style.display="none"; }="none"; }
-
-function renderDashboard
+function closeOwner(){ document.getElementById("ownerPanel").style.display="none"; }
 
 function renderDashboard(){
-    let(){
-    let data=getData(); data=getData(); let online=0 let online=0, offline=0, offline=0, collection=0, collection=0, total=0, total=0;
-    data;
-    data.forEach(item=>{.forEach(item=>{
-        if(item
-        if(item.kind==="sale"){.kind==="sale"){
-            total+=
-            total+=Number(item.amount);Number(item.amount);
-            if(item
-            if(item.type==="online").type==="online") online+=Number(item online+=Number(item.amount);
-           .amount);
-            if(item.type===" if(item.type==="offline") offline+=offline") offline+=Number(item.amount);Number(item.amount);
-        }
-
-        }
-        if(item.kind        if(item.kind==="collection") collection==="collection") collection+=Number(item.amount+=Number(item.amount);
-    }););
-    });
-    document.getElementById
-    document.getElementById("onlineTotal").("onlineTotal").textContent="₹textContent="₹"+online;
-"+online;
-    document.getElementById("    document.getElementById("offlineTotal").textContentofflineTotal").textContent="₹"+="₹"+offline;
-   offline;
-    document.getElementById("collection document.getElementById("collectionTotal").textContent="Total").textContent="₹"+collection₹"+collection;
-    document;
-    document.getElementById("salesTotal.getElementById("salesTotal").textContent="").textContent="₹"+total;₹"+total;
-    
-    let
-    
-    let body=document.getElementById(" body=document.getElementById("historyBody"); bodyhistoryBody"); body.innerHTML="";
-.innerHTML="";
-    data.sort((    data.sort((a,b)=>ba,b)=>b.id-a.id);.id-a.id);
-    data.forEach
+    let data=getData(); let online=0, offline=0, collection=0, total=0;
     data.forEach(item=>{
-(item=>{
-        let row=document        let row=document.createElement("tr");.createElement("tr");
-        let type
-        let type=item.kind==="collection=item.kind==="collection"?"💰"?"💰 Collection":item.type Collection":item.type==="online"?"==="online"?"🟢 Online🟢 Online":"🔵":"🔵 Offline";
-        Offline";
-        row.innerHTML=`< row.innerHTML=`<td>${escapeHTMLtd>${escapeHTML(item.date)}</td(item.date)}</td><td>${type><td>${type}</td><td}</td><td><strong>><strong>₹${item.amount₹${item.amount}</strong></td}</strong></td><td>${escape><td>${escapeHTML(item.note||HTML(item.note||"-")}</td"-")}</td><td><button><td><button class="action-btn class="action-btn red" onclick=" red" onclick="deleteRecord(${itemdeleteRecord(${item.id})">Delete.id})">Delete</button></td</button></td>`;
-       >`;
-        body.appendChild(row); body.appendChild(row);
+        if(item.kind==="sale"){
+            total+=Number(item.amount);
+            if(item.type==="online") online+=Number(item.amount);
+            if(item.type==="offline") offline+=Number(item.amount);
+        }
+        if(item.kind==="collection") collection+=Number(item.amount);
     });
-
+    document.getElementById("onlineTotal").textContent="₹"+online;
+    document.getElementById("offlineTotal").textContent="₹"+offline;
+    document.getElementById("collectionTotal").textContent="₹"+collection;
+    document.getElementById("salesTotal").textContent="₹"+total;
+    
+    let body=document.getElementById("historyBody"); body.innerHTML="";
+    data.sort((a,b)=>b.id-a.id);
+    data.forEach(item=>{
+        let row=document.createElement("tr");
+        let type=item.kind==="collection"?"💰 Collection":item.type==="online"?"🟢 Online":"🔵 Offline";
+        row.innerHTML=`<td>${escapeHTML(item.date)}</td><td>${type}</td><td><strong>₹${item.amount}</strong></td><td>${escapeHTML(item.note||"-")}</td><td><button class="action-btn red" onclick="deleteRecord(${item.id})">Delete</button></td>`;
+        body.appendChild(row);
     });
 }
-
-function render}
 
 function renderOrders(){
-   Orders(){
-    let box=document.getElementById let box=document.getElementById("ordersList");("ordersList"); let orders=getOrders let orders=getOrders();
-    box();
+    let box=document.getElementById("ordersList"); let orders=getOrders();
     box.innerHTML="";
-.innerHTML="";
-    if(!orders    if(!orders.length){ box.innerHTML.length){ box.innerHTML="<p style='="<p style='padding:15padding:15px;color:#7px;color:#777'>No77'>No online orders yet.</ online orders yet.</p>"; return;p>"; return; }
-    orders }
-    orders.sort((a,b.sort((a,b)=>b.createdAt-a)=>b.createdAt-a.createdAt);
-   .createdAt);
-    orders.forEach(order=> orders.forEach(order=>{
-        let{
-        let div=document.createElement(" div=document.createElement("div"); div.classNamediv"); div.className="order-card";="order-card";
-        let items
-        let items=order.items.map=order.items.map(item=>escapeHTML(item=>escapeHTML(item.name)+" ×(item.name)+" × "+item.qty+" "+item.qty+" = ₹"+( = ₹"+(item.price*item.qty)).join("<item.price*item.qty)).join("<br>");
-br>");
-        div.innerHTML=`        div.innerHTML=`
-        <h
-        <h3>3>📦 ${escapeHTML📦 ${escapeHTML(order.id)}</h(order.id)}</h3>
-       3>
-        <p> <p>👤 <strong👤 <strong>${escapeHTML(order>${escapeHTML(order.name)}</strong></.name)}</strong></p>
-       p>
-        <p> <p>📱 ${escape📱 ${escapeHTML(order.mobile)}</HTML(order.mobile)}</p>
-       p>
-        <p> <p>📍 ${escape📍 ${escapeHTML(order.address)}</HTML(order.address)}</p>
-        <p>p>
-        <p>🏥 Area:🏥 Area: <strong>${escape <strong>${escapeHTML(order.area)}</HTML(order.area)}</strong></p>strong></p>
-        <p
-        <p>💳 Payment>💳 Payment: <strong>${: <strong>${escapeHTML(order.paymentescapeHTML(order.payment)}</strong></p)}</strong></p>
-        <>
-        <div style="backgrounddiv style="background:white;padding:1:white;padding:10px;margin:0px;margin:10px 10px 0;border-radius:0;border-radius:10px"><10px"><strong>strong>🛒 Items</strong🛒 Items</strong><br>${items><br>${items}<hr><strong}<hr><strong>💰 Total>💰 Total: ₹${order: ₹${order.amount}</strong></.amount}</strong></div>
-       div>
-        <p> <p>📸 Screenshot📸 Screenshot: <strong>${: <strong>${order.screenshotSubmittedorder.screenshotSubmitted?"✅ Submitted":"?"✅ Submitted":"Not Required"}</Not Required"}</strong></p>strong></p>
-        <p
-        <p>Status: <span>Status: <span class="status">${ class="status">${escapeHTML(order.statusescapeHTML(order.status)}</span></p)}</span></p>
-        <>
-        <div style="margindiv style="margin-top:10-top:10px">
-           px">
-            <button class=" <button class="action-btn green"action-btn green" onclick="updateOrder onclick="updateOrderStatus('${order.idStatus('${order.id}','Confirmed')">✅}','Confirmed')">✅ Confirm</button> Confirm</button>
-            <button
-            <button class="action-btn class="action-btn orange" onclick=" orange" onclick="updateOrderStatus('${updateOrderStatus('${order.id}','Preparingorder.id}','Preparing')">🍳')">🍳 Preparing</button Preparing</button>
-            <>
-            <button class="actionbutton class="action-btn blue" onclick-btn blue" onclick="updateOrderStatus="updateOrderStatus('${order.id}','('${order.id}','Out for Delivery')">Out for Delivery')">🛵 Delivery🛵 Delivery</button>
-</button>
-            <button class            <button class="action-btn green="action-btn green" onclick="update" onclick="updateOrderStatus('${orderOrderStatus('${order.id}','Delivered.id}','Delivered')">✅ Delivered')">✅ Delivered</button>
-</button>
-            <button class            <button class="action-btn red="action-btn red" onclick="update" onclick="updateOrderStatus('${orderOrderStatus('${order.id}','Cancelled')">.id}','Cancelled')">❌ Cancel</❌ Cancel</button>
-           button>
-            <button class=" <button class="action-btn red"action-btn red" onclick="deleteOrder onclick="deleteOrder('${order.id}')('${order.id}')">🗑">🗑️ Delete</button️ Delete</button>
-        </>
+    if(!orders.length){ box.innerHTML="<p style='padding:15px;color:#777'>No online orders yet.</p>"; return; }
+    orders.sort((a,b)=>b.createdAt-a.createdAt);
+    orders.forEach(order=>{
+        let div=document.createElement("div"); div.className="order-card";
+        let items=order.items.map(item=>escapeHTML(item.name)+" × "+item.qty+" = ₹"+(item.price*item.qty)).join("<br>");
+        div.innerHTML=`
+        <h3>📦 ${escapeHTML(order.id)}</h3>
+        <p>👤 <strong>${escapeHTML(order.name)}</strong></p>
+        <p>📱 ${escapeHTML(order.mobile)}</p>
+        <p>📍 ${escapeHTML(order.address)}</p>
+        <p>🏥 Area: <strong>${escapeHTML(order.area)}</strong></p>
+        <p>💳 Payment: <strong>${escapeHTML(order.payment)}</strong></p>
+        <div style="background:white;padding:10px;margin:10px 0;border-radius:10px"><strong>🛒 Items</strong><br>${items}<hr><strong>💰 Total: ₹${order.amount}</strong></div>
+        <p>📸 Screenshot: <strong>${order.screenshotSubmitted?"✅ Submitted":"Not Required"}</strong></p>
+        <p>Status: <span class="status">${escapeHTML(order.status)}</span></p>
+        <div style="margin-top:10px">
+            <button class="action-btn green" onclick="updateOrderStatus('${order.id}','Confirmed')">✅ Confirm</button>
+            <button class="action-btn orange" onclick="updateOrderStatus('${order.id}','Preparing')">🍳 Preparing</button>
+            <button class="action-btn blue" onclick="updateOrderStatus('${order.id}','Out for Delivery')">🛵 Delivery</button>
+            <button class="action-btn green" onclick="updateOrderStatus('${order.id}','Delivered')">✅ Delivered</button>
+            <button class="action-btn red" onclick="updateOrderStatus('${order.id}','Cancelled')">❌ Cancel</button>
+            <button class="action-btn red" onclick="deleteOrder('${order.id}')">🗑️ Delete</button>
         </div>`;
-div>`;
-        box.appendChild(div        box.appendChild(div);
-    }););
+        box.appendChild(div);
     });
 }
 
-function
+function updateOrderStatus(id,status){
+    let orders=getOrders(); let order=orders.find(x=>x.id===id);
+    if(!order) return; order.status=status; saveOrders(orders); renderOrders();
 }
-
-function updateOrderStatus(id updateOrderStatus(id,status){
-   ,status){
-    let orders=getOrders let orders=getOrders(); let order=(); let order=orders.find(x=>orders.find(x=>x.id===idx.id===id);
-    if);
-    if(!order) return(!order) return; order.status=status; order.status=status; saveOrders(; saveOrders(orders); renderOrdersorders); renderOrders();
-}
-();
-}
-function deleteOrder(idfunction deleteOrder(id){ if(!confirm){ if(!confirm("Delete this order("Delete this order?")) return; let orders=getOrders?")) return; let orders=getOrders().filter(x=>x.id!==id().filter(x=>x.id!==id); saveOrders(); saveOrders(orders); renderOrdersorders); renderOrders(); }
-function(); }
-function deleteRecord deleteRecord(id){ if(!(id){ if(!confirm("Delete thisconfirm("Delete this record?")) return record?")) return; let data=; let data=getData().filter(xgetData().filter(x=>x.id!===>x.id!==id); saveDataid); saveData(data); renderDashboard(data); renderDashboard(); }
-function(); }
+function deleteOrder(id){ if(!confirm("Delete this order?")) return; let orders=getOrders().filter(x=>x.id!==id); saveOrders(orders); renderOrders(); }
+function deleteRecord(id){ if(!confirm("Delete this record?")) return; let data=getData().filter(x=>x.id!==id); saveData(data); renderDashboard(); }
 function addSale(){
- addSale(){
-    let amount=    let amount=Number(document.getElementById("Number(document.getElementById("saleAmount").valuesaleAmount").value);
-    if);
-    if(!amount || amount(!amount || amount<=0){ alert<=0){ alert("Valid amount enter("Valid amount enter करें।"); return करें।"); return; }
-   ; }
-    let type=document.getElementById let type=document.getElementById("saleType").("saleType").value;
-   value;
-    let note=document.getElementById let note=document.getElementById("saleNote").("saleNote").value.trim();
-value.trim();
-    let date=document    let date=document.getElementById("saleDate.getElementById("saleDate").value;
-").value;
-    if(!date    if(!date){ let now=new){ let now=new Date(); date= Date(); date=now.getFullYear()+"-"+now.getFullYear()+"-"+String(now.getMonth()+String(now.getMonth()+1).padStart1).padStart(2,"0(2,"0")+"-"+String")+"-"+String(now.getDate()).pad(now.getDate()).padStart(2,"Start(2,"0"); }
-0"); }
-    let data=    let data=getData();
-   getData();
-    data.push({id data.push({id:Date.now(),:Date.now(), kind:"sale", kind:"sale", type:type, amount type:type, amount:amount, note:amount, note:note, date:note, date:date});
-   :date});
-    saveData(data); saveData(data);
-    document.getElementById
-    document.getElementById("saleAmount").("saleAmount").value=""; documentvalue=""; document.getElementById("saleNote.getElementById("saleNote").value="";").value="";
-    render
-    renderDashboard(); alert("Dashboard(); alert("Sale saved ✅");Sale saved ✅");
-}
-function
+    let amount=Number(document.getElementById("saleAmount").value);
+    if(!amount || amount<=0){ alert("Valid amount enter करें।"); return; }
+    let type=document.getElementById("saleType").value;
+    let note=document.getElementById("saleNote").value.trim();
+    let date=document.getElementById("saleDate").value;
+    if(!date){ let now=new Date(); date=now.getFullYear()+"-"+String(now.getMonth()+1).padStart(2,"0")+"-"+String(now.getDate()).padStart(2,"0"); }
+    let data=getData();
+    data.push({id:Date.now(), kind:"sale", type:type, amount:amount, note:note, date:date});
+    saveData(data);
+    document.getElementById("saleAmount").value=""; document.getElementById("saleNote").value="";
+    renderDashboard(); alert("Sale saved ✅");
 }
 function addCollection(){
- addCollection(){
-    let amount=    let amount=Number(document.getElementById("Number(document.getElementById("collectionAmount").valuecollectionAmount").value);
-    if);
-    if(!amount || amount(!amount || amount<=0){ alert<=0){ alert("Valid amount enter("Valid amount enter करें।"); return करें।"); return; }
-   ; }
-    let note=document.getElementById let note=document.getElementById("collectionNote").("collectionNote").value.trim();
-value.trim();
-    let now=new    let now=new Date(); let date Date(); let date=now.getFullYear()+"=now.getFullYear()+"-"+String(now.getMonth-"+String(now.getMonth()+1).pad()+1).padStart(2,"Start(2,"0")+"-"+0")+"-"+String(now.getDate()).String(now.getDate()).padStart(2padStart(2,"0");
-,"0");
-    let data=    let data=getData();
-   getData();
-    data.push({id data.push({id:Date.now(),:Date.now(), kind:"collection", kind:"collection", amount:amount, amount:amount, note:note, note:note, date:date});
- date:date});
-    saveData(data    saveData(data);
-    document);
-    document.getElementById("collectionAmount.getElementById("collectionAmount").value="";").value=""; document.getElementById("collection document.getElementById("collectionNote").value="Note").value="";
-    render";
-    renderDashboard(); alert("Dashboard(); alert("Collection saved ✅");Collection saved ✅");
+    let amount=Number(document.getElementById("collectionAmount").value);
+    if(!amount || amount<=0){ alert("Valid amount enter करें।"); return; }
+    let note=document.getElementById("collectionNote").value.trim();
+    let now=new Date(); let date=now.getFullYear()+"-"+String(now.getMonth()+1).padStart(2,"0")+"-"+String(now.getDate()).padStart(2,"0");
+    let data=getData();
+    data.push({id:Date.now(), kind:"collection", amount:amount, note:note, date:date});
+    saveData(data);
+    document.getElementById("collectionAmount").value=""; document.getElementById("collectionNote").value="";
+    renderDashboard(); alert("Collection saved ✅");
 }
-function
-}
-function escapeHTML(text){ escapeHTML(text){ return String(text). return String(text).replaceAll("&","&replaceAll("&","&amp;").replaceAllamp;").replaceAll("<","&lt("<","&lt;").replaceAll(">;").replaceAll(">","&gt;","&gt;").replaceAll('"',"").replaceAll('"',"&quot;").&quot;").replaceAll("'","&#replaceAll("'","&#039;039;"); }
-
-render"); }
+function escapeHTML(text){ return String(text).replaceAll("&","&amp;").replaceAll("<","&lt;").replaceAll(">","&gt;").replaceAll('"',"&quot;").replaceAll("'","&#039;"); }
 
 renderCart();
-documentCart();
-document.getElementById("saleDate").valueAsDate.getElementById("saleDate = new Date();").valueAsDate = new Date();
+document.getElementById("saleDate").valueAsDate = new Date();
 </script>
 </body>
-</script>
-</body>
-</html>
 </html>
