@@ -4,7 +4,6 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>The Cafe Town | Pilkhuwa - Premium Ordering</title>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
 body{font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;background:#fff8ef;color:#35170e;line-height:1.6}
@@ -187,8 +186,10 @@ textarea{min-height:90px}
 <section>
 <h2>❤️ Welcome to The Cafe Town</h2>
 <div class="card" style="text-align:center">
-<p>Welcome to <strong>The Cafe Town</strong> — a friendly place to enjoy delicious food.</p>
-<p style="margin-top:15px">📍 Rama Hospital, Near Hindalpur Marg, Pilkhuwa</p>
+    <!-- ✅ UPDATED: Logo.PNG added here -->
+    <img src="Logo.PNG" alt="The Cafe Town Logo" style="max-width: 100%; max-height: 300px; object-fit: contain; border-radius: 15px; margin-bottom: 15px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+    <p>Welcome to <strong>The Cafe Town</strong> — a friendly place to enjoy delicious food.</p>
+    <p style="margin-top:15px">📍 Rama Hospital, Near Hindalpur Marg, Pilkhuwa</p>
 </div>
 </section>
 
@@ -274,14 +275,14 @@ textarea{min-height:90px}
     <h3 style="color:#d32f2f">📱 Step 1: Payment App चुनें</h3>
     <p>नीचे अपने पसंदीदा Payment App पर टैप करें। Amount ऑटोमैटिक भरा होगा।</p>
 
-    <!-- Dynamic QR Code Container -->
+    <!-- ✅ UPDATED: Pn.JPG (Barcode/QR) added here -->
     <div id="qr-container">
-        <div id="qrcode"></div>
+        <img src="Pn.JPG" alt="Scan this QR Code" style="max-width: 250px; width: 100%; border-radius: 10px;">
     </div>
     <div class="tap-indicator">📷 या किसी भी App से QR स्कैन करें</div>
-    <p class="pay-status" id="qrStatus">Add items to cart to see QR code.</p>
+    <p class="pay-status" id="qrStatus">Add items to cart to see payment details.</p>
 
-    <!-- NEW: App Chooser - NO WHATSAPP -->
+    <!-- App Chooser -->
     <div class="app-chooser">
         <h4>👇 अपना Payment App चुनें (WhatsApp नहीं)</h4>
         <div class="app-grid">
@@ -401,21 +402,20 @@ textarea{min-height:90px}
 /* ========================= SETTINGS ========================= */
 const OWNER_PIN = "1122";
 const WHATSAPP_NUMBER = "917452849258";
-const UPI_ID = "Paytm.s21aaef@pty"; // ⚠️ अपनी सही UPI ID यहाँ चेक कर लें
+const UPI_ID = "Paytm.s21aaef@pty"; 
 const MERCHANT_NAME = "The Cafe Town";
 
 /* ========================= CART ========================= */
 let cart = [];
 let selectedArea = "";
 let paymentInitiated = false;
-let qrCodeObj = null;
 let currentAmount = 0;
 
 function addToCart(name, price) {
     let item = cart.find(x => x.name === name);
     if (item) { item.qty++; } else { cart.push({ name: name, price: price, qty: 1 }); }
     renderCart();
-    updateQRCode();
+    updateAmountDisplay();
     document.getElementById("order").scrollIntoView({ behavior: "smooth" });
 }
 
@@ -424,7 +424,7 @@ function changeQty(index, change) {
     cart[index].qty += change;
     if (cart[index].qty <= 0) { cart.splice(index, 1); }
     renderCart();
-    updateQRCode();
+    updateAmountDisplay();
 }
 
 function getCartTotal() {
@@ -454,34 +454,21 @@ function renderCart() {
     });
 }
 
-/* ========================= QR CODE ========================= */
-function generateQR(amount) {
-    const container = document.getElementById("qrcode");
-    container.innerHTML = ""; 
-    
-    if(amount <= 0) {
-        document.getElementById("qrStatus").textContent = "Add items to cart to see QR code.";
-        return;
+/* ========================= AMOUNT DISPLAY (Static QR) ========================= */
+function updateAmountDisplay() {
+    const total = getCartTotal();
+    const statusEl = document.getElementById("qrStatus");
+    if(total > 0 && document.getElementById("onlinePaymentBox").style.display !== "none") {
+        currentAmount = total;
+        statusEl.innerHTML = `✅ Pay this Amount: <strong>₹${total}</strong><br><small style="color:#666">(QR स्कैन करने के बाद Amount मैन्युअली डालें)</small>`;
+        paymentInitiated = true;
+    } else {
+        statusEl.textContent = "Add items to cart to see payment details.";
+        paymentInitiated = false;
     }
-
-    currentAmount = amount;
-    const upiString = `upi://pay?pa=${encodeURIComponent(UPI_ID)}&pn=${encodeURIComponent(MERCHANT_NAME)}&am=${amount.toFixed(2)}&cu=INR`;
-
-    qrCodeObj = new QRCode(container, {
-        text: upiString,
-        width: 220,
-        height: 220,
-        colorDark : "#000000",
-        colorLight : "#ffffff",
-        correctLevel : QRCode.CorrectLevel.H
-    });
-
-    document.getElementById("qrStatus").innerHTML = `✅ Amount: <strong>₹${amount}</strong>`;
-    paymentInitiated = true;
 }
 
-/* ========================= NEW: SPECIFIC APP OPENER ========================= */
-// यह फंक्शन सीधे PhonePe/GPay/Paytm/BHIM खोलेगा - WhatsApp नहीं!
+/* ========================= APP OPENER ========================= */
 function openSpecificApp(appName) {
     if (currentAmount <= 0) {
         alert("⚠️ पहले Cart में Items Add करें।");
@@ -498,29 +485,24 @@ function openSpecificApp(appName) {
 
     switch(appName) {
         case "phonepe":
-            // PhonePe का अपना deep link
             deepLink = `phonepe://pay?pa=${pa}&pn=${pn}&am=${am}&tn=${tn}&cu=INR`;
             appDisplayName = "PhonePe";
             break;
         case "gpay":
-            // Google Pay (Tez) का deep link
             deepLink = `tez://upi/pay?pa=${pa}&pn=${pn}&am=${am}&tn=${tn}&cu=INR`;
             appDisplayName = "Google Pay";
             break;
         case "paytm":
-            // Paytm का deep link
             deepLink = `paytmmp://pay?pa=${pa}&pn=${pn}&am=${am}&tn=${tn}&cu=INR`;
             appDisplayName = "Paytm";
             break;
         case "bhim":
         default:
-            // BHIM या कोई भी UPI ऐप (Android app chooser)
             deepLink = `upi://pay?pa=${pa}&pn=${pn}&am=${am}&tn=${tn}&cu=INR`;
             appDisplayName = "BHIM / Other UPI App";
             break;
     }
 
-    // Mobile पर ही काम करेगा
     const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
     
     if (!isMobile) {
@@ -528,27 +510,16 @@ function openSpecificApp(appName) {
         return;
     }
 
-    // App को खोलने की कोशिश
     window.location.href = deepLink;
 
-    // 2.5 सेकंड बाद चेक करें - अगर ऐप नहीं खुला तो fallback
     setTimeout(() => {
         if (!document.hidden) {
-            // User अभी भी पेज पर है, मतलब app नहीं खुला
             const retry = confirm(`⚠️ ${appDisplayName} ऐप नहीं खुला।\n\nसंभवतः यह ऐप आपके फोन में इंस्टॉल नहीं है।\n\nक्या आप कोई दूसरा ऐप आज़माना चाहते हैं?`);
             if (retry) {
-                // Scroll to app chooser
                 document.querySelector(".app-chooser").scrollIntoView({ behavior: "smooth" });
             }
         }
     }, 2500);
-}
-
-function updateQRCode() {
-    const total = getCartTotal();
-    if(total > 0 && document.getElementById("onlinePaymentBox").style.display !== "none") {
-        generateQR(total);
-    }
 }
 
 function copyUPI() {
@@ -593,7 +564,6 @@ function setPaymentOptions(isInRama) {
     document.getElementById("onlinePaymentBox").style.display = "none";
     document.getElementById("codInfo").style.display = "none";
     paymentInitiated = false;
-    document.getElementById("qrcode").innerHTML = "";
 }
 
 function paymentChanged() {
@@ -606,7 +576,7 @@ function paymentChanged() {
 
     if (method === "online") {
         onlineBox.style.display = "block";
-        updateQRCode();
+        updateAmountDisplay();
     }
     if (method === "cod") {
         if (selectedArea !== "in") {
@@ -724,7 +694,6 @@ function placeOrder() {
 
     cart = []; selectedArea = ""; screenshotData = ""; paymentInitiated = false; currentAmount = 0;
     renderCart();
-    document.getElementById("qrcode").innerHTML = "";
     document.getElementById("customerName").value = "";
     document.getElementById("customerMobile").value = "";
     document.getElementById("customerAddress").value = "";
