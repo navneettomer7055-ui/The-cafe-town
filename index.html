@@ -4,6 +4,26 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>The Cafe Town | Pilkhuwa - Premium Ordering</title>
+
+<!-- Location Schema Code -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CafeOrCoffeeShop",
+  "name": "The Cafe Town",
+  "image": "Logo.PNG",
+  "telephone": "7452849258",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Rama Hospital, Near Hindalpur Marg",
+    "addressLocality": "Pilkhuwa",
+    "addressRegion": "Uttar Pradesh",
+    "postalCode": "245304",
+    "addressCountry": "IN"
+  }
+}
+</script>
+
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
 body{font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;background:#fff8ef;color:#35170e;line-height:1.6}
@@ -51,7 +71,6 @@ textarea{min-height:90px}
     border: 2px solid #542516;
 }
 
-/* NEW: App Chooser Buttons */
 .app-chooser {
     margin: 20px auto;
     max-width: 400px;
@@ -186,7 +205,6 @@ textarea{min-height:90px}
 <section>
 <h2>❤️ Welcome to The Cafe Town</h2>
 <div class="card" style="text-align:center">
-    <!-- ✅ UPDATED: Logo.PNG added here -->
     <img src="Logo.PNG" alt="The Cafe Town Logo" style="max-width: 100%; max-height: 300px; object-fit: contain; border-radius: 15px; margin-bottom: 15px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
     <p>Welcome to <strong>The Cafe Town</strong> — a friendly place to enjoy delicious food.</p>
     <p style="margin-top:15px">📍 Rama Hospital, Near Hindalpur Marg, Pilkhuwa</p>
@@ -275,25 +293,18 @@ textarea{min-height:90px}
     <h3 style="color:#d32f2f">📱 Step 1: Payment App चुनें</h3>
     <p>नीचे अपने पसंदीदा Payment App पर टैप करें। Amount ऑटोमैटिक भरा होगा।</p>
 
-    <!-- ✅ UPDATED: Pn.JPG (Barcode/QR) added here -->
     <div id="qr-container">
         <img src="Pn.JPG" alt="Scan this QR Code" style="max-width: 250px; width: 100%; border-radius: 10px;">
     </div>
     <div class="tap-indicator">📷 या किसी भी App से QR स्कैन करें</div>
     <p class="pay-status" id="qrStatus">Add items to cart to see payment details.</p>
 
-    <!-- App Chooser -->
-    <div class="app-chooser"><!-- 🟢 Yeh QR code aur instruction section apne payment box me add karein -->
-<div style="background: #f8f9fa; border: 1px solid #dee2e6; border-radius: 12px; padding: 16px; margin: 15px 0; text-align: center;">
-  <p style="font-size: 14px; color: #333; margin-bottom: 10px; font-weight: 500;">
-    💡 <strong>Direct button se payment na ho toh, is QR Code ko scan karein:</strong>
-  </p>
-  
-
-</div>
-<a href="upi://pay?pa=Paytm.s21aaef@pty&pn=The%20Cafe%20Town" style="display: inline-block;">
-  <img src="Pn.JPG" alt="QR Code" style="width: 180px; height: 180px; border-radius: 8px; border: 1px solid #ccc; background: #fff; padding: 5px;" />
-</a>
+    <div class="app-chooser">
+        <div style="background: #f8f9fa; border: 1px solid #dee2e6; border-radius: 12px; padding: 16px; margin: 15px 0; text-align: center;">
+          <p style="font-size: 14px; color: #333; margin-bottom: 10px; font-weight: 500;">
+            💡 <strong>Direct button se payment na ho toh, is QR Code ko scan karein:</strong>
+          </p>
+        </div>
 
         <h4>👇 अपना Payment App चुनें (WhatsApp नहीं)</h4>
         <div class="app-grid">
@@ -316,7 +327,6 @@ textarea{min-height:90px}
         </div>
     </div>
 
-    <!-- UPI ID Copy Box -->
     <div class="upi-display-box">
         <p style="font-size:14px;color:#555;margin-bottom:5px">या UPI ID कॉपी करें:</p>
         <div class="upi-id-text" id="upiText">Paytm.s21aaef@pty</div>
@@ -357,6 +367,22 @@ textarea{min-height:90px}
 <p>Deepak Tomar</p>
 <a class="phone" href="tel:7452849258" style="font-size:20px;color:#542516;text-decoration:none;font-weight:bold">📲 74528 49258</a>
 <p style="margin-top:15px">📍 Rama Hospital, Near Hindalpur Marg, Pilkhuwa</p>
+</div>
+</section>
+
+<!-- Added Google Map Section -->
+<section>
+<h2>📍 Find Us On Google Map</h2>
+<div class="card" style="text-align:center; padding: 10px; overflow: hidden;">
+    <div style="position: relative; width: 100%; padding-bottom: 56.25%; height: 0;">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m13!1m8!1m3!1d3499.8424349009033!2d77.6089001!3d28.6943596!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjjCsDQxJzM5LjciTiA3N8KwMzYnMzIuMCJF!5e0!3m2!1sen!2sin!4v1789798239553!5m2!1sen!2sin" 
+            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0; border-radius: 10px;" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="strict-origin-when-cross-origin">
+        </iframe>
+    </div>
+    <p style="margin-top: 15px;"><strong>The Cafe Town</strong>, Rama Hospital, Near Hindalpur Marg, Pilkhuwa</p>
 </div>
 </section>
 
@@ -410,13 +436,11 @@ textarea{min-height:90px}
 </div>
 
 <script>
-/* ========================= SETTINGS ========================= */
 const OWNER_PIN = "1122";
 const WHATSAPP_NUMBER = "917452849258";
 const UPI_ID = "Paytm.s21aaef@pty"; 
 const MERCHANT_NAME = "The Cafe Town";
 
-/* ========================= CART ========================= */
 let cart = [];
 let selectedArea = "";
 let paymentInitiated = false;
@@ -465,7 +489,6 @@ function renderCart() {
     });
 }
 
-/* ========================= AMOUNT DISPLAY (Static QR) ========================= */
 function updateAmountDisplay() {
     const total = getCartTotal();
     const statusEl = document.getElementById("qrStatus");
@@ -479,7 +502,6 @@ function updateAmountDisplay() {
     }
 }
 
-/* ========================= APP OPENER ========================= */
 function openSpecificApp(appName) {
     if (currentAmount <= 0) {
         alert("⚠️ पहले Cart में Items Add करें।");
@@ -547,7 +569,6 @@ function copyUPI() {
     });
 }
 
-/* ========================= AREA & PAYMENT ========================= */
 function selectArea(area) {
     selectedArea = area;
     let inBtn = document.getElementById("inRamaBtn");
@@ -599,7 +620,6 @@ function paymentChanged() {
     }
 }
 
-/* ========================= SCREENSHOT ========================= */
 let screenshotData = "";
 
 function previewScreenshot() {
@@ -623,7 +643,6 @@ function previewScreenshot() {
     reader.readAsDataURL(file);
 }
 
-/* ========================= PLACE ORDER ========================= */
 function placeOrder() {
     if (!cart.length) { alert("Please add items to cart first."); return; }
 
@@ -713,7 +732,6 @@ function placeOrder() {
     document.getElementById("paymentSection").style.display = "none";
 }
 
-/* ========================= STORAGE & OWNER ========================= */
 function getOrders(){ return JSON.parse(localStorage.getItem("cafeTownOrders")||"[]"); }
 function saveOrders(data){ localStorage.setItem("cafeTownOrders", JSON.stringify(data)); }
 function getData(){ return JSON.parse(localStorage.getItem("cafeTownData")||"[]"); }
