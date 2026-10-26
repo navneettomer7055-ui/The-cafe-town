@@ -1,45 +1,113 @@
+
 <!DOCTYPE html>
 <html lang="hi">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>The Cafe Town Chatbot Test</title>
+<title>The Cafe Town Chatbot</title>
 <style>
-body{font-family:Arial,sans-serif;background:#fff8f0;margin:0;padding:20px}
-.card{max-width:500px;margin:auto;background:white;padding:20px;border-radius:16px;box-shadow:0 2px 12px #ddd}
-h2{color:#8b2d24}
-#chat{height:300px;overflow:auto;border:1px solid #ddd;padding:10px;border-radius:10px;margin-bottom:12px}
-.msg{padding:9px;margin:7px 0;border-radius:9px;background:#f1f1f1}
-.user{background:#ffeadb;text-align:right}
-input{box-sizing:border-box;width:100%;padding:12px;margin-bottom:8px;border:1px solid #ccc;border-radius:8px}
-button{padding:12px;border:0;border-radius:8px;background:#8b2d24;color:white}
+body {
+  font-family: Arial, sans-serif;
+  background: #fff8f0;
+  padding: 20px;
+}
+.card {
+  max-width: 500px;
+  margin: auto;
+  background: white;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 2px 12px #ddd;
+}
+h2 { color: #8b2d24; }
+#chat {
+  height: 300px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 12px;
+}
+.msg {
+  padding: 10px;
+  margin: 7px 0;
+  border-radius: 9px;
+  background: #f1f1f1;
+  overflow-wrap: anywhere;
+}
+.user {
+  background: #ffeadb;
+  text-align: right;
+}
+input {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 8px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+button {
+  padding: 12px 20px;
+  border: 0;
+  border-radius: 8px;
+  background: #8b2d24;
+  color: white;
+  cursor: pointer;
+}
 </style>
 </head>
 <body>
 <div class="card">
-<h2>☕ The Cafe Town</h2>
-<p>Chatbot Demo — Test Only</p>
-<div id="chat"><div class="msg">Bot: Namaste! The Cafe Town mein swagat hai. Menu, price ya order ke baare mein poochhein.</div></div>
-<input id="msg" placeholder="Jaise: menu, price, order">
-<button onclick="send()">Send</button>
+  <h2>☕ The Cafe Town</h2>
+  <p>Chatbot Demo — Test Only</p>
+
+  <div id="chat">
+    <div class="msg">
+      Bot: Namaste! The Cafe Town mein swagat hai.
+      Menu, price ya order ke baare mein poochhein.
+    </div>
+  </div>
+
+  <input id="msg" placeholder="Jaise: Cold Coffee 2">
+  <button onclick="send()">Send</button>
 </div>
+
 <script>
-function send(){
- const box=document.getElementById('msg');
- const q=box.value.trim().toLowerCase();
- if(!q)return;
- const chat=document.getElementById('chat');
- chat.innerHTML+='<div class="msg user">You: '+q.replace(/[&<>"]/g,'')+'</div>';
- let a='Main abhi demo chatbot hoon. Menu ya order ke baare mein poochhein.';
- if(q.includes('menu'))a='Hamare menu mein burger, pizza, cold coffee aur aur bhi items hain. Exact prices owner se confirm karein.';
- else if(q.includes('price')||q.includes('कीमत'))a='Demo mein exact menu prices abhi add nahi ki gayi hain.';
- else if(q.includes('order'))a='Order test ke liye item aur quantity likhein. Yeh demo abhi real order send nahi karta.';
- chat.innerHTML+='<div class="msg">Bot: '+a+'</div>';
- chat.scrollTop=chat.scrollHeight;box.value='';
-}
- else if(q.includes('coffee')||q.includes('cold coffee')){
-  let qty = parseInt(q.match(/\d+/)?.[0] || '1');
-  a = 'Cold Coffee ₹70 × ' + qty + ' = ₹' + (70 * qty);
+function send() {
+  const box = document.getElementById('msg');
+  const q = box.value.trim().toLowerCase();
+  if (!q) return;
+
+  const chat = document.getElementById('chat');
+
+  const userMsg = document.createElement('div');
+  userMsg.className = 'msg user';
+  userMsg.textContent = 'You: ' + q;
+  chat.appendChild(userMsg);
+
+  let a = 'Maaf kijiye, demo mein iska jawab abhi available nahi hai. Menu ya Cold Coffee ki quantity poochhein.';
+
+  if (q.includes('menu')) {
+    a = 'Hamare menu mein burger, pizza aur cold coffee hain. Price jaanne ke liye Cold Coffee 2 likhein.';
+  } else if (q.includes('cold coffee') || q.includes('coffee')) {
+    const match = q.match(/\d+/);
+    const qty = match ? Math.max(1, Math.min(100, parseInt(match[0], 10))) : 1;
+    const price = 70;
+    a = 'Cold Coffee: ₹' + price + ' × ' + qty + ' = ₹' + (price * qty);
+  } else if (q.includes('price') || q.includes('कीमत')) {
+    a = 'Demo price: Cold Coffee ₹70 per cup. Sahi price owner se confirm karein.';
+  } else if (q.includes('order')) {
+    a = 'Yeh sirf demo hai. Aapka real order abhi place nahi hua hai.';
+  }
+
+  const botMsg = document.createElement('div');
+  botMsg.className = 'msg';
+  botMsg.textContent = 'Bot: ' + a;
+  chat.appendChild(botMsg);
+
+  chat.scrollTop = chat.scrollHeight;
+  box.value = '';
 }
 </script>
 </body>
