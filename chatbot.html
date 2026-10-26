@@ -37,6 +37,10 @@ function send(){
  chat.innerHTML+='<div class="msg">Bot: '+a+'</div>';
  chat.scrollTop=chat.scrollHeight;box.value='';
 }
+ else if(q.includes('coffee')||q.includes('cold coffee')){
+  let qty = parseInt(q.match(/\d+/)?.[0] || '1');
+  a = 'Cold Coffee ₹70 × ' + qty + ' = ₹' + (70 * qty);
+}
 </script>
 </body>
 </html>
